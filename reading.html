@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading · Mitchell Langley</title>
+<meta name="description" content="An annotated reading library spanning law, history, politics, transportation, literature, public health and philosophy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="doc-head">
+  <a class="doc-name" href="index.html">Mitchell Langley</a>
+  <nav aria-label="Primary navigation">
+    <ul class="doc-nav">
+      <li><a class="route-work" href="resume.html">Resume</a></li>
+      <li><a class="route-cases" href="cases.html">Case studies</a></li>
+      <li><a class="route-writing" href="writing.html">Writing</a></li>
+      <li><a class="route-reading" href="reading.html" aria-current="page">Reading</a></li>
+      <li><a class="route-gallery" href="photographs.html">Photographs</a></li>
+      <li class="lang-link"><a href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="page">
+
+  <section class="plate">
+    <div class="rail">
+      <p class="plate-line">Reading</p>
+      <h1>A working library</h1>
+      <div class="plate-intro">
+        <p class="plate-note">Books I have collected on the ancient world, Chilean law and history, public administration, modern politics, transport, philosophy and literature. Spanish-language titles include an English translation where useful. Jump to a shelf, then open any title for a short note on why I like it.</p>
+        <nav aria-label="Library sections">
+          <ul class="library-jump">
+            <li><a class="filter-chip" href="#ancient-near-east">Ancient Near East</a></li>
+            <li><a class="filter-chip" href="#greece-rome">Greece, Rome &amp; Early Christianity</a></li>
+            <li><a class="filter-chip" href="#chile">Chilean Law &amp; History</a></li>
+            <li><a class="filter-chip" href="#law-administration">Law &amp; Public Administration</a></li>
+            <li><a class="filter-chip" href="#modern-history">Modern History &amp; Politics</a></li>
+            <li><a class="filter-chip" href="#transport">Transport &amp; Infrastructure</a></li>
+            <li><a class="filter-chip" href="#philosophy-literature">Philosophy &amp; Literature</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <div id="library-sections" aria-busy="true"></div>
+  <div id="library-error" class="library-error mt-6" role="alert" hidden>
+    <h2>Library data could not be loaded</h2>
+    <p>Please refresh the page to try again.</p>
+  </div>
+
+  <dialog id="book-drawer" class="book-drawer" aria-labelledby="book-drawer-title" aria-describedby="book-drawer-note">
+    <div class="book-drawer-inner">
+      <div class="book-drawer-bar">
+        <p class="book-drawer-shelf"><span id="book-drawer-shelf"></span><span id="book-drawer-count" class="book-drawer-count"></span></p>
+        <button type="button" class="book-drawer-close" aria-label="Close note" autofocus>
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" fill="none"/></svg>
+        </button>
+      </div>
+      <div id="book-drawer-body" class="book-drawer-body">
+        <h2 id="book-drawer-title" class="book-drawer-title"></h2>
+        <p id="book-drawer-translation" class="book-drawer-translation"></p>
+        <p id="book-drawer-author" class="book-drawer-author"></p>
+        <p class="book-drawer-label">Why I like it</p>
+        <p id="book-drawer-note" class="book-drawer-note"></p>
+      </div>
+      <nav class="book-drawer-nav" aria-label="Other notes">
+        <button type="button" class="book-step book-step-prev" data-step="-1"><span class="book-step-dir">Previous</span><span class="book-step-title"></span></button>
+        <button type="button" class="book-step book-step-next" data-step="1"><span class="book-step-dir">Next</span><span class="book-step-title"></span></button>
+      </nav>
+    </div>
+  </dialog>
+
+</main>
+
+<footer class="site-footer">
+  <div class="rail">
+    <div class="footer-grid">
+      <div>
+        <p class="doc-name">Mitchell Langley</p>
+        <p>Infrastructure advisory, transportation planning and project finance</p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="cases.html">Case studies</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="reading.html" aria-current="page">Reading</a></li>
+        <li><a href="photographs.html">Photographs</a></li>
+        <li><a href="mailto:mitch@mitchlangley.us">Email</a></li>
+        <li><a href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a></li>
+      </ul>
+    </div>
+    <div class="footer-base">
+      <span>Last updated September 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const DATA_URL = 'assets/reading/libros.json';
+  // Keep ids in sync with the jump links above.
+  const SHELVES = [
+    { id: 'ancient-near-east', title: 'Ancient Near East' },
+    { id: 'greece-rome', title: 'Greece, Rome & Early Christianity' },
+    { id: 'chile', title: 'Chilean Law & History' },
+    { id: 'law-administration', title: 'Law & Public Administration' },
+    { id: 'modern-history', title: 'Modern History & Politics' },
+    { id: 'transport', title: 'Transport & Infrastructure' },
+    { id: 'philosophy-literature', title: 'Philosophy & Literature' }
+  ];
+
+  const $ = selector => document.querySelector(selector);
+  const container = $('#library-sections');
+  const error = $('#library-error');
+
+  const drawer = $('#book-drawer');
+  const drawerBody = $('#book-drawer-body');
+  const drawerShelf = $('#book-drawer-shelf');
+  const drawerCount = $('#book-drawer-count');
+  const drawerTitle = $('#book-drawer-title');
+  const drawerTranslation = $('#book-drawer-translation');
+  const drawerAuthor = $('#book-drawer-author');
+  const drawerNote = $('#book-drawer-note');
+  const stepButtons = [...drawer.querySelectorAll('.book-step')];
+
+  let notes = [];   // annotated books, in display order
+  let current = -1; // index into notes
+
+  const element = (name, className, text) => {
+    const node = document.createElement(name);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  };
+  const cleanText = value => typeof value === 'string' ? value.trim() || null : null;
+  const slugify = value => value.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+/, '').slice(0, 60).replace(/-+$/, '');
+  // Titles with an English translation are Spanish; mark them so they are read correctly.
+  const setTitle = (node, book) => {
+    node.textContent = book.title;
+    if (book.english_translation) node.lang = 'es'; else node.removeAttribute('lang');
+  };
+
+  const makeBookCard = book => {
+    const article = element('article', 'book-card');
+    const title = element('h3', 'book-title');
+    if (book.annotation) {
+      const open = element('button', 'book-open');
+      open.type = 'button';
+      open.dataset.note = book.noteIndex;
+      open.setAttribute('aria-haspopup', 'dialog');
+      setTitle(open, book);
+      title.appendChild(open);
+      book.trigger = open;
+    } else {
+      setTitle(title, book);
+    }
+    article.appendChild(title);
+    if (book.english_translation) {
+      article.appendChild(element('p', 'book-translation', book.english_translation));
+    }
+    if (book.author) {
+      article.appendChild(element('p', 'book-author caption', book.author));
+    }
+    if (book.annotation) {
+      const cue = element('p', 'book-cue', 'Why I like it');
+      cue.setAttribute('aria-hidden', 'true');
+      article.appendChild(cue);
+    }
+    return article;
+  };
+
+  const buildShelves = books => {
+    const fragment = document.createDocumentFragment();
+    SHELVES.forEach((shelf, index) => {
+      const shelfBooks = books.filter(book => book.shelf === shelf.title);
+      const band = element('section', `band ${index % 2 ? 'band-wash' : 'band-paper'}`);
+      band.id = shelf.id;
+      band.setAttribute('aria-labelledby', `${shelf.id}-heading`);
+      const rail = element('div', 'rail');
+      const headingRow = element('div', 'library-heading-row');
+      const heading = element('h2', 'sec', shelf.title);
+      heading.id = `${shelf.id}-heading`;
+      headingRow.append(heading);
+      const grid = element('div', 'library-grid');
+      shelfBooks.forEach(book => grid.appendChild(makeBookCard(book)));
+      rail.append(headingRow, grid);
+      band.appendChild(rail);
+      band.hidden = shelfBooks.length === 0;
+      fragment.appendChild(band);
+    });
+    container.replaceChildren(fragment);
+  };
+
+  /* ---------- Annotation drawer ---------- */
+
+  // The open note lives in the URL hash so it can be linked to. The hash is
+  // replaced, never pushed, so opening notes does not pile up history entries.
+  const noteFromHash = () => {
+    const slug = decodeURIComponent(location.hash.slice(1));
+    return slug ? notes.findIndex(book => book.slug === slug) : -1;
+  };
+  const setHash = hash => history.replaceState(history.state, '', hash || location.pathname + location.search);
+
+  const renderNote = index => {
+    const book = notes[index];
+    current = index;
+    drawerShelf.textContent = book.shelf;
+    drawerCount.textContent = `${book.shelfPosition} of ${book.shelfSize}`;
+    setTitle(drawerTitle, book);
+    drawerTranslation.textContent = book.english_translation || '';
+    drawerTranslation.hidden = !book.english_translation;
+    drawerAuthor.textContent = book.author || '';
+    drawerAuthor.hidden = !book.author;
+    drawerNote.textContent = book.annotation;
+
+    stepButtons.forEach(button => {
+      const neighbour = notes[index + Number(button.dataset.step)];
+      button.hidden = !neighbour;
+      if (!neighbour) return;
+      setTitle(button.querySelector('.book-step-title'), neighbour);
+      button.setAttribute('aria-label',
+        `${button.dataset.step < 0 ? 'Previous' : 'Next'} note: ${neighbour.title}`);
+    });
+
+    drawerBody.scrollTop = 0;
+    if (drawer.open) {
+      drawerBody.classList.remove('is-turning');
+      void drawerBody.offsetWidth; // restart the animation
+      drawerBody.classList.add('is-turning');
+    }
+  };
+
+  const openNote = index => {
+    renderNote(index);
+    setHash(`#${notes[index].slug}`);
+    if (!drawer.open) drawer.showModal();
+  };
+
+  const step = delta => {
+    const next = current + delta;
+    if (!notes[next]) return;
+    renderNote(next);
+    setHash(`#${notes[next].slug}`);
+    // Reaching either end hides that button; keep focus inside the drawer.
+    if (document.activeElement && document.activeElement.hidden) {
+      (stepButtons.find(button => !button.hidden) || drawer.querySelector('.book-drawer-close')).focus();
+    }
+  };
+
+  container.addEventListener('click', event => {
+    const trigger = event.target.closest('.book-open');
+    if (trigger) openNote(Number(trigger.dataset.note));
+  });
+
+  drawer.querySelector('.book-drawer-close').addEventListener('click', () => drawer.close());
+  stepButtons.forEach(button => button.addEventListener('click', () => step(Number(button.dataset.step))));
+
+  // A click that lands on the dialog itself (not its contents) is on the backdrop.
+  drawer.addEventListener('click', event => {
+    if (event.target === drawer) drawer.close();
+  });
+
+  drawer.addEventListener('keydown', event => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.key === 'ArrowLeft') { event.preventDefault(); step(-1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); step(1); }
+  });
+
+  // Every way of closing (button, Esc, backdrop, Android back) ends here.
+  drawer.addEventListener('close', () => {
+    drawerBody.classList.remove('is-turning');
+    if (noteFromHash() !== -1) setHash('');
+    const book = notes[current];
+    if (book && book.trigger) book.trigger.focus();
+  });
+
+  // Follows in-page links to a note, e.g. a hash typed into the address bar.
+  window.addEventListener('hashchange', () => {
+    const index = noteFromHash();
+    if (index !== -1) openNote(index);
+  });
+
+  /* ---------- Load ---------- */
+
+  fetch(DATA_URL)
+    .then(response => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    })
+    .then(data => {
+      if (!Array.isArray(data)) throw new Error('Library JSON must be an array.');
+      const shelfOrder = new Map(SHELVES.map((shelf, index) => [shelf.title, index]));
+      const books = data.map(book => {
+        if (!book || typeof book.title !== 'string' || !book.title.trim() || !shelfOrder.has(book.shelf)) {
+          throw new Error('A book has an invalid title or shelf.');
+        }
+        return {
+          title: book.title.trim(),
+          author: cleanText(book.author),
+          english_translation: cleanText(book.english_translation),
+          annotation: cleanText(book.annotation),
+          shelf: book.shelf
+        };
+      }).sort((a, b) => shelfOrder.get(a.shelf) - shelfOrder.get(b.shelf) ||
+        a.title.localeCompare(b.title, 'en', { sensitivity: 'base' }));
+
+      const slugs = new Set();
+      notes = books.filter(book => book.annotation);
+      notes.forEach((book, index) => {
+        let slug = slugify(book.title) || 'book';
+        for (let n = 2; slugs.has(slug); n++) slug = `${slugify(book.title)}-${n}`;
+        slugs.add(slug);
+        const shelfNotes = notes.filter(other => other.shelf === book.shelf);
+        Object.assign(book, {
+          slug,
+          noteIndex: index,
+          shelfPosition: shelfNotes.indexOf(book) + 1,
+          shelfSize: shelfNotes.length
+        });
+      });
+
+      buildShelves(books);
+      container.setAttribute('aria-busy', 'false');
+
+      const linked = noteFromHash();
+      if (linked !== -1) openNote(linked);
+    })
+    .catch(err => {
+      console.error('Unable to load reading library:', err);
+      container.setAttribute('aria-busy', 'false');
+      container.hidden = true;
+      error.hidden = false;
+    });
+})();
+</script>
+
+</body>
+</html>
