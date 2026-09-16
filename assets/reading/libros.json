@@ -1,548 +1,602 @@
 [
   {
-    "title": "Urbanismo y Construcción (3a ed.)",
-    "author": "Juan Eduardo Figueroa Valdés",
-    "english_translation": "Urban Planning and Construction (3rd ed.)",
-    "shelf": "Chilean Law & History",
-    "annotation": "It covers the ground where public law meets land use and the physical growth of cities. That is where I can connect legal rules to the way urban form and transportation actually develop."
-  },
-  {
-    "title": "Diego Portales y la tradición política portaliana",
-    "author": "Gonzalo Arenas Hoder",
-    "english_translation": "Diego Portales and the Portalian Political Tradition",
-    "shelf": "Chilean Law & History",
-    "annotation": "I don't share Portales's worldview, but his ideas about order, authority and the elite project of 'civilizing' the poor left a lasting mark on Chilean political culture. Knowing where they came from makes it easier to spot the assumptions about hierarchy and state authority that still turn up in Chilean public life."
-  },
-  {
-    "title": "Roman Law and the Legal World of the Romans",
-    "author": "Andrew M. Riggsby",
-    "english_translation": null,
-    "shelf": "Law & Public Administration",
-    "annotation": "Riggsby puts Roman law back inside the society and institutions that produced it, so legal development reads as part of a working political and social order."
-  },
-  {
-    "title": "Historia Social, Política y Jurídica de Roma",
-    "author": "Carlos Felipe Amunátegui Perelló",
-    "english_translation": "Social, Political, and Legal History of Rome",
-    "shelf": "Law & Public Administration",
-    "annotation": "I like how Amunátegui ties Roman law to political and social change, so that legal authority and its institutions grow up alongside the Roman state."
-  },
-  {
-    "title": "Vicios del acto administrativo",
-    "author": "Fabián Huepe Artigas; Baltazar Morales Espinoza; Francisco Santibañez Yáñez",
-    "english_translation": "Flaws in Administrative Acts",
-    "shelf": "Chilean Law & History",
-    "annotation": "Chile is where I learned to work with legal logic in practice. Defective administrative acts raise the questions that shaped that experience: who was competent to act, whether the act was legal, whether procedure was followed and where public authority stops."
-  },
-  {
-    "title": "Introducción a la historia del derecho chileno: Constitución, legalidad y cultura jurídica, siglos XVI a XX",
-    "author": "Fernando Muñoz León",
-    "english_translation": "Introduction to the History of Chilean Law: Constitution, Legality, and Legal Culture, 16th to 20th Centuries",
-    "shelf": "Chilean Law & History",
-    "annotation": "Knowing the history of Chilean law helps me make sense of the legal and political assumptions I ran into while working there. Living in Chile has also left me feeling responsible for understanding its institutions as the product of a long legal and political history."
-  },
-  {
-    "title": "La motivación: Principio general del derecho público",
-    "author": "Alejandro Gómez Sotomayor",
-    "english_translation": "Reasoning: A General Principle of Public Law",
-    "shelf": "Law & Public Administration",
-    "annotation": "Reason-giving is where administrative legality, accountability and judicial review meet. The book also explains a good part of the civil-law approach to public law, which became far more familiar to me working in Chile than it ever was growing up in the United States."
-  },
-  {
-    "title": "El impulso sistemático del derecho administrativo chileno (1861-1890)",
-    "author": "Gabriel Bocksang Hola",
-    "english_translation": "The Systematic Impetus of Chilean Administrative Law (1861–1890)",
-    "shelf": "Chilean Law & History",
-    "annotation": "Bocksang shows how Chilean administrative law was organized into a coherent system of concepts between 1861 and 1890. That history explains a lot about the legal mindset I absorbed working on regulation and public administration in Chile."
-  },
-  {
-    "title": "Historia del Derecho: Evolución de las fuentes del derecho privado occidental en sus textos y contextos, de la romanización a la codificación",
-    "author": "Italo Merello Arecco",
-    "english_translation": "History of Law: The Evolution of the Sources of Western Private Law in Their Texts and Contexts, from Romanization to Codification",
-    "shelf": "Law & Public Administration",
-    "annotation": "Merello covers the whole stretch from Romanization to codification, which is long enough to show how the civil-law tradition became systematic and attentive to its sources. The common-law environment I grew up around in the United States works differently on both counts."
-  },
-  {
-    "title": "El Estado sobre ruedas: Transporte público, política y ciudad. La ETCE 1945-1981",
-    "author": "Simón Castillo; Marcelo Mardones; Waldo Vila",
-    "english_translation": "The State on Wheels: Public Transport, Politics, and the City, ETCE 1945–1981",
-    "shelf": "Transport & Infrastructure",
-    "annotation": "My interest in transit goes beyond work. It is how I think about governance, urban development and the relationship between land use and transportation, and this book puts all of those questions into one Chilean historical case."
-  },
-  {
-    "title": "The Great Society Subway: A History of the Washington Metro",
-    "author": "Zachary M. Schrag",
-    "english_translation": null,
-    "shelf": "Transport & Infrastructure",
-    "annotation": "I read it as a history of transit as governance. Schrag shows institutions, regional politics, planning decisions, financing and land-use ambitions coming together in one of the most important postwar public transport projects in the United States."
-  },
-  {
-    "title": "Megaprojects and Risk: An Anatomy of Ambition",
-    "author": "Bent Flyvbjerg; Nils Bruzelius; Werner Rothengatter",
-    "english_translation": null,
-    "shelf": "Transport & Infrastructure",
-    "annotation": "Big infrastructure projects show how governments and institutions decide things under uncertainty. The book's account of optimism bias, strategic misrepresentation and project risk is directly relevant to how I think about transport and public investment."
-  },
-  {
-    "title": "As I Lay Dying",
-    "author": "William Faulkner",
-    "english_translation": null,
-    "shelf": "Philosophy & Literature",
-    "annotation": "Faulkner tells the story in many voices, each with a partial view. Family, place, memory and social surroundings all come through that way, and no single account gets to be the authoritative one."
-  },
-  {
-    "title": "La Regenta",
-    "author": "Leopoldo Alas (Clarín)",
-    "english_translation": "The Regent's Wife",
-    "shelf": "Philosophy & Literature",
-    "annotation": "It is a major work of realism and also a close study of a provincial society: its hierarchy, religion, reputation and institutional pressure. Clarín shows in unusual detail how a social order keeps reproducing itself."
-  },
-  {
-    "title": "A History of Babylon, 2200 BC–AD 75",
-    "author": "Paul-Alain Beaulieu",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Babylon fascinates me because it is so old and lasted so long. Beaulieu makes people and institutions from that far back feel understandable, and shows political authority surviving and changing over more than two thousand years."
-  },
-  {
-    "title": "A History of the Ancient Near East, ca. 3000-323 BC (2nd ed.)",
-    "author": "Marc Van De Mieroop",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "This is my chronological frame for the ancient Near East. When I read about a particular ruler, state, administrative system or cultural shift, this is where I go to place it in a regional history that runs across thousands of years."
-  },
-  {
-    "title": "Ancient Records of Assyria and Babylonia, Volume I: Historical Records of Assyria from the Earliest Times to Sargon",
-    "author": "Daniel David Luckenbill",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Primary records close some of the distance between us and these very old states. Reading how Assyrian rulers described their own power, administration, wars and legitimacy makes me think about what has changed in political life since then, and what hasn't."
-  },
-  {
-    "title": "Assyria: The Rise and Fall of the World's First Empire",
-    "author": "Eckart Frahm",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Assyria interests me as an early imperial state, and as a society whose rulers could be conquerors, administrators, builders on a huge scale and curious intellectuals all at once. Figures like Ashurbanipal are a good reminder that the pursuit of knowledge is not a modern habit."
-  },
-  {
-    "title": "Entrepreneurs and Enterprise in Early Mesopotamia: A Study of Three Archives from the Third Dynasty of Ur (2112–2004 BCE)",
-    "author": "Steven J. Garfinkle",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Administrative and economic archives make the ancient world concrete in a way I didn't expect. These three archives from Ur III are full of enterprise, contracts, accounts and people taking initiative, all of it recognizable, inside a state more than four thousand years old."
-  },
-  {
-    "title": "Gudea and His Dynasty",
-    "author": "Dietz Otto Edzard",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "I genuinely admire Gudea. His idea of kingship centers on building, piety, stewardship and orderly government, and those aims still feel recognizable after more than four thousand years."
-  },
-  {
-    "title": "Hammurabi of Babylon",
-    "author": "Dominique Charpin",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Hammurabi is famous as a lawgiver. Charpin also treats him as a ruler, which lets me follow how state authority, administration and justice developed, and how law related to political power."
-  },
-  {
-    "title": "Hezekiah in History and Tradition",
-    "author": "Robb Andrew Young",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Young keeps two Hezekiahs in view: the king historians can reconstruct and the one later tradition remembered. Texts, archaeology and political tradition each preserve a somewhat different version of the same past."
-  },
-  {
-    "title": "History Begins at Sumer: 27 Firsts in Recorded History",
-    "author": "Samuel Noah Kramer",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Kramer makes it vivid how old organized human life is. Newer scholarship complicates some of his 'firsts', but the main point holds: institutions, literature, schooling, conflict and humor were already there in Sumer."
-  },
-  {
-    "title": "Israel's Past Seen from the Present: Studies on History and Religion in Ancient Israel and Judah",
-    "author": "Bob Becking",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Becking keeps historical memory in view the whole time: how later communities rebuilt their own past, and how our assumptions today shape what we think ancient history means."
-  },
-  {
-    "title": "King Hammurabi of Babylon: A Biography",
-    "author": "Marc Van De Mieroop",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "I read this alongside the legal histories. Van De Mieroop brings back Hammurabi the politician and administrator, and his laws become one piece of a larger project that also involved state-building, diplomacy, war and governance."
-  },
-  {
-    "title": "Leadership in the Ancient World: Concepts, Models, Theories",
-    "author": "Melina Tamiolaki (editor)",
-    "english_translation": null,
-    "shelf": "Greece, Rome & Early Christianity",
-    "annotation": "Part of what draws me to ancient history is finding familiar ambitions, virtues, weaknesses and political problems in societies that lived an enormously long time ago. Comparing leaders across the ancient world is a direct way to look for them."
-  },
-  {
-    "title": "Networks of Authority and Power in Ur III Times",
-    "author": "Piotr Michalowski",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "I'm interested in Ur III mostly for its early state administration. Michalowski rebuilds authority from the networks, officials, institutions and documents, which is more useful to me than treating the state as an abstract, centralized machine."
-  },
-  {
-    "title": "Sennacherib, King of Assyria",
-    "author": "Josette Elayi",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "A biography of a single Assyrian king makes imperial administration and strategy concrete. With Sennacherib you can watch military power, state organization, building projects and royal self-presentation working together."
-  },
-  {
-    "title": "Sennacherib at the Gates of Jerusalem: Story, History and Historiography",
-    "author": "Isaac Kalimi; Seth Richardson (editors)",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Sennacherib's campaign against Jerusalem can be seen through Assyrian sources, biblical memory, archaeology and later historians. That makes it a good case for studying how historical memory gets made and argued over."
-  },
-  {
-    "title": "The Age of Agade: Inventing Empire in Ancient Mesopotamia",
-    "author": "Benjamin R. Foster",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Agade was an early experiment in imperial power. The subtitle's phrase, 'inventing empire', gets at what I want to know: how people first built the administrative and ideological tools to govern something larger than a city-state."
-  },
-  {
-    "title": "The Oxford History of the Ancient Near East, Volume III: From the Hyksos to the Late Second Millennium BC",
-    "author": "Karen Radner; Nadine Moeller; D. T. Potts (editors)",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "This is my reference for the period when the ancient Near East became closely interconnected. States in this volume are understood through their dealings with one another: diplomacy, migration, trade, war and rival systems of authority."
-  },
-  {
-    "title": "The Passionate Bureaucrat: Lessons for the 21st Century from 4,500 Years of Public Service Reform",
-    "author": "Max Everest-Phillips",
-    "english_translation": null,
-    "shelf": "Law & Public Administration",
-    "annotation": "I think of administration as a problem people keep running into. I like seeing questions of bureaucracy, implementation, reform and public service traced back 4,500 years instead of treated as modern problems."
-  },
-  {
-    "title": "The Sumerians: Their History, Culture and Character",
-    "author": "Samuel Noah Kramer",
-    "english_translation": null,
-    "shelf": "Ancient Near East",
-    "annotation": "Kramer's classic synthesis covers what fascinates me most about the ancient Near East. Sumer's cities and states are about as early as it gets, and they are full of institutions, ambitions and anxieties that are still surprisingly easy to recognize."
-  },
-  {
-    "title": "Clement of Alexandria: The Exhortation to the Greeks; The Rich Man's Salvation; To the Newly Baptized",
-    "author": "Clement of Alexandria",
-    "english_translation": null,
-    "shelf": "Greece, Rome & Early Christianity",
-    "annotation": "Reading Clement himself shows me how an early Christian explained his beliefs, his ethics and his place in the Greco-Roman world, without going through later summaries."
-  },
-  {
-    "title": "Justin Martyr: His Life and Thought",
-    "author": "L. W. Barnard",
-    "english_translation": null,
-    "shelf": "Greece, Rome & Early Christianity",
-    "annotation": "Justin interests me because he stood between Christianity and classical philosophy and tried to work out the terms between them. Barnard shows early Christianity as an intellectual movement that grew up inside the Greco-Roman world."
-  },
-  {
-    "title": "The Apostolic Fathers: Greek Texts and English Translations",
-    "author": "Michael W. Holmes (editor and translator)",
-    "english_translation": null,
-    "shelf": "Greece, Rome & Early Christianity",
-    "annotation": "These are the primary sources I start from for Christianity right after the New Testament period, when it was still diverse and its institutions were taking shape."
-  },
-  {
-    "title": "The Jesus Movement: A Social History of Its First Century",
-    "author": "Ekkehard W. Stegemann; Wolfgang Stegemann",
-    "english_translation": null,
-    "shelf": "Greece, Rome & Early Christianity",
-    "annotation": "The Stegemanns write social history, so early Christianity appears among real communities, institutions, class structures and political conditions. Doctrine is only part of the story."
-  },
-  {
-    "title": "The Jesus Movement and the World of the Early Church",
-    "author": "Sheila E. McGinn",
-    "english_translation": null,
-    "shelf": "Greece, Rome & Early Christianity",
-    "annotation": "McGinn describes the social and historical setting in which the Jesus movement turned into communities and institutions that lasted."
-  },
-  {
-    "title": "The Moral Psychology of Clement of Alexandria: Mosaic Philosophy",
-    "author": "Kathleen Gibbons",
-    "english_translation": null,
-    "shelf": "Philosophy & Literature",
-    "annotation": "Gibbons works at the level of moral psychology and philosophy, showing how Clement and other Christian thinkers took in the intellectual traditions around them, adapted them and pushed back against them."
-  },
-  {
-    "title": "La esquina es mi corazón",
-    "author": "Pedro Lemebel",
-    "english_translation": "The Corner Is My Heart",
-    "shelf": "Philosophy & Literature",
-    "annotation": "Lemebel's Chile is intimate, urban and marginal, and it is deliberately nothing like the official political or institutional history. He makes me look at the lives and places that more conventional histories leave at the edges."
-  },
-  {
-    "title": "Balmaceda: Su Gobierno y la Revolución de 1891",
-    "author": "Julio Bañados Espinosa",
-    "english_translation": "Balmaceda: His Government and the Revolution of 1891",
-    "shelf": "Chilean Law & History",
-    "annotation": "Chile's civil war of 1891 holds a very different place in national memory than the American Civil War does in the United States. Getting Balmaceda's real role straight shows me how an event with large consequences can fade almost out of popular memory."
-  },
-  {
-    "title": "Historia del Derecho",
-    "author": "Jaime Eyzaguirre",
-    "english_translation": "History of Law",
-    "shelf": "Chilean Law & History",
-    "annotation": "Eyzaguirre is part of how I've been learning the history behind the legal tradition I met professionally in Chile, especially its assumptions about sources, institutions and legal order, which don't always match an American common-law background."
-  },
-  {
-    "title": "La guerra civil de 1891, Tomo 1: La irrupción política de los militares en Chile",
-    "author": "Alejandro San Francisco",
-    "english_translation": "The Civil War of 1891, Volume 1: The Political Intervention of the Military in Chile",
-    "shelf": "Chilean Law & History",
-    "annotation": "Part of the fascination is the gap between how much the 1891 war mattered and how little most people remember it. Studying it closely explains the political order that came after, and how Chile remembers its internal conflicts, or doesn't."
-  },
-  {
-    "title": "La guerra del Pacífico (1879–1883)",
-    "author": "Carmen McEvoy; Gabriel Cid",
-    "english_translation": "The War of the Pacific (1879–1883)",
-    "shelf": "Chilean Law & History",
-    "annotation": "You can't understand Chilean national identity, territorial memory or Chile's relations with its neighbors without the War of the Pacific. What the war became in public culture afterward matters almost as much as the war itself."
-  },
-  {
-    "title": "Labradores, peones y proletarios: Formación y crisis de la sociedad popular chilena del siglo XIX",
-    "author": "Gabriel Salazar Vergara",
-    "english_translation": "Farmers, Peons, and Proletarians: Formation and Crisis of Chilean Popular Society in the 19th Century",
-    "shelf": "Chilean Law & History",
-    "annotation": "Salazar looks past the elites and institutions to how Chile's popular classes formed, and I don't think the country's history makes sense without that. He also gives social context for the nineteenth-century political language of order, civilization and hierarchy."
-  },
-  {
-    "title": "Anarchy, State, and Utopia",
-    "author": "Robert Nozick",
-    "english_translation": null,
-    "shelf": "Philosophy & Literature",
-    "annotation": "Nozick makes a rigorous argument about the moral limits of state power. I don't accept all of his conclusions, but he makes me test what I assume about coercion, redistribution, rights and how far government should reach."
-  },
-  {
-    "title": "And the Band Played On: Politics, People, and the AIDS Epidemic",
-    "author": "Randy Shilts",
-    "english_translation": null,
-    "shelf": "Modern History & Politics",
-    "annotation": "What I study in the AIDS crisis is political and institutional failure. Shilts shows delay, fragmented authority, incentives, bureaucracy, stigma and individual decisions adding up to a public policy catastrophe."
-  },
-  {
-    "title": "Eichmann in Jerusalem: A Report on the Banality of Evil",
-    "author": "Hannah Arendt",
-    "english_translation": null,
-    "shelf": "Modern History & Politics",
-    "annotation": "Arendt raises hard questions about responsibility, obedience and judgment, and about how ordinary bureaucratic behavior can have extraordinary moral consequences."
-  },
-  {
-    "title": "How to Survive a Plague: The Inside Story of How Citizens and Science Tamed AIDS",
-    "author": "David France",
-    "english_translation": null,
-    "shelf": "Modern History & Politics",
-    "annotation": "I read it next to the histories of institutional failure. France shows organized citizens, activists and scientists forcing change when existing systems were failing, with public institutions eventually coming along."
-  },
-  {
-    "title": "Last Days of the SFRY",
-    "author": "Borisav Jovic",
-    "english_translation": null,
-    "shelf": "Modern History & Politics",
-    "annotation": "This is an insider's account of a state coming apart. From inside the government you see politicians interpreting events, misreading each other and helping to unravel structures they had assumed would last."
-  },
-  {
-    "title": "Patient Zero and the Making of the AIDS Epidemic",
-    "author": "Richard A. McKay",
-    "english_translation": null,
-    "shelf": "Modern History & Politics",
-    "annotation": "McKay traces how one powerful, misleading story shaped what the public understood about an epidemic. It adds the history of the narrative to my interest in institutional failure, since institutions and the media also build stories about who is to blame."
-  },
-  {
-    "title": "Public Transit Planning and Operation: Theory, Modeling and Practice",
-    "author": "Avishai (Avi) Ceder",
-    "english_translation": null,
-    "shelf": "Transport & Infrastructure",
-    "annotation": "I use it for work and for my own interest. Ceder covers the technical side of transit planning and operations, which complements my broader interest in how governance, urban form and land use shape a transit system."
-  },
-  {
-    "title": "Transporte Público: Planeación, diseño, operación y administración",
-    "author": "Ángel R. Molinero Molinero; Ignacio Sánchez Arellano",
-    "english_translation": "Public Transport: Planning, Design, Operation, and Administration",
-    "shelf": "Transport & Infrastructure",
-    "annotation": "This is my Spanish-language technical reference. It connects planning, design, operation and administration, the practical parts of public transport that sit underneath the governance and land-use questions I'm interested in."
-  },
-  {
-    "title": "Man's Search for Meaning",
-    "author": "Viktor E. Frankl",
-    "english_translation": null,
-    "shelf": "Philosophy & Literature",
-    "annotation": "Frankl writes about meaning, dignity and agency in extreme conditions. It's a book I end up reflecting on personally, more than one I simply agree or disagree with."
-  },
-  {
-    "title": "The Practicing Stoic: A Philosophical User's Manual",
-    "author": "Ward Farnsworth",
-    "english_translation": null,
-    "shelf": "Philosophy & Literature",
-    "annotation": "My interest in Stoicism is separate from my interest in early Christianity. Farnsworth organizes Stoic thought around practical problems of judgment, emotion, desire, adversity and conduct, so it reads as something to use and not only as an ancient philosophical system."
-  },
-  {
-    "title": "Enchiridion",
-    "author": "Epictetus",
-    "english_translation": null,
-    "shelf": "Philosophy & Literature",
-    "annotation": "Epictetus draws the line between what is and isn't in our control very directly. The book is short enough that Stoicism feels like a discipline of judgment and conduct, something you practice."
-  },
-  {
-    "title": "Marcus Agrippa: A Biography",
-    "author": "Meyer Reinhold",
-    "english_translation": null,
-    "shelf": "Greece, Rome & Early Christianity",
-    "annotation": "Agrippa complicates the usual story of the Augustan age, which centers on the ruler. His career shows administration, military skill, engineering, loyalty and personal relationships mattering as much as formal sovereignty."
-  },
-  {
-    "title": "Marcus Agrippa: Right-hand Man of Caesar Augustus",
-    "author": "Lindsay Powell",
-    "english_translation": null,
-    "shelf": "Greece, Rome & Early Christianity",
-    "annotation": "Agrippa is a case of real power exercised from beside the top instead of from it. He was good at war, administration and infrastructure, and that combination is exactly what interests me."
-  },
-  {
-    "title": "Marcus Aurelius: A Life",
-    "author": "Frank McLynn",
-    "english_translation": null,
-    "shelf": "Philosophy & Literature",
-    "annotation": "McLynn puts the philosopher-emperor back into his working life of governing, war, family and imperial administration. The Meditations read differently once you know the life they came out of."
-  },
-  {
-    "title": "Meditations",
-    "author": "Marcus Aurelius",
-    "english_translation": null,
-    "shelf": "Philosophy & Literature",
-    "annotation": "My interest here is Stoic, not Christian. I like that the text is private and repetitive. It shows Marcus using philosophy day after day to correct himself, judge carefully and hold back."
-  },
-  {
-    "title": "The Cambridge History of Greek and Roman Political Thought",
-    "author": "Christopher Rowe; Malcolm Schofield (editors)",
-    "english_translation": null,
-    "shelf": "Greece, Rome & Early Christianity",
-    "annotation": "I go to this for how the Greeks and Romans thought about authority, citizenship, law, constitutions, virtue and political order. Those ideas kept shaping Western legal and political traditions long afterward."
-  },
-  {
-    "title": "Southern Honor: Ethics and Behavior in the Old South",
-    "author": "Bertram Wyatt-Brown",
-    "english_translation": null,
-    "shelf": "Modern History & Politics",
-    "annotation": "Wyatt-Brown treats the antebellum South as a social and moral system with its own codes of status, reputation, violence and hierarchy. A lot of behavior that makes no sense through formal politics alone makes sense through those codes."
-  },
-  {
-    "title": "The Clash of Civilizations and the Remaking of World Order",
-    "author": "Samuel P. Huntington",
-    "english_translation": null,
-    "shelf": "Modern History & Politics",
-    "annotation": "I don't read this as a framework to adopt. It's an influential argument, and I want to understand it on its own terms. It's also a good test case for big claims about culture, identity and geopolitical conflict, and for the risks of treating civilizations as coherent political actors."
-  },
-  {
-    "title": "Región y nación: la construcción provincial de Chile, siglo XIX",
-    "author": "Armando Cartes Montory",
-    "english_translation": "Region and nation: the provincial construction of Chile in the 19th century",
-    "shelf": "Chilean Law & History",
-    "annotation": "Cartes shows Chile's state and national identity being built through its regions, which is a useful corrective to seeing everything from Santiago outward. It gives today's tensions between the capital and the regions a history."
-  },
-  {
-    "title": "Santiago de Chile (1541-1991): Historia de una sociedad urbana",
-    "author": "Armando de Ramón",
-    "english_translation": "Santiago, Chile (1541-1991): a history of an urban society",
-    "shelf": "Chilean Law & History",
-    "annotation": "Santiago makes more sense once you see its present shape as the result of 450 years of social, political, economic and spatial change. It also connects to my interest in land use, transportation and governance."
-  },
-  {
-    "title": "Historia de Chile: Desde la invasión incaica hasta nuestros días (1500-2000)",
-    "author": "Armando de Ramón",
-    "english_translation": "History of Chile: from the Incan invasion until the present (1500-2000)",
-    "shelf": "Chilean Law & History",
-    "annotation": "As an immigrant, I think knowing Chilean history well is a civic responsibility. The news makes far more sense against the long development of the country's institutions, political identities, regional differences and recurring ideas about authority and order."
-  },
-  {
-    "title": "Tocqueville's Nightmare: The Administrative State Emerges in America, 1900–1940",
-    "author": "Daniel R. Ernst",
-    "english_translation": null,
-    "shelf": "Law & Public Administration",
-    "annotation": "I grew up in the United States with common-law assumptions in the background, and I learned to think seriously about regulation inside Chile's more continental legal culture. Ernst shows how the American administrative state worked out its own answer to that tension."
-  },
-  {
-    "title": "Controlling Administrative Power: An Historical Comparison",
-    "author": "Peter Cane",
-    "english_translation": null,
-    "shelf": "Law & Public Administration",
-    "annotation": "Cane compares legal traditions at exactly the point I care about most: how each one thinks about administrative power, limits it and justifies courts reviewing it. Reading him, I can sort out which of my legal instincts came from working in Chile and which came from growing up in the U.S."
-  },
-  {
-    "title": "La teoría general del Derecho administrativo como sistema",
-    "author": "Eberhard Schmidt-Assmann",
-    "english_translation": "General Theory of Administrative Law as a System",
-    "shelf": "Law & Public Administration",
-    "annotation": "Schmidt-Assmann spells out the systematic, conceptual style of administrative-law reasoning that became second nature to me in Chile. Read comparatively, it also shows why that way of thinking can sound so European to an American lawyer."
-  },
-  {
-    "title": "The Roman Law Tradition",
-    "author": "A. D. E. Lewis; D. J. Ibbetson (editors)",
-    "english_translation": null,
-    "shelf": "Law & Public Administration",
-    "annotation": "The way Roman law was received and reinterpreted over the centuries is how the continental tradition got its concepts, categories and habits of thought, and those eventually reached systems like Chile's."
-  },
-  {
-    "title": "Comparative Law",
-    "author": "Uwe Kischel",
-    "english_translation": null,
-    "shelf": "Law & Public Administration",
-    "annotation": "Kischel gave me words for something I had lived before I had a framework for it. Growing up around American common-law assumptions and then learning legal logic through real work in Chile meant living with two different ways of organizing and reasoning about law."
-  },
-  {
-    "title": "A Natural History of the Common Law",
-    "author": "S. F. C. Milsom",
-    "english_translation": null,
-    "shelf": "Law & Public Administration",
-    "annotation": "Milsom lets me look at the common law from the inside, as a tradition with a history, where I used to take it as the American default I grew up with. His focus on law developing through adjudication means more to me after working in a more systematized civil-law setting."
-  },
-  {
-    "title": "An Historical Introduction to Private Law",
-    "author": "R. C. van Caenegem",
-    "english_translation": null,
-    "shelf": "Law & Public Administration",
-    "annotation": "This is a bridge between the two legal worlds I know. Van Caenegem explains historically why English common law and continental private law went different ways, and he doesn't settle for the usual shorthand of precedent versus codes."
-  },
-  {
-    "title": "Historical Foundations of the Common Law",
-    "author": "S. F. C. Milsom",
-    "english_translation": null,
-    "shelf": "Law & Public Administration",
-    "annotation": "The common law was culturally familiar to me in the United States, but I never had to analyze it as consciously as the Chilean system I later worked in. Milsom gives me its history in depth."
-  },
-  {
-    "title": "Historia del Derecho privado de la Edad Moderna",
-    "author": "Franz Wieacker",
-    "english_translation": "History of Private Law in the Modern Era",
-    "shelf": "Law & Public Administration",
-    "annotation": "Wieacker traces where modern civil law came from intellectually: the reception of Roman law, legal science, natural law, codification and system-building. That lineage explains the style of legal thinking I worked with in Chile."
-  },
-  {
-    "title": "European Legal History: A Cultural and Political Perspective",
-    "author": "Randall Lesaffer",
-    "english_translation": null,
-    "shelf": "Law & Public Administration",
-    "annotation": "Lesaffer writes legal history as part of political and cultural history. That gives me the background for why the European traditions Latin America inherited turned out the way they did."
-  },
-  {
-    "title": "El orden jurídico medieval",
-    "author": "Paolo Grossi",
-    "english_translation": "The Medieval Legal Order",
-    "shelf": "Law & Public Administration",
-    "annotation": "It's easy to assume law has always been codified and centered on the state. Grossi's medieval Europe had a plural legal order, and once you've seen it, modern civil-law systems look like something people built at a particular time."
-  },
-  {
-    "title": "Mitología jurídica de la modernidad",
-    "author": "Paolo Grossi",
-    "english_translation": "Legal Mythology of Modernity",
-    "shelf": "Law & Public Administration",
-    "annotation": "Grossi takes ideas that seem obvious, like state sovereignty over law, codification and the completeness of the legal order, and shows that they are historically contingent. I lean on that when comparing the civil-law mindset I learned in Chile with the common-law world I grew up in."
+    "category": "Ancient Near East",
+    "subtitle": "This section progresses chronologically, starting with broad regional frameworks and the earliest Sumerian societies, moving through the empires of Agade, Babylon, and Assyria, and concluding with studies on how historical memory was formed in ancient Israel.",
+    "books": [
+      {
+        "title": "A History of the Ancient Near East, ca. 3000-323 BC (2nd ed.)",
+        "author": "Marc Van De Mieroop",
+        "annotation": "A standard chronological framework for the ancient Near East, useful for placing a particular ruler, state, administrative system or cultural shift within a regional history running across thousands of years.",
+        "order": "1"
+      },
+      {
+        "title": "The Oxford History of the Ancient Near East, Volume III: From the Hyksos to the Late Second Millennium BC",
+        "author": "Karen Radner; Nadine Moeller; D. T. Potts (editors)",
+        "annotation": "Covers the period when the ancient Near East became closely interconnected, with states understood mainly through their dealings with one another: diplomacy, migration, trade, war and rival systems of authority.",
+        "order": "2"
+      },
+      {
+        "title": "History Begins at Sumer: 27 Firsts in Recorded History",
+        "author": "Samuel Noah Kramer",
+        "annotation": "Kramer makes the sheer age of organized human life vivid. Later scholarship has complicated some of his 'firsts', but the underlying point holds: institutions, literature, schooling, conflict and humor were already present in Sumer.",
+        "order": "3"
+      },
+      {
+        "title": "The Sumerians: Their History, Culture and Character",
+        "author": "Samuel Noah Kramer",
+        "annotation": "Kramer's classic synthesis of Sumerian history and culture, remarkable for how early Sumer's cities and states were and how recognizable their institutions, ambitions and anxieties still are.",
+        "order": "4"
+      },
+      {
+        "title": "The Age of Agade: Inventing Empire in Ancient Mesopotamia",
+        "author": "Benjamin R. Foster",
+        "annotation": "Agade was an early experiment in imperial power, and Foster's subtitle, 'inventing empire', names the real subject: how the administrative and ideological tools to govern something larger than a city-state got built for the first time.",
+        "order": "5"
+      },
+      {
+        "title": "Gudea and His Dynasty",
+        "author": "Dietz Otto Edzard",
+        "annotation": "Gudea's model of kingship centers on building, piety and orderly stewardship of the state, and it holds up remarkably well against the leadership qualities still admired today. I find him genuinely compelling as a case study in early state and administrative formation: how much of what we now call good leadership was already recognizable more than four thousand years ago.",
+        "order": "6"
+      },
+      {
+        "title": "Entrepreneurs and Enterprise in Early Mesopotamia: A Study of Three Archives from the Third Dynasty of Ur (2112-2004 BCE)",
+        "author": "Steven J. Garfinkle",
+        "annotation": "Garfinkle works from three archives of the Ur III period to reconstruct enterprise, contracts, accounts and individual initiative inside a state more than four thousand years old, making administrative and economic history concrete in a way broader surveys don't.",
+        "order": "7"
+      },
+      {
+        "title": "Networks of Authority and Power in Ur III Times",
+        "author": "Piotr Michalowski",
+        "annotation": "Michalowski reconstructs Ur III authority from its networks of officials, institutions and documents rather than treating the state as an abstract, centralized machine, an approach that says more about how early administration actually worked than a top-down account would.",
+        "order": "8"
+      },
+      {
+        "title": "A History of Babylon, 2200 BC-AD 75",
+        "author": "Paul-Alain Beaulieu",
+        "annotation": "Beaulieu covers Babylon across roughly 2,300 years, making the people and institutions of that span legible and tracing how political authority survived and changed over an extraordinarily long run.",
+        "order": "9"
+      },
+      {
+        "title": "King Hammurabi of Babylon: A Biography",
+        "author": "Marc Van De Mieroop",
+        "annotation": "Read alongside the legal histories, this brings back Hammurabi the politician and administrator, with his laws as one piece of a larger project that also involved state-building, diplomacy, war and governance.",
+        "order": "10"
+      },
+      {
+        "title": "Hammurabi of Babylon",
+        "author": "Dominique Charpin",
+        "annotation": "Hammurabi is best known as a lawgiver. Charpin treats him equally as a ruler, following how state authority, administration and justice developed together and how law related to political power.",
+        "order": "11"
+      },
+      {
+        "title": "Ancient Records of Assyria and Babylonia, Volume I: Historical Records of Assyria from the Earliest Times to Sargon",
+        "author": "Daniel David Luckenbill",
+        "annotation": "A primary-source collection that closes some of the distance to these very old states. Reading how Assyrian rulers described their own power, administration, wars and legitimacy is a direct way to see what has changed in political self-presentation since, and what hasn't.",
+        "order": "12"
+      },
+      {
+        "title": "Assyria: The Rise and Fall of the World's First Empire",
+        "author": "Eckart Frahm",
+        "annotation": "Frahm treats Assyria as an early imperial state whose rulers were conquerors, administrators, builders on a huge scale and, in the case of Ashurbanipal, serious collectors of knowledge, a useful reminder that the pursuit of learning is not a modern habit.",
+        "order": "13"
+      },
+      {
+        "title": "Sennacherib, King of Assyria",
+        "author": "Josette Elayi",
+        "annotation": "A single-king biography that makes imperial administration and strategy concrete: military power, state organization, building projects and royal self-presentation all working together under one reign.",
+        "order": "14"
+      },
+      {
+        "title": "Sennacherib at the Gates of Jerusalem: Story, History and Historiography",
+        "author": "Isaac Kalimi; Seth Richardson (editors)",
+        "annotation": "Sennacherib's campaign against Jerusalem survives through Assyrian sources, biblical memory, archaeology and generations of later historians, which makes it a strong case study in how historical memory gets made and argued over.",
+        "order": "15"
+      },
+      {
+        "title": "Hezekiah in History and Tradition",
+        "author": "Robb Andrew Young",
+        "annotation": "Young keeps two Hezekiahs in view: the king historians can reconstruct from texts and archaeology, and the one later tradition remembered. The gap between the two says as much about how political memory forms as it does about the king himself.",
+        "order": "16"
+      },
+      {
+        "title": "Israel's Past Seen from the Present: Studies on History and Religion in Ancient Israel and Judah",
+        "author": "Bob Becking",
+        "annotation": "Becking keeps historical memory in view throughout: how later communities rebuilt their own past, and how present-day assumptions shape what we think ancient history means.",
+        "order": "17"
+      }
+    ]
+  },
+  {
+    "category": "Greece, Rome & Early Christianity",
+    "subtitle": "This section builds from classical political thought into the practical administration of Rome, and then explores how the early Jesus movement grew into durable institutions within that Greco-Roman context.",
+    "books": [
+      {
+        "title": "The Cambridge History of Greek and Roman Political Thought",
+        "author": "Christopher Rowe; Malcolm Schofield (editors)",
+        "annotation": "Covers how the Greeks and Romans thought about authority, citizenship, law, constitutions, virtue and political order, ideas that went on shaping Western legal and political traditions long after antiquity ended.",
+        "order": "1"
+      },
+      {
+        "title": "Leadership in the Ancient World: Concepts, Models, Theories",
+        "author": "Melina Tamiolaki (editor)",
+        "annotation": "A comparative study of leadership across the ancient world, useful for tracing which ambitions, virtues, weaknesses and political problems recur across societies separated by enormous stretches of time.",
+        "order": "2"
+      },
+      {
+        "title": "Marcus Agrippa: Right-hand Man of Caesar Augustus",
+        "author": "Lindsay Powell",
+        "annotation": "Agrippa is a case of real power exercised from beside the top rather than from it, competent at war, administration and infrastructure all at once.",
+        "order": "3"
+      },
+      {
+        "title": "Marcus Agrippa: A Biography",
+        "author": "Meyer Reinhold",
+        "annotation": "Agrippa complicates the usual ruler-centered story of the Augustan age. His career shows administration, military skill, engineering and personal loyalty mattering as much as formal sovereignty.",
+        "order": "4"
+      },
+      {
+        "title": "The Jesus Movement and the World of the Early Church",
+        "author": "Sheila E. McGinn",
+        "annotation": "McGinn describes the social and historical setting in which the Jesus movement turned into communities and institutions durable enough to last.",
+        "order": "5"
+      },
+      {
+        "title": "The Jesus Movement: A Social History of Its First Century",
+        "author": "Ekkehard W. Stegemann; Wolfgang Stegemann",
+        "annotation": "The Stegemanns write social rather than doctrinal history, so early Christianity appears among real communities, institutions, class structures and political conditions.",
+        "order": "6"
+      },
+      {
+        "title": "The Apostolic Fathers: Greek Texts and English Translations",
+        "author": "Michael W. Holmes (editor and translator)",
+        "annotation": "A primary-source collection for Christianity immediately after the New Testament period, when its institutions were still diverse and taking shape.",
+        "order": "7"
+      },
+      {
+        "title": "Justin Martyr: His Life and Thought",
+        "author": "L. W. Barnard",
+        "annotation": "Justin stood between Christianity and classical philosophy and tried to work out the terms between them. Barnard presents early Christianity as an intellectual movement that grew up inside, rather than apart from, the Greco-Roman world.",
+        "order": "8"
+      },
+      {
+        "title": "Clement of Alexandria: The Exhortation to the Greeks; The Rich Man's Salvation; To the Newly Baptized",
+        "author": "Clement of Alexandria",
+        "annotation": "Reading Clement directly, rather than through later summaries, shows how an early Christian explained his beliefs, ethics and place within the Greco-Roman world in his own terms.",
+        "order": "9"
+      }
+    ]
+  },
+  {
+    "category": "Law & Public Administration",
+    "subtitle": "This category starts with the ancient roots of Roman law, moves through the historical divergence of common and civil law traditions in Europe, and concludes with studies on modern administrative power and Latin American constitutionalism.",
+    "books": [
+      {
+        "title": "Roman Law and the Legal World of the Romans",
+        "author": "Andrew M. Riggsby",
+        "annotation": "Riggsby situates Roman law inside the society and institutions that produced it, so legal development reads as part of a functioning political and social order rather than an abstract system of rules.",
+        "order": "1"
+      },
+      {
+        "title": "Historia Social, Política y Jurídica de Roma",
+        "author": "Carlos Felipe Amunátegui Perelló",
+        "annotation": "Amunátegui ties Roman law to political and social change, tracking how legal authority and its institutions grew up alongside the Roman state itself rather than developing on a separate track.",
+        "order": "2",
+        "english_translation": "Social, Political, and Legal History of Rome"
+      },
+      {
+        "title": "The Roman Law Tradition",
+        "author": "A. D. E. Lewis; D. J. Ibbetson (editors)",
+        "annotation": "Traces how Roman law was received and reinterpreted over the centuries, which is how the continental tradition got its concepts, categories and habits of thought, concepts that eventually reached systems like Chile's.",
+        "order": "3"
+      },
+      {
+        "title": "Historia del Derecho: Evolución de las fuentes del derecho privado occidental en sus textos y contextos, de la romanización a la codificación",
+        "author": "Italo Merello Arecco",
+        "annotation": "Merello covers the full stretch from Romanization to codification, long enough to show how the civil-law tradition became systematic and source-conscious. The comparison with common-law development is instructive for anyone trained in the latter.",
+        "order": "4",
+        "english_translation": "History of Law: The Evolution of the Sources of Western Private Law in Their Texts and Contexts, from Romanization to Codification"
+      },
+      {
+        "title": "European Legal History: A Cultural and Political Perspective",
+        "author": "Randall Lesaffer",
+        "annotation": "Lesaffer writes legal history as part of political and cultural history, which supplies the background for why the European traditions Latin America inherited turned out the way they did.",
+        "order": "5"
+      },
+      {
+        "title": "El orden jurídico medieval",
+        "author": "Paolo Grossi",
+        "annotation": "It's easy to assume law has always been codified and centered on the state. Grossi's medieval Europe had a plural legal order instead, and once that's visible, modern civil-law systems look like something people built at a particular historical moment rather than something inevitable.",
+        "order": "6",
+        "english_translation": "The Medieval Legal Order"
+      },
+      {
+        "title": "Historia del Derecho privado de la Edad Moderna",
+        "author": "Franz Wieacker",
+        "annotation": "Wieacker traces where modern civil law came from intellectually: the reception of Roman law, legal science, natural law, codification and system-building. That lineage explains the style of legal reasoning still taught in civil-law systems today.",
+        "order": "7",
+        "english_translation": "History of Private Law in the Modern Era"
+      },
+      {
+        "title": "Mitología jurídica de la modernidad",
+        "author": "Paolo Grossi",
+        "annotation": "Grossi takes ideas that seem self-evident, such as state sovereignty over law, codification and the completeness of the legal order, and shows they're historically contingent rather than natural facts, a useful corrective when comparing civil-law and common-law assumptions.",
+        "order": "8",
+        "english_translation": "Legal Mythology of Modernity"
+      },
+      {
+        "title": "An Historical Introduction to Private Law",
+        "author": "R. C. van Caenegem",
+        "annotation": "A genuine bridge between the two legal worlds I know. Van Caenegem explains historically why English common law and continental private law diverged, without settling for the usual shorthand of precedent versus codes.",
+        "order": "9"
+      },
+      {
+        "title": "Comparative Law",
+        "author": "Uwe Kischel",
+        "annotation": "Kischel gave me language for something I had lived before I had a framework for it. Growing up around American common-law assumptions and later learning legal reasoning through work in Chile meant living with two different ways of organizing and reasoning about law, and this book is the clearest account I've found of what actually separates them.",
+        "order": "10"
+      },
+      {
+        "title": "A Natural History of the Common Law",
+        "author": "S. F. C. Milsom",
+        "annotation": "Milsom treats the common law as a tradition with its own history rather than a natural default, developing through adjudication rather than system-building. That framing lands differently after working inside a more systematized civil-law setting.",
+        "order": "11"
+      },
+      {
+        "title": "Historical Foundations of the Common Law",
+        "author": "S. F. C. Milsom",
+        "annotation": "A deeper companion to Milsom's Natural History, tracing the doctrinal development of English common-law institutions in more technical detail than the shorter book attempts.",
+        "order": "12"
+      },
+      {
+        "title": "The Passionate Bureaucrat: Lessons for the 21st Century from 4,500 Years of Public Service Reform",
+        "author": "Max Everest-Phillips",
+        "annotation": "Traces bureaucracy, implementation, reform and public service back 4,500 years instead of treating them as distinctly modern problems, which reframes administration as a recurring human problem rather than a contemporary one.",
+        "order": "13"
+      },
+      {
+        "title": "Tocqueville's Nightmare: The Administrative State Emerges in America, 1900-1940",
+        "author": "Daniel R. Ernst",
+        "annotation": "Ernst traces how the American administrative state worked out its own answer to the tension between common-law assumptions and the practical need to regulate, a tension that feels familiar to anyone who grew up with one legal tradition and later had to think seriously within another.",
+        "order": "14"
+      },
+      {
+        "title": "Controlling Administrative Power: An Historical Comparison",
+        "author": "Peter Cane",
+        "annotation": "Cane compares legal traditions at exactly the point that matters most for administrative law: how each one thinks about administrative power, limits it and justifies judicial review of it. Reading him side by side with a common-law and a civil-law background is a good way to sort out which instincts came from which system.",
+        "order": "15"
+      },
+      {
+        "title": "La teoría general del Derecho administrativo como sistema",
+        "author": "Eberhard Schmidt-Assmann",
+        "annotation": "Schmidt-Assmann spells out the systematic, conceptual style of administrative-law reasoning characteristic of the civil-law tradition, a style that can sound distinctly European to a lawyer trained on common-law premises.",
+        "order": "16",
+        "english_translation": "General Theory of Administrative Law as a System"
+      },
+      {
+        "title": "La motivación: Principio general del derecho público",
+        "author": "Alejandro Gómez Sotomayor",
+        "annotation": "Reason-giving sits at the intersection of administrative legality, accountability and judicial review. The book also lays out the civil-law approach to that principle in some depth, a useful contrast for anyone whose legal instincts started in a common-law system.",
+        "order": "17",
+        "english_translation": "Reasoning: A General Principle of Public Law"
+      },
+      {
+        "title": "Principios del procedimiento administrativo en América Latina",
+        "author": "Allan Brewer-Carías",
+        "annotation": "A comparative study of administrative procedure across Latin American legal systems, useful for placing Chile's own approach within the region rather than treating it as a self-contained case.",
+        "order": "18",
+        "english_translation": "Principles of Administrative Procedure in Latin America"
+      },
+      {
+        "title": "Latin American Constitutionalism, 1810-2010",
+        "author": "Roberto Gargarella",
+        "annotation": "Traces two centuries of Latin American constitutional development and argues that expanding rights language has coexisted, again and again, with an unreformed concentration of power in the executive 'engine room' of these constitutions.",
+        "order": "19"
+      },
+      {
+        "title": "Regulation and Development",
+        "author": "Jean-Jacques Laffont",
+        "annotation": "Applies regulatory economics to the actual constraints of developing countries with limited institutional capacity and weak enforcement, rather than assuming the high-capacity institutional environment regulation theory is usually built for.",
+        "order": "20"
+      }
+    ]
+  },
+  {
+    "category": "Chilean Law & History",
+    "subtitle": "This reading order progresses from sweeping national and urban histories into 19th-century state-building and conflict, before concluding with the specific doctrinal treatises that govern modern Chilean public and administrative law.",
+    "books": [
+      {
+        "title": "Historia de Chile: Desde la invasión incaica hasta nuestros días (1500-2000)",
+        "author": "Armando de Ramón",
+        "annotation": "As an immigrant to Chile, I treat knowing the country's history well as a civic responsibility. Current events make far more sense against the long development of Chile's institutions, political identities, regional differences and recurring ideas about authority and order.",
+        "order": "1",
+        "english_translation": "History of Chile: from the Incan invasion until the present (1500-2000)"
+      },
+      {
+        "title": "Santiago de Chile (1541-1991): Historia de una sociedad urbana",
+        "author": "Armando de Ramón",
+        "annotation": "Santiago's present shape makes more sense once you see it as the result of 450 years of social, political, economic and spatial change, which connects the city's history directly to land use, transportation and governance.",
+        "order": "2",
+        "english_translation": "Santiago, Chile (1541-1991): a history of an urban society"
+      },
+      {
+        "title": "Historia del Derecho",
+        "author": "Jaime Eyzaguirre",
+        "annotation": "Eyzaguirre traces the history behind Chile's legal tradition, including its assumptions about sources, institutions and legal order, which diverge in real ways from an American common-law background.",
+        "order": "3",
+        "english_translation": "History of Law"
+      },
+      {
+        "title": "Introducción a la historia del derecho chileno: Constitución, legalidad y cultura jurídica, siglos XVI a XX",
+        "author": "Fernando Muñoz León",
+        "annotation": "Muñoz León traces Chilean legal and constitutional culture from the sixteenth century through the twentieth, connecting formal changes in the law to the political and social assumptions that produced them.",
+        "order": "4",
+        "english_translation": "Introduction to the History of Chilean Law: Constitution, Legality, and Legal Culture, 16th to 20th Centuries"
+      },
+      {
+        "title": "Región y nación: la construcción provincial de Chile, siglo XIX",
+        "author": "Armando Cartes Montory",
+        "annotation": "Cartes shows Chile's state and national identity being built through its regions rather than radiating outward from Santiago, giving today's tensions between the capital and the regions an actual history.",
+        "order": "5",
+        "english_translation": "Region and nation: the provincial construction of Chile in the 19th century"
+      },
+      {
+        "title": "Labradores, peones y proletarios: Formación y crisis de la sociedad popular chilena del siglo XIX",
+        "author": "Gabriel Salazar Vergara",
+        "annotation": "Salazar looks past the elites and institutions to how Chile's popular classes formed, a perspective the country's history doesn't fully make sense without. He also supplies social context for the nineteenth-century political language of order, civilization and hierarchy.",
+        "order": "6",
+        "english_translation": "Farmers, Peons, and Proletarians: Formation and Crisis of Chilean Popular Society in the 19th Century"
+      },
+      {
+        "title": "Diego Portales y la tradición política portaliana",
+        "author": "Gonzalo Arenas Hoder",
+        "annotation": "Arenas traces how Portales's ideas about order, authority and an elite project of 'civilizing' the poor became a lasting current in Chilean political culture. The book is useful for spotting the assumptions about hierarchy and state authority that still surface in Chilean public life, whether or not one shares that original worldview.",
+        "order": "7",
+        "english_translation": "Diego Portales and the Portalian Political Tradition"
+      },
+      {
+        "title": "El nacimiento del Derecho Administrativo patrio de Chile (1810-1860)",
+        "author": "Gabriel Bocksang Hola",
+        "annotation": "The prequel to Bocksang's later study of 1861-1890, tracing how a distinctly Chilean administrative law first took shape in the decades after independence and through the Portalian period, before it was later organized into a coherent system.",
+        "order": "8",
+        "english_translation": "The Birth of Chile's National Administrative Law (1810-1860)"
+      },
+      {
+        "title": "El impulso sistemático del derecho administrativo chileno (1861-1890)",
+        "author": "Gabriel Bocksang Hola",
+        "annotation": "Bocksang traces how Chilean administrative law was organized into a coherent system of concepts between 1861 and 1890, the period when the discipline's modern vocabulary and structure took shape.",
+        "order": "9",
+        "english_translation": "The Systematic Impetus of Chilean Administrative Law (1861–1890)"
+      },
+      {
+        "title": "La guerra del Pacífico (1879-1883)",
+        "author": "Carmen McEvoy; Gabriel Cid",
+        "annotation": "Chilean national identity, territorial memory and Chile's relations with its neighbors are hard to understand without the War of the Pacific, and what the war became in public culture afterward matters almost as much as the war itself.",
+        "order": "10",
+        "english_translation": "The War of the Pacific (1879–1883)"
+      },
+      {
+        "title": "Balmaceda: Su Gobierno y la Revolución de 1891",
+        "author": "Julio Bañados Espinosa",
+        "annotation": "Chile's 1891 civil war occupies a much smaller place in national memory than the American Civil War does in the United States, despite its scale. Getting Balmaceda's actual role straight is a good demonstration of how an event with large consequences can fade almost out of popular memory.",
+        "order": "11",
+        "english_translation": "Balmaceda: His Government and the Revolution of 1891"
+      },
+      {
+        "title": "La guerra civil de 1891, Tomo 1: La irrupción política de los militares en Chile",
+        "author": "Alejandro San Francisco",
+        "annotation": "The gap between how much the 1891 war mattered and how little it's remembered is part of what makes it worth studying closely. San Francisco's account of the military's political intervention explains a good deal about the political order that came after.",
+        "order": "12",
+        "english_translation": "The Civil War of 1891, Volume 1: The Political Intervention of the Military in Chile"
+      },
+      {
+        "title": "La organización administrativa del Estado",
+        "author": "Rolando Pantoja Bauzá",
+        "annotation": "A deep study of Chile's administrative organization theory: centralization, deconcentration, decentralization and public services. It lays out the doctrinal architecture behind bodies like the regional SEREMIs and services such as the DTPR.",
+        "order": "13",
+        "english_translation": "The Administrative Organization of the State"
+      },
+      {
+        "title": "Vicios del acto administrativo",
+        "author": "Fabián Huepe Artigas; Baltazar Morales Espinoza; Francisco Santibañez Yáñez",
+        "annotation": "The book works through the defects that can invalidate an administrative act: who was competent to act, whether the act was legal, whether procedure was followed and where the limits of public authority sit. Those questions sit at the center of Chilean administrative practice.",
+        "order": "14",
+        "english_translation": "Flaws in Administrative Acts"
+      },
+      {
+        "title": "Derecho Administrativo Sancionador: bases y principios en el derecho chileno",
+        "author": "Eduardo Cordero Quinzacara",
+        "annotation": "Cordero's monograph is the foundational treatment of punitive administrative power and its limits in Chile: legality, culpability, double jeopardy and statutes of limitation.",
+        "order": "15",
+        "english_translation": "Sanctioning Administrative Law: Foundations and Principles in Chilean Law"
+      },
+      {
+        "title": "Tratado de Responsabilidad Extracontractual",
+        "author": "Enrique Barros Bourie",
+        "annotation": "Formally a civil-law treatise, but its chapters on state liability and falta de servicio are required reading in Chilean public law, a rare case of one book working seriously across both bodies of law.",
+        "order": "16",
+        "english_translation": "Treatise on Non-Contractual Liability"
+      },
+      {
+        "title": "Libre Competencia y Monopolio",
+        "author": "Domingo Valdés Prieto",
+        "annotation": "A full treatise rather than a manual, and the most complete doctrinal treatment of Chile's competition law regime under DL 211.",
+        "order": "17",
+        "english_translation": "Free Competition and Monopoly"
+      },
+      {
+        "title": "Urbanismo y Construcción (3a ed.)",
+        "author": "Juan Eduardo Figueroa Valdés",
+        "annotation": "The book works the ground where public law meets land use and urban growth, tracing how zoning, permitting and construction rules shape the physical form a city actually takes.",
+        "order": "18",
+        "english_translation": "Urban Planning and Construction (3rd ed.)"
+      }
+    ]
+  },
+  {
+    "category": "Transport & Infrastructure",
+    "subtitle": "This group begins with broad historical case studies showing how governance shapes transit, transitions into the economics and risks of megaprojects, and ends with technical planning references.",
+    "books": [
+      {
+        "title": "The Great Society Subway: A History of the Washington Metro",
+        "author": "Zachary M. Schrag",
+        "annotation": "Schrag treats the Washington Metro as a history of transit as governance, showing institutions, regional politics, planning decisions, financing and land-use ambitions come together in one of the most consequential postwar public transport projects in the United States.",
+        "order": "1"
+      },
+      {
+        "title": "El Estado sobre ruedas: Transporte público, política y ciudad. La ETCE 1945-1981",
+        "author": "Simón Castillo; Marcelo Mardones; Waldo Vila",
+        "annotation": "The book puts governance, urban development and the relationship between land use and transportation into a single Chilean historical case, following the ETCE (State Public Transit Company) through nearly four decades of transit policy.",
+        "order": "2",
+        "english_translation": "The State on Wheels: Public Transport, Politics, and the City, ETCE 1945–1981"
+      },
+      {
+        "title": "Megaprojects and Risk: An Anatomy of Ambition",
+        "author": "Bent Flyvbjerg; Nils Bruzelius; Werner Rothengatter",
+        "annotation": "Large infrastructure projects show how governments and institutions decide things under uncertainty. The book's account of optimism bias, strategic misrepresentation and project risk is directly relevant to transport planning and public investment generally.",
+        "order": "3"
+      },
+      {
+        "title": "Granting and Renegotiating Infrastructure Concessions",
+        "author": "J. Luis Guasch",
+        "annotation": "Examines why infrastructure concession contracts are renegotiated so often after they're awarded, and what that pattern reveals about contract design, bidding incentives and the limits of regulatory commitment.",
+        "order": "4"
+      },
+      {
+        "title": "The Economics of Public-Private Partnerships",
+        "author": "Eduardo Engel; Ronald Fischer; Alexander Galetovic",
+        "annotation": "An economic analysis of PPP financing, risk allocation and the incentive problems specific to concession-based infrastructure delivery, informed heavily by the authors' work on Chile's own concessions program.",
+        "order": "5"
+      },
+      {
+        "title": "Public Transit Planning and Operation: Theory, Modeling and Practice",
+        "author": "Avishai (Avi) Ceder",
+        "annotation": "Covers the technical side of transit planning and operations in depth, a useful complement to the broader question of how governance, urban form and land use shape a transit system.",
+        "order": "6"
+      },
+      {
+        "title": "Transporte Público: Planeación, diseño, operación y administración",
+        "author": "Ángel R. Molinero Molinero; Ignacio Sánchez Arellano",
+        "annotation": "A Spanish-language technical reference connecting planning, design, operation and administration, the practical layer underneath the governance and land-use questions that motivate the rest of the shelf.",
+        "order": "7",
+        "english_translation": "Public Transport: Planning, Design, Operation, and Administration"
+      }
+    ]
+  },
+  {
+    "category": "Philosophy & Literature",
+    "subtitle": "This section progresses from foundational Stoic texts on personal conduct, into broader philosophical questions regarding meaning and state power, and concludes with literary works that explore fractured narratives and societal constraints.",
+    "books": [
+      {
+        "title": "Enchiridion",
+        "author": "Epictetus",
+        "annotation": "Epictetus draws the line between what is and isn't within our control directly and without much decoration. Its brevity makes Stoicism read as a discipline of judgment and conduct, something practiced rather than studied.",
+        "order": "1"
+      },
+      {
+        "title": "Meditations",
+        "author": "Marcus Aurelius",
+        "annotation": "A private, repetitive text, read here for its Stoicism rather than any later Christian reading of it. It shows Marcus using philosophy day after day to correct himself, judge carefully and hold back.",
+        "order": "2"
+      },
+      {
+        "title": "Marcus Aurelius: A Life",
+        "author": "Frank McLynn",
+        "annotation": "McLynn puts the philosopher-emperor back into his working life of governing, war, family and imperial administration, and the Meditations read differently once you know the life they came out of.",
+        "order": "3"
+      },
+      {
+        "title": "The Practicing Stoic: A Philosophical User's Manual",
+        "author": "Ward Farnsworth",
+        "annotation": "Farnsworth organizes Stoic thought around practical problems of judgment, emotion, desire, adversity and conduct, so it reads as something to use rather than only as a historical philosophical system.",
+        "order": "4"
+      },
+      {
+        "title": "The Moral Psychology of Clement of Alexandria: Mosaic Philosophy",
+        "author": "Kathleen Gibbons",
+        "annotation": "Gibbons works at the level of moral psychology and philosophy, showing how Clement and other early Christian thinkers absorbed the intellectual traditions around them, adapted them and pushed back against them.",
+        "order": "5"
+      },
+      {
+        "title": "Man's Search for Meaning",
+        "author": "Viktor E. Frankl",
+        "annotation": "Frankl writes about meaning, dignity and agency under extreme conditions, and the book holds up as much for personal reflection as for its argument.",
+        "order": "6"
+      },
+      {
+        "title": "Anarchy, State, and Utopia",
+        "author": "Robert Nozick",
+        "annotation": "Nozick builds a rigorous argument about the moral limits of state power. Agreeing with his conclusions isn't the point; the book is a useful test of what one assumes about coercion, redistribution, rights and how far government should reach.",
+        "order": "7"
+      },
+      {
+        "title": "As I Lay Dying",
+        "author": "William Faulkner",
+        "annotation": "Faulkner tells the story in many voices, each with a partial view, so family, place, memory and social surroundings all come through fragmented rather than through one authoritative account.",
+        "order": "8"
+      },
+      {
+        "title": "La Regenta",
+        "author": "Leopoldo Alas (Clarín)",
+        "annotation": "A major work of realism and a close study of a provincial society: its hierarchy, religion, reputation and institutional pressure. Clarín shows in unusual detail how a social order keeps reproducing itself.",
+        "order": "9",
+        "english_translation": "The Regent's Wife"
+      },
+      {
+        "title": "La esquina es mi corazón",
+        "author": "Pedro Lemebel",
+        "annotation": "Lemebel's Chile is intimate, urban and marginal, deliberately unlike the official political or institutional history, and it pulls into view the lives and places that more conventional histories tend to leave at the edges.",
+        "order": "10",
+        "english_translation": "The Corner Is My Heart"
+      }
+    ]
+  },
+  {
+    "category": "Modern History & Politics",
+    "subtitle": "This category starts with cultural analyses of societies and conflicts, examines the moral implications of bureaucracy, and follows a detailed narrative arc of the AIDS epidemic from institutional failure to activist success.",
+    "books": [
+      {
+        "title": "Southern Honor: Ethics and Behavior in the Old South",
+        "author": "Bertram Wyatt-Brown",
+        "annotation": "Wyatt-Brown treats the antebellum South as a social and moral system with its own codes of status, reputation, violence and hierarchy, codes that explain a lot of behavior formal politics alone can't account for.",
+        "order": "1"
+      },
+      {
+        "title": "Last Days of the SFRY",
+        "author": "Borisav Jovic",
+        "annotation": "An insider's account of a state coming apart. From inside the government, politicians misread events and each other while helping to unravel structures they had assumed would last.",
+        "order": "2"
+      },
+      {
+        "title": "The Clash of Civilizations and the Remaking of World Order",
+        "author": "Samuel P. Huntington",
+        "annotation": "An influential argument worth understanding on its own terms rather than adopting outright. It's also a good test case for big claims about culture, identity and geopolitical conflict, and for the risks of treating civilizations as coherent political actors.",
+        "order": "3"
+      },
+      {
+        "title": "Eichmann in Jerusalem: A Report on the Banality of Evil",
+        "author": "Hannah Arendt",
+        "annotation": "Arendt raises hard questions about responsibility, obedience and judgment, and about how ordinary bureaucratic behavior can carry extraordinary moral consequences.",
+        "order": "4"
+      },
+      {
+        "title": "And the Band Played On: Politics, People, and the AIDS Epidemic",
+        "author": "Randy Shilts",
+        "annotation": "Shilts documents political and institutional failure in detail: delay, fragmented authority, misaligned incentives, bureaucracy, stigma and individual decisions compounding into a public policy catastrophe.",
+        "order": "5"
+      },
+      {
+        "title": "Patient Zero and the Making of the AIDS Epidemic",
+        "author": "Richard A. McKay",
+        "annotation": "McKay traces how one powerful, misleading story shaped public understanding of an epidemic, adding the history of the narrative itself to the record of institutional failure, since institutions and media also build stories about who is to blame.",
+        "order": "6"
+      },
+      {
+        "title": "How to Survive a Plague: The Inside Story of How Citizens and Science Tamed AIDS",
+        "author": "David France",
+        "annotation": "Read alongside the histories of institutional failure, France shows organized citizens, activists and scientists forcing change while existing systems were failing, with public institutions eventually catching up.",
+        "order": "7"
+      }
+    ]
   }
 ]

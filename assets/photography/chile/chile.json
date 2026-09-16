@@ -1,0 +1,110 @@
+[
+  {
+    "order": 1,
+    "filename": "00507.webp",
+    "latitude": -51.09546,
+    "longitude": -72.98336,
+    "region": "Región de Magallanes",
+    "locality": "Torres del Paine",
+    "description": "Scenic mountain pass near the southern entrance of Torres del Paine along the Serrano River sector."
+  },
+  {
+    "order": 2,
+    "filename": "00494.webp",
+    "latitude": -37.96083,
+    "longitude": -72.43722,
+    "region": "Región de La Araucanía",
+    "locality": "Collipulli",
+    "description": "Overlook above the Malleco River valley near the historic railway viaduct in Collipulli."
+  },
+  {
+    "order": 3,
+    "filename": "00197.webp",
+    "latitude": -33.08025,
+    "longitude": -71.66733,
+    "region": "Región de Valparaíso",
+    "locality": "Valparaíso",
+    "description": "Coastal hill area in southern Valparaíso overlooking the bay toward Playa Ancha."
+  },
+  {
+    "order": 4,
+    "filename": "00502.webp",
+    "latitude": -51.04255,
+    "longitude": -72.56624,
+    "region": "Región de Magallanes",
+    "locality": "Torres del Paine",
+    "description": "Steppe and lake approach area near Laguna Amarga on the eastern side of Torres del Paine."
+  },
+  {
+    "order": 5,
+    "filename": "00177.webp",
+    "latitude": -35.47728,
+    "longitude": -70.98909,
+    "region": "Región del Maule",
+    "locality": "San Clemente",
+    "description": "Andean mountain valley landscape along the Pehuenche international route near the Maule River."
+  },
+  {
+    "order": 6,
+    "filename": "00309.webp",
+    "latitude": -32.8406,
+    "longitude": -70.12904,
+    "region": "Región de Valparaíso",
+    "locality": "Los Andes",
+    "description": "High Andean pass near Portillo and the switchbacks of the Caracoles border crossing."
+  },
+  {
+    "order": 7,
+    "filename": "00497.webp",
+    "latitude": -42.049358,
+    "longitude": -73.973861,
+    "region": "Región de Los Lagos",
+    "locality": "Chepu",
+    "description": "Coastal wetlands and sunken forest area where the Chepu River meets the Pacific in Chiloé."
+  },
+  {
+    "order": 8,
+    "filename": "00495.webp",
+    "latitude": -38.81513,
+    "longitude": -73.40089,
+    "region": "Región de La Araucanía",
+    "locality": "Puerto Saavedra",
+    "description": "Coastal mouth where the Imperial River and Lake Budi wetlands meet the Pacific Ocean."
+  },
+  {
+    "order": 9,
+    "filename": "00484.webp",
+    "latitude": -35.32712,
+    "longitude": -72.42986,
+    "region": "Región del Maule",
+    "locality": "Constitución",
+    "description": "Rugged Pacific shoreline featuring sea rocks and dark sand beaches in Constitución."
+  },
+  {
+    "order": 10,
+    "filename": "00256.webp",
+    "latitude": -33.32732,
+    "longitude": -70.55601,
+    "region": "Región Metropolitana",
+    "locality": "Las Condes",
+    "description": "Foothill urban viewpoint in eastern Santiago near San Carlos de Apoquindo."
+  },
+  {
+    "order": 11,
+    "filename": "00333.webp",
+    "latitude": -23.4996,
+    "longitude": -70.42785,
+    "region": "Región de Antofagasta",
+    "locality": "Antofagasta",
+    "description": "Coastal desert shoreline near the natural rock arch monument of La Portada."
+  },
+  {
+    "order": 12,
+    "filename": "00201.webp",
+    "latitude": -33.08119,
+    "longitude": -71.66674,
+    "region": "Región de Valparaíso",
+    "locality": "Valparaíso",
+    "description": "Clifftop residential and ocean overlook area in the southern hills of Valparaíso."
+  }
+]

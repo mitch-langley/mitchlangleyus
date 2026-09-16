@@ -1,0 +1,132 @@
+/* ============================================================
+   CASE STUDY PDF — print stylesheet
+   Shared skin for the five downloadable case-study briefs in
+   assets/cases/*.pdf, built by build_pdfs.py from the matching
+   *.md source. Tokens are copied from assets/site.css so the
+   brief reads as an extension of the site, not a separate
+   document; unlike the site's own @media print block (tuned to
+   save ink on a home printer) this keeps full navy/serif
+   branding, since these PDFs are the deliverable, not a
+   printout of a webpage.
+
+   To edit a case study: edit its .md file, then run
+   `python build_pdfs.py` from assets/cases/. Section order in
+   the .md drives the styling below (eyebrow, then H1, then H2,
+   then the client/role facts line) — keep that order.
+   ============================================================ */
+
+:root {
+  --navy-900: #1D3F5C;
+  --navy-600: #3D6485;
+  --ink-900: #1A1A1A;
+  --ink-500: #69707D;
+  --surface-tint: #F4F6F8;
+  --white: #FFFFFF;
+  --rule: #D8DCE0;
+
+  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Source Sans 3', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--white);
+  color: var(--ink-900);
+  font-family: var(--font-sans);
+  font-size: 9.4pt;
+  line-height: 1.42;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.pdf-page + .pdf-page { break-before: page; }
+.pdf-page > *:first-child { margin-top: 0; }
+
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 700; color: var(--navy-900); line-height: 1.2; }
+p, table, ul, ol { margin: 0 0 7pt; }
+strong { font-weight: 600; }
+
+/* Eyebrow: the .md's opening "**LABEL**" paragraph */
+.pdf-page:first-of-type > p:first-of-type {
+  margin-bottom: 3pt;
+  font-family: var(--font-serif);
+  font-size: 8.2pt;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--navy-600);
+}
+.pdf-page:first-of-type > p:first-of-type strong { font-weight: 600; }
+
+/* Title: first H1 on page 1 */
+.pdf-page:first-of-type > h1:first-of-type {
+  margin-bottom: 3pt;
+  font-size: 17.5pt;
+  letter-spacing: -.01em;
+}
+
+/* Subtitle: the H2 right after the title */
+.pdf-page:first-of-type > h1:first-of-type + h2 {
+  margin-bottom: 8pt;
+  font-family: var(--font-sans);
+  font-size: 10.5pt;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink-500);
+}
+
+/* Facts line: the paragraph right after the subtitle
+   (Client / Role / Scope / Anonymization, pipe-separated) */
+.pdf-page:first-of-type > h1:first-of-type + h2 + p {
+  margin-bottom: 11pt;
+  padding-top: 7pt;
+  padding-bottom: 8pt;
+  border-top: 1pt solid var(--navy-900);
+  border-bottom: .75pt solid var(--rule);
+  font-size: 8.1pt;
+  color: var(--ink-500);
+}
+.pdf-page:first-of-type > h1:first-of-type + h2 + p strong { color: var(--navy-900); }
+
+/* Page-2 running head: the lone H1 that opens the second page */
+.pdf-page:nth-of-type(2) > h1:first-of-type {
+  margin-bottom: 9pt;
+  padding-bottom: 6pt;
+  border-bottom: 1pt solid var(--navy-900);
+  font-size: 14.5pt;
+}
+
+/* Section headings (H3) */
+h3 {
+  margin-top: 11pt;
+  margin-bottom: 4pt;
+  font-size: 10pt;
+  letter-spacing: -.005em;
+}
+h3:first-of-type { margin-top: 0; }
+
+table { width: 100%; border-collapse: collapse; font-size: 8.3pt; line-height: 1.32; }
+th, td { padding: 3.5pt 8pt 3.5pt 0; text-align: left; vertical-align: top; border-bottom: .75pt solid var(--rule); }
+thead th { border-bottom: 1pt solid var(--navy-900); font-weight: 600; color: var(--navy-900); }
+td:last-child, th:last-child { padding-right: 0; }
+
+/* Source basis: closing footnote block on page 2 */
+.pdf-page:nth-of-type(2) > h3:last-of-type {
+  margin-top: 14pt;
+  padding-top: 6pt;
+  border-top: .75pt solid var(--rule);
+  font-size: 7.6pt;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+.pdf-page:nth-of-type(2) > h3:last-of-type + p {
+  font-size: 7.8pt;
+  line-height: 1.4;
+  color: var(--ink-500);
+}
+
+/* Print-only chrome: header/footer are supplied by Chrome's own
+   page templates (see build_pdfs.py), not by this stylesheet. */

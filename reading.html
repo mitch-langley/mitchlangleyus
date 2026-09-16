@@ -21,12 +21,13 @@
       <li><a class="route-work" href="resume.html">Resume</a></li>
       <li><a class="route-cases" href="cases.html">Case studies</a></li>
       <li><a class="route-writing" href="writing.html">Writing</a></li>
-      <li><a class="route-reading" href="reading.html" aria-current="page">Reading</a></li>
-      <li><a class="route-gallery" href="photographs.html">Photographs</a></li>
+      <li><a class="route-reading is-current" href="reading.html" aria-current="page">Reading</a></li>
+      <li><a class="route-gallery" href="photography.html">Photographs</a></li>
       <li class="lang-link"><a href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a></li>
     </ul>
   </nav>
 </header>
+
 
 <main id="main" class="page">
 
@@ -38,12 +39,12 @@
         <p class="plate-note">Books I have collected on the ancient world, Chilean law and history, public administration, modern politics, transport, philosophy and literature. Spanish-language titles include an English translation where useful. Jump to a shelf, then open any title for a short note on why I like it.</p>
         <nav aria-label="Library sections">
           <ul class="library-jump">
+            <li><a class="filter-chip" href="#transport">Transport &amp; Infrastructure</a></li>
+            <li><a class="filter-chip" href="#law-administration">Law &amp; Public Administration</a></li>
+            <li><a class="filter-chip" href="#chile">Chilean Law &amp; History</a></li>
             <li><a class="filter-chip" href="#ancient-near-east">Ancient Near East</a></li>
             <li><a class="filter-chip" href="#greece-rome">Greece, Rome &amp; Early Christianity</a></li>
-            <li><a class="filter-chip" href="#chile">Chilean Law &amp; History</a></li>
-            <li><a class="filter-chip" href="#law-administration">Law &amp; Public Administration</a></li>
             <li><a class="filter-chip" href="#modern-history">Modern History &amp; Politics</a></li>
-            <li><a class="filter-chip" href="#transport">Transport &amp; Infrastructure</a></li>
             <li><a class="filter-chip" href="#philosophy-literature">Philosophy &amp; Literature</a></li>
           </ul>
         </nav>
@@ -89,11 +90,12 @@
         <p>Infrastructure advisory, transportation planning and project finance</p>
       </div>
       <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="cases.html">Case studies</a></li>
+        <li><a href="cases.html">Case Studies</a></li>
         <li><a href="writing.html">Writing</a></li>
         <li><a href="reading.html" aria-current="page">Reading</a></li>
-        <li><a href="photographs.html">Photographs</a></li>
+        <li><a href="photography.html">Photographs</a></li>
         <li><a href="mailto:mitch@mitchlangley.us">Email</a></li>
         <li><a href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a></li>
       </ul>
@@ -104,17 +106,18 @@
   </div>
 </footer>
 
+
 <script>
 (() => {
   const DATA_URL = 'assets/reading/libros.json';
   // Keep ids in sync with the jump links above.
   const SHELVES = [
+    { id: 'transport', title: 'Transport & Infrastructure' },
+    { id: 'law-administration', title: 'Law & Public Administration' },
+    { id: 'chile', title: 'Chilean Law & History' },
     { id: 'ancient-near-east', title: 'Ancient Near East' },
     { id: 'greece-rome', title: 'Greece, Rome & Early Christianity' },
-    { id: 'chile', title: 'Chilean Law & History' },
-    { id: 'law-administration', title: 'Law & Public Administration' },
     { id: 'modern-history', title: 'Modern History & Politics' },
-    { id: 'transport', title: 'Transport & Infrastructure' },
     { id: 'philosophy-literature', title: 'Philosophy & Literature' }
   ];
 
@@ -179,7 +182,7 @@
     return article;
   };
 
-  const buildShelves = books => {
+  const buildShelves = (books, subtitleByShelf) => {
     const fragment = document.createDocumentFragment();
     SHELVES.forEach((shelf, index) => {
       const shelfBooks = books.filter(book => book.shelf === shelf.title);
@@ -191,9 +194,12 @@
       const heading = element('h2', 'sec', shelf.title);
       heading.id = `${shelf.id}-heading`;
       headingRow.append(heading);
+      rail.append(headingRow);
+      const subtitle = subtitleByShelf.get(shelf.title);
+      if (subtitle) rail.append(element('p', 'library-subtitle', subtitle));
       const grid = element('div', 'library-grid');
       shelfBooks.forEach(book => grid.appendChild(makeBookCard(book)));
-      rail.append(headingRow, grid);
+      rail.append(grid);
       band.appendChild(rail);
       band.hidden = shelfBooks.length === 0;
       fragment.appendChild(band);
@@ -300,19 +306,31 @@
     .then(data => {
       if (!Array.isArray(data)) throw new Error('Library JSON must be an array.');
       const shelfOrder = new Map(SHELVES.map((shelf, index) => [shelf.title, index]));
-      const books = data.map(book => {
-        if (!book || typeof book.title !== 'string' || !book.title.trim() || !shelfOrder.has(book.shelf)) {
-          throw new Error('A book has an invalid title or shelf.');
+      const subtitleByShelf = new Map();
+
+      const books = [];
+      data.forEach(category => {
+        if (!category || typeof category.category !== 'string' || !shelfOrder.has(category.category) || !Array.isArray(category.books)) {
+          throw new Error('A category has an invalid name or books list.');
         }
-        return {
-          title: book.title.trim(),
-          author: cleanText(book.author),
-          english_translation: cleanText(book.english_translation),
-          annotation: cleanText(book.annotation),
-          shelf: book.shelf
-        };
-      }).sort((a, b) => shelfOrder.get(a.shelf) - shelfOrder.get(b.shelf) ||
-        a.title.localeCompare(b.title, 'en', { sensitivity: 'base' }));
+        const shelf = category.category;
+        subtitleByShelf.set(shelf, cleanText(category.subtitle));
+        category.books.forEach((book, bookIndex) => {
+          if (!book || typeof book.title !== 'string' || !book.title.trim()) {
+            throw new Error('A book has an invalid title.');
+          }
+          books.push({
+            title: book.title.trim(),
+            author: cleanText(book.author),
+            english_translation: cleanText(book.english_translation),
+            annotation: cleanText(book.annotation),
+            shelf,
+            order: Number(book.order) || bookIndex
+          });
+        });
+      });
+
+      books.sort((a, b) => shelfOrder.get(a.shelf) - shelfOrder.get(b.shelf) || a.order - b.order);
 
       const slugs = new Set();
       notes = books.filter(book => book.annotation);
@@ -329,7 +347,7 @@
         });
       });
 
-      buildShelves(books);
+      buildShelves(books, subtitleByShelf);
       container.setAttribute('aria-busy', 'false');
 
       const linked = noteFromHash();

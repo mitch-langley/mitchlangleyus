@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "photography.html"
+        ],
+        "createdAt": "2026-09-16T02:04:55.373Z",
+        "reason": "lightbox <img id=lightbox-img> is a JS-populated template slot, empty src until the dialog opens, same pattern as reading.html's book-drawer"
+      },
+      {
+        "rule": "em-dash-overuse",
+        "value": "*",
+        "files": [
+          "photography.html"
+        ],
+        "createdAt": "2026-09-16T02:05:08.956Z",
+        "reason": "em dashes are the Region — Locality caption separator the user explicitly requested, one per photo card (12 total), not prose cadence"
+      }
+    ]
+  }
+}

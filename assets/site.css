@@ -462,20 +462,81 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .sidebar-section:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
 .summary { font-size: var(--text-small); line-height: 1.6; }
 
-.role { padding: var(--s5) 0; border-top: 1px solid var(--rule); }
-.sec + .role { border-top: 0; padding-top: 0; }   /* the title's hairline already divides */
-.role:last-child { border-bottom: 1px solid var(--rule); }
-.role-hd { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s4); }
-.role-title { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: var(--color-primary); }
-.role-dates { flex: 0 0 auto; font-size: var(--text-small); color: var(--text-muted); white-space: nowrap; }
-.role-org { margin-top: 2px; font-size: var(--text-small); color: var(--color-primary-hover); font-weight: 600; }
-.role-brief { font-size: var(--text-small); font-style:italic; }
-.role ul { margin-top: var(--s3); padding-left: 1.1rem; }
-.role li { margin-bottom: var(--s2); font-size: var(--text-small); line-height: 1.55; }
-.role li:first-child { list-style-type: none; margin-left: -1.1rem; margin-bottom: var(--s3); font-style: italic; 
-.role li::first-child::marker {content:none;}}
-.role li:last-child { margin-bottom: 0; }
-.role li::marker { color: var(--color-primary-hover); }
+.role {
+  padding: var(--s5) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.sec + .role {
+  border-top: 0;
+  padding-top: 0;
+} /* the title's hairline already divides */
+
+.role:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.role-hd {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s4);
+}
+
+.role-heading {
+  margin-bottom: var(--s3);
+}
+
+.role-eyebrow {
+  margin-bottom: 0.3rem;
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.role-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-primary);
+}
+
+.role-dates {
+  flex: 0 0 auto;
+  font-size: var(--text-small);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.role-org {
+  margin-top: 2px;
+  font-size: var(--text-small);
+  color: var(--color-primary-hover);
+  font-weight: 600;
+}
+
+.role-brief {
+  font-size: var(--text-small);
+  font-style: italic;
+}
+
+.role p {
+  max-width: none;
+  margin-top: var(--s3);
+  font-size: var(--text-small);
+  line-height: 1.55;
+}
+
+.role p strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
 
 .skill-group + .skill-group { margin-top: var(--s4); }
 .skill-group-title { font-size: var(--text-small); font-weight: 700; color: var(--color-primary); margin-bottom: 2px; }
@@ -554,17 +615,38 @@ p { max-width: var(--measure); text-wrap: pretty; }
   font-size: var(--text-small); color: var(--text-muted);
 }
 
-.project-card {
-  display: flex;
-  flex-direction: column;
-  padding: 25px 30px;
+/* Case brief: eyebrow + title, then Mandate / Analysis / Outcome as
+   three left-aligned columns on wide screens, stacked on narrow ones. */
+.case-brief-list { display: flex; flex-direction: column; gap: var(--s7); }
+
+.case-brief {
+  padding: 34px 38px;
   background: var(--surface-card);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
-  max-width: 50rem;
-  width: 100%;
 }
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: var(--s5); }
+.band-wash .case-brief { background: var(--white); }
+
+.case-brief-head {
+  margin-bottom: var(--s6);
+  padding-bottom: var(--s5);
+  border-bottom: 1px solid var(--rule);
+}
+.case-brief-head .role-eyebrow { margin-bottom: var(--s2); }
+.case-brief-head .role-title { margin: 0; }
+
+.case-cols { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: var(--s6); text-align: left; }
+.case-col-label {
+  margin-bottom: var(--s2);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.case-col p { max-width: none; font-size: var(--text-small); line-height: 1.6; }
+.case-col-outcome .case-col-label { color: var(--color-primary-hover); }
+.case-col-outcome p { color: var(--color-primary); font-weight: 600; }
 
 /* ============================================================
    10. WRITING
@@ -866,6 +948,16 @@ body.essay-document {
 }
 
 .library-heading-row .sec { margin-bottom: var(--s2); }
+
+.library-subtitle {
+  margin-top: calc(-1 * var(--s5));
+  margin-bottom: var(--s6);
+  max-width: calc(17rem * 2 + var(--s4));
+  color: var(--text-muted);
+  font-size: var(--text-body-size);
+  font-style: italic;
+  line-height: 1.55;
+}
 
 .filter-chip {
   padding: 5px 11px;
@@ -1175,40 +1267,186 @@ html:has(.book-drawer[open]) { overflow: hidden; scrollbar-gutter: stable; }
 
 /* ============================================================
    11. PHOTOGRAPHS
+   Grid of shot buttons (not links: each opens the lightbox in
+   place, there is no per-photo page). Place name sits under the
+   frame at all times; the description reveals on hover as a
+   caption over the image, and always in the lightbox, so touch
+   and keyboard users get it too.
    ============================================================ */
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: var(--s5); list-style: none; }
+.gallery-fixed { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .shot-wide { grid-column: span 2; }
 .shot-tall .shot-frame { aspect-ratio: 3 / 4; }
 
 .shot figure { margin: 0; }
 .shot-frame {
-  display: block; position: relative; aspect-ratio: 4 / 3; overflow: hidden;
+  display: block; position: relative; aspect-ratio: 3 / 2; overflow: hidden;
   border-radius: var(--radius-md); background: var(--surface-card);
   box-shadow: var(--shadow-card);
   transition: box-shadow var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
 }
 .shot-frame img { width: 100%; height: 100%; object-fit: cover; }
-.shot a:hover .shot-frame, .shot button:hover .shot-frame { box-shadow: var(--shadow-card-hover); transform: translateY(-2px); }
-.shot figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s2); margin-top: var(--s3); font-size: var(--text-small); }
+.shot a:hover .shot-frame, .shot button:hover .shot-frame,
+.shot button:focus-visible .shot-frame { box-shadow: var(--shadow-card-hover); transform: translateY(-2px); }
+
+/* Description, revealed over the photo on hover/focus */
+.shot-desc {
+  position: absolute; inset: 0;
+  display: flex; align-items: flex-end;
+  padding: var(--s4);
+  background: linear-gradient(to top, rgba(15, 31, 46, .82) 0%, rgba(15, 31, 46, 0) 60%);
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+.shot-desc span {
+  font-family: var(--font-serif); font-style: italic; font-size: var(--text-small);
+  line-height: 1.45; color: var(--white);
+}
+.shot a:hover .shot-desc, .shot button:hover .shot-desc,
+.shot button:focus-visible .shot-desc { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .shot-desc { transition: none; } }
+
+.shot figcaption { margin-top: var(--s3); font-size: var(--text-small); }
 .shot-place { color: var(--color-primary); font-weight: 600; }
 .shot-meta { color: var(--text-muted); }
 .shot a, .shot button {
   display: block; width: 100%; padding: 0; border: 0; background: none;
   text-align: left; cursor: pointer; color: inherit; text-decoration: none;
 }
+.shot button:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; border-radius: var(--radius-md); }
 
-.lightbox { width: min(1100px, 92vw); padding: 0; border: 0; border-radius: var(--radius-lg); background: var(--surface-dark); color: var(--text-on-dark-muted); box-shadow: var(--shadow-popover); }
+.lightbox { position: relative; width: min(1100px, 92vw); padding: 0; border: 0; border-radius: var(--radius-lg); background: var(--surface-dark); color: var(--text-on-dark-muted); box-shadow: var(--shadow-popover); }
 .lightbox::backdrop { background: rgba(29, 63, 92, .82); }
-.lightbox img { width: 100%; height: auto; max-height: 80vh; object-fit: contain; background: #13293C; }
-.lightbox figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s3); padding: var(--s4) var(--s5); font-size: var(--text-small); }
+.lightbox img { width: 100%; height: auto; max-height: 72vh; object-fit: contain; background: #13293C; }
+.lightbox figcaption { padding: var(--s5) var(--s6); font-size: var(--text-small); }
+.lightbox .shot-place { color: var(--white); font-size: 1.05rem; }
+.lightbox-desc {
+  margin-top: var(--s2);
+  max-width: 60ch;
+  font-family: var(--font-serif); font-style: italic; font-size: 1.0625rem;
+  line-height: 1.55; color: var(--text-on-dark-muted);
+}
 .lightbox-close {
-  position: absolute; top: var(--s3); right: var(--s3);
+  position: absolute; top: var(--s3); right: var(--s3); z-index: 2;
   width: 2.5rem; height: 2.5rem;
   border: 0; border-radius: var(--radius-pill);
   background: rgba(29, 63, 92, .6); color: var(--white); cursor: pointer;
   -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  transition: background-color var(--dur-fast) var(--ease-out);
 }
 .lightbox-close:hover { background: var(--color-primary); }
+.lightbox-close svg { width: 1rem; height: 1rem; }
+
+.lightbox-nav {
+  position: absolute; z-index: 2; top: 0; bottom: 0; left: 0; right: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding-inline: var(--s3);
+  pointer-events: none;
+}
+.lightbox-step {
+  pointer-events: auto;
+  display: grid; place-items: center;
+  width: 2.75rem; height: 2.75rem;
+  border: 0; border-radius: var(--radius-pill);
+  background: rgba(29, 63, 92, .6); color: var(--white); cursor: pointer;
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+.lightbox-step:hover { background: var(--color-primary); }
+.lightbox-step[hidden] { visibility: hidden; }
+.lightbox-step svg { width: 1.15rem; height: 1.15rem; }
+
+/* Photo stage: one frame, photos crossfade in place. .is-stage is
+   set in the markup (not toggled by script), so the first photo
+   shows immediately with no JS and under reduced motion; a script
+   only adds the looping crossfade on top when motion is allowed. */
+.essay-photos { display: flex; flex-direction: column; gap: var(--s8); padding-block: var(--s8); list-style: none; }
+.essay-photo { position: relative; margin: 0; }
+.essay-photo img { width: 100%; height: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
+.essay-vignette {
+  /* Sized/positioned inline (left/top/width/height) to match the
+     photo's own contain-fit rectangle, same as .essay-caption below,
+     so the fade sits on the photo's true edges, not the frame's; it
+     deliberately overshoots that rectangle by a few pixels (see the
+     script), so the outer ring below is fully opaque and colour-
+     matched to the page background, making that overshoot invisible.
+     A single radial gradient, anchored below the photo's bottom
+     edge, fades left/right/top smoothly with no seams; the bottom
+     stays inside the gradient's clear core so it's left alone. */
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 72% 82% at 50% 100%,
+    rgba(29, 63, 92, 0) 45%,
+    var(--surface-dark) 100%);
+}
+.essay-caption {
+  /* Frame-relative fallback for no-JS/no-measurement; overridden
+     inline (left/top/width/height) once the photo's own contain-fit
+     rectangle is known, so the caption lines up with the visible
+     photo rather than its (possibly letterboxed) frame. */
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 60%;
+  padding: var(--s5) var(--s6);
+  background: linear-gradient(to bottom,
+    rgba(29, 63, 92, .82) 0%,
+    rgba(29, 63, 92, .82) 12%,
+    rgba(29, 63, 92, .5) 45%,
+    rgba(29, 63, 92, .15) 78%,
+    rgba(29, 63, 92, 0) 100%);
+  font-family: var(--font-serif); font-style: italic;
+  font-size: clamp(1rem, .87rem + .55vw, 1.25rem);
+  line-height: 1.4; color: var(--white);
+}
+
+.essay-photos.is-stage {
+  display: block; position: relative;
+  height: min(76vh, 640px);
+  padding: 0;
+  border-radius: var(--radius-md);
+  background: var(--surface-dark);
+  overflow: hidden;
+}
+.essay-photos.is-stage .essay-photo { position: absolute; inset: 0; opacity: 0; }
+.essay-photos.is-stage .essay-photo:first-child { opacity: 1; }
+.essay-photos.is-stage .essay-photo img {
+  width: 100%; height: 100%;
+  border-radius: 0; box-shadow: none;
+  object-fit: contain;
+}
+
+/* ============================================================
+   11c. FIESTAS PATRIAS (photography/18sept.html)
+   A single, non-scrolling screen: a compact navy header over a
+   full-bleed photo stage that fills the rest of the viewport.
+   Everything here is scoped to body.fiestas-page so it can't leak
+   into the shared .plate/.essay-photos rules used elsewhere.
+   ============================================================ */
+body.fiestas-page {
+  display: flex; flex-direction: column;
+  height: 100vh; height: 100dvh;
+  overflow: hidden;
+  background: var(--surface-dark);
+}
+.fiestas-page .plate {
+  flex: 0 0 auto;
+  padding-block: var(--s3) var(--s3);
+}
+.fiestas-page .plate-line { margin: 0; }
+.fiestas-page .plate .rail {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: var(--s3) var(--s5);
+}
+.fiestas-page #music-toggle { flex-shrink: 0; }
+.fiestas-page .plate h1 {
+  margin-top: var(--s1);
+  font-size: clamp(1.3rem, 1.05rem + 1vw, 1.8rem);
+}
+.fiestas-page main { flex: 1 1 auto; min-height: 0; }
+.fiestas-page .essay-photos.is-stage {
+  width: 100%; height: 100%;
+  margin: 0; border-radius: 0;
+}
+.fiestas-page .essay-photos.is-stage .essay-photo img { object-fit: cover; }
 
 /* ============================================================
    12. BUTTONS, TABLES, FORMS (the system's Button and TextField)
@@ -1325,6 +1563,9 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .case-where { grid-row: auto; padding-top: 0; }
   .case-result { grid-row: auto; margin-top: var(--s3); }
 
+  .case-brief { padding: var(--s5); }
+  .case-cols { grid-template-columns: 1fr; gap: var(--s5); }
+
   .facts { grid-template-columns: 1fr; gap: 2px 0; }
   .facts dd { margin-bottom: var(--s3); }
 
@@ -1332,7 +1573,9 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .essay-note { grid-column: 1; }
 
   .gallery { gap: var(--s4); }
+  .gallery-fixed { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .shot-wide { grid-column: auto; }
+  .lightbox-step { width: 2.25rem; height: 2.25rem; }
 }
 
 @media (max-width: 560px) {
@@ -1340,6 +1583,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .doc-nav { width: 100%; }
   .btn-row .btn { flex: 1 1 auto; }
   .gallery { grid-template-columns: 1fr; }
+  .gallery-fixed { grid-template-columns: 1fr; }
   .prose { font-size: 1.0625rem; }
   [lang="es"] .prose p, .prose[lang="es"] p { text-align: left; }
 }
@@ -1404,14 +1648,19 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .sec { font-size: 10.5pt; margin: .16in 0 .07in; padding-bottom: .03in; border-bottom: 1px solid #111; }
   .role { padding: 0 0 .1in; border: 0; page-break-inside: avoid; }
   .role:last-child { border: 0; }
-  .role-title, .role-dates, .role-org, .role li, .info, .edu-deg { font-size: 9.3pt; }
+  .role-title, .role-dates, .role-org, .role p, .info, .edu-deg { font-size: 9.3pt; }
   .role-org { color: #333; }
-  .role li { margin-bottom: .02in; line-height: 1.35; }
+  .role p { margin-top: .04in; line-height: 1.35; }
   .skill { font-size: 9.3pt; }
   .edu-desc, .caption { font-size: 9pt; }
 
   .case-item > a { display: block; padding: 0 0 .1in; box-shadow: none; background: none; page-break-inside: avoid; }
   .case-result { border-top: 1px solid #111; }
+
+  .case-brief { padding: 0 0 .16in; box-shadow: none; background: none; page-break-inside: avoid; }
+  .case-brief-head { border-bottom-color: #111; }
+  .case-col-outcome .case-col-label { color: #111; }
+  .case-col-outcome p { color: #111; }
 
   .prose { max-width: none; font-size: 10.5pt; line-height: 1.42; }
   .prose > * + * { margin-top: .1in; }
