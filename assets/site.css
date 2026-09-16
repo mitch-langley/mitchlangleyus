@@ -615,8 +615,13 @@ p { max-width: var(--measure); text-wrap: pretty; }
   font-size: var(--text-small); color: var(--text-muted);
 }
 
-/* Case brief: eyebrow + title, then Mandate / Analysis / Outcome as
-   three left-aligned columns on wide screens, stacked on narrow ones. */
+/* Case brief: eyebrow + title, then a three-track grid. .case-lead holds
+   Mandate over Outcome in the first track, Analysis fills the second, and
+   the case figure (when there is one) fills the widest third track.
+   Without a figure the Analysis spans both right tracks, capped at a
+   reading measure, so the first track lines up across every card. When
+   stacked, .case-lead dissolves so the order reads Mandate, Analysis,
+   Outcome, Figure. */
 .case-brief-list { display: flex; flex-direction: column; gap: var(--s7); }
 
 .case-brief {
@@ -635,7 +640,52 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .case-brief-head .role-eyebrow { margin-bottom: var(--s2); }
 .case-brief-head .role-title { margin: 0; }
 
-.case-cols { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: var(--s6); text-align: left; }
+.case-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 1.6fr);
+  grid-template-areas: "lead analysis analysis";
+  gap: var(--s5);
+  align-items: start;
+  text-align: left;
+}
+.case-cols:has(.case-figure) { grid-template-areas: "lead analysis figure"; }
+.case-lead { grid-area: lead; display: flex; flex-direction: column; gap: var(--s4); }
+.case-col-mandate { grid-area: mandate; }
+.case-col-analysis { grid-area: analysis; max-width: var(--measure); }
+.case-col-outcome {
+  grid-area: outcome;
+  padding-top: var(--s4);
+  border-top: 1px solid var(--rule);
+}
+
+.case-figure { grid-area: figure; margin: 0; }
+.case-figure a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: zoom-in;
+}
+.case-figure img {
+  display: block;
+  width: 100%; height: auto;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  transition: box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+}
+.case-figure a:hover img { border-color: var(--line); box-shadow: var(--shadow-card-hover); }
+.case-figure a:focus-visible { outline-offset: 4px; border-radius: var(--radius-sm); }
+.case-figure-cue {
+  display: flex; align-items: center; gap: var(--s2);
+  margin-top: var(--s2);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.case-figure-cue svg { width: .8rem; height: .8rem; flex: none; }
+.case-figure a:hover .case-figure-cue { color: var(--color-primary-hover); }
 .case-col-label {
   margin-bottom: var(--s2);
   font-size: var(--text-micro);
@@ -987,7 +1037,8 @@ body.essay-document {
 .plate-intro { width: fit-content; max-width: 100%; }
 .plate .filter-chip:hover { background: var(--white); color: var(--color-primary-hover); }
 
-.library-jump {
+.library-jump,
+.case-jump {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s2);
@@ -995,8 +1046,11 @@ body.essay-document {
   margin-top: var(--s4);
   contain: inline-size;
 }
-.library-jump a { display: inline-block; text-decoration: none; }
-#library-sections > .band { scroll-margin-top: 5.5rem; }
+/* The case chips set their own width instead of wrapping at the note's,
+   so all six sit on one line whenever the rail allows. */
+.case-jump { contain: none; }
+.library-jump a, .case-jump a { display: inline-block; text-decoration: none; }
+#library-sections > .band, .case-brief { scroll-margin-top: 5.5rem; }
 
 .book-card {
   position: relative;
@@ -1539,6 +1593,21 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
 /* ============================================================
    15. RESPONSIVE
    ============================================================ */
+/* Case briefs: too narrow for three tracks, so the figure drops under
+   Outcome in the first track and Analysis keeps the second. */
+@media (max-width: 1080px) {
+  .case-cols {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+    grid-template-areas: "lead analysis";
+  }
+  .case-cols:has(.case-figure) {
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "lead   analysis"
+      "figure analysis";
+  }
+}
+
 @media (max-width: 900px) {
   .band { padding-block: var(--s8); }
   .doc-head { position: static; padding: var(--s4) var(--gutter); gap: var(--s2) var(--s4); }
@@ -1564,7 +1633,15 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .case-result { grid-row: auto; margin-top: var(--s3); }
 
   .case-brief { padding: var(--s5); }
-  .case-cols { grid-template-columns: 1fr; gap: var(--s5); }
+  .case-cols,
+  .case-cols:has(.case-figure) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: "mandate" "analysis" "outcome" "figure";
+    gap: var(--s5);
+  }
+  .case-lead { display: contents; }
+  .case-col-analysis { max-width: none; }
 
   .facts { grid-template-columns: 1fr; gap: 2px 0; }
   .facts dd { margin-bottom: var(--s3); }
@@ -1625,7 +1702,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .essay-paper .footnotes { font-size: 8.5pt; }
 
   .doc-nav, .skip-link, .btn, .btn-row,
-  .gallery, .lightbox, .home-routes-nav, .hero-video, .portrait { display: none !important; }
+  .gallery, .lightbox, .home-routes-nav, .hero-video, .portrait, .case-jump { display: none !important; }
 
   .doc-head { position: static; display: block; padding: 0 0 .08in; margin-bottom: .16in; box-shadow: none; border-bottom: 2px solid #111; text-align: center; }
   .doc-name { color: #111; font-size: 13pt; }
@@ -1661,6 +1738,9 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .case-brief-head { border-bottom-color: #111; }
   .case-col-outcome .case-col-label { color: #111; }
   .case-col-outcome p { color: #111; }
+  .case-col-outcome { border-top-color: #111; }
+  .case-figure img { border-color: #cfd6db; box-shadow: none; }
+  .case-figure-cue { display: none; }
 
   .prose { max-width: none; font-size: 10.5pt; line-height: 1.42; }
   .prose > * + * { margin-top: .1in; }

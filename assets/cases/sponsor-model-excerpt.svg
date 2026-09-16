@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc"><title id="title">Sponsor-side model review</title><desc id="desc">Normalized reconstruction of four fare-revenue scenarios. The selected case rises from 90 to 100 and feeds the cash-flow model. Annotations explain the recovery assumptions and the difference between annual support and monthly liquidity.</desc>
+<defs><pattern id="hatch" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M-4 4L4 -4 M0 16L16 0 M12 20L20 12" stroke="#94aabb" stroke-width="2"/></pattern></defs>
+<rect x="0" y="0" width="1600" height="1100" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="80" y="80" font-family="Calibri, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="2" fill="#1e405a">SPONSOR-SIDE FINANCIAL &amp; TECHNICAL DUE DILIGENCE</text>
+<text x="80" y="155" font-family="Georgia, serif" font-size="49" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1e405a">Tracing assumptions into projected cash flow</text>
+<path d="M80 195L1520 195" fill="none" stroke="#cfd7dd" stroke-width="2"/>
+<text x="80" y="252" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Reconstructed model excerpt  |  Fare-revenue reference = 100</text>
+<rect x="80" y="310" width="1440" height="66" fill="#f2f5f7" stroke="none" stroke-width="1"/>
+<text x="102" y="352" font-family="Calibri, sans-serif" font-size="25" font-weight="700" text-anchor="start" letter-spacing="0" fill="#63717c">Revenue scenario</text>
+<text x="474.0" y="352" font-family="Calibri, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#63717c">Y1</text>
+<text x="602.0" y="352" font-family="Calibri, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#63717c">Y2</text>
+<text x="730.0" y="352" font-family="Calibri, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#63717c">Y3</text>
+<text x="858.0" y="352" font-family="Calibri, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#63717c">Y4</text>
+<text x="986.0" y="352" font-family="Calibri, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#63717c">Y5</text>
+<text x="1114.0" y="352" font-family="Calibri, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#63717c">Y6</text>
+<text x="1242.0" y="352" font-family="Calibri, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#63717c">Y7</text>
+<text x="1370.0" y="352" font-family="Calibri, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#63717c">Y8</text>
+<text x="102" y="418" font-family="Calibri, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Upper reference</text>
+<text x="474.0" y="418" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">100</text>
+<text x="602.0" y="418" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">100</text>
+<text x="730.0" y="418" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">100</text>
+<text x="858.0" y="418" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">100</text>
+<text x="986.0" y="418" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">100</text>
+<text x="1114.0" y="418" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">100</text>
+<text x="1242.0" y="418" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">100</text>
+<text x="1370.0" y="418" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">100</text>
+<path d="M80 442L1520 442" fill="none" stroke="#cfd7dd" stroke-width="1"/>
+<rect x="80" y="442" width="1440" height="66" fill="#e5edf2" stroke="none" stroke-width="1"/>
+<rect x="80" y="442" width="6" height="66" fill="#1e405a" stroke="none" stroke-width="1"/>
+<text x="102" y="484" font-family="Calibri, sans-serif" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">Selected recovery case</text>
+<text x="474.0" y="484" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">90</text>
+<text x="602.0" y="484" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">92.7</text>
+<text x="730.0" y="484" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">95.5</text>
+<text x="858.0" y="484" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">98.3</text>
+<text x="986.0" y="484" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">100</text>
+<text x="1114.0" y="484" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">100</text>
+<text x="1242.0" y="484" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">100</text>
+<text x="1370.0" y="484" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">100</text>
+<path d="M80 508L1520 508" fill="none" stroke="#cfd7dd" stroke-width="1"/>
+<text x="102" y="550" font-family="Calibri, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Recovery downside</text>
+<text x="474.0" y="550" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">50</text>
+<text x="602.0" y="550" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">55</text>
+<text x="730.0" y="550" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">60</text>
+<text x="858.0" y="550" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">65</text>
+<text x="986.0" y="550" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">70</text>
+<text x="1114.0" y="550" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">75</text>
+<text x="1242.0" y="550" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">80</text>
+<text x="1370.0" y="550" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">85</text>
+<path d="M80 574L1520 574" fill="none" stroke="#cfd7dd" stroke-width="1"/>
+<text x="102" y="616" font-family="Calibri, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Lower reference</text>
+<text x="474.0" y="616" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">50</text>
+<text x="602.0" y="616" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">50</text>
+<text x="730.0" y="616" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">50</text>
+<text x="858.0" y="616" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">50</text>
+<text x="986.0" y="616" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">50</text>
+<text x="1114.0" y="616" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">50</text>
+<text x="1242.0" y="616" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">50</text>
+<text x="1370.0" y="616" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#243442">50</text>
+<path d="M80 640L1520 640" fill="none" stroke="#cfd7dd" stroke-width="1"/>
+<text x="80" y="689" font-family="Calibri, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="1" fill="#1e405a">SELECTED CASE FEEDS THE CASH-FLOW MODEL</text>
+<path d="M1518 475 L1550 475 L1550 731 L1460 731" fill="none" stroke="#527b96" stroke-width="2"/>
+<path d="M1472 723 L1460 731 L1472 739" fill="none" stroke="#527b96" stroke-width="2"/>
+<rect x="1020" y="700" width="430" height="60" fill="#f2f5f7" stroke="none" stroke-width="1"/>
+<text x="1235" y="739" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">Projected fare receipts</text>
+<text x="80" y="817" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">Recovery assumption</text>
+<text x="80" y="857" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Selected case: 3% annual growth through Y4,</text>
+<text x="80" y="891" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">then 100 from Y5. Downside: +5 points a year.</text>
+<text x="860" y="817" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">Financing question</text>
+<text x="860" y="857" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Conditional annual revenue support did not</text>
+<text x="860" y="891" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">establish cash available for monthly payments.</text>
+<path d="M80 983L1520 983" fill="none" stroke="#cfd7dd" stroke-width="2"/>
+<text x="80" y="1022" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Reconstruction of the reviewed model, not a screenshot or a claim of original model authorship.</text>
+<text x="80" y="1052" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Scenario factors precede separate tariff adjustments. Modeled assumptions, not observed revenue.</text>
+</svg>
