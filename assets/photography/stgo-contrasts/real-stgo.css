@@ -1,0 +1,114 @@
+/* ============================================================
+   REAL-STGO.CSS
+   Additions for real-stgo.html, the standalone Santiago photo
+   essay. Written against the same design tokens as site.css
+   (navy/serif/sans system). Link this file after site.css; it
+   does not replace or duplicate any rule already defined there.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Movements carry no visible heading (the name stays on the
+   section's aria-label). The only marker between movements is a
+   hairline in the site's --rule colour, rail width, sitting at
+   the top edge of each movement after the first so it falls
+   midway between the two groups of photos.
+   ------------------------------------------------------------ */
+.stgo-movement {
+  --movement-pad: var(--space-section);
+  position: relative;
+  padding-block: var(--movement-pad);
+}
+.stgo-movement:first-child {
+  padding-top: var(--s6);
+}
+.stgo-movement + .stgo-movement::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(var(--content-max), 100% - 2 * var(--gutter));
+  height: 1px;
+  background: var(--rule);
+  transform: translateX(-50%);
+}
+
+/* ------------------------------------------------------------
+   Track: justified rows. Each frame's flex-basis and flex-grow
+   are both proportional to its aspect ratio (--ar, written into
+   each figure's style attribute), so every photo in a row ends up
+   the same height with no cropping, and the sequence order is
+   kept. --row-h is the target row height before rows stretch to
+   fill the rail. max-width stops a short last row from blowing a
+   lone photo up to full width; it sits centered instead.
+   ------------------------------------------------------------ */
+.stgo-track {
+  --row-h: 17rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--s6) var(--s4);
+}
+
+.stgo-frame {
+  --ar: 4 / 3; /* fallback only; every figure sets its own */
+  flex-grow: calc(var(--ar) * 100);
+  flex-shrink: 1;
+  flex-basis: calc(var(--ar) * var(--row-h));
+  max-width: calc(var(--ar) * var(--row-h) * 1.6);
+  min-width: 0;
+  margin: 0;
+}
+
+.stgo-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ar);
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--surface-card);
+  box-shadow: var(--shadow-card);
+}
+.stgo-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ------------------------------------------------------------
+   Caption: the lyric line itself, then a subtle credit line
+   underneath. The credit is intentionally quiet, it names the
+   source without competing with the line above it.
+   ------------------------------------------------------------ */
+.stgo-caption {
+  margin: var(--s3) auto 0;
+  text-align: center;
+}
+.stgo-caption-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-small);
+  line-height: 1.5;
+  color: var(--text-body);
+  max-width: none;
+}
+.stgo-caption-credit {
+  margin-top: var(--s1);
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------ */
+@media (max-width: 900px) {
+  .stgo-movement { --movement-pad: var(--s8); }
+  .stgo-track { --row-h: 12rem; gap: var(--s5) var(--s3); }
+}
+@media (max-width: 560px) {
+  .stgo-track { --row-h: 9rem; }
+}

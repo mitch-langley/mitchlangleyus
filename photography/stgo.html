@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Santiago, in Contrast, Mitchell Langley</title>
+<meta name="description" content="A photographic essay of Santiago, Chile, sequenced across four movements.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+
+<style id="stgo-gsap-essay-styles">
+  html { scroll-behavior: auto; }
+  body.essay-stgo-page { overflow-x: hidden; }
+
+  .essay-stgo-page .page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    overflow: clip;
+  }
+
+  .essay-stgo-page .stgo-movement {
+    --movement-bg: color-mix(in srgb, var(--navy-900, #1D3F5C) 12%, white);
+    --movement-fg: var(--text-body, #1A1A1A);
+    --movement-muted: var(--navy-900, #1D3F5C);
+    --movement-rule: color-mix(in srgb, var(--navy-900, #1D3F5C) 25%, transparent);
+    position: relative;
+    height: calc(100svh - var(--stgo-header-height, 0px));
+    min-height: 36rem;
+    overflow: hidden;
+    background: var(--movement-bg);
+    color: var(--movement-fg);
+  }
+
+  .essay-stgo-page .stgo-movement[data-movement="2"] {
+    --movement-bg: color-mix(in srgb, var(--navy-900, #1D3F5C) 30%, white);
+  }
+
+  .essay-stgo-page .stgo-movement[data-movement="3"],
+  .essay-stgo-page .stgo-movement[data-movement="4"] {
+    --movement-bg: var(--navy-600, #3D6485);
+    --movement-fg: var(--white, #fff);
+    --movement-muted: var(--text-on-dark-muted, rgba(255, 255, 255, .88));
+    --movement-rule: var(--rule-dark, rgba(255, 255, 255, .22));
+    --focus-ring: var(--white, #fff);
+  }
+
+  .essay-stgo-page .stgo-movement[data-movement="4"] {
+    --movement-bg: var(--navy-900, #1D3F5C);
+  }
+
+  .essay-stgo-page .stgo-movement > .rail {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .essay-stgo-page .stgo-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .essay-stgo-page .is-animated .stgo-track {
+    width: max-content;
+    overflow: visible;
+    will-change: transform;
+  }
+
+  .essay-stgo-page .stgo-frame {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 4.5rem max(var(--gutter, 20px), calc((100vw - var(--content-max, 1100px)) / 2)) 6rem;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: var(--s7, 48px);
+    align-items: center;
+    scroll-snap-align: start;
+  }
+
+  .essay-stgo-page .is-animated .stgo-frame {
+    flex-basis: 100vw;
+    width: 100vw;
+  }
+
+  .essay-stgo-page .stgo-photo {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .essay-stgo-page .stgo-photo img {
+    /* Size the element box to the picture itself so the corners actually round;
+       with width/height 100% + object-fit the radius clips empty letterbox space. */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center;
+    transform-origin: center;
+    border-radius: var(--radius-md, 12px);
+  }
+
+  /* Caption order: lyric, its English gloss, credit, English context, place.
+     Spacing lives on the element that follows, so an empty slot collapses cleanly. */
+  .essay-stgo-page .stgo-caption {
+    min-width: 0;
+    max-height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+  .essay-stgo-page .stgo-caption > * { margin: 0; }
+  .essay-stgo-page .stgo-caption > :empty { display: none; }
+
+  .essay-stgo-page .stgo-caption-text {
+    font-family: var(--font-serif, Georgia, serif);
+    font-size: var(--text-subtitle, 1.3rem);
+    font-style: italic;
+    line-height: var(--leading-body, 1.6);
+    color: var(--movement-fg);
+  }
+
+  /* The gloss reads as a translator's note under the lyric, not a second lyric. */
+  .essay-stgo-page .stgo-caption-translation {
+    margin-top: var(--s2, 8px);
+    font-family: var(--font-sans, Arial, sans-serif);
+    font-size: var(--text-body-size, 1.05rem);
+    line-height: 1.5;
+    color: var(--movement-muted);
+  }
+
+  .essay-stgo-page .stgo-caption-credit {
+    margin-top: var(--s5, 24px);
+    padding-top: var(--s4, 16px);
+    border-top: 1px solid var(--movement-rule);
+    font-size: var(--text-small, .9rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    color: var(--movement-muted);
+  }
+
+  .essay-stgo-page .stgo-context {
+    margin-top: var(--s5, 24px);
+    max-width: 42ch;
+    font-size: var(--text-body-size, 1.05rem);
+    line-height: var(--leading-body, 1.6);
+    color: var(--movement-fg);
+  }
+
+  /* Place colophon: pin in the gutter, then name, comuna, coordinates stacked. */
+  .essay-stgo-page .stgo-place {
+    position: relative;
+    display: grid;
+    margin-top: var(--s5, 24px);
+    padding-left: 1.5rem;
+    font-size: var(--text-small, .9rem);
+    line-height: 1.45;
+    color: var(--movement-muted);
+  }
+  .essay-stgo-page .stgo-place svg {
+    position: absolute;
+    left: 0;
+    top: .15em;
+    width: 1rem;
+    height: 1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+  }
+  .essay-stgo-page .stgo-place-name {
+    font-weight: 600;
+    color: var(--movement-fg);
+  }
+  .essay-stgo-page .stgo-place-coords {
+    justify-self: start;
+    margin-top: 2px;
+    font-variant-numeric: tabular-nums;
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-color: var(--movement-rule);
+    text-underline-offset: 3px;
+  }
+  .essay-stgo-page .stgo-place-coords:hover { text-decoration-color: currentColor; }
+
+  /* Preview unwritten slots with ?drafts in the URL. */
+  html.stgo-drafts .stgo-caption > :empty {
+    display: block;
+    padding: var(--s2, 8px) var(--s3, 12px);
+    border: 1px dashed var(--movement-rule);
+    border-radius: var(--radius-sm, 5px);
+    font-family: var(--font-sans, Arial, sans-serif);
+    font-size: var(--text-small, .9rem);
+    font-style: normal;
+    color: var(--movement-muted);
+  }
+  html.stgo-drafts .stgo-caption-translation:empty::before { content: "English translation of the lyric"; }
+  html.stgo-drafts .stgo-context:empty::before { content: "English context, a sentence or short paragraph"; }
+  html.stgo-drafts .stgo-place:empty::before { content: "Location, comuna and coordinates missing from the data"; }
+
+  .essay-stgo-page .stgo-controls {
+    position: absolute;
+    z-index: 6;
+    right: max(var(--gutter, 20px), calc((100% - var(--content-max, 1100px)) / 2));
+    bottom: var(--s5, 24px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s3, 12px);
+  }
+
+  .essay-stgo-page .stgo-progress-count {
+    min-width: 4rem;
+    text-align: center;
+    font-size: var(--text-small, .9rem);
+    font-variant-numeric: tabular-nums;
+    color: var(--movement-muted);
+  }
+
+  .essay-stgo-page .stgo-arrow {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--movement-muted);
+    border-radius: var(--radius-sm, 5px);
+    background: var(--color-primary, #1D3F5C);
+    color: var(--white, #fff);
+    cursor: pointer;
+    transition: background var(--dur-fast, 140ms), border-color var(--dur-fast, 140ms);
+  }
+
+  .essay-stgo-page .stgo-arrow:hover:not(:disabled) {
+    background: var(--color-primary-hover, #3D6485);
+    border-color: var(--color-primary-hover, #3D6485);
+  }
+
+  .essay-stgo-page .stgo-arrow:disabled {
+    background: transparent;
+    border-color: var(--movement-rule);
+    color: var(--movement-muted);
+    cursor: default;
+  }
+
+  .essay-stgo-page .stgo-arrow svg { width: 20px; height: 20px; }
+
+  @media (max-width: 640px) {
+    .essay-stgo-page .stgo-movement { min-height: 40rem; }
+    .essay-stgo-page .stgo-frame {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: minmax(0, 1fr) auto;
+      gap: var(--s5, 24px);
+      padding-top: 5rem;
+    }
+    /* Cap the caption so the photograph keeps most of the screen; the rest scrolls. */
+    .essay-stgo-page .stgo-caption { max-height: 48svh; }
+    .essay-stgo-page .stgo-caption-credit { margin-top: var(--s3, 12px); padding-top: var(--s3, 12px); }
+    .essay-stgo-page .stgo-caption-translation,
+    .essay-stgo-page .stgo-context { font-size: var(--text-small, .9rem); }
+    .essay-stgo-page .stgo-context,
+    .essay-stgo-page .stgo-place { margin-top: var(--s4, 16px); }
+  }
+</style>
+
+</head>
+<body class="route-gallery essay-stgo-page">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="doc-head">
+  <a class="doc-name" href="../index.html">Mitchell Langley</a>
+  <nav aria-label="Primary navigation">
+    <ul class="doc-nav">
+      <li><a class="route-work" href="../resume.html">Resume</a></li>
+      <li><a class="route-cases" href="../cases.html">Case studies</a></li>
+      <li><a class="route-writing" href="../writing.html">Writing</a></li>
+      <li><a class="route-reading" href="../reading.html">Reading</a></li>
+      <li><a class="route-gallery is-current" href="../photography.html" aria-current="page">Photographs</a></li>
+      <li class="lang-link"><a href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="page">
+
+  <section class="stgo-movement" data-movement="1" aria-label="The Face It Shows First">
+    <div class="rail" data-movement-title="The Face It Shows First">
+      <div class="stgo-track">
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/bandera-plaza.webp" alt="" width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Llegué a Santiago provinciano y Martín Rivas...</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Manuel García · La gran ciudad</p>
+            <p class="stgo-context">I came to Santiago as an outsider like Martín Rivas...</p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Plaza de la Ciudadanía / Bandera Bicentenario</span>
+              <span class="stgo-place-comuna" lang="es">Santiago Centro</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.4438,-70.65378" target="_blank" rel="noopener" aria-label="33.4438° S, 70.6538° W, open in Google Maps (new tab)">33.4438° S, 70.6538° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/fountain-inside-la-moneda.webp" alt="" width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Dicen que el tiempo guarda en sus bastillas las cosas que el hombre olvidó...</p>
+            <p class="stgo-caption-translation">They say time keeps within its hems the things manking forgot...</p>
+            <p class="stgo-caption-credit" lang="es">Fernando Ubiergo · El tiempo en las bastillas</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Patio de los Naranjos, La Moneda</span>
+              <span class="stgo-place-comuna" lang="es">Santiago Centro</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.44305,-70.65388" target="_blank" rel="noopener" aria-label="33.4430° S, 70.6539° W, open in Google Maps (new tab)">33.4430° S, 70.6539° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 0.75;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/intendencia-arq.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Quién me ayudaría a desarmar tu historia antigua, y a pedazos volverte a conquistar...</p>
+            <p class="stgo-caption-translation">Who would help me take apart your ancient past, and piece by piece win you back again...</p>
+            <p class="stgo-caption-credit" lang="es">Santiago del Nuevo Extremo · A mi ciudad</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Edificio de la ex-Intendencia de Santiago (Morandé con Moneda)</span>
+              <span class="stgo-place-comuna" lang="es">Santiago Centro</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.44223,-70.65321" target="_blank" rel="noopener" aria-label="33.4422° S, 70.6532° W, open in Google Maps (new tab)">33.4422° S, 70.6532° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/monumento-manuel-rodriguez.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Yo no sé si volveré a verlo libre y gentil; solo sé que sonreía camino a Til-Til.</p>
+            <p class="stgo-caption-translation">I don't know if I'll see him free and noble once more; all I know is that he went with a smile on his way to Til-Til.</p>
+            <p class="stgo-caption-credit" lang="es">Patricio Manns · El cautivo de Til-Til</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Monumento a Manuel Rodríguez (Camino a Til-Til)</span>
+              <span class="stgo-place-comuna" lang="es">Til-Til</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.1153,-70.9269" target="_blank" rel="noopener" aria-label="33.1153° S, 70.9269° W, open in Google Maps (new tab)">33.1153° S, 70.9269° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 0.75;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/portales-statue.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Santiago del ochocientos, para poderte mirar...</p>
+            <p class="stgo-caption-translation">19th century Santiago, if I could look upon you...</p>
+            <p class="stgo-caption-credit" lang="es">Violeta Parra · Santiago, penando estás</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Estatua de Diego Portales, Plaza de la Constitución (Agustinas)</span>
+              <span class="stgo-place-comuna" lang="es">Santiago Centro</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.44129,-70.65412" target="_blank" rel="noopener" aria-label="33.4413° S, 70.6541° W, open in Google Maps (new tab)">33.4413° S, 70.6541° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/la-moneda.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Y en una hermosa plaza liberada...</p>
+            <p class="stgo-caption-translation">And in a beautiful liberated plaza...</p>
+            <p class="stgo-caption-credit" lang="es">Pablo Milanés · Yo pisaré las calles nuevamente</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">La Moneda</span>
+              <span class="stgo-place-comuna" lang="es">Santiago Centro</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.44356,-70.6539" target="_blank" rel="noopener" aria-label="33.4436° S, 70.6539° W, open in Google Maps (new tab)">33.4436° S, 70.6539° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/cable-car-cityscape.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Y si miras de lo alto hacia el valle, lo verás que lo baña un estero...</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Los Huasos Quincheros · Si vas para Chile</p>
+            <p class="stgo-context">And if you look from on high towards the valley, you'll see that it's bathed by a river...</p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Plaza Tupahue (Parquemet), mirando hacia Pedro de Valdivia Norte (Providencia)</span>
+              <span class="stgo-place-comuna" lang="es">Providencia</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.4159,-70.62195" target="_blank" rel="noopener" aria-label="33.4159° S, 70.6219° W, open in Google Maps (new tab)">33.4159° S, 70.6219° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="stgo-movement" data-movement="2" aria-label="Where the Face Shows Its Seams">
+    <div class="rail" data-movement-title="Where the Face Shows Its Seams">
+      <div class="stgo-track">
+
+        <figure class="stgo-frame" style="--ar: 0.75;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/uvp-torres.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Ya la aurora no es nada nuevo...</p>
+            <p class="stgo-caption-translation">Dawn holds no novelty now...</p>
+            <p class="stgo-caption-credit" lang="es">Eduardo Gatti · Los momentos</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Torres EMPART (UVP), Av. Providencia con Carlos Antúnez</span>
+              <span class="stgo-place-comuna" lang="es">Providencia</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.42696,-70.61532" target="_blank" rel="noopener" aria-label="33.4270° S, 70.6153° W, open in Google Maps (new tab)">33.4270° S, 70.6153° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 0.75;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/bahai.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Mira hacia el cielo y olvida ese lánguido temor que fue permanente emoción</p>
+            <p class="stgo-caption-translation">Gaze at the sky and let go of the languid dread that lived as an endless thrill</p>
+            <p class="stgo-caption-credit" lang="es">Los Jaivas · Mira Niñita</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Templo Bahai</span>
+              <span class="stgo-place-comuna" lang="es">Peñalolén</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.47658,-70.51178" target="_blank" rel="noopener" aria-label="33.4766° S, 70.5118° W, open in Google Maps (new tab)">33.4766° S, 70.5118° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 0.75;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/est-cent-old-new.webp" alt="" width="1200" height="1600" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Bajo el rostro nuevo del cemento, vive el mismo pueblo de hace tiempo...</p>
+            <p class="stgo-caption-translation">Beneath the new face of concrete, the same folk endure...</p>
+            <p class="stgo-caption-credit" lang="es">Illapu · Vuelvo</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Av. María Rozas Velásquez con calle Pudahuel (zona &#x27;guetos verticales&#x27;)</span>
+              <span class="stgo-place-comuna" lang="es">Estación Central</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.45314,-70.70599" target="_blank" rel="noopener" aria-label="33.4531° S, 70.7060° W, open in Google Maps (new tab)">33.4531° S, 70.7060° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/metro-painting.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">De este viaje, por nuestra historia, por los conceptos...</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Schwenke &amp; Nilo · El viaje</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Estación La Moneda</span>
+              <span class="stgo-place-comuna" lang="es">Santiago Centro</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.445,-70.65549" target="_blank" rel="noopener" aria-label="33.4450° S, 70.6555° W, open in Google Maps (new tab)">33.4450° S, 70.6555° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/vitacura-arq.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Una preciosa entrada de autos esperando un Peugeot.</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Víctor Jara · Las casitas del barrio alto</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Youtopia (Av. Monseñor Escrivá de Balaguer)</span>
+              <span class="stgo-place-comuna" lang="es">Vitacura</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.38238,-70.58234" target="_blank" rel="noopener" aria-label="33.3824° S, 70.5823° W, open in Google Maps (new tab)">33.3824° S, 70.5823° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 0.75;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/virgen-san-cristobal.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Levántate, y mira la montaña; de donde viene el viento, el sol y el agua..</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Víctor Jara · Plegaria a un labrador</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Cerro San Cristóbal</span>
+              <span class="stgo-place-comuna" lang="es">Providencia</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.42544,-70.6332" target="_blank" rel="noopener" aria-label="33.4254° S, 70.6332° W, open in Google Maps (new tab)">33.4254° S, 70.6332° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="stgo-movement" data-movement="3" aria-label="What's Underneath">
+    <div class="rail" data-movement-title="What's Underneath">
+      <div class="stgo-track">
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/lo-espejo-colo-colo.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">De la población, poca plata, mucho amor y sobra el corazón.</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Arte Elegante · Nos Jugamos La Vida</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Pobl. José María Caro (&#x27;La Caro&#x27;)</span>
+              <span class="stgo-place-comuna" lang="es">Lo Espejo</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.5059,-70.6848" target="_blank" rel="noopener" aria-label="33.5059° S, 70.6848° W, open in Google Maps (new tab)">33.5059° S, 70.6848° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 0.75;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/graffiti-santo-padre.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Miren cómo nos hablan del paraíso...</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Violeta Parra · ¿Qué dirá el Santo Padre?</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Cerro Santa Lucía</span>
+              <span class="stgo-place-comuna" lang="es">Santiago Centro</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.4384,-70.64311" target="_blank" rel="noopener" aria-label="33.4384° S, 70.6431° W, open in Google Maps (new tab)">33.4384° S, 70.6431° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/macul-mural.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Frágil como un volantín, en los techos de Barrancas jugaba el niño Luchín con sus manitos moradas</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Víctor Jara · Luchín</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Villa Universidad Católica (Ramón Cruz Montt con Capitán Ignacio Carrera Pinto)</span>
+              <span class="stgo-place-comuna" lang="es">Macul</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.48049,-70.58278" target="_blank" rel="noopener" aria-label="33.4805° S, 70.5828° W, open in Google Maps (new tab)">33.4805° S, 70.5828° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/aki-llanura-mural.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">El bajo Chile anónimo.</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Portavoz · El otro Chile</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Llanura con Coronel Alejandro Sepúlveda</span>
+              <span class="stgo-place-comuna" lang="es">Peñalolén</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.47374,-70.56699" target="_blank" rel="noopener" aria-label="33.4737° S, 70.5670° W, open in Google Maps (new tab)">33.4737° S, 70.5670° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/monumental.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Cantemos todos de Arica a Magallanes...</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Carlos Ulloa Díaz / Mario Barrientos · Himno de Colo Colo</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Estadio Monumental</span>
+              <span class="stgo-place-comuna" lang="es">Macul</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.50627,-70.60521" target="_blank" rel="noopener" aria-label="33.5063° S, 70.6052° W, open in Google Maps (new tab)">33.5063° S, 70.6052° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="stgo-movement" data-movement="4" aria-label="Coda">
+    <div class="rail" data-movement-title="Coda">
+      <div class="stgo-track">
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/vista-from-llanura.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Cuando me acuerdo de mi país...</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Patricio Manns · Cuando me acuerdo de mi país</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Lo Hermida</span>
+              <span class="stgo-place-comuna" lang="es">Peñalolén</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.47472,-70.56901" target="_blank" rel="noopener" aria-label="33.4747° S, 70.5690° W, open in Google Maps (new tab)">33.4747° S, 70.5690° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/view-from-la-dehesa.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Quisiera sacarte a caminar en un largo tour por Pudahuel y La Bandera, por Pudahuel y por La Legua; y verías la vida tal como es...</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Sol y Lluvia · El largo tour</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Entrada a La Dehesa (Gran Vía con Camino Santa Teresa de Los Andes)</span>
+              <span class="stgo-place-comuna" lang="es">Lo Barnechea</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.36758,-70.54556" target="_blank" rel="noopener" aria-label="33.3676° S, 70.5456° W, open in Google Maps (new tab)">33.3676° S, 70.5456° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/stgo-night-mirador.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">Y en Santiago tantas cosas...</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Ismael Serrano · Vine del Norte</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Mirador de Peñalolén Alto</span>
+              <span class="stgo-place-comuna" lang="es">Peñalolén</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.48858,-70.51988" target="_blank" rel="noopener" aria-label="33.4886° S, 70.5199° W, open in Google Maps (new tab)">33.4886° S, 70.5199° W</a>
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="stgo-frame" style="--ar: 1.3333;">
+          <div class="stgo-photo">
+            <img src="../assets/photography/stgo-contrasts/how-the-cordillera-really-feels-visually.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="stgo-caption">
+            <p class="stgo-caption-text" lang="es">¿Qué sabes de cordillera si tú naciste tan lejos?</p>
+            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-credit" lang="es">Patricio Manns · Arriba en la Cordillera</p>
+            <p class="stgo-context"></p>
+            <p class="stgo-place"></p>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="rail">
+    <div class="footer-grid">
+      <div>
+        <p class="doc-name">Mitchell Langley</p>
+        <p>Infrastructure advisory, transportation planning and project finance</p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../cases.html">Case Studies</a></li>
+        <li><a href="../writing.html">Writing</a></li>
+        <li><a href="../reading.html">Reading</a></li>
+        <li><a href="../photography.html" aria-current="page">Photographs</a></li>
+        <li><a href="mailto:mitch@mitchlangley.us">Email</a></li>
+        <li><a href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a></li>
+      </ul>
+    </div>
+    <div class="footer-base">
+      <span>Last updated September 2026</span>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script>
+(() => {
+  if (new URLSearchParams(location.search).has('drafts')) document.documentElement.classList.add('stgo-drafts');
+  const reducedMotion =window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const animated = !!(window.gsap && window.ScrollTrigger && !reducedMotion);
+  const header = document.querySelector('.doc-head');
+  const headerHeight = () => getComputedStyle(header).position === 'sticky' ? header.offsetHeight : 0;
+  const updateHeader = () => document.documentElement.style.setProperty('--stgo-header-height', `${headerHeight()}px`);
+  updateHeader();
+  if (animated) gsap.registerPlugin(ScrollTrigger);
+
+  const movements = Array.from(document.querySelectorAll('.stgo-movement'));
+  const galleries = movements.map((movement, movementIndex) => {
+    const rail = movement.querySelector(':scope > .rail');
+    const track = movement.querySelector('.stgo-track');
+    const panels = Array.from(track.querySelectorAll('.stgo-frame'));
+    track.id = `stgo-track-${movementIndex + 1}`;
+    const controls = document.createElement('div');
+    controls.className = 'stgo-controls';
+    controls.setAttribute('role', 'group');
+    controls.setAttribute('aria-label', `${movement.getAttribute('aria-label')}: photograph navigation`);
+    controls.innerHTML = `
+      <button class="stgo-arrow" type="button" aria-label="Previous photograph" aria-controls="${track.id}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m14 5-7 7 7 7M7 12h14"/></svg>
+      </button>
+      <span class="stgo-progress-count" aria-live="polite" aria-atomic="true"></span>
+      <button class="stgo-arrow" type="button" aria-label="Next photograph" aria-controls="${track.id}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m10 5 7 7-7 7M3 12h14"/></svg>
+      </button>`;
+    rail.appendChild(controls);
+    const [previous, next] = controls.querySelectorAll('button');
+    const count = controls.querySelector('.stgo-progress-count');
+    const gallery = { movement, track, panels, previous, next, active: 0, trigger: null };
+    gallery.update = index => {
+      gallery.active = index;
+      const label = `${String(index + 1).padStart(2, '0')} / ${String(panels.length).padStart(2, '0')}`;
+      if (count.textContent !== label) count.textContent = label;
+      previous.disabled = movementIndex === 0 && index === 0;
+      next.disabled = movementIndex === movements.length - 1 && index === panels.length - 1;
+    };
+    gallery.update(0);
+    previous.addEventListener('click', () => navigate(movementIndex, -1));
+    next.addEventListener('click', () => navigate(movementIndex, 1));
+    if (!animated) {
+      track.addEventListener('scroll', () => gallery.update(Math.round(track.scrollLeft / track.clientWidth)), { passive: true });
+    }
+    return gallery;
+  });
+
+  function navigate(movementIndex, direction) {
+    let gallery = galleries[movementIndex];
+    let index = gallery.active + direction;
+    if (index < 0 || index >= gallery.panels.length) {
+      const adjacent = galleries[movementIndex + direction];
+      if (!adjacent) return;
+      gallery = adjacent;
+      index = direction > 0 ? 0 : gallery.panels.length - 1;
+      (direction > 0 ? gallery.next : gallery.previous).focus({ preventScroll: true });
+    }
+    if (gallery.trigger) {
+      const { start, end } = gallery.trigger;
+      // Stay inside the pin at either edge; scrub supplies the slide transition.
+      const position = start + (end - start) * index / (gallery.panels.length - 1);
+      window.scrollTo({ top: Math.max(start + 1, Math.min(end - 1, position)), behavior: 'instant' });
+      ScrollTrigger.update();
+    } else {
+      const top = gallery.movement.getBoundingClientRect().top + window.scrollY - headerHeight();
+      window.scrollTo({ top, behavior: 'instant' });
+      gallery.track.scrollTo({ left: index * gallery.track.clientWidth, behavior: 'instant' });
+    }
+    gallery.update(index);
+  }
+
+  document.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.target.closest('input, textarea, select, [contenteditable="true"]')) return;
+    const index = galleries.findIndex(({ movement }) => {
+      const rect = movement.getBoundingClientRect();
+      const center = (window.innerHeight + headerHeight()) / 2;
+      return rect.top <= center && rect.bottom > center;
+    });
+    if (index < 0) return;
+    event.preventDefault();
+    navigate(index, event.key === 'ArrowRight' ? 1 : -1);
+  });
+
+  window.addEventListener('resize', updateHeader);
+  if (!animated) return;
+
+  galleries.forEach((gallery, movementIndex) => {
+    const { movement, track, panels } = gallery;
+    movement.classList.add('is-animated');
+    const getDistance = () => Math.max(0, track.scrollWidth - window.innerWidth);
+    const horizontalTween = gsap.to(track, {
+      x: () => -getDistance(),
+      ease: 'none',
+      overwrite: true,
+      scrollTrigger: {
+        trigger: movement,
+        start: () => `top ${headerHeight()}px`,
+        end: () => `+=${getDistance()}`,
+        pin: true,
+        scrub: 0.75,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        snap: {
+          snapTo: 1 / (panels.length - 1),
+          directional: false,
+          inertia: false,
+          duration: { min: 0.12, max: 0.32 },
+          delay: 0.05,
+          ease: 'power1.inOut'
+        },
+        onUpdate(self) {
+          gallery.update(Math.round(self.progress * (panels.length - 1)));
+        }
+      }
+    });
+    gallery.trigger = horizontalTween.scrollTrigger;
+
+    // Give each incoming photograph and lyric a restrained editorial reveal.
+    panels.forEach((panel, index) => {
+      const photo = panel.querySelector('.stgo-photo img');
+      const caption = panel.querySelector('.stgo-caption');
+
+      if (index === 0) {
+        gsap.fromTo(photo,
+          { autoAlpha: 0.7, scale: 0.985 },
+          { autoAlpha: 1, scale: 1, duration: 0.8, ease: 'power2.out', delay: movementIndex === 0 ? 0.15 : 0 }
+        );
+        gsap.fromTo(caption,
+          { autoAlpha: 0, x: 28 },
+          { autoAlpha: 1, x: 0, duration: 0.7, ease: 'power2.out', delay: movementIndex === 0 ? 0.25 : 0.05 }
+        );
+        return;
+      }
+
+      gsap.fromTo(photo,
+        { autoAlpha: 0.42, scale: 0.975, x: 28 },
+        {
+          autoAlpha: 1,
+          scale: 1,
+          x: 0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: panel,
+            containerAnimation: horizontalTween,
+            start: 'left 82%',
+            end: 'left 54%',
+            scrub: true
+          }
+        }
+      );
+
+      gsap.fromTo(caption,
+        { autoAlpha: 0, x: 44 },
+        {
+          autoAlpha: 1,
+          x: 0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: panel,
+            containerAnimation: horizontalTween,
+            start: 'left 76%',
+            end: 'left 50%',
+            scrub: true
+          }
+        }
+      );
+    });
+  });
+
+  // Refresh once image dimensions have settled so horizontal distances are exact.
+  window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
+})();
+</script>
+
+</body>
+</html>
