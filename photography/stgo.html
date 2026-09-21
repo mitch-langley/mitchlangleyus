@@ -70,11 +70,6 @@
     scroll-snap-type: x mandatory;
   }
 
-  .essay-stgo-page .is-animated .stgo-track {
-    width: max-content;
-    overflow: visible;
-    will-change: transform;
-  }
 
   .essay-stgo-page .stgo-frame {
     flex: 0 0 100%;
@@ -89,10 +84,6 @@
     scroll-snap-align: start;
   }
 
-  .essay-stgo-page .is-animated .stgo-frame {
-    flex-basis: 100vw;
-    width: 100vw;
-  }
 
   .essay-stgo-page .stgo-photo {
     width: 100%;
@@ -137,13 +128,19 @@
     color: var(--movement-fg);
   }
 
-  /* The gloss reads as a translator's note under the lyric, not a second lyric. */
+  /* English lyrics sit directly below the Spanish lyrics. */
   .essay-stgo-page .stgo-caption-translation {
     margin-top: var(--s2, 8px);
-    font-family: var(--font-sans, Arial, sans-serif);
+    font-family: var(--font-serif, Georgia, serif);
     font-size: var(--text-body-size, 1.05rem);
+    font-style: italic;
     line-height: 1.5;
-    color: var(--movement-muted);
+    color: #606060;
+  }
+
+  .essay-stgo-page .stgo-movement[data-movement="3"] .stgo-caption-translation,
+  .essay-stgo-page .stgo-movement[data-movement="4"] .stgo-caption-translation {
+    color: #c9c9c9;
   }
 
   .essay-stgo-page .stgo-caption-credit {
@@ -278,6 +275,39 @@
     .essay-stgo-page .stgo-context,
     .essay-stgo-page .stgo-place { margin-top: var(--s4, 16px); }
   }
+
+  html.stgo-deck,
+  .stgo-deck body.essay-stgo-page { height: 100%; overflow: hidden; }
+  .stgo-deck .essay-stgo-page .site-footer { display: none; }
+  .stgo-deck .essay-stgo-page .stgo-movement { min-height: 0; }
+  .stgo-deck .essay-stgo-page .stgo-movement[hidden],
+  .stgo-deck .essay-stgo-page .stgo-frame[hidden] { display: none; }
+  .stgo-deck .essay-stgo-page .stgo-track {
+    display: block;
+    overflow: hidden;
+    scroll-snap-type: none;
+  }
+  .stgo-deck .essay-stgo-page .stgo-frame { grid-template-rows: minmax(0, 1fr); }
+  @media (prefers-reduced-motion: no-preference) {
+    .stgo-deck .stgo-frame:not([hidden]) .stgo-photo,
+    .stgo-deck .stgo-frame:not([hidden]) .stgo-caption {
+      animation: stgo-reveal 420ms var(--ease-out, ease-out) both;
+    }
+  }
+  @keyframes stgo-reveal {
+    from { opacity: 0; transform: translateX(var(--stgo-reveal-offset, 20px)); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @media (max-width: 640px) {
+    .stgo-deck .essay-stgo-page .stgo-frame {
+      grid-template-rows: minmax(0, 1fr) auto;
+      padding-top: var(--s5, 24px);
+      gap: var(--s4, 16px);
+    }
+    .stgo-deck .essay-stgo-page .stgo-caption {
+      max-height: min(48svh, calc((100svh - var(--stgo-header-height, 0px) - 9rem) * .65));
+    }
+  }
 </style>
 
 </head>
@@ -311,9 +341,9 @@
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">Llegué a Santiago provinciano y Martín Rivas...</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-translation">I came to Santiago as an outsider like Martín Rivas...</p>
             <p class="stgo-caption-credit" lang="es">Manuel García · La gran ciudad</p>
-            <p class="stgo-context">I came to Santiago as an outsider like Martín Rivas...</p>
+            <p class="stgo-context"></p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Plaza de la Ciudadanía / Bandera Bicentenario</span>
@@ -419,9 +449,9 @@
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">Y si miras de lo alto hacia el valle, lo verás que lo baña un estero...</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-translation">And if you look from on high towards the valley, you'll see that it's bathed by a river...</p>
             <p class="stgo-caption-credit" lang="es">Los Huasos Quincheros · Si vas para Chile</p>
-            <p class="stgo-context">And if you look from on high towards the valley, you'll see that it's bathed by a river...</p>
+            <p class="stgo-context"></p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Plaza Tupahue (Parquemet), mirando hacia Pedro de Valdivia Norte (Providencia)</span>
@@ -752,29 +782,22 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script>
 (() => {
   if (new URLSearchParams(location.search).has('drafts')) document.documentElement.classList.add('stgo-drafts');
-  const reducedMotion =window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const animated = !!(window.gsap && window.ScrollTrigger && !reducedMotion);
   const header = document.querySelector('.doc-head');
-  const headerHeight = () => getComputedStyle(header).position === 'sticky' ? header.offsetHeight : 0;
-  const updateHeader = () => document.documentElement.style.setProperty('--stgo-header-height', `${headerHeight()}px`);
-  updateHeader();
-  if (animated) gsap.registerPlugin(ScrollTrigger);
-
+  const updateHeader = () => document.documentElement.style.setProperty('--stgo-header-height', header.getBoundingClientRect().height + 'px');
   const movements = Array.from(document.querySelectorAll('.stgo-movement'));
+  let activeMovement = 0;
   const galleries = movements.map((movement, movementIndex) => {
     const rail = movement.querySelector(':scope > .rail');
     const track = movement.querySelector('.stgo-track');
     const panels = Array.from(track.querySelectorAll('.stgo-frame'));
-    track.id = `stgo-track-${movementIndex + 1}`;
+    track.id = 'stgo-track-' + (movementIndex + 1);
     const controls = document.createElement('div');
     controls.className = 'stgo-controls';
     controls.setAttribute('role', 'group');
-    controls.setAttribute('aria-label', `${movement.getAttribute('aria-label')}: photograph navigation`);
+    controls.setAttribute('aria-label', movement.getAttribute('aria-label') + ': photograph navigation');
     controls.innerHTML = `
       <button class="stgo-arrow" type="button" aria-label="Previous photograph" aria-controls="${track.id}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m14 5-7 7 7 7M7 12h14"/></svg>
@@ -786,148 +809,59 @@
     rail.appendChild(controls);
     const [previous, next] = controls.querySelectorAll('button');
     const count = controls.querySelector('.stgo-progress-count');
-    const gallery = { movement, track, panels, previous, next, active: 0, trigger: null };
-    gallery.update = index => {
-      gallery.active = index;
-      const label = `${String(index + 1).padStart(2, '0')} / ${String(panels.length).padStart(2, '0')}`;
-      if (count.textContent !== label) count.textContent = label;
-      previous.disabled = movementIndex === 0 && index === 0;
-      next.disabled = movementIndex === movements.length - 1 && index === panels.length - 1;
-    };
-    gallery.update(0);
-    previous.addEventListener('click', () => navigate(movementIndex, -1));
-    next.addEventListener('click', () => navigate(movementIndex, 1));
-    if (!animated) {
-      track.addEventListener('scroll', () => gallery.update(Math.round(track.scrollLeft / track.clientWidth)), { passive: true });
-    }
-    return gallery;
+    previous.addEventListener('click', () => navigate(-1));
+    next.addEventListener('click', () => navigate(1));
+    return { movement, panels, previous, next, count, active: 0 };
   });
 
-  function navigate(movementIndex, direction) {
-    let gallery = galleries[movementIndex];
-    let index = gallery.active + direction;
-    if (index < 0 || index >= gallery.panels.length) {
-      const adjacent = galleries[movementIndex + direction];
-      if (!adjacent) return;
-      gallery = adjacent;
-      index = direction > 0 ? 0 : gallery.panels.length - 1;
-      (direction > 0 ? gallery.next : gallery.previous).focus({ preventScroll: true });
+  function show(movementIndex, index, direction = 1) {
+    activeMovement = movementIndex;
+    galleries.forEach((gallery, i) => {
+      gallery.movement.hidden = i !== movementIndex;
+      gallery.panels.forEach((panel, j) => { panel.hidden = i !== movementIndex || j !== index; });
+    });
+    const gallery = galleries[movementIndex];
+    gallery.active = index;
+    gallery.movement.style.setProperty('--stgo-reveal-offset', (direction * 20) + 'px');
+    gallery.count.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(gallery.panels.length).padStart(2, '0');
+    gallery.previous.disabled = movementIndex === 0 && index === 0;
+    gallery.next.disabled = movementIndex === galleries.length - 1 && index === gallery.panels.length - 1;
+    gallery.panels[index].querySelector('.stgo-caption').scrollTop = 0;
+    const upcoming = gallery.panels[index + 1] || galleries[movementIndex + 1]?.panels[0];
+    if (upcoming) upcoming.querySelector('img').loading = 'eager';
+  }
+
+  function navigate(direction) {
+    let movementIndex = activeMovement;
+    const current = galleries[movementIndex];
+    let index = current.active + direction;
+    const moveFocus = current.movement.contains(document.activeElement);
+    if (index < 0 || index >= current.panels.length) {
+      movementIndex += direction;
+      if (!galleries[movementIndex]) return;
+      index = direction > 0 ? 0 : galleries[movementIndex].panels.length - 1;
     }
-    if (gallery.trigger) {
-      const { start, end } = gallery.trigger;
-      // Stay inside the pin at either edge; scrub supplies the slide transition.
-      const position = start + (end - start) * index / (gallery.panels.length - 1);
-      window.scrollTo({ top: Math.max(start + 1, Math.min(end - 1, position)), behavior: 'instant' });
-      ScrollTrigger.update();
-    } else {
-      const top = gallery.movement.getBoundingClientRect().top + window.scrollY - headerHeight();
-      window.scrollTo({ top, behavior: 'instant' });
-      gallery.track.scrollTo({ left: index * gallery.track.clientWidth, behavior: 'instant' });
+    show(movementIndex, index, direction);
+    if (moveFocus) {
+      const gallery = galleries[movementIndex];
+      let button = direction > 0 ? gallery.next : gallery.previous;
+      if (button.disabled) button = direction > 0 ? gallery.previous : gallery.next;
+      button.focus({ preventScroll: true });
     }
-    gallery.update(index);
   }
 
   document.addEventListener('keydown', event => {
     if (!['ArrowLeft', 'ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
     if (event.target.closest('input, textarea, select, [contenteditable="true"]')) return;
-    const index = galleries.findIndex(({ movement }) => {
-      const rect = movement.getBoundingClientRect();
-      const center = (window.innerHeight + headerHeight()) / 2;
-      return rect.top <= center && rect.bottom > center;
-    });
-    if (index < 0) return;
     event.preventDefault();
-    navigate(index, event.key === 'ArrowRight' ? 1 : -1);
+    navigate(event.key === 'ArrowRight' ? 1 : -1);
   });
 
+  document.documentElement.classList.add('stgo-deck');
+  updateHeader();
+  show(0, 0);
   window.addEventListener('resize', updateHeader);
-  if (!animated) return;
-
-  galleries.forEach((gallery, movementIndex) => {
-    const { movement, track, panels } = gallery;
-    movement.classList.add('is-animated');
-    const getDistance = () => Math.max(0, track.scrollWidth - window.innerWidth);
-    const horizontalTween = gsap.to(track, {
-      x: () => -getDistance(),
-      ease: 'none',
-      overwrite: true,
-      scrollTrigger: {
-        trigger: movement,
-        start: () => `top ${headerHeight()}px`,
-        end: () => `+=${getDistance()}`,
-        pin: true,
-        scrub: 0.75,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-        snap: {
-          snapTo: 1 / (panels.length - 1),
-          directional: false,
-          inertia: false,
-          duration: { min: 0.12, max: 0.32 },
-          delay: 0.05,
-          ease: 'power1.inOut'
-        },
-        onUpdate(self) {
-          gallery.update(Math.round(self.progress * (panels.length - 1)));
-        }
-      }
-    });
-    gallery.trigger = horizontalTween.scrollTrigger;
-
-    // Give each incoming photograph and lyric a restrained editorial reveal.
-    panels.forEach((panel, index) => {
-      const photo = panel.querySelector('.stgo-photo img');
-      const caption = panel.querySelector('.stgo-caption');
-
-      if (index === 0) {
-        gsap.fromTo(photo,
-          { autoAlpha: 0.7, scale: 0.985 },
-          { autoAlpha: 1, scale: 1, duration: 0.8, ease: 'power2.out', delay: movementIndex === 0 ? 0.15 : 0 }
-        );
-        gsap.fromTo(caption,
-          { autoAlpha: 0, x: 28 },
-          { autoAlpha: 1, x: 0, duration: 0.7, ease: 'power2.out', delay: movementIndex === 0 ? 0.25 : 0.05 }
-        );
-        return;
-      }
-
-      gsap.fromTo(photo,
-        { autoAlpha: 0.42, scale: 0.975, x: 28 },
-        {
-          autoAlpha: 1,
-          scale: 1,
-          x: 0,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: panel,
-            containerAnimation: horizontalTween,
-            start: 'left 82%',
-            end: 'left 54%',
-            scrub: true
-          }
-        }
-      );
-
-      gsap.fromTo(caption,
-        { autoAlpha: 0, x: 44 },
-        {
-          autoAlpha: 1,
-          x: 0,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: panel,
-            containerAnimation: horizontalTween,
-            start: 'left 76%',
-            end: 'left 50%',
-            scrub: true
-          }
-        }
-      );
-    });
-  });
-
-  // Refresh once image dimensions have settled so horizontal distances are exact.
-  window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
+  if ('ResizeObserver' in window) new ResizeObserver(updateHeader).observe(header);
 })();
 </script>
 

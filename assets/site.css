@@ -335,6 +335,7 @@ p { max-width: var(--measure); text-wrap: pretty; }
    ============================================================ */
 .plate {
   padding-block: 70px;
+  padding-left: var(--s5);
   background: var(--surface-dark);
   color: var(--text-on-dark-muted);
 }
