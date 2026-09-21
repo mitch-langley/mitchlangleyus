@@ -1,2 +1,49 @@
+# ==========================================
+# Large Media & Source Assets (Not for web)
+# ==========================================
+# Uncompressed audio files (e.g. 24 MB himno.wav)
+*.wav
 
-.claude/worktrees/
+# Unused and source/original image working directories
+assets/photography/stgo-contrasts/_originals/
+assets/photography/stgo-contrasts/color/
+assets/photography/stgo-contrasts/unused/
+
+# Raw/working spreadsheets and documents
+*.xlsx
+*.pptx
+
+# ==========================================
+# AI Agents, Tools & Worktrees
+# ==========================================
+# Claude Code / Codex metadata and duplicated worktrees
+.claude/
+.impeccable/
+
+# ==========================================
+# Python & Scripts
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# ==========================================
+# Operating System & Editors
+# ==========================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# VS Code settings
+.vscode/
+
+# ==========================================
+# Build & Local Deploy Artifacts (Cloudflare)
+# ==========================================
+.wrangler/
+dist/
+node_modules/
