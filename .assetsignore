@@ -1,0 +1,9 @@
+.git/
+.claude/
+.impeccable/
+.vscode/
+sync.py
+*.wav
+assets/photography/stgo-contrasts/_originals/
+assets/photography/stgo-contrasts/color/
+assets/photography/stgo-contrasts/unused/
