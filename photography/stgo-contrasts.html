@@ -23,34 +23,58 @@
   }
 
   .essay-stgo-page .stgo-movement {
-    --movement-bg: color-mix(in srgb, var(--navy-900, #1D3F5C) 12%, white);
-    --movement-fg: var(--text-body, #1A1A1A);
-    --movement-muted: var(--navy-900, #1D3F5C);
-    --movement-rule: color-mix(in srgb, var(--navy-900, #1D3F5C) 25%, transparent);
     position: relative;
     height: calc(100svh - var(--stgo-header-height, 0px));
     min-height: 36rem;
     overflow: hidden;
-    background: var(--movement-bg);
-    color: var(--movement-fg);
   }
 
+  /* Default light theme colors for movements 1 and 2 */
+  .essay-stgo-page .stgo-movement[data-movement="1"],
   .essay-stgo-page .stgo-movement[data-movement="2"] {
-    --movement-bg: color-mix(in srgb, var(--navy-900, #1D3F5C) 30%, white);
+    --movement-fg: var(--text-body, #1A1A1A);
+    --movement-muted: #4a4a4a;
+    --movement-rule: rgba(0, 0, 0, 0.12);
   }
 
+  /* Dark theme colors for movements 3 and 4 */
   .essay-stgo-page .stgo-movement[data-movement="3"],
   .essay-stgo-page .stgo-movement[data-movement="4"] {
-    --movement-bg: var(--navy-600, #3D6485);
     --movement-fg: var(--white, #fff);
-    --movement-muted: var(--text-on-dark-muted, rgba(255, 255, 255, .88));
-    --movement-rule: var(--rule-dark, rgba(255, 255, 255, .22));
+    --movement-muted: rgba(255, 255, 255, .88);
+    --movement-rule: rgba(255, 255, 255, .22);
     --focus-ring: var(--white, #fff);
   }
 
-  .essay-stgo-page .stgo-movement[data-movement="4"] {
-    --movement-bg: var(--navy-900, #1D3F5C);
-  }
+  /* Movement 1: Lightest Neutral Grey Tier (7 frames) */
+  .essay-stgo-page .stgo-movement[data-movement="1"] .stgo-frame:nth-child(1) { background: #f8f8f8; }
+  .essay-stgo-page .stgo-movement[data-movement="1"] .stgo-frame:nth-child(2) { background: #f2f2f2; }
+  .essay-stgo-page .stgo-movement[data-movement="1"] .stgo-frame:nth-child(3) { background: #ececec; }
+  .essay-stgo-page .stgo-movement[data-movement="1"] .stgo-frame:nth-child(4) { background: #e6e6e6; }
+  .essay-stgo-page .stgo-movement[data-movement="1"] .stgo-frame:nth-child(5) { background: #e0e0e0; }
+  .essay-stgo-page .stgo-movement[data-movement="1"] .stgo-frame:nth-child(6) { background: #dadada; }
+  .essay-stgo-page .stgo-movement[data-movement="1"] .stgo-frame:nth-child(7) { background: #d4d4d4; }
+
+  /* Movement 2: Medium-Light Neutral Grey Tier (6 frames) */
+  .essay-stgo-page .stgo-movement[data-movement="2"] .stgo-frame:nth-child(1) { background: #cbcbcb; }
+  .essay-stgo-page .stgo-movement[data-movement="2"] .stgo-frame:nth-child(2) { background: #c2c2c2; }
+  .essay-stgo-page .stgo-movement[data-movement="2"] .stgo-frame:nth-child(3) { background: #b9b9b9; }
+  .essay-stgo-page .stgo-movement[data-movement="2"] .stgo-frame:nth-child(4) { background: #b0b0b0; }
+  .essay-stgo-page .stgo-movement[data-movement="2"] .stgo-frame:nth-child(5) { background: #a7a7a7; }
+  .essay-stgo-page .stgo-movement[data-movement="2"] .stgo-frame:nth-child(6) { background: #9e9e9e; }
+
+  /* Movement 3: Darker Neutral Grey Tier (5 frames) */
+  .essay-stgo-page .stgo-movement[data-movement="3"] .stgo-frame:nth-child(1) { background: #7b7b7b; }
+  .essay-stgo-page .stgo-movement[data-movement="3"] .stgo-frame:nth-child(2) { background: #707070; }
+  .essay-stgo-page .stgo-movement[data-movement="3"] .stgo-frame:nth-child(3) { background: #656565; }
+  .essay-stgo-page .stgo-movement[data-movement="3"] .stgo-frame:nth-child(4) { background: #5a5a5a; }
+  .essay-stgo-page .stgo-movement[data-movement="3"] .stgo-frame:nth-child(5) { background: #4f4f4f; }
+
+  /* Movement 4: Darkest Charcoal Tier (4 frames) */
+  .essay-stgo-page .stgo-movement[data-movement="4"] .stgo-frame:nth-child(1) { background: #3d3d3d; }
+  .essay-stgo-page .stgo-movement[data-movement="4"] .stgo-frame:nth-child(2) { background: #303030; }
+  .essay-stgo-page .stgo-movement[data-movement="4"] .stgo-frame:nth-child(3) { background: #232323; }
+  .essay-stgo-page .stgo-movement[data-movement="4"] .stgo-frame:nth-child(4) { background: #161616; }
 
   .essay-stgo-page .stgo-movement > .rail {
     position: relative;
@@ -70,20 +94,20 @@
     scroll-snap-type: x mandatory;
   }
 
-
-  .essay-stgo-page .stgo-frame {
+.essay-stgo-page .stgo-frame {
     flex: 0 0 100%;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 4.5rem max(var(--gutter, 20px), calc((100vw - var(--content-max, 1100px)) / 2)) 6rem;
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    gap: var(--s7, 48px);
+    /* Change this line: */
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); 
+    gap: var(--s5, 24px);
     align-items: center;
     scroll-snap-align: start;
+    color: var(--movement-fg);
   }
-
 
   .essay-stgo-page .stgo-photo {
     width: 100%;
@@ -95,8 +119,6 @@
   }
 
   .essay-stgo-page .stgo-photo img {
-    /* Size the element box to the picture itself so the corners actually round;
-       with width/height 100% + object-fit the radius clips empty letterbox space. */
     width: auto;
     height: auto;
     max-width: 100%;
@@ -108,8 +130,6 @@
     border-radius: var(--radius-md, 12px);
   }
 
-  /* Caption order: lyric, its English gloss, credit, English context, place.
-     Spacing lives on the element that follows, so an empty slot collapses cleanly. */
   .essay-stgo-page .stgo-caption {
     min-width: 0;
     max-height: 100%;
@@ -120,21 +140,20 @@
   .essay-stgo-page .stgo-caption > * { margin: 0; }
   .essay-stgo-page .stgo-caption > :empty { display: none; }
 
-  .essay-stgo-page .stgo-caption-text {
+.essay-stgo-page .stgo-caption-text {
     font-family: var(--font-serif, Georgia, serif);
-    font-size: var(--text-subtitle, 1.3rem);
+    font-size: 1.15rem; /* Reduced from var(--text-subtitle, 1.3rem) */
     font-style: italic;
-    line-height: var(--leading-body, 1.6);
+    line-height: 1.5;   /* Tightened from var(--leading-body, 1.6) */
     color: var(--movement-fg);
   }
 
-  /* English lyrics sit directly below the Spanish lyrics. */
-  .essay-stgo-page .stgo-caption-translation {
+.essay-stgo-page .stgo-caption-translation {
     margin-top: var(--s2, 8px);
     font-family: var(--font-serif, Georgia, serif);
-    font-size: var(--text-body-size, 1.05rem);
+    font-size: 0.95rem; /* Reduced from var(--text-body-size, 1.05rem) */
     font-style: italic;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #606060;
   }
 
@@ -154,18 +173,20 @@
     color: var(--movement-muted);
   }
 
-  .essay-stgo-page .stgo-context {
-    margin-top: var(--s5, 24px);
-    max-width: 42ch;
-    font-size: var(--text-body-size, 1.05rem);
-    line-height: var(--leading-body, 1.6);
+.essay-stgo-page .stgo-context {
+    margin-top: var(--s4, 16px); /* Reduced margin-top slightly */
+    font-size: 0.95rem;          /* Reduced from var(--text-body-size, 1.05rem) */
+    line-height: 1.45;           /* Tightened from var(--leading-body, 1.6) */
     color: var(--movement-fg);
   }
 
-  /* Place colophon: pin in the gutter, then name, comuna, coordinates stacked. */
+/* Place colophon: pin in the gutter, name on top, comuna and coordinates inline below. */
   .essay-stgo-page .stgo-place {
     position: relative;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
     margin-top: var(--s5, 24px);
     padding-left: 1.5rem;
     font-size: var(--text-small, .9rem);
@@ -183,12 +204,23 @@
     stroke-width: 1.4;
   }
   .essay-stgo-page .stgo-place-name {
+    display: block;
+    width: 100%;
     font-weight: 600;
     color: var(--movement-fg);
   }
+  .essay-stgo-page .stgo-place-comuna {
+    display: inline;
+  }
+  .essay-stgo-page .stgo-place-comuna::after {
+    content: "·";
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: var(--movement-muted);
+  }
   .essay-stgo-page .stgo-place-coords {
-    justify-self: start;
-    margin-top: 2px;
+    display: inline;
+    margin-top: 0;
     font-variant-numeric: tabular-nums;
     color: inherit;
     text-decoration-line: underline;
@@ -197,7 +229,6 @@
   }
   .essay-stgo-page .stgo-place-coords:hover { text-decoration-color: currentColor; }
 
-  /* Preview unwritten slots with ?drafts in the URL. */
   html.stgo-drafts .stgo-caption > :empty {
     display: block;
     padding: var(--s2, 8px) var(--s3, 12px);
@@ -267,7 +298,6 @@
       gap: var(--s5, 24px);
       padding-top: 5rem;
     }
-    /* Cap the caption so the photograph keeps most of the screen; the rest scrolls. */
     .essay-stgo-page .stgo-caption { max-height: 48svh; }
     .essay-stgo-page .stgo-caption-credit { margin-top: var(--s3, 12px); padding-top: var(--s3, 12px); }
     .essay-stgo-page .stgo-caption-translation,
@@ -319,10 +349,6 @@
   <a class="doc-name" href="../index.html">Mitchell Langley</a>
   <nav aria-label="Primary navigation">
     <ul class="doc-nav">
-      <li><a class="route-work" href="../resume.html">Resume</a></li>
-      <li><a class="route-cases" href="../cases.html">Case studies</a></li>
-      <li><a class="route-writing" href="../writing.html">Writing</a></li>
-      <li><a class="route-reading" href="../reading.html">Reading</a></li>
       <li><a class="route-gallery is-current" href="../photography.html" aria-current="page">Photographs</a></li>
       <li class="lang-link"><a href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a></li>
     </ul>
@@ -343,7 +369,7 @@
             <p class="stgo-caption-text" lang="es">Llegué a Santiago provinciano y Martín Rivas...</p>
             <p class="stgo-caption-translation">I came to Santiago as an outsider like Martín Rivas...</p>
             <p class="stgo-caption-credit" lang="es">Manuel García · La gran ciudad</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Martín Rivas is the protagonist of Alberto Blest Gana's classic 1862 novel, a provincial man arriving in Santiago to start a new life. The massive Bicentennial Flag represent the imposing apparatus that greets newcomers.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Plaza de la Ciudadanía / Bandera Bicentenario</span>
@@ -359,9 +385,9 @@
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">Dicen que el tiempo guarda en sus bastillas las cosas que el hombre olvidó...</p>
-            <p class="stgo-caption-translation">They say time keeps within its hems the things manking forgot...</p>
+            <p class="stgo-caption-translation">They say time keeps within its hems the things mankind forgot...</p>
             <p class="stgo-caption-credit" lang="es">Fernando Ubiergo · El tiempo en las bastillas</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">The inner courtyards of La Moneda, Chile's presidential palace, project a serene continuity that contrasts with the building's turbulent political history.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Patio de los Naranjos, La Moneda</span>
@@ -373,18 +399,18 @@
 
         <figure class="stgo-frame" style="--ar: 0.75;">
           <div class="stgo-photo">
-            <img src="../assets/photography/stgo-contrasts/intendencia-arq.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
+            <img src="../assets/photography/stgo-contrasts/colonial.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">Quién me ayudaría a desarmar tu historia antigua, y a pedazos volverte a conquistar...</p>
             <p class="stgo-caption-translation">Who would help me take apart your ancient past, and piece by piece win you back again...</p>
             <p class="stgo-caption-credit" lang="es">Santiago del Nuevo Extremo · A mi ciudad</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Colonial estates like this one in Las Condes have been absorbed by the sprawling metropolis, standing as manicured relics of a bygone agrarian era amid the modern city.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
-              <span class="stgo-place-name" lang="es">Edificio de la ex-Intendencia de Santiago (Morandé con Moneda)</span>
-              <span class="stgo-place-comuna" lang="es">Santiago Centro</span>
-              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.44223,-70.65321" target="_blank" rel="noopener" aria-label="33.4422° S, 70.6532° W, open in Google Maps (new tab)">33.4422° S, 70.6532° W</a>
+              <span class="stgo-place-name" lang="es">Centro Cultural Las Condes (ex-Casona Chacra El Rosario)</span>
+              <span class="stgo-place-comuna" lang="es">Las Condes</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.40619,-70.5618" target="_blank" rel="noopener" aria-label="33.40619° S, 70.5618° W, open in Google Maps (new tab)">33.40619° S, 70.5618° W</a>
             </p>
           </figcaption>
         </figure>
@@ -394,10 +420,10 @@
             <img src="../assets/photography/stgo-contrasts/monumento-manuel-rodriguez.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
           </div>
           <figcaption class="stgo-caption">
-            <p class="stgo-caption-text" lang="es">Yo no sé si volveré a verlo libre y gentil; solo sé que sonreía camino a Til-Til.</p>
+            <p class="stgo-caption-text" lang="es">Yo no sé si volveré a verlo libre y gentil. Solo sé que sonreía camino a Til-Til.</p>
             <p class="stgo-caption-translation">I don't know if I'll see him free and noble once more; all I know is that he went with a smile on his way to Til-Til.</p>
             <p class="stgo-caption-credit" lang="es">Patricio Manns · El cautivo de Til-Til</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Manuel Rodríguez, a mythologized guerrilla hero of Chilean independence, was assassinated near this spot in Til-Til. He remains a potent symbol of national identity and popular resistance.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Monumento a Manuel Rodríguez (Camino a Til-Til)</span>
@@ -415,10 +441,10 @@
             <p class="stgo-caption-text" lang="es">Santiago del ochocientos, para poderte mirar...</p>
             <p class="stgo-caption-translation">19th century Santiago, if I could look upon you...</p>
             <p class="stgo-caption-credit" lang="es">Violeta Parra · Santiago, penando estás</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Diego Portales was the austere architect of the 1833 Constitution, establishing the centralized state order that fundamentally shaped Chile's institutional character.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
-              <span class="stgo-place-name" lang="es">Estatua de Diego Portales, Plaza de la Constitución (Agustinas)</span>
+              <span class="stgo-place-name" lang="es">Estatua de Diego Portales, Plaza de la Constitución</span>
               <span class="stgo-place-comuna" lang="es">Santiago Centro</span>
               <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.44129,-70.65412" target="_blank" rel="noopener" aria-label="33.4413° S, 70.6541° W, open in Google Maps (new tab)">33.4413° S, 70.6541° W</a>
             </p>
@@ -433,7 +459,7 @@
             <p class="stgo-caption-text" lang="es">Y en una hermosa plaza liberada...</p>
             <p class="stgo-caption-translation">And in a beautiful liberated plaza...</p>
             <p class="stgo-caption-credit" lang="es">Pablo Milanés · Yo pisaré las calles nuevamente</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Written by the Cuban songwriter about returning to a democratic Santiago, this song captures the enduring political weight of La Moneda and its surrounding plazas.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">La Moneda</span>
@@ -451,10 +477,10 @@
             <p class="stgo-caption-text" lang="es">Y si miras de lo alto hacia el valle, lo verás que lo baña un estero...</p>
             <p class="stgo-caption-translation">And if you look from on high towards the valley, you'll see that it's bathed by a river...</p>
             <p class="stgo-caption-credit" lang="es">Los Huasos Quincheros · Si vas para Chile</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">From the heights of Cerro San Cristóbal, Santiago appears as a picturesque and unified valley, beautifully framed by the surrounding geography.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
-              <span class="stgo-place-name" lang="es">Plaza Tupahue (Parquemet), mirando hacia Pedro de Valdivia Norte (Providencia)</span>
+              <span class="stgo-place-name" lang="es">Plaza Tupahue, Parquemet</span>
               <span class="stgo-place-comuna" lang="es">Providencia</span>
               <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.4159,-70.62195" target="_blank" rel="noopener" aria-label="33.4159° S, 70.6219° W, open in Google Maps (new tab)">33.4159° S, 70.6219° W</a>
             </p>
@@ -474,10 +500,10 @@
             <img src="../assets/photography/stgo-contrasts/uvp-torres.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
           </div>
           <figcaption class="stgo-caption">
-            <p class="stgo-caption-text" lang="es">Ya la aurora no es nada nuevo...</p>
+            <p class="stgo-caption-text" lang="es">Ya la aurora no es nada nuevo</p>
             <p class="stgo-caption-translation">Dawn holds no novelty now...</p>
             <p class="stgo-caption-credit" lang="es">Eduardo Gatti · Los momentos</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">The EMPART towers in Providencia are emblems of mid-century modernist optimism and state housing, standing out amid the rapid commercialization of the surrounding avenues.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Torres EMPART (UVP), Av. Providencia con Carlos Antúnez</span>
@@ -495,10 +521,10 @@
             <p class="stgo-caption-text" lang="es">Mira hacia el cielo y olvida ese lánguido temor que fue permanente emoción</p>
             <p class="stgo-caption-translation">Gaze at the sky and let go of the languid dread that lived as an endless thrill</p>
             <p class="stgo-caption-credit" lang="es">Los Jaivas · Mira Niñita</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Perched on the Andean foothills, the Bahá'i Temple offers a space of ethereal tranquility, contrasting with the dense urban sprawl spreading below it.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
-              <span class="stgo-place-name" lang="es">Templo Bahai</span>
+              <span class="stgo-place-name" lang="es">Templo Bahá'i de Sudamérica</span>
               <span class="stgo-place-comuna" lang="es">Peñalolén</span>
               <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.47658,-70.51178" target="_blank" rel="noopener" aria-label="33.4766° S, 70.5118° W, open in Google Maps (new tab)">33.4766° S, 70.5118° W</a>
             </p>
@@ -510,10 +536,10 @@
             <img src="../assets/photography/stgo-contrasts/est-cent-old-new.webp" alt="" width="1200" height="1600" loading="lazy" decoding="async">
           </div>
           <figcaption class="stgo-caption">
-            <p class="stgo-caption-text" lang="es">Bajo el rostro nuevo del cemento, vive el mismo pueblo de hace tiempo...</p>
+            <p class="stgo-caption-text" lang="es">Bajo el rostro nuevo del cemento vive el mismo pueblo de hace tiempo</p>
             <p class="stgo-caption-translation">Beneath the new face of concrete, the same folk endure...</p>
             <p class="stgo-caption-credit" lang="es">Illapu · Vuelvo</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">The hyper-dense residential towers of Estación Central represent a rapid wave of real estate development, dramatically altering the traditional scale of the neighborhood.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Av. María Rozas Velásquez con calle Pudahuel (zona &#x27;guetos verticales&#x27;)</span>
@@ -528,10 +554,10 @@
             <img src="../assets/photography/stgo-contrasts/metro-painting.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
           </div>
           <figcaption class="stgo-caption">
-            <p class="stgo-caption-text" lang="es">De este viaje, por nuestra historia, por los conceptos...</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-text" lang="es">De este viaje, por nuestra historia, por los conceptos</p>
+            <p class="stgo-caption-translation">Of this journey, through our history, through the concepts</p>
             <p class="stgo-caption-credit" lang="es">Schwenke &amp; Nilo · El viaje</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">The Santiago Metro is the circulatory system of the city. Its stations often double as subterranean galleries showcasing national identity and history.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Estación La Moneda</span>
@@ -546,10 +572,10 @@
             <img src="../assets/photography/stgo-contrasts/vitacura-arq.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
           </div>
           <figcaption class="stgo-caption">
-            <p class="stgo-caption-text" lang="es">Una preciosa entrada de autos esperando un Peugeot.</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-text" lang="es">Una preciosa entrada de autos esperando un Peugeot</p>
+            <p class="stgo-caption-translation">A beautiful driveway waiting for a Peugeot</p>
             <p class="stgo-caption-credit" lang="es">Víctor Jara · Las casitas del barrio alto</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Vitacura is one of Santiago's wealthiest municipalities, known for its pristine residential architecture and highly manicured commercial spaces.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Youtopia (Av. Monseñor Escrivá de Balaguer)</span>
@@ -564,10 +590,10 @@
             <img src="../assets/photography/stgo-contrasts/virgen-san-cristobal.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
           </div>
           <figcaption class="stgo-caption">
-            <p class="stgo-caption-text" lang="es">Levántate, y mira la montaña; de donde viene el viento, el sol y el agua..</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-text" lang="es">Levántate y mira la montaña; de donde viene el viento, el sol y el agua</p>
+            <p class="stgo-caption-translation">Arise and look at the mountain; from where the wind, the sun, and the water come</p>
             <p class="stgo-caption-credit" lang="es">Víctor Jara · Plegaria a un labrador</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">The towering statue of the Virgin Mary on Cerro San Cristóbal watches over the city from one of its highest central vantage points, a constant presence above the smog.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Cerro San Cristóbal</span>
@@ -591,12 +617,12 @@
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">De la población, poca plata, mucho amor y sobra el corazón.</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-translation">From the neighborhood, little money, a lot of love, and heart to spare.</p>
             <p class="stgo-caption-credit" lang="es">Arte Elegante · Nos Jugamos La Vida</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context"><i>Poblaciones</i> like 'La Caro', working-class neighborhoods formed by land occupations and state housing initiatives, embody the resilience of the urban periphery.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
-              <span class="stgo-place-name" lang="es">Pobl. José María Caro (&#x27;La Caro&#x27;)</span>
+              <span class="stgo-place-name" lang="es">Población José María Caro (&#x27;La Caro&#x27;)</span>
               <span class="stgo-place-comuna" lang="es">Lo Espejo</span>
               <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.5059,-70.6848" target="_blank" rel="noopener" aria-label="33.5059° S, 70.6848° W, open in Google Maps (new tab)">33.5059° S, 70.6848° W</a>
             </p>
@@ -605,18 +631,18 @@
 
         <figure class="stgo-frame" style="--ar: 0.75;">
           <div class="stgo-photo">
-            <img src="../assets/photography/stgo-contrasts/graffiti-santo-padre.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
+            <img src="../assets/photography/stgo-contrasts/estallido.webp" alt="" width="960" height="1280" loading="lazy" decoding="async">
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">Miren cómo nos hablan del paraíso...</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-translation">Look at how they speak to us of paradise...</p>
             <p class="stgo-caption-credit" lang="es">Violeta Parra · ¿Qué dirá el Santo Padre?</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">During the 2019 social uprising (Estallido Social), the streets around Plaza Baquedano and Providencia became the epicenter of mass protests, leaving lasting marks on the urban landscape.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
-              <span class="stgo-place-name" lang="es">Cerro Santa Lucía</span>
-              <span class="stgo-place-comuna" lang="es">Santiago Centro</span>
-              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.4384,-70.64311" target="_blank" rel="noopener" aria-label="33.4384° S, 70.6431° W, open in Google Maps (new tab)">33.4384° S, 70.6431° W</a>
+              <span class="stgo-place-name" lang="es">Av. Providencia con Condell (aprox.)</span>
+              <span class="stgo-place-comuna" lang="es">Providencia</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.435034,-70.628707" target="_blank" rel="noopener" aria-label="33.435034° S, 70.628707° W, open in Google Maps (new tab)">33.435034° S, 70.628707° W</a>
             </p>
           </figcaption>
         </figure>
@@ -626,13 +652,13 @@
             <img src="../assets/photography/stgo-contrasts/macul-mural.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
           </div>
           <figcaption class="stgo-caption">
-            <p class="stgo-caption-text" lang="es">Frágil como un volantín, en los techos de Barrancas jugaba el niño Luchín con sus manitos moradas</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-text" lang="es">Frágil como un volantín, en los techos de Barrancas jugaba el niño Luchín...</p>
+            <p class="stgo-caption-translation">Fragile as a kite, on the roofs of Barrancas, little Luchín played...</p>
             <p class="stgo-caption-credit" lang="es">Víctor Jara · Luchín</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Housing projects often feature murals commemorating folk heroes like Víctor Jara. The artwork serves as a neighborhood memory bank, preserving cultural history.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
-              <span class="stgo-place-name" lang="es">Villa Universidad Católica (Ramón Cruz Montt con Capitán Ignacio Carrera Pinto)</span>
+              <span class="stgo-place-name" lang="es">Villa Universidad Católica</span>
               <span class="stgo-place-comuna" lang="es">Macul</span>
               <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.48049,-70.58278" target="_blank" rel="noopener" aria-label="33.4805° S, 70.5828° W, open in Google Maps (new tab)">33.4805° S, 70.5828° W</a>
             </p>
@@ -645,9 +671,9 @@
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">El bajo Chile anónimo.</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-translation">The anonymous, lower Chile.</p>
             <p class="stgo-caption-credit" lang="es">Portavoz · El otro Chile</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">The expansive open spaces and working-class neighborhoods of Peñalolén sit at the base of the Andes, a physical frontier between the sprawling city and the cordillera towering above.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Llanura con Coronel Alejandro Sepúlveda</span>
@@ -663,9 +689,9 @@
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">Cantemos todos de Arica a Magallanes...</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-translation">Let us all sing from Arica to Magallanes...</p>
             <p class="stgo-caption-credit" lang="es">Carlos Ulloa Díaz / Mario Barrientos · Himno de Colo Colo</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Home to Colo-Colo, Chile's most popular football club, the Estadio Monumental in Macul is a massive concrete cauldron that serves as a powerful focal point for popular identity and passion.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Estadio Monumental</span>
@@ -689,9 +715,9 @@
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">Cuando me acuerdo de mi país...</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-translation">When I remember my country...</p>
             <p class="stgo-caption-credit" lang="es">Patricio Manns · Cuando me acuerdo de mi país</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Lo Hermida in Peñalolén has a rich history of community organization. Looking out from its streets, the city stretches endlessly toward the horizon.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Lo Hermida</span>
@@ -706,13 +732,13 @@
             <img src="../assets/photography/stgo-contrasts/view-from-la-dehesa.webp" alt="" width="1600" height="1200" loading="lazy" decoding="async">
           </div>
           <figcaption class="stgo-caption">
-            <p class="stgo-caption-text" lang="es">Quisiera sacarte a caminar en un largo tour por Pudahuel y La Bandera, por Pudahuel y por La Legua; y verías la vida tal como es...</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-text" lang="es">Por Pudahuel y La Bandera, por Pudahuel y por La Legua; y verías la vida tal como es...</p>
+            <p class="stgo-caption-translation">Through Pudahuel and La Bandera, through Pudahuel and through La Legua; and you would see life as it is...</p>
             <p class="stgo-caption-credit" lang="es">Sol y Lluvia · El largo tour</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Situated high in the eastern foothills, the residential enclave of La Dehesa offers a stark contrast to the working-class communes just a few kilometers away.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
-              <span class="stgo-place-name" lang="es">Entrada a La Dehesa (Gran Vía con Camino Santa Teresa de Los Andes)</span>
+              <span class="stgo-place-name" lang="es">Gran Vía con Camino Santa Teresa de Los Andes</span>
               <span class="stgo-place-comuna" lang="es">Lo Barnechea</span>
               <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.36758,-70.54556" target="_blank" rel="noopener" aria-label="33.3676° S, 70.5456° W, open in Google Maps (new tab)">33.3676° S, 70.5456° W</a>
             </p>
@@ -725,9 +751,9 @@
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">Y en Santiago tantas cosas...</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-translation">And in Santiago so many things...</p>
             <p class="stgo-caption-credit" lang="es">Ismael Serrano · Vine del Norte</p>
-            <p class="stgo-context"></p>
+            <p class="stgo-context">Seen from the high vantage points of Peñalolén at night, Santiago's vast grid of lights offers a brief, beautiful illusion of a unified metropolis.</p>
             <p class="stgo-place">
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
               <span class="stgo-place-name" lang="es">Mirador de Peñalolén Alto</span>
@@ -743,10 +769,15 @@
           </div>
           <figcaption class="stgo-caption">
             <p class="stgo-caption-text" lang="es">¿Qué sabes de cordillera si tú naciste tan lejos?</p>
-            <p class="stgo-caption-translation"></p>
+            <p class="stgo-caption-translation">What do you know of the mountain range if you were born so far away?</p>
             <p class="stgo-caption-credit" lang="es">Patricio Manns · Arriba en la Cordillera</p>
-            <p class="stgo-context"></p>
-            <p class="stgo-place"></p>
+            <p class="stgo-context">The Andes Cordillera is Santiago's omnipresent wall. It dictates the city's climate, contains its smog, and visually dominates every eastward view.</p>
+            <p class="stgo-place">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15Z"/><circle cx="8" cy="6.4" r="1.7"/></svg>
+              <span class="stgo-place-name" lang="es">Av. Jaime Guzmán Errázuriz con Regina Pacis (frontis Campus Oriente UC)</span>
+              <span class="stgo-place-comuna" lang="es">Providencia</span>
+              <a class="stgo-place-coords" href="https://www.google.com/maps/search/?api=1&amp;query=-33.4468,-70.5946" target="_blank" rel="noopener" aria-label="33.4468° S, 70.5946° W, open in Google Maps (new tab)">33.4468° S, 70.5946° W</a>
+            </p>
           </figcaption>
         </figure>
 
@@ -779,8 +810,6 @@
     </div>
   </div>
 </footer>
-
-
 
 <script>
 (() => {

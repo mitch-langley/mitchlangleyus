@@ -30,7 +30,7 @@
     "context-en": ""
   },
   {
-    "filename": "intendencia-arq.webp",
+    "filename": "colonial.webp",
     "movement_number": 1,
     "movement_name": "The Face It Shows First",
     "movement_order": 3,
@@ -38,9 +38,9 @@
     "caption-song": "A mi ciudad",
     "caption-artist": "Santiago del Nuevo Extremo",
     "caption": "Quién me ayudaría a desarmar tu historia antigua, y a pedazos volverte a conquistar...",
-    "coordinates": "-33.44223, -70.65321",
-    "comuna": "Santiago Centro",
-    "location": "Edificio de la ex-Intendencia de Santiago (Morandé con Moneda)",
+    "coordinates": "-33.40619, -70.5618",
+    "comuna": "Las Condes",
+    "location": "Casona de la antigua chacra El Rosario, ahora Centro Cultural Las Condes",
     "caption-en": "",
     "context-en": ""
   },
@@ -130,7 +130,7 @@
     "caption": "Mira hacia el cielo y olvida ese lánguido temor que fue permanente emoción",
     "coordinates": "-33.47658, -70.51178",
     "comuna": "Peñalolén",
-    "location": "Templo Bahai",
+    "location": "Templo Bahá'i de Sudamérica",
     "caption-en": "",
     "context-en": ""
   },
@@ -210,7 +210,7 @@
     "context-en": ""
   },
   {
-    "filename": "graffiti-santo-padre.webp",
+    "filename": "estallido.webp",
     "movement_number": 3,
     "movement_name": "What's Underneath",
     "movement_order": 2,
@@ -218,9 +218,9 @@
     "caption-song": "¿Qué dirá el Santo Padre?",
     "caption-artist": "Violeta Parra",
     "caption": "Miren cómo nos hablan del paraíso...",
-    "coordinates": "-33.4384, -70.64311",
-    "comuna": "Santiago Centro",
-    "location": "Cerro Santa Lucía",
+    "coordinates": "-33.435034, -70.628707",
+    "comuna": "Providencia",
+    "location": "Av. Providencia con Condell (aprox.)",
     "caption-en": "",
     "context-en": ""
   },
@@ -292,7 +292,7 @@
     "overall_order": 20,
     "caption-song": "El largo tour",
     "caption-artist": "Sol y Lluvia",
-    "caption": "Quisiera sacarte a caminar en un largo tour por Pudahuel y La Bandera, por Pudahuel y por La Legua; y verías la vida tal como es...",
+    "caption": "Por Pudahuel y La Bandera, por Pudahuel y por La Legua; y verías la vida tal como es...",
     "coordinates": "-33.36758, -70.54556",
     "comuna": "Lo Barnechea",
     "location": "Entrada a La Dehesa (Gran Vía con Camino Santa Teresa de Los Andes)",
@@ -323,9 +323,9 @@
     "caption-song": "Arriba en la Cordillera",
     "caption-artist": "Patricio Manns",
     "caption": "¿Qué sabes de cordillera si tú naciste tan lejos?",
-    "coordinates": null,
-    "comuna": null,
-    "location": null,
+    "coordinates": "-33.4468, -70.5946",
+    "comuna": "Providencia",
+    "location": "Av. Jaime Guzmán Errázuriz con Regina Pacis (frontis Campus Oriente UC)",
     "caption-en": "",
     "context-en": ""
   }
