@@ -1,68 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc"><title id="title">Cumulative startup-delay exposure</title><desc id="desc">Two 12-month modeled exposure paths. The partial-fleet case ends at index 100 and the full-fleet case at approximately 200. Each point combines ending debt and other amounts accumulated to that month.</desc>
-<defs><pattern id="hatch" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M-4 4L4 -4 M0 16L16 0 M12 20L20 12" stroke="#94aabb" stroke-width="2"/></pattern></defs>
-<rect x="0" y="0" width="1600" height="1100" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="80" y="80" font-family="Calibri, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="2" fill="#1e405a">SERVICE-STARTUP DELAY &amp; FLEET FINANCING EXPOSURE</text>
-<text x="80" y="155" font-family="Georgia, serif" font-size="49" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1e405a">Exposure accumulates while buses remain idle</text>
-<path d="M80 195L1520 195" fill="none" stroke="#cfd7dd" stroke-width="2"/>
-<text x="80" y="252" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Cumulative modeled exposure  |  Partial-fleet total at month 12 = 100</text>
-<path d="M155 790.0L1310 790.0" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="133" y="799.0" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="end" letter-spacing="0" fill="#63717c">0</text>
-<path d="M155 683.3333333333334L1310 683.3333333333334" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="133" y="692.3333333333334" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="end" letter-spacing="0" fill="#63717c">50</text>
-<path d="M155 576.6666666666667L1310 576.6666666666667" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="133" y="585.6666666666667" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="end" letter-spacing="0" fill="#63717c">100</text>
-<path d="M155 470.0L1310 470.0" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="133" y="479.0" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="end" letter-spacing="0" fill="#63717c">150</text>
-<path d="M155 363.33333333333337L1310 363.33333333333337" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="133" y="372.33333333333337" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="end" letter-spacing="0" fill="#63717c">200</text>
-<text x="80" y="313" font-family="Calibri, sans-serif" font-size="21" font-weight="700" text-anchor="start" letter-spacing="1" fill="#63717c">INDEX</text>
-<text x="155.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">1</text>
-<text x="260.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">2</text>
-<text x="365.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">3</text>
-<text x="470.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">4</text>
-<text x="575.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">5</text>
-<text x="680.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">6</text>
-<text x="785.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">7</text>
-<text x="890.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">8</text>
-<text x="995.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">9</text>
-<text x="1100.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">10</text>
-<text x="1205.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">11</text>
-<text x="1310.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">12</text>
-<text x="735" y="869" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="middle" letter-spacing="1" fill="#63717c">MONTH OF IMMOBILIZATION</text>
-<path d="M155.00 770.92 L260.00 756.63 L365.00 741.24 L470.00 725.43 L575.00 709.22 L680.00 692.59 L785.00 675.55 L890.00 658.08 L995.00 640.20 L1100.00 621.89 L1205.00 603.16 L1310.00 576.67" fill="none" stroke="#527b96" stroke-width="5" stroke-dasharray="10 7"/>
-<circle cx="155.0" cy="770.9190986088508" r="5" fill="#527b96"/>
-<circle cx="260.0" cy="756.629112048793" r="5" fill="#527b96"/>
-<circle cx="365.0" cy="741.2370262672089" r="5" fill="#527b96"/>
-<circle cx="470.0" cy="725.4347232212106" r="5" fill="#527b96"/>
-<circle cx="575.0" cy="709.2201313136128" r="5" fill="#527b96"/>
-<circle cx="680.0" cy="692.5911684856646" r="5" fill="#527b96"/>
-<circle cx="785.0" cy="675.5457421642182" r="5" fill="#527b96"/>
-<circle cx="890.0" cy="658.0817492086311" r="5" fill="#527b96"/>
-<circle cx="995.0" cy="640.1970758574014" r="5" fill="#527b96"/>
-<circle cx="1100.0" cy="621.8895976745307" r="5" fill="#527b96"/>
-<circle cx="1205.0" cy="603.1571794956193" r="5" fill="#527b96"/>
-<circle cx="1310.0" cy="576.6666666666667" r="5" fill="#527b96"/>
-<text x="1336.0" y="586.6666666666667" font-family="Calibri, sans-serif" font-size="36" font-weight="700" text-anchor="start" letter-spacing="0" fill="#527b96">100</text>
-<path d="M155.00 755.44 L260.00 726.64 L365.00 695.63 L470.00 663.79 L575.00 631.12 L680.00 597.61 L785.00 563.26 L890.00 528.07 L995.00 492.03 L1100.00 455.13 L1205.00 417.38 L1310.00 363.99" fill="none" stroke="#1e405a" stroke-width="5"/>
-<circle cx="155.0" cy="755.4356009388849" r="5" fill="#1e405a"/>
-<circle cx="260.0" cy="726.6441053751896" r="5" fill="#1e405a"/>
-<circle cx="365.0" cy="695.630043048083" r="5" fill="#1e405a"/>
-<circle cx="470.0" cy="663.7887092377413" r="5" fill="#1e405a"/>
-<circle cx="575.0" cy="631.115926223174" r="5" fill="#1e405a"/>
-<circle cx="680.0" cy="597.6074951858999" r="5" fill="#1e405a"/>
-<circle cx="785.0" cy="563.2591961034043" r="5" fill="#1e405a"/>
-<circle cx="890.0" cy="528.0667876420587" r="5" fill="#1e405a"/>
-<circle cx="995.0" cy="492.0260070495" r="5" fill="#1e405a"/>
-<circle cx="1100.0" cy="455.13257004646556" r="5" fill="#1e405a"/>
-<circle cx="1205.0" cy="417.3821707180825" r="5" fill="#1e405a"/>
-<circle cx="1310.0" cy="363.98628051211625" r="5" fill="#1e405a"/>
-<text x="1336.0" y="373.98628051211625" font-family="Calibri, sans-serif" font-size="36" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">200</text>
-<path d="M180 300L238 300" fill="none" stroke="#1e405a" stroke-width="5"/>
-<text x="254" y="309" font-family="Calibri, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1e405a">Entire fleet idle</text>
-<path d="M650 300L708 300" fill="none" stroke="#527b96" stroke-width="5" stroke-dasharray="10 7"/>
-<text x="724" y="309" font-family="Calibri, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0" fill="#527b96">About half the fleet idle</text>
-<text x="80" y="937" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Each point counts ending debt once, plus other amounts accumulated through that month.</text>
-<path d="M80 983L1520 983" fill="none" stroke="#cfd7dd" stroke-width="2"/>
-<text x="80" y="1022" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Reconstructed from the monthly scenario formulas. Includes principal, assumed fees, preservation and other outlays.</text>
-<text x="80" y="1052" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Hypothetical gross exposure, not incurred loss or realized savings. Refinancing allowance enters in month 12.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Cumulative startup-delay exposure</title>
+  <desc id="desc">Two 12-month modeled exposure paths. The partial-fleet case ends at index 100 and the full-fleet case at approximately 200. Each point combines ending debt and other amounts accumulated to that month.</desc>
+  <defs>
+    <pattern id="hatch" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M-4 4L4 -4 M0 16L16 0 M12 20L20 12" stroke="#94aabb" stroke-width="2" />
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="1600" height="1100" fill="#ffffff" stroke="none" stroke-width="1" />
+  <g aria-hidden="true">
+    <path d="M155.00 770.92 L260.00 756.63 L365.00 741.24 L470.00 725.43 L575.00 709.22 L680.00 692.59 L785.00 675.55 L890.00 658.08 L995.00 640.20 L1100.00 621.89 L1205.00 603.16 L1310.00 576.67 L1310 790 L155 790 Z" fill="#3d6485" fill-opacity=".055" />
+    <path d="M155.00 755.44 L260.00 726.64 L365.00 695.63 L470.00 663.79 L575.00 631.12 L680.00 597.61 L785.00 563.26 L890.00 528.07 L995.00 492.03 L1100.00 455.13 L1205.00 417.38 L1310.00 363.99 L1310 790 L155 790 Z" fill="#1d3f5c" fill-opacity=".055" />
+    <rect x="80" y="902" width="1440" height="60" fill="#f4f6f8" />
+    <path d="M80 902L80 962" fill="none" stroke="#1d3f5c" stroke-width="4" />
+  </g>
+  <text x="80" y="80" font-family="Calibri, sans-serif" font-size="21" font-weight="700" text-anchor="start" letter-spacing="2.2" fill="#3d6485" style="font-variant-numeric:tabular-nums lining-nums">SERVICE-STARTUP DELAY &amp; FLEET FINANCING EXPOSURE</text>
+  <text x="80" y="155" font-family="Georgia, serif" font-size="49" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Exposure accumulates while buses remain idle</text>
+  <path d="M80 195L1520 195" fill="none" stroke="#d8dce0" stroke-width="2" />
+  <text x="80" y="252" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Cumulative modeled exposure  |  Partial-fleet total at month 12 = 100</text>
+  <path d="M155 790.0L1310 790.0" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="133" y="799.0" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="end" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">0</text>
+  <path d="M155 683.3333333333334L1310 683.3333333333334" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="133" y="692.3333333333334" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="end" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">50</text>
+  <path d="M155 576.6666666666667L1310 576.6666666666667" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="133" y="585.6666666666667" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="end" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">100</text>
+  <path d="M155 470.0L1310 470.0" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="133" y="479.0" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="end" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">150</text>
+  <path d="M155 363.33333333333337L1310 363.33333333333337" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="133" y="372.33333333333337" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="end" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">200</text>
+  <text x="80" y="313" font-family="Calibri, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="1" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">INDEX</text>
+  <text x="155.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">1</text>
+  <text x="260.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">2</text>
+  <text x="365.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">3</text>
+  <text x="470.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">4</text>
+  <text x="575.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">5</text>
+  <text x="680.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">6</text>
+  <text x="785.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">7</text>
+  <text x="890.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">8</text>
+  <text x="995.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">9</text>
+  <text x="1100.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">10</text>
+  <text x="1205.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">11</text>
+  <text x="1310.0" y="830" font-family="Calibri, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">12</text>
+  <text x="735" y="869" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="middle" letter-spacing="1" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">MONTH OF IMMOBILIZATION</text>
+  <path d="M155.00 770.92 L260.00 756.63 L365.00 741.24 L470.00 725.43 L575.00 709.22 L680.00 692.59 L785.00 675.55 L890.00 658.08 L995.00 640.20 L1100.00 621.89 L1205.00 603.16 L1310.00 576.67" fill="none" stroke="#3d6485" stroke-width="6" stroke-dasharray="10 7" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="155.0" cy="770.9190986088508" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="260.0" cy="756.629112048793" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="365.0" cy="741.2370262672089" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="470.0" cy="725.4347232212106" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="575.0" cy="709.2201313136128" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="680.0" cy="692.5911684856646" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="785.0" cy="675.5457421642182" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="890.0" cy="658.0817492086311" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="995.0" cy="640.1970758574014" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="1100.0" cy="621.8895976745307" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="1205.0" cy="603.1571794956193" r="6" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <circle cx="1310.0" cy="576.6666666666667" r="9" fill="#3d6485" stroke="#ffffff" stroke-width="2" />
+  <text x="1336.0" y="586.6666666666667" font-family="Calibri, sans-serif" font-size="44" font-weight="700" text-anchor="start" letter-spacing="0" fill="#3d6485" style="font-variant-numeric:tabular-nums lining-nums">100</text>
+  <path d="M155.00 755.44 L260.00 726.64 L365.00 695.63 L470.00 663.79 L575.00 631.12 L680.00 597.61 L785.00 563.26 L890.00 528.07 L995.00 492.03 L1100.00 455.13 L1205.00 417.38 L1310.00 363.99" fill="none" stroke="#1d3f5c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="155.0" cy="755.4356009388849" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="260.0" cy="726.6441053751896" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="365.0" cy="695.630043048083" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="470.0" cy="663.7887092377413" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="575.0" cy="631.115926223174" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="680.0" cy="597.6074951858999" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="785.0" cy="563.2591961034043" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="890.0" cy="528.0667876420587" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="995.0" cy="492.0260070495" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="1100.0" cy="455.13257004646556" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="1205.0" cy="417.3821707180825" r="6" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <circle cx="1310.0" cy="363.98628051211625" r="9" fill="#1d3f5c" stroke="#ffffff" stroke-width="2" />
+  <text x="1336.0" y="373.98628051211625" font-family="Calibri, sans-serif" font-size="44" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">200</text>
+  <path d="M180 300L238 300" fill="none" stroke="#1d3f5c" stroke-width="5" />
+  <text x="254" y="309" font-family="Calibri, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Entire fleet idle</text>
+  <path d="M650 300L708 300" fill="none" stroke="#3d6485" stroke-width="5" stroke-dasharray="10 7" />
+  <text x="724" y="309" font-family="Calibri, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0" fill="#3d6485" style="font-variant-numeric:tabular-nums lining-nums">About half the fleet idle</text>
+  <text x="106" y="940" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">Each point counts ending debt once, plus other amounts accumulated through that month.</text>
+  <path d="M80 983L1520 983" fill="none" stroke="#d8dce0" stroke-width="2" />
+  <text x="80" y="1022" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Reconstructed from the monthly scenario formulas. Includes principal, assumed fees, preservation and other outlays.</text>
+  <text x="80" y="1052" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Hypothetical gross exposure, not incurred loss or realized savings. Refinancing allowance enters in month 12.</text>
+  <g aria-hidden="true">
+    <rect x="80" y="30" width="64" height="4" fill="#1d3f5c" />
+    <path d="M158 32H1520" fill="none" stroke="#d8dce0" stroke-width="1" />
+    <text x="1520" y="80" font-family="Calibri, sans-serif" font-size="21" font-weight="700" text-anchor="end" letter-spacing="2" fill="#626e79">FIG. 03</text>
+    <path d="M80 195H200" fill="none" stroke="#1d3f5c" stroke-width="4" />
+  </g>
 </svg>

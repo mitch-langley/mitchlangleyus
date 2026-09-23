@@ -1,44 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc"><title id="title">Land-use constraints schematic</title><desc id="desc">Conceptual parcel: a road-widening reservation at the frontage, a main zone potentially permitting a charging center, and a rear flood-risk zone excluding both charging and terminal use. Not a survey.</desc>
-<defs><pattern id="hatch" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M-4 4L4 -4 M0 16L16 0 M12 20L20 12" stroke="#94aabb" stroke-width="2"/></pattern></defs>
-<rect x="0" y="0" width="1600" height="1100" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="80" y="80" font-family="Calibri, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="2" fill="#1e405a">SITE ACQUISITION DUE DILIGENCE</text>
-<text x="80" y="155" font-family="Georgia, serif" font-size="49" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1e405a">Charging use depends on the site footprint</text>
-<path d="M80 195L1520 195" fill="none" stroke="#cfd7dd" stroke-width="2"/>
-<text x="80" y="252" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">One parcel, distinct restrictions on where development can occur.</text>
-<rect x="145" y="330" width="100" height="385" fill="#f2f5f7" stroke="none" stroke-width="1"/>
-<path d="M195 340L195 705" fill="none" stroke="#bdc9d1" stroke-width="3" stroke-dasharray="16 14"/>
-<text x="195" y="759" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="2" fill="#63717c">ROAD</text>
-<rect x="300" y="380" width="1050" height="270" fill="#e5edf2" stroke="none" stroke-width="1"/>
-<rect x="300" y="380" width="65" height="270" fill="#e7decd" stroke="none" stroke-width="1"/>
-<rect x="1070" y="380" width="280" height="270" fill="#edf1f4" stroke="none" stroke-width="1"/>
-<rect x="1070" y="380" width="280" height="270" fill="url(#hatch)" stroke="none" stroke-width="1"/>
-<rect x="300" y="380" width="1050" height="270" fill="none" stroke="#1e405a" stroke-width="3"/>
-<path d="M365 380L365 650" fill="none" stroke="#8f806b" stroke-width="2" stroke-dasharray="9 7"/>
-<path d="M1070 380L1070 650" fill="none" stroke="#1e405a" stroke-width="2"/>
-<text x="717" y="499" font-family="Calibri, sans-serif" font-size="36" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">Potential charging use</text>
-<text x="717" y="542" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">Subject to development requirements</text>
-<text x="1210" y="495" font-family="Calibri, sans-serif" font-size="29" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1e405a">Use excluded</text>
-<text x="1210" y="533" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#1e405a">in rear zone</text>
-<path d="M332 650L332 730" fill="none" stroke="#1e405a" stroke-width="2"/>
-<circle cx="332" cy="746" r="20" fill="#1e405a"/>
-<text x="332" y="754" font-family="Calibri, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#ffffff">1</text>
-<path d="M717 650L717 730" fill="none" stroke="#1e405a" stroke-width="2"/>
-<circle cx="717" cy="746" r="20" fill="#1e405a"/>
-<text x="717" y="754" font-family="Calibri, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#ffffff">2</text>
-<path d="M1210 650L1210 730" fill="none" stroke="#1e405a" stroke-width="2"/>
-<circle cx="1210" cy="746" r="20" fill="#1e405a"/>
-<text x="1210" y="754" font-family="Calibri, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#ffffff">3</text>
-<text x="80" y="809" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">1  Road frontage</text>
-<text x="80" y="850" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Reservation for future public</text>
-<text x="80" y="884" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">taking for road widening.</text>
-<text x="590" y="809" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">2  Main zone</text>
-<text x="590" y="850" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Charging-center use may fit.</text>
-<text x="590" y="884" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Risk-study requirements need confirmation.</text>
-<text x="1120" y="809" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">3  Rear zone</text>
-<text x="1120" y="850" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Flood-risk zoning excludes</text>
-<text x="1120" y="884" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">charging and terminal uses.</text>
-<text x="80" y="945" font-family="Calibri, sans-serif" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">Bus terminal use was excluded across the reviewed parcel.</text>
-<path d="M80 983L1520 983" fill="none" stroke="#cfd7dd" stroke-width="2"/>
-<text x="80" y="1022" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Derived from the reviewed zoning plan and technical memorandum.</text>
-<text x="80" y="1052" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Illustrative geometry and widths; not to scale, not a survey or an approved development layout.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Land-use constraints schematic</title>
+  <desc id="desc">Conceptual parcel: a road-widening reservation at the frontage, a main zone potentially permitting a charging center, and a rear flood-risk zone excluding both charging and terminal use. Not a survey.</desc>
+  <defs>
+    <pattern id="hatch" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M-4 4L4 -4 M0 16L16 0 M12 20L20 12" stroke="#a7b8c7" stroke-width="1.5" />
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="1600" height="1100" fill="#ffffff" stroke="none" stroke-width="1" />
+  <g aria-hidden="true">
+    <path d="M80 780H530" fill="none" stroke="#1d3f5c" stroke-width="3" />
+    <path d="M590 780H1070" fill="none" stroke="#1d3f5c" stroke-width="3" />
+    <path d="M1120 780H1520" fill="none" stroke="#1d3f5c" stroke-width="3" />
+    <rect x="80" y="929" width="1440" height="44" fill="#e8eef3" />
+    <path d="M80 929L80 973" fill="none" stroke="#1d3f5c" stroke-width="4" />
+  </g>
+  <text x="80" y="80" font-family="Calibri, sans-serif" font-size="21" font-weight="700" text-anchor="start" letter-spacing="2.2" fill="#3d6485" style="font-variant-numeric:tabular-nums lining-nums">SITE ACQUISITION DUE DILIGENCE</text>
+  <text x="80" y="155" font-family="Georgia, serif" font-size="49" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Charging use depends on the site footprint</text>
+  <path d="M80 195L1520 195" fill="none" stroke="#d8dce0" stroke-width="2" />
+  <text x="80" y="252" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">One parcel, distinct restrictions on where development can occur.</text>
+  <rect x="145" y="330" width="100" height="385" fill="#f4f6f8" stroke="none" stroke-width="1" />
+  <path d="M195 340L195 705" fill="none" stroke="#bdc9d1" stroke-width="3" stroke-dasharray="16 14" />
+  <text x="195" y="759" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="2" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">ROAD</text>
+  <rect x="300" y="380" width="1050" height="270" fill="#e8eef3" stroke="none" stroke-width="1" />
+  <rect x="300" y="380" width="65" height="270" fill="#e7decd" stroke="none" stroke-width="1" />
+  <rect x="1070" y="380" width="280" height="270" fill="#edf1f4" stroke="none" stroke-width="1" />
+  <rect x="1070" y="380" width="280" height="270" fill="url(#hatch)" stroke="none" stroke-width="1" />
+  <rect x="300" y="380" width="1050" height="270" fill="none" stroke="#1d3f5c" stroke-width="3" />
+  <path d="M365 380L365 650" fill="none" stroke="#8f806b" stroke-width="2" stroke-dasharray="9 7" />
+  <path d="M1070 380L1070 650" fill="none" stroke="#1d3f5c" stroke-width="2" />
+  <text x="717" y="499" font-family="Calibri, sans-serif" font-size="36" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Potential charging use</text>
+  <text x="717" y="542" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Subject to development requirements</text>
+  <rect x="1100" y="454" width="220" height="101" fill="#f4f6f8" />
+  <text x="1210" y="495" font-family="Calibri, sans-serif" font-size="29" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Use excluded</text>
+  <text x="1210" y="533" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">in rear zone</text>
+  <path d="M332 650L332 730" fill="none" stroke="#1d3f5c" stroke-width="2" />
+  <circle cx="332" cy="746" r="20" fill="#1d3f5c" />
+  <text x="332" y="754" font-family="Calibri, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#ffffff" style="font-variant-numeric:tabular-nums lining-nums">1</text>
+  <path d="M717 650L717 730" fill="none" stroke="#1d3f5c" stroke-width="2" />
+  <circle cx="717" cy="746" r="20" fill="#1d3f5c" />
+  <text x="717" y="754" font-family="Calibri, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#ffffff" style="font-variant-numeric:tabular-nums lining-nums">2</text>
+  <path d="M1210 650L1210 730" fill="none" stroke="#1d3f5c" stroke-width="2" />
+  <circle cx="1210" cy="746" r="20" fill="#1d3f5c" />
+  <text x="1210" y="754" font-family="Calibri, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0" fill="#ffffff" style="font-variant-numeric:tabular-nums lining-nums">3</text>
+  <text x="80" y="809" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">1  Road frontage</text>
+  <text x="80" y="846" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">Reservation for future public</text>
+  <text x="80" y="880" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">taking for road widening.</text>
+  <text x="590" y="809" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">2  Main zone</text>
+  <text x="590" y="846" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">Charging-center use may fit.</text>
+  <text x="590" y="880" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">Risk-study requirements</text>
+  <text x="590" y="914" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">need confirmation.</text>
+  <text x="1120" y="809" font-family="Calibri, sans-serif" font-size="28" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">3  Rear zone</text>
+  <text x="1120" y="846" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">Flood-risk zoning excludes</text>
+  <text x="1120" y="880" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">charging and terminal uses.</text>
+  <text x="106" y="962" font-family="Calibri, sans-serif" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Bus terminal use was excluded across the reviewed parcel.</text>
+  <path d="M80 983L1520 983" fill="none" stroke="#d8dce0" stroke-width="2" />
+  <text x="80" y="1022" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Derived from the reviewed zoning plan and technical memorandum.</text>
+  <text x="80" y="1052" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Illustrative geometry and widths; not to scale, not a survey or an approved development layout.</text>
+  <g aria-hidden="true">
+    <rect x="80" y="30" width="64" height="4" fill="#1d3f5c" />
+    <path d="M158 32H1520" fill="none" stroke="#d8dce0" stroke-width="1" />
+    <text x="1520" y="80" font-family="Calibri, sans-serif" font-size="21" font-weight="700" text-anchor="end" letter-spacing="2" fill="#626e79">FIG. 06</text>
+    <path d="M80 195H200" fill="none" stroke="#1d3f5c" stroke-width="4" />
+  </g>
 </svg>

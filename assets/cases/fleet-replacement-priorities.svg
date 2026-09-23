@@ -1,33 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc"><title id="title">Fleet replacement subsidy priorities</title><desc id="desc">The city accounts for about 5 percent of reported urban selections and 76 percent of urban waitlist entries. The first retirement cohort represents 19 percent of its registered fleet and the following cohort 4 percent. The groups use different denominators.</desc>
-<defs><pattern id="hatch" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M-4 4L4 -4 M0 16L16 0 M12 20L20 12" stroke="#94aabb" stroke-width="2"/></pattern></defs>
-<rect x="0" y="0" width="1600" height="1100" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="80" y="80" font-family="Calibri, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="2" fill="#1e405a">REGULATORY &amp; POLICY ANALYSIS</text>
-<text x="80" y="155" font-family="Georgia, serif" font-size="49" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1e405a">The city accounted for most of the waitlist</text>
-<path d="M80 195L1520 195" fill="none" stroke="#cfd7dd" stroke-width="2"/>
-<text x="80" y="252" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">City's share of each reported urban application group</text>
-<path d="M440.0 365L440.0 638" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="440.0" y="345" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">0%</text>
-<path d="M695.0 365L695.0 638" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="695.0" y="345" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">25%</text>
-<path d="M950.0 365L950.0 638" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="950.0" y="345" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">50%</text>
-<path d="M1205.0 365L1205.0 638" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="1205.0" y="345" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">75%</text>
-<path d="M1460.0 365L1460.0 638" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="1460.0" y="345" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">100%</text>
-<text x="80" y="437" font-family="Calibri, sans-serif" font-size="29" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">Selected applications</text>
-<rect x="440" y="392" width="48.57142857142857" height="68" fill="#1e405a" stroke="none" stroke-width="1"/>
-<text x="508.57142857142856" y="439" font-family="Calibri, sans-serif" font-size="38" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">5%</text>
-<text x="80" y="585" font-family="Calibri, sans-serif" font-size="29" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">Waitlisted applications</text>
-<rect x="440" y="540" width="771.8918918918919" height="68" fill="#1e405a" stroke="none" stroke-width="1"/>
-<text x="1231.8918918918919" y="587" font-family="Calibri, sans-serif" font-size="38" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">76%</text>
-<path d="M80 700L1520 700" fill="none" stroke="#cfd7dd" stroke-width="2"/>
-<text x="80" y="755" font-family="Calibri, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="1" fill="#1e405a">RETIREMENT EXPOSURE</text>
-<text x="80" y="851" font-family="Georgia, serif" font-size="66" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1e405a">19%</text>
-<text x="80" y="900" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">First retirement cohort</text>
-<text x="620" y="851" font-family="Georgia, serif" font-size="66" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1e405a">4%</text>
-<text x="620" y="900" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">Following cohort</text>
-<text x="1070" y="815" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Both are shares of the</text>
-<text x="1070" y="851" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">same registered fleet.</text>
-<text x="1070" y="887" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Successive retirement cohorts.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Fleet replacement subsidy priorities</title>
+  <desc id="desc">The city accounts for about 5 percent of reported urban selections and 76 percent of urban waitlist entries. The first retirement cohort represents 19 percent of its registered fleet and the following cohort 4 percent. The groups use different denominators.</desc>
+  <defs>
+    <pattern id="hatch" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M-4 4L4 -4 M0 16L16 0 M12 20L20 12" stroke="#94aabb" stroke-width="2" />
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="1600" height="1100" fill="#ffffff" stroke="none" stroke-width="1" />
+  <g aria-hidden="true">
+    <rect x="440" y="392" width="1020" height="68" fill="#f4f6f8" />
+    <rect x="440" y="540" width="1020" height="68" fill="#f4f6f8" />
+    <rect x="80" y="724" width="1440" height="250" fill="#f4f6f8" />
+    <path d="M80 724L80 974" fill="none" stroke="#1d3f5c" stroke-width="4" />
+    <path d="M580 796L580 928" fill="none" stroke="#d8dce0" stroke-width="2" />
+    <path d="M1028 796L1028 928" fill="none" stroke="#d8dce0" stroke-width="2" />
+  </g>
+  <text x="80" y="80" font-family="Calibri, sans-serif" font-size="21" font-weight="700" text-anchor="start" letter-spacing="2.2" fill="#3d6485" style="font-variant-numeric:tabular-nums lining-nums">REGULATORY &amp; POLICY ANALYSIS</text>
+  <text x="80" y="155" font-family="Georgia, serif" font-size="49" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">The city accounted for most of the waitlist</text>
+  <path d="M80 195L1520 195" fill="none" stroke="#d8dce0" stroke-width="2" />
+  <text x="80" y="252" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">City's share of each reported urban application group</text>
+  <path d="M440.0 365L440.0 638" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="440.0" y="345" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">0%</text>
+  <path d="M695.0 365L695.0 638" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="695.0" y="345" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">25%</text>
+  <path d="M950.0 365L950.0 638" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="950.0" y="345" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">50%</text>
+  <path d="M1205.0 365L1205.0 638" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="1205.0" y="345" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">75%</text>
+  <path d="M1460.0 365L1460.0 638" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="1460.0" y="345" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">100%</text>
+  <text x="80" y="437" font-family="Calibri, sans-serif" font-size="29" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Selected applications</text>
+  <rect x="440" y="392" width="48.57142857142857" height="68" fill="#1d3f5c" stroke="none" stroke-width="1" />
+  <text x="508.57142857142856" y="439" font-family="Calibri, sans-serif" font-size="46" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">5%</text>
+  <text x="80" y="585" font-family="Calibri, sans-serif" font-size="29" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Waitlisted applications</text>
+  <rect x="440" y="540" width="771.8918918918919" height="68" fill="#1d3f5c" stroke="none" stroke-width="1" />
+  <text x="1231.8918918918919" y="587" font-family="Calibri, sans-serif" font-size="46" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">76%</text>
+  <path d="M80 700L1520 700" fill="none" stroke="#d8dce0" stroke-width="2" />
+  <text x="112" y="770" font-family="Calibri, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="1" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">RETIREMENT EXPOSURE</text>
+  <text x="112" y="868" font-family="Georgia, serif" font-size="86" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">19%</text>
+  <text x="112" y="922" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">First retirement cohort</text>
+  <text x="620" y="868" font-family="Georgia, serif" font-size="86" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">4%</text>
+  <text x="620" y="922" font-family="Calibri, sans-serif" font-size="28" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">Following cohort</text>
+  <text x="1070" y="815" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Both are shares of the</text>
+  <text x="1070" y="851" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">same registered fleet.</text>
+  <text x="1070" y="887" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Successive retirement cohorts.</text>
+  <g aria-hidden="true">
+    <rect x="80" y="30" width="64" height="4" fill="#1d3f5c" />
+    <path d="M158 32H1520" fill="none" stroke="#d8dce0" stroke-width="1" />
+    <text x="1520" y="80" font-family="Calibri, sans-serif" font-size="21" font-weight="700" text-anchor="end" letter-spacing="2" fill="#626e79">FIG. 05</text>
+    <path d="M80 195H200" fill="none" stroke="#1d3f5c" stroke-width="4" />
+  </g>
 </svg>

@@ -1,43 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc"><title id="title">Lender-side battery range review</title><desc id="desc">Buses whose assigned daily mileage exceeds single-charge range: the proposed battery case rises from 55.6 percent at startup to 75 percent in year eight; the larger battery case rises from 44.4 to 66.7 percent. Modeled with a 15 percent reserve and 30 percent capacity degradation by year eight.</desc>
-<defs><pattern id="hatch" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M-4 4L4 -4 M0 16L16 0 M12 20L20 12" stroke="#94aabb" stroke-width="2"/></pattern></defs>
-<rect x="0" y="0" width="1600" height="1100" fill="#ffffff" stroke="none" stroke-width="1"/>
-<text x="80" y="80" font-family="Calibri, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="2" fill="#1e405a">LENDER-SIDE DUE DILIGENCE</text>
-<text x="80" y="155" font-family="Georgia, serif" font-size="49" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1e405a">Larger batteries leave a range shortfall</text>
-<path d="M80 195L1520 195" fill="none" stroke="#cfd7dd" stroke-width="2"/>
-<text x="80" y="252" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Buses exceeding single-charge range under assigned daily mileage</text>
-<rect x="385" y="288" width="24" height="24" fill="#1e405a" stroke="none" stroke-width="1"/>
-<text x="424" y="310" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1e405a">Proposed battery: 315 kWh</text>
-<rect x="930" y="288" width="24" height="24" fill="#527b96" stroke="none" stroke-width="1"/>
-<text x="969" y="310" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="start" letter-spacing="0" fill="#527b96">Larger battery: 350 kWh</text>
-<path d="M385.0 386L385.0 755" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="385.0" y="367" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">0%</text>
-<path d="M650.0 386L650.0 755" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="650.0" y="367" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">25%</text>
-<path d="M915.0 386L915.0 755" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="915.0" y="367" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">50%</text>
-<path d="M1180.0 386L1180.0 755" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="1180.0" y="367" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">75%</text>
-<path d="M1445.0 386L1445.0 755" fill="none" stroke="#cfd7dd" stroke-width="1"/>
-<text x="1445.0" y="367" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#63717c">100%</text>
-<text x="80" y="453" font-family="Calibri, sans-serif" font-size="34" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">Startup</text>
-<text x="80" y="493" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">New battery</text>
-<text x="80" y="653" font-family="Calibri, sans-serif" font-size="34" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">Year 8</text>
-<text x="80" y="693" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">30% degradation</text>
-<rect x="385" y="410" width="588.8888888888889" height="52" fill="#1e405a" stroke="none" stroke-width="1"/>
-<text x="991.8888888888889" y="446" font-family="Calibri, sans-serif" font-size="32" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">55.6%</text>
-<rect x="385" y="482" width="471.1111111111111" height="52" fill="#527b96" stroke="none" stroke-width="1"/>
-<text x="874.1111111111111" y="518" font-family="Calibri, sans-serif" font-size="32" font-weight="700" text-anchor="start" letter-spacing="0" fill="#527b96">44.4%</text>
-<rect x="385" y="610" width="795.0" height="52" fill="#1e405a" stroke="none" stroke-width="1"/>
-<text x="1198.0" y="646" font-family="Calibri, sans-serif" font-size="32" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1e405a">75%</text>
-<rect x="385" y="682" width="706.6666666666665" height="52" fill="#527b96" stroke="none" stroke-width="1"/>
-<text x="1109.6666666666665" y="718" font-family="Calibri, sans-serif" font-size="32" font-weight="700" text-anchor="start" letter-spacing="0" fill="#527b96">66.7%</text>
-<path d="M80 798L1520 798" fill="none" stroke="#cfd7dd" stroke-width="2"/>
-<text x="80" y="875" font-family="Georgia, serif" font-size="56" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1e405a">+3.3%</text>
-<text x="80" y="923" font-family="Calibri, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Higher quoted bus price</text>
-<text x="650" y="850" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">The larger pack reduces the shortfall, but</text>
-<text x="650" y="888" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">intermediate charging or operating changes</text>
-<text x="650" y="926" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#243442">remain necessary under these assignments.</text>
-<path d="M80 983L1520 983" fill="none" stroke="#cfd7dd" stroke-width="2"/>
-<text x="80" y="1022" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Assumptions: 15% battery reserve, 1.0 km/kWh and 30% capacity degradation by year 8; includes nonrevenue mileage.</text>
-<text x="80" y="1052" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#63717c">Modeled range screen, not observed failures or a charging schedule. Capacities follow the workbook's rounded inputs.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Lender-side battery range review</title>
+  <desc id="desc">Buses whose assigned daily mileage exceeds single-charge range: the proposed battery case rises from 55.6 percent at startup to 75 percent in year eight; the larger battery case rises from 44.4 to 66.7 percent. Modeled with a 15 percent reserve and 30 percent capacity degradation by year eight.</desc>
+  <defs>
+    <pattern id="hatch" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M-4 4L4 -4 M0 16L16 0 M12 20L20 12" stroke="#94aabb" stroke-width="2" />
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="1600" height="1100" fill="#ffffff" stroke="none" stroke-width="1" />
+  <g aria-hidden="true">
+    <rect x="385" y="410" width="1060" height="52" fill="#f4f6f8" />
+    <rect x="385" y="482" width="1060" height="52" fill="#f4f6f8" />
+    <rect x="385" y="610" width="1060" height="52" fill="#f4f6f8" />
+    <rect x="385" y="682" width="1060" height="52" fill="#f4f6f8" />
+    <rect x="80" y="818" width="1440" height="138" fill="#f4f6f8" />
+    <path d="M80 818L80 956" fill="none" stroke="#1d3f5c" stroke-width="4" />
+    <path d="M592 840L592 932" fill="none" stroke="#d8dce0" stroke-width="2" />
+  </g>
+  <text x="80" y="80" font-family="Calibri, sans-serif" font-size="21" font-weight="700" text-anchor="start" letter-spacing="2.2" fill="#3d6485" style="font-variant-numeric:tabular-nums lining-nums">LENDER-SIDE DUE DILIGENCE</text>
+  <text x="80" y="155" font-family="Georgia, serif" font-size="49" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Larger batteries leave a range shortfall</text>
+  <path d="M80 195L1520 195" fill="none" stroke="#d8dce0" stroke-width="2" />
+  <text x="80" y="252" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Buses exceeding single-charge range under assigned daily mileage</text>
+  <rect x="385" y="288" width="24" height="24" fill="#1d3f5c" stroke="none" stroke-width="1" />
+  <text x="424" y="310" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Proposed battery: 315 kWh</text>
+  <rect x="930" y="288" width="24" height="24" fill="#3d6485" stroke="none" stroke-width="1" />
+  <text x="969" y="310" font-family="Calibri, sans-serif" font-size="26" font-weight="400" text-anchor="start" letter-spacing="0" fill="#3d6485" style="font-variant-numeric:tabular-nums lining-nums">Larger battery: 350 kWh</text>
+  <path d="M385.0 386L385.0 755" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="385.0" y="367" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">0%</text>
+  <path d="M650.0 386L650.0 755" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="650.0" y="367" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">25%</text>
+  <path d="M915.0 386L915.0 755" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="915.0" y="367" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">50%</text>
+  <path d="M1180.0 386L1180.0 755" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="1180.0" y="367" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">75%</text>
+  <path d="M1445.0 386L1445.0 755" fill="none" stroke="#d8dce0" stroke-width="1" />
+  <text x="1445.0" y="367" font-family="Calibri, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">100%</text>
+  <text x="80" y="453" font-family="Calibri, sans-serif" font-size="34" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Startup</text>
+  <text x="80" y="493" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">New battery</text>
+  <text x="80" y="653" font-family="Calibri, sans-serif" font-size="34" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">Year 8</text>
+  <text x="80" y="693" font-family="Calibri, sans-serif" font-size="25" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">30% degradation</text>
+  <rect x="385" y="410" width="588.8888888888889" height="52" fill="#1d3f5c" stroke="none" stroke-width="1" />
+  <text x="991.8888888888889" y="446" font-family="Calibri, sans-serif" font-size="38" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">55.6%</text>
+  <rect x="385" y="482" width="471.1111111111111" height="52" fill="#3d6485" stroke="none" stroke-width="1" />
+  <text x="874.1111111111111" y="518" font-family="Calibri, sans-serif" font-size="38" font-weight="700" text-anchor="start" letter-spacing="0" fill="#3d6485" style="font-variant-numeric:tabular-nums lining-nums">44.4%</text>
+  <rect x="385" y="610" width="795.0" height="52" fill="#1d3f5c" stroke="none" stroke-width="1" />
+  <text x="1198.0" y="646" font-family="Calibri, sans-serif" font-size="38" font-weight="700" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">75%</text>
+  <rect x="385" y="682" width="706.6666666666665" height="52" fill="#3d6485" stroke="none" stroke-width="1" />
+  <text x="1109.6666666666665" y="718" font-family="Calibri, sans-serif" font-size="38" font-weight="700" text-anchor="start" letter-spacing="0" fill="#3d6485" style="font-variant-numeric:tabular-nums lining-nums">66.7%</text>
+  <path d="M80 798L1520 798" fill="none" stroke="#d8dce0" stroke-width="2" />
+  <text x="112" y="875" font-family="Georgia, serif" font-size="68" font-weight="400" text-anchor="start" letter-spacing="0" fill="#1d3f5c" style="font-variant-numeric:tabular-nums lining-nums">+3.3%</text>
+  <text x="112" y="923" font-family="Calibri, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Higher quoted bus price</text>
+  <text x="650" y="850" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">The larger pack reduces the shortfall, but</text>
+  <text x="650" y="888" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">intermediate charging or operating changes</text>
+  <text x="650" y="926" font-family="Calibri, sans-serif" font-size="29" font-weight="400" text-anchor="start" letter-spacing="0" fill="#283b4a" style="font-variant-numeric:tabular-nums lining-nums">remain necessary under these assignments.</text>
+  <path d="M80 983L1520 983" fill="none" stroke="#d8dce0" stroke-width="2" />
+  <text x="80" y="1022" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Assumptions: 15% battery reserve, 1.0 km/kWh and 30% capacity degradation by year 8; includes nonrevenue mileage.</text>
+  <text x="80" y="1052" font-family="Calibri, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0" fill="#626e79" style="font-variant-numeric:tabular-nums lining-nums">Modeled range screen, not observed failures or a charging schedule. Capacities follow the workbook's rounded inputs.</text>
+  <g aria-hidden="true">
+    <rect x="80" y="30" width="64" height="4" fill="#1d3f5c" />
+    <path d="M158 32H1520" fill="none" stroke="#d8dce0" stroke-width="1" />
+    <text x="1520" y="80" font-family="Calibri, sans-serif" font-size="21" font-weight="700" text-anchor="end" letter-spacing="2" fill="#626e79">FIG. 01</text>
+    <path d="M80 195H200" fill="none" stroke="#1d3f5c" stroke-width="4" />
+  </g>
 </svg>

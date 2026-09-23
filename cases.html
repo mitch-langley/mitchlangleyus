@@ -9,6 +9,91 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="assets/site.css">
+<style>
+  .case-lightbox {
+    width: min(94vw, 1500px);
+    max-width: none;
+    max-height: 94vh;
+    margin: auto;
+    padding: 18px;
+    border: 0;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 24px 80px rgba(14, 31, 43, 0.32);
+    overflow: visible;
+  }
+
+  .case-lightbox::backdrop {
+    background: rgba(12, 25, 35, 0.78);
+    backdrop-filter: blur(3px);
+  }
+
+  .case-lightbox-frame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-height: calc(94vh - 36px);
+  }
+
+  .case-lightbox-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(94vh - 36px);
+    object-fit: contain;
+  }
+
+  .case-lightbox-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #1e405a;
+    color: #fff;
+    font: 400 30px/1 Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 3px 14px rgba(14, 31, 43, 0.25);
+  }
+
+  .case-lightbox-close:hover,
+  .case-lightbox-close:focus-visible {
+    background: #243442;
+  }
+
+  .case-lightbox-close:focus-visible {
+    outline: 3px solid #94aabb;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 700px) {
+    .case-lightbox {
+      width: 96vw;
+      padding: 10px;
+    }
+
+    .case-lightbox-frame,
+    .case-lightbox-image {
+      max-height: calc(94vh - 20px);
+    }
+
+    .case-lightbox-close {
+      top: -6px;
+      right: -6px;
+      width: 38px;
+      height: 38px;
+      font-size: 27px;
+    }
+  }
+</style>
 </head>
 <body class="route-cases">
 
@@ -229,6 +314,54 @@
 
     </div>
   </section>
+
+<dialog class="case-lightbox" id="case-lightbox" aria-label="Enlarged image">
+  <div class="case-lightbox-frame">
+    <button class="case-lightbox-close" type="button" aria-label="Close enlarged image">&times;</button>
+    <img class="case-lightbox-image" alt="">
+  </div>
+</dialog>
+
+<script>
+  (() => {
+    const lightbox = document.getElementById('case-lightbox');
+    const lightboxImage = lightbox.querySelector('.case-lightbox-image');
+    const closeButton = lightbox.querySelector('.case-lightbox-close');
+    const figureLinks = document.querySelectorAll('.case-figure > a[href$=".svg"]');
+
+    function openLightbox(link) {
+      const sourceImage = link.querySelector('img');
+      lightboxImage.src = link.getAttribute('href');
+      lightboxImage.alt = sourceImage?.alt || '';
+      lightbox.showModal();
+    }
+
+    function closeLightbox() {
+      lightbox.close();
+    }
+
+    figureLinks.forEach((link) => {
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        openLightbox(link);
+      });
+    });
+
+    closeButton.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    lightbox.addEventListener('close', () => {
+      lightboxImage.removeAttribute('src');
+      lightboxImage.alt = '';
+    });
+  })();
+</script>
 
   <section class="band band-tight on-navy">
     <div class="rail">

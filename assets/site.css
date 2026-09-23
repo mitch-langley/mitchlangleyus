@@ -1055,9 +1055,10 @@ body.essay-document {
 
 .book-card {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: var(--s4);
   min-width: 0;
-  flex-direction: column;
   padding: var(--s3) var(--s4);
   background: var(--surface-card);
   border-radius: var(--radius-md);
@@ -1069,6 +1070,23 @@ body.essay-document {
 .book-card:has(.book-open:focus-visible) { box-shadow: var(--shadow-card-hover); transform: translateY(-2px); }
 /* The whole card is the hit area; the ring belongs to the card, not the title. */
 .book-card:has(.book-open:focus-visible) { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
+
+.book-cover {
+  display: block;
+  width: 4.5rem;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  align-self: start;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .08), 0 4px 10px rgba(0, 0, 0, .14);
+}
+.book-card-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
 
 .book-title {
   font-size: 1.05rem;
@@ -1197,6 +1215,24 @@ html:has(.book-drawer[open]) { overflow: hidden; scrollbar-gutter: stable; }
   overscroll-behavior: contain;
   padding: var(--s6) var(--s6) var(--s7);
 }
+.book-drawer-heading {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: var(--s5);
+  align-items: start;
+}
+.book-drawer-heading-copy { min-width: 0; }
+.book-drawer-cover {
+  display: block;
+  width: 7.5rem;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 6px 18px rgba(0, 0, 0, .16);
+}
+.book-drawer-cover[hidden] { display: none; }
+
 .book-drawer-title {
   font-size: clamp(1.35rem, 1.2rem + .6vw, 1.6rem);
   overflow-wrap: anywhere;
@@ -1303,6 +1339,8 @@ html:has(.book-drawer[open]) { overflow: hidden; scrollbar-gutter: stable; }
 @media (max-width: 560px) {
   .library-heading-row { display: block; }
   .library-grid { grid-template-columns: 1fr; }
+  .book-card { grid-template-columns: 3.75rem minmax(0, 1fr); gap: var(--s3); }
+  .book-cover { width: 3.75rem; }
 
   .book-drawer {
     inset: auto 0 0 0;
@@ -1317,6 +1355,8 @@ html:has(.book-drawer[open]) { overflow: hidden; scrollbar-gutter: stable; }
   .book-drawer-inner { height: auto; max-height: 88vh; max-height: 88dvh; }
   .book-drawer-bar { padding-left: var(--s5); }
   .book-drawer-body { padding: var(--s5) var(--s5) var(--s6); }
+  .book-drawer-heading { grid-template-columns: 5.5rem minmax(0, 1fr); gap: var(--s4); }
+  .book-drawer-cover { width: 5.5rem; }
   .book-drawer-nav { padding-inline: var(--s4); gap: var(--s2); }
 }
 
