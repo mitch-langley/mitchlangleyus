@@ -1,15 +1,14 @@
 /* ============================================================
    MITCHELL LANGLEY, site.css
-   One stylesheet for every page: home, resume, case studies,
-   writing and photographs.
+   Shared styles for home, resume, project samples, writing,
+   reading and photography.
 
    SOURCE OF TRUTH
    Built on the Mitchell Langley Asesorías design system
-   (claude.ai/design, project 22dc858d). Tokens in section 2 are
-   copied from its tokens/*.css; do not invent new hues here.
-     - One navy family carries the brand: #1D3F5C, hover #3D6485.
-     - Green #1E8449 is reserved for the single most important
-       action on a page (here: email). Never decorative.
+   (claude.ai/design, project 22dc858d), with the Santiago Metro
+   route palette for section identities.
+     - Each section retains its homepage line color.
+     - Small text uses a darker route shade for contrast.
      - Surfaces are white, alternating with #F4F6F8. Separation
        comes from background change and soft shadow; hairline
        #D8DCE0 rules only where a divider is needed.
@@ -24,15 +23,23 @@
    Keep weights in this file to that set.
 
    ROUTE CLASSES
-   .route-work/.route-cases/.route-writing/.route-gallery remain
-   in the markup but no longer change colour: the system has one
-   brand colour, not a colour per section.
+   Route classes assign section colors. .metro-section applies
+   that palette to page components; .metro-line--N identifies
+   the same route in the homepage diagram.
    ============================================================ */
 
 /* ============================================================
    1. TOKENS (from the design system)
    ============================================================ */
 :root {
+  /* Santiago Metro line colors from the supplied reference. */
+  --metro-1: #ef0017;
+  --metro-2: #ffa800;
+  --metro-3: #813919;
+  --metro-4: #282582;
+  --metro-5: #00a368;
+  --metro-6: #943991;
+
   /* Brand palette */
   --navy-900: #1D3F5C;    /* primary / dark */
   --navy-600: #3D6485;    /* hover / accent tint, 6.0:1 on white */
@@ -60,8 +67,7 @@
   --rule-dark: rgba(255, 255, 255, .22);
   --focus-ring: var(--navy-600);
 
-  /* Kept as an alias so older markup and the print block still
-     resolve; every page now draws its marks in navy. */
+  /* Default route mark; themed pages assign their section color. */
   --line: var(--navy-600);
 
   /* Type */
@@ -115,6 +121,62 @@
   color-scheme: light;
 }
 
+/* Section identities are shared by the map, navigation and page themes. */
+.route-work, .metro-line--1 {
+  --route-color: var(--metro-1);
+  --route-ink: #bd0012;
+  --route-hover: #990010;
+  --route-surface: #cc0014;
+  --route-on-surface: #fff;
+}
+.route-cases, .metro-line--2 {
+  --route-color: var(--metro-2);
+  --route-ink: #805000;
+  --route-hover: #633d00;
+  --route-surface: var(--metro-2);
+  --route-on-surface: #1a1a1a;
+  --badge-ink: #111;
+}
+.route-writing, .metro-line--3 {
+  --route-color: var(--metro-3);
+  --route-ink: var(--metro-3);
+  --route-hover: #602710;
+  --route-surface: var(--metro-3);
+  --route-on-surface: #fff;
+}
+.route-gallery, .metro-line--4 {
+  --route-color: var(--metro-4);
+  --route-ink: var(--metro-4);
+  --route-hover: #19145f;
+  --route-surface: var(--metro-4);
+  --route-on-surface: #fff;
+}
+.route-reading, .metro-line--5 {
+  --route-color: var(--metro-5);
+  --route-ink: #006b45;
+  --route-hover: #004c31;
+  --route-surface: #007b4f;
+  --route-on-surface: #fff;
+}
+.metro-line--6 { --route-color: var(--metro-6); }
+
+body.metro-section {
+  --color-primary: var(--route-ink);
+  --color-primary-hover: var(--route-hover);
+  --color-accent: var(--route-ink);
+  --color-accent-hover: var(--route-hover);
+  --surface-dark: var(--route-surface);
+  --text-on-dark: var(--route-on-surface);
+  --text-on-dark-muted: var(--route-on-surface);
+  --focus-ring: var(--route-ink);
+  --line: var(--route-color);
+  --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, .16);
+  --shadow-popover: 0 18px 44px rgba(0, 0, 0, .24);
+  accent-color: var(--route-ink);
+  caret-color: var(--route-ink);
+}
+body.metro-section.route-cases { --rule-dark: rgba(26, 26, 26, .25); }
+
 /* ============================================================
    2. BASE
    ============================================================ */
@@ -158,11 +220,11 @@ a:hover { color: var(--color-primary-hover); }
 }
 .on-navy :focus-visible,
 .plate :focus-visible,
-.site-footer :focus-visible { outline-color: var(--white); }
+.site-footer :focus-visible { outline-color: var(--text-on-dark); }
 
 ::selection { background: rgba(29, 63, 92, .18); color: var(--text-body); }
 .on-navy ::selection, .plate ::selection, .site-footer ::selection {
-  background: rgba(255, 255, 255, .28); color: var(--white);
+  background: var(--text-on-dark); color: var(--surface-dark);
 }
 
 .skip-link {
@@ -262,8 +324,8 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .band-paper { background: var(--white); }
 
 .on-navy { background: var(--surface-dark); color: var(--text-on-dark-muted); }
-.on-navy h1, .on-navy h2, .on-navy h3, .on-navy h4 { color: var(--white); }
-.on-navy a { color: var(--white); }
+.on-navy h1, .on-navy h2, .on-navy h3, .on-navy h4 { color: var(--text-on-dark); }
+.on-navy a { color: var(--text-on-dark); }
 .on-navy .sec { border-bottom-color: var(--rule-dark); }
 
 .stack > * + * { margin-top: var(--s4); }
@@ -351,7 +413,7 @@ p { max-width: var(--measure); text-wrap: pretty; }
   margin-top: var(--s3);
   font-size: var(--text-display);
   line-height: 1.12;
-  color: var(--white);
+  color: var(--text-on-dark);
   max-width: 60ch;
 }
 .plate-note { margin-top: var(--s4); font-size: var(--text-subtitle); line-height: 1.55; color: var(--text-on-dark-muted); max-width: 80ch; }
@@ -363,9 +425,168 @@ p { max-width: var(--measure); text-wrap: pretty; }
   font-size: var(--text-small);
   color: var(--text-on-dark-muted);
 }
-.plate-facts b { color: var(--white); font-weight: 600; }
+.plate-facts b { color: var(--text-on-dark); font-weight: 600; }
 .plate-facts a { color: var(--text-on-dark-muted)}
-.plate-facts a:hover {color: var(--color-primary-hover)}
+.plate-facts a:hover { color: var(--text-on-dark); text-decoration-thickness: 2px; }
+
+/* Santiago Metro homepage */
+.metro-page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: #f7f8f9;
+}
+
+.metro-home {
+  width: min(880px, calc(100% - 80px));
+  margin: auto;
+  padding-block: clamp(48px, 8vh, 88px) 32px;
+}
+
+.metro-home h1 {
+  margin-bottom: clamp(32px, 5vh, 56px);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -.035em;
+  text-align: left;
+}
+
+.metro-map {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.metro-tracks {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.metro-tracks--compact { display: none; }
+.metro-track {
+  fill: none;
+  stroke: var(--route-color);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.metro-stop {
+  fill: #f7f8f9;
+  stroke: var(--route-color);
+  stroke-width: 4;
+  vector-effect: non-scaling-stroke;
+}
+
+.metro-interchange {
+  fill: #f7f8f9;
+  stroke: #1a1a1a;
+  stroke-width: 3;
+  vector-effect: non-scaling-stroke;
+}
+
+.metro-destinations {
+  display: grid;
+  grid-template-rows: repeat(6, minmax(80px, 1fr));
+  list-style: none;
+  min-width: 0;
+}
+
+.metro-destinations li { display: flex; min-width: 0; }
+
+.metro-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 12px 8px 12px 0;
+  color: var(--text-body);
+  text-decoration: none;
+}
+
+.metro-badge {
+  display: grid;
+  place-items: center;
+  flex: 0 0 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--route-color);
+  color: var(--badge-ink, #fff);
+  font: 700 2rem/1 var(--font-sans);
+  font-variant-numeric: lining-nums;
+}
+
+.metro-label {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+a.metro-link:hover,
+a.metro-link:focus-visible { color: var(--text-body); }
+
+a.metro-link:hover .metro-label,
+a.metro-link:focus-visible .metro-label {
+  text-decoration: underline;
+  text-decoration-color: var(--route-color);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+a.metro-link:focus-visible { outline-color: var(--text-body); outline-offset: 5px; }
+
+.metro-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  width: min(880px, calc(100% - 80px));
+  margin-inline: auto;
+  padding-block: 20px 32px;
+}
+
+.metro-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.metro-footer a:hover { color: var(--text-body); text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .metro-home, .metro-footer { width: calc(100% - 40px); }
+  .metro-home { padding-top: 40px; }
+  .metro-home h1 { margin-bottom: 28px; }
+  .metro-map { grid-template-columns: 64px minmax(0, 1fr); }
+  .metro-tracks--wide { display: none; }
+  .metro-tracks--compact { display: block; }
+  .metro-destinations { grid-template-rows: repeat(6, minmax(72px, 1fr)); }
+  .metro-link { gap: 16px; }
+  .metro-badge { flex-basis: 44px; height: 44px; font-size: 1.75rem; }
+  .metro-footer { padding-top: 0; }
+}
+
+@media (forced-colors: active) {
+  .metro-badge { border: 2px solid CanvasText; }
+  .metro-track, .metro-stop, .metro-interchange { stroke: CanvasText; }
+}
+
+@media print {
+  .metro-page { min-height: auto; background: #fff; }
+  .metro-home, .metro-footer { width: 100%; }
+  .metro-home { padding-top: 0; }
+  .metro-map { display: block; }
+  .metro-tracks, .metro-badge { display: none; }
+  .metro-destinations { grid-template-rows: repeat(6, auto); }
+  .metro-link { padding-block: 8px; }
+}
 
 /* ============================================================
    7. HOME
@@ -698,6 +919,91 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .case-col p { max-width: none; font-size: var(--text-small); line-height: 1.6; }
 .case-col-outcome .case-col-label { color: var(--color-primary-hover); }
 .case-col-outcome p { color: var(--color-primary); font-weight: 600; }
+
+/* Project image viewer */
+.case-lightbox {
+  width: min(94vw, 1500px);
+  max-width: none;
+  max-height: 94vh;
+  margin: auto;
+  padding: 18px;
+  border: 0;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(14, 31, 43, 0.32);
+  overflow: visible;
+}
+
+.case-lightbox::backdrop {
+  background: rgba(12, 25, 35, 0.78);
+  backdrop-filter: blur(3px);
+}
+
+.case-lightbox-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: calc(94vh - 36px);
+}
+
+.case-lightbox-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(94vh - 36px);
+  object-fit: contain;
+}
+
+.case-lightbox-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font: 400 30px/1 Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 3px 14px rgba(14, 31, 43, 0.25);
+}
+
+.case-lightbox-close:hover,
+.case-lightbox-close:focus-visible {
+  background: var(--color-primary-hover);
+}
+
+.case-lightbox-close:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .case-lightbox {
+    width: 96vw;
+    padding: 10px;
+  }
+
+  .case-lightbox-frame,
+  .case-lightbox-image {
+    max-height: calc(94vh - 20px);
+  }
+
+  .case-lightbox-close {
+    top: -6px;
+    right: -6px;
+    width: 38px;
+    height: 38px;
+    font-size: 27px;
+  }
+}
 
 /* ============================================================
    10. WRITING
@@ -1572,10 +1878,10 @@ body.fiestas-page {
 
 /* On navy (hero, plates, dark bands): primary becomes the system's
    white "outline" button */
-:is(.on-navy, .plate) .btn { background: var(--white); border-color: var(--white); color: var(--color-primary); }
-:is(.on-navy, .plate) .btn:hover { background: var(--color-primary); border-color: var(--white); color: var(--white); }
-:is(.on-navy, .plate) .btn-line { background: transparent; border-color: var(--white); color: var(--white); }
-:is(.on-navy, .plate) .btn-line:hover { background: var(--white); color: var(--color-primary); }
+:is(.on-navy, .plate) .btn { background: var(--text-on-dark); border-color: var(--text-on-dark); color: var(--surface-dark); }
+:is(.on-navy, .plate) .btn:hover { background: transparent; border-color: var(--text-on-dark); color: var(--text-on-dark); }
+:is(.on-navy, .plate) .btn-line { background: transparent; border-color: var(--text-on-dark); color: var(--text-on-dark); }
+:is(.on-navy, .plate) .btn-line:hover { background: var(--text-on-dark); color: var(--surface-dark); }
 :is(.on-navy, .plate) .btn-accent { background: var(--color-accent); border-color: var(--color-accent); color: var(--white); }
 :is(.on-navy, .plate) .btn-accent:hover { background: var(--white); border-color: var(--white); color: var(--color-accent); }
 
@@ -1600,16 +1906,75 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
    13. FOOTER
    ============================================================ */
 .site-footer { padding-block: var(--s7) var(--s5); background: var(--surface-dark); color: var(--text-on-dark-muted); }
-.site-footer .doc-name { color: var(--white); font-size: 1.3rem; }
+.site-footer .doc-name { color: var(--text-on-dark); font-size: 1.3rem; }
 .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s5); }
 .footer-nav { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); list-style: none; }
 .site-footer a { color: var(--text-on-dark-muted); text-decoration: none; }
-.site-footer a:hover { color: var(--white); text-decoration: underline; }
+.site-footer a:hover { color: var(--text-on-dark); text-decoration: underline; }
 .footer-base {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s3);
   margin-top: var(--s6); padding-top: var(--s4);
   border-top: 1px solid var(--rule-dark);
   font-size: var(--text-small);
+}
+
+/* Section colors on navigation, controls and page accents. */
+@media screen {
+  .metro-section .plate { border-bottom: 6px solid var(--route-color); }
+  .metro-section .sec { border-bottom-color: var(--route-color); }
+
+  .metro-section .doc-nav a[class*="route-"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--route-ink);
+    white-space: nowrap;
+  }
+  .metro-section .doc-nav a[class*="route-"]:hover { color: var(--route-hover); }
+  .metro-section .doc-nav a[class*="route-"]:focus-visible { outline-color: var(--route-ink); }
+  .metro-section .doc-nav a[class*="route-"]::after { background: var(--route-color); }
+
+  .metro-section :is(.doc-nav, .footer-nav) a[class*="route-"]::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--route-color);
+  }
+  .metro-section .footer-nav a[class*="route-"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .metro-section .footer-nav a[class*="route-"]::before {
+    box-shadow: 0 0 0 2px var(--white);
+  }
+  .metro-section .footer-nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  .metro-section .plate .btn[class*="route-"] {
+    border-color: var(--route-color);
+    background: var(--route-color);
+    color: var(--route-on-surface);
+  }
+  .metro-section .plate .btn[class*="route-"]:hover {
+    border-color: var(--route-color);
+    background: var(--route-hover);
+    color: var(--white);
+  }
+
+  .metro-section .filter-chip { border-color: var(--route-ink); }
+  .metro-section .filter-chip:hover,
+  .metro-section .filter-chip:focus-visible {
+    background: var(--route-ink);
+    color: var(--white);
+  }
+  .metro-section .book-drawer-bar { border-top: 4px solid var(--route-color); }
+  .metro-section .book-drawer::backdrop { background: rgba(0, 0, 0, .45); }
 }
 
 /* ============================================================
@@ -1718,6 +2083,18 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
     --navy-900: #111; --navy-600: #333; --ink-900: #1a1a1a; --ink-500: #555;
     --rule: #cfd6db; --surface-tint: transparent;
     --shadow-card: none; --shadow-card-hover: none;
+  }
+  body.metro-section {
+    --color-primary: #111;
+    --color-primary-hover: #333;
+    --color-accent: #111;
+    --color-accent-hover: #333;
+    --surface-dark: transparent;
+    --text-on-dark: #111;
+    --text-on-dark-muted: #333;
+    --line: #111;
+    --shadow-card-hover: none;
+    --shadow-popover: none;
   }
   html, body { background: #fff; color: #111; }
   body { font-size: 10pt; line-height: 1.4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }

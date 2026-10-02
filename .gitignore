@@ -12,6 +12,8 @@ assets/photography/stgo-contrasts/unused/
 # Raw/working spreadsheets and documents
 *.xlsx
 *.pptx
+.toolkit-generated.json
+*.md
 
 # ==========================================
 # AI Agents, Tools & Worktrees
@@ -19,6 +21,7 @@ assets/photography/stgo-contrasts/unused/
 # Claude Code / Codex metadata and duplicated worktrees
 .claude/
 .impeccable/
+.vscode/
 
 # ==========================================
 # Python & Scripts
@@ -47,3 +50,8 @@ desktop.ini
 .wrangler/
 dist/
 node_modules/
+
+# Local route-generation credentials and source downloads
+.env.routes
+assets/others/.route-cache/
+!assets/others/README.md

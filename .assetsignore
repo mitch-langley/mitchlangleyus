@@ -7,3 +7,7 @@ sync.py
 assets/photography/stgo-contrasts/_originals/
 assets/photography/stgo-contrasts/color/
 assets/photography/stgo-contrasts/unused/
+.env.routes
+assets/others/.env.routes
+assets/others/.route-cache/
+assets/others/tools/
