@@ -1920,7 +1920,64 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
 
 /* Section colors on navigation, controls and page accents. */
 @media screen {
-  .metro-section .plate { border-bottom: 6px solid var(--route-color); }
+  /* Metro-section page plates use a shared transit-silver surface.
+     Route colors are retained as restrained identity accents rather
+     than full-bleed backgrounds. */
+  .metro-section .plate {
+    background: #E7EAED;
+    color: var(--text-muted);
+    border-bottom: 6px solid var(--route-color);
+  }
+  .metro-section .plate .plate-line,
+  .metro-section .plate h1 {
+    color: var(--route-ink);
+  }
+  .metro-section .plate .plate-note {
+    color: var(--text-body);
+  }
+  .metro-section .plate .plate-facts {
+    border-top-color: #C9CED3;
+    color: var(--text-muted);
+  }
+  .metro-section .plate .plate-facts b {
+    color: var(--text-body);
+  }
+  .metro-section .plate .plate-facts a {
+    color: var(--route-ink);
+  }
+  .metro-section .plate .plate-facts a:hover {
+    color: var(--route-hover);
+  }
+  .metro-section .plate :focus-visible {
+    outline-color: var(--route-ink);
+  }
+  .metro-section .plate ::selection {
+    background: rgba(29, 63, 92, .16);
+    color: var(--text-body);
+  }
+
+  /* Keep plate actions neutral so the route color remains an accent. */
+  .metro-section .plate .btn {
+    background: var(--navy-900);
+    border-color: var(--navy-900);
+    color: var(--white);
+  }
+  .metro-section .plate .btn:hover {
+    background: var(--navy-600);
+    border-color: var(--navy-600);
+    color: var(--white);
+  }
+  .metro-section .plate .btn-line {
+    background: transparent;
+    border-color: var(--navy-900);
+    color: var(--navy-900);
+  }
+  .metro-section .plate .btn-line:hover {
+    background: var(--navy-900);
+    border-color: var(--navy-900);
+    color: var(--white);
+  }
+
   .metro-section .sec { border-bottom-color: var(--route-color); }
 
   .metro-section .doc-nav a[class*="route-"] {
@@ -1957,13 +2014,13 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   }
 
   .metro-section .plate .btn[class*="route-"] {
-    border-color: var(--route-color);
-    background: var(--route-color);
-    color: var(--route-on-surface);
+    border-color: var(--navy-900);
+    background: transparent;
+    color: var(--navy-900);
   }
   .metro-section .plate .btn[class*="route-"]:hover {
-    border-color: var(--route-color);
-    background: var(--route-hover);
+    border-color: var(--navy-900);
+    background: var(--navy-900);
     color: var(--white);
   }
 
