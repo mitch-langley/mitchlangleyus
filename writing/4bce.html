@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A counterfactual analysis of Roman administrative alternatives for Judaea after the death of Herod the Great in 4 BCE.">
+  <title>Governing Judaea after Herod: Augustus's Alternatives in 4 BCE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/site.css">
+
+  <style>
+    @layer essay-diagrams {
+      .essay-diagram {
+        container: essay-diagram / inline-size;
+        margin-block: 1.5rem;
+        padding-block: 1rem;
+        border-block: 1px solid var(--rule, #d8dce0);
+        font-family: var(--font-sans, Arial, sans-serif);
+        font-size: 1rem;
+        line-height: 1.4;
+        break-inside: avoid;
+      }
+      .diagram-caption { display: block; margin-block-end: .875rem; }
+      .diagram-number {
+        display: block;
+        margin-block-end: .25rem;
+        color: var(--route-ink, #813919);
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+      }
+      .diagram-title { color: var(--color-primary, #1d3f5c); font-size: 1rem; }
+      .diagram-subtitle, .diagram-note {
+        display: block;
+        color: #535b65;
+        font-size: .875rem;
+        line-height: 1.45;
+      }
+      .diagram-subtitle { margin-block-start: .2rem; }
+      .diagram-note { margin-block-start: .875rem; }
+      .diagram-steps {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+        list-style: none;
+      }
+      .diagram-node {
+        position: relative;
+        min-width: 0;
+        padding: .75rem;
+        border: 1px solid #c7cfd6;
+        border-radius: 2px;
+        background: var(--surface-card, #f4f6f8);
+        color: var(--color-primary, #1d3f5c);
+        overflow-wrap: break-word;
+      }
+      .diagram-node strong, .diagram-node span { display: block; }
+      .diagram-node-detail { margin-block-start: .4rem; font-size: .875rem; }
+      .diagram-authority .diagram-node:first-child {
+        background: var(--color-primary, #1d3f5c);
+        border-color: var(--color-primary, #1d3f5c);
+        color: #fff;
+      }
+      .diagram-authority .diagram-node:last-child {
+        background: #faf4f0;
+        border-color: var(--route-ink, #813919);
+        color: var(--route-ink, #813919);
+      }
+      .diagram-authority .diagram-node:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        inset-block-end: -1.05rem;
+        inset-inline-start: calc(50% - .2rem);
+        width: .4rem;
+        height: .4rem;
+        border-inline-end: 2px solid var(--route-ink, #813919);
+        border-block-end: 2px solid var(--route-ink, #813919);
+        transform: rotate(45deg);
+      }
+      .diagram-rank { margin-block-end: .35rem; color: #68717b; font-size: .875rem; font-weight: 600; }
+      .diagram-ranking { gap: .75rem; }
+      .diagram-ranking .diagram-node:nth-child(-n + 2) {
+        background: #faf4f0;
+        border-color: var(--route-ink, #813919);
+      }
+      .diagram-ranking .diagram-node:nth-child(-n + 2) .diagram-rank { color: var(--route-ink, #813919); }
+      @container essay-diagram (min-width: 34rem) {
+        .diagram-authority, .diagram-ranking { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .diagram-authority { gap: 1.25rem; }
+        .diagram-authority .diagram-node:not(:last-child)::after {
+          inset-block-end: auto;
+          inset-block-start: calc(50% - .2rem);
+          inset-inline-start: auto;
+          inset-inline-end: -.85rem;
+          transform: rotate(-45deg);
+        }
+      }
+      @media print {
+        .essay-diagram { margin-block: .16in; padding-block: .1in; font-size: .875rem; }
+        .diagram-title { font-size: .875rem; }
+        .diagram-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; }
+        .diagram-node { padding: .5rem; }
+        .diagram-authority .diagram-node:not(:last-child)::after { content: none; }
+        .diagram-node-detail, .diagram-rank, .diagram-note, .diagram-subtitle { font-size: .75rem; }
+      }
+    }
+  </style>
+</head>
+
+<body class="route-writing essay-document essay-academic">
+
+<main class="essay-layout" aria-labelledby="essay-title">
+  <nav class="essay-toc" aria-label="Table of contents">
+    <details open>
+      <summary>Contents</summary>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#counterfactual-method">Counterfactual method and Augustan administration</a></li>
+        <li><a href="#syrian-incorporation">Syrian incorporation with broad indigenous autonomy</a></li>
+        <li>
+          <a href="#direct-roman-rule">Direct Roman rule with Augustan safeguards</a>
+          <ol>
+            <li><a href="#local-jurisdiction">Local jurisdiction and protection of ancestral practices</a></li>
+            <li><a href="#tax-obligations">Defined tax obligations and remedies against abuse</a></li>
+            <li><a href="#gubernatorial-supervision">Supervision and the governor's rank</a></li>
+          </ol>
+        </li>
+        <li><a href="#antipas-monarchy">A unified Herodian monarchy under Antipas</a></li>
+        <li><a href="#comparative-assessment">Comparative assessment</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#notes-heading">Notes</a></li>
+        <li>
+          <a href="#bibliography-heading">Selected sources and bibliography</a>
+          <ol>
+            <li><a href="#primary-sources">Primary and documentary sources</a></li>
+            <li><a href="#modern-scholarship">Modern scholarship</a></li>
+          </ol>
+        </li>
+      </ol>
+    </details>
+  </nav>
+  <article class="essay-paper">
+
+    <header class="essay-paper-head">
+      <h1 class="essay-paper-title" id="essay-title">Governing Judaea after Herod: Augustus's Alternatives in 4 BCE</h1>
+      <p class="essay-byline">Mitchell Langley &middot; October 2026</p>
+    </header>
+
+    <section>
+      <h2 id="introduction">Introduction</h2>
+
+      <p>
+        After Herod the Great's death in 4 BCE, Augustus had to decide who would govern Judaea. Rival Herodian
+        claimants and Judaean delegations traveled to Rome to argue their cases. Although small, the territory
+        mattered to Rome's control of the east. Disorder during the succession crisis had already required
+        intervention from the Syrian command, so Augustus also had to consider how Roman authority could last
+        where political legitimacy, taxation, and religious institutions were closely connected.<sup class="footnote-ref"><a href="#fn1" id="fnref1" role="doc-noteref" aria-label="Read note 1">1</a></sup>
+        Augustus confirmed Archelaus as ethnarch of Judaea, Samaria, and Idumaea. Antipas received Galilee and
+        Peraea, and Philip received territories to the northeast. After Archelaus's removal in 6 CE, Judaea
+        entered the Syrian provincial system under direct Roman administration. Other alternatives were
+        available. Josephus reports that the principal anti-Archelaean delegation asked Augustus to abolish
+        Herodian monarchy, attach Judaea to Syria, and appoint more moderate Roman governors. Antipas,
+        previously named Herod's heir, also claimed the larger inheritance. Practices in Cyrene, Asia, and Egypt
+        from roughly the same period show that direct Roman rule could preserve local jurisdiction and
+        ancestral law, maintain fiscal records, and provide remedies against official abuse.<sup class="footnote-ref"><a href="#fn2" id="fnref2" role="doc-noteref" aria-label="Read note 2">2</a></sup>
+      </p>
+
+      <p>
+        The decision of 4 BCE did not make the revolt of 66 CE inevitable, but Rome's later failure to
+        establish stable relations with Judaea contributed to the sequence that ended in war and the
+        destruction of Jerusalem, including the Second Temple, in 70 CE. The religious consequences were
+        far-reaching. Losing the Temple accelerated the development of Jewish communal and religious life
+        without a central sacrificial sanctuary, although synagogues and Torah observance long predated 70
+        CE. Rabbinic authority grew gradually and was initially limited. The revolt also disrupted
+        Jerusalem's "mother church." A later Christian tradition, first clearly preserved by Eusebius, held
+        that Jerusalem believers withdrew to Pella; the historical details remain disputed. Gentile
+        Christian communities shaped by Pauline missions had already existed for decades. The war of 66 to
+        70 CE therefore changed the institutions
+        within which rabbinic Judaism and Pauline Christianity developed, but it created neither.<sup class="footnote-ref"><a href="#fn3" id="fnref3" role="doc-noteref" aria-label="Read note 3">3</a></sup>
+        Which administrative alternative available to Augustus around 4 BCE was most likely to reduce human
+        suffering, economic disruption, and military escalation while preserving Roman strategic control?
+        Incorporation into Syria with extensive indigenous autonomy appears the strongest option. Direct
+        Roman administration with enforceable limits is a close second, while a unified client kingdom under
+        Antipas is a credible third option whose success would have depended more heavily on the ruler.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="counterfactual-method">Counterfactual method and Augustan administration</h2>
+
+      <p>
+        This analysis considers administrative alternatives and institutions that were available to Augustus
+        through legal precedent or contemporary practice in other provinces. The Roman imperial state's
+        baseline demands for provincial government included tax collection and tribute for the imperial
+        core, security maintained through military force, recognition of imperial sovereignty, and respect
+        for Roman prestige. Judaea was divided by region, social status, religious tendency, elite rivalry,
+        and relations with neighboring populations. Within those constraints, Augustus could have combined
+        existing administrative practices into a system of government less likely to escalate disputes. Such
+        a framework would not have constituted a modern tolerant state. Provincial government in the eastern
+        Mediterranean already relied on inherited civic institutions, local law, client rulers, and distinct
+        jurisdictions rather than a uniform Roman
+        bureaucracy.<sup class="footnote-ref"><a href="#fn4" id="fnref4" role="doc-noteref" aria-label="Read note 4">4</a></sup>
+        Josephus is the principal narrative source for the succession crisis, but his account needs careful
+        reading. His description of the 4 BCE delegation preserves an alternative debated at Rome, while its
+        accusations against Herod and Archelaus form part of an adversarial speech. They cannot be read as
+        an audited account of Herodian finances. His explanation of the revolt of 66 is also retrospective
+        and polemical. Martin Goodman and Steve Mason, through different approaches, reject explanations
+        that reduce the revolt to a single cause or treat the years after the census of 6 CE as a continuous
+        march
+        toward inevitable war.<sup class="footnote-ref"><a href="#fn5" id="fnref5" role="doc-noteref" aria-label="Read note 5">5</a></sup>
+      </p>
+
+      <p>
+        Augustus could not undo the deaths that had already occurred during the succession crisis. Before
+        Augustus made his final decision, Archelaus violently suppressed disturbances around the Temple.
+        Josephus reports 3,000 killed, an ancient literary figure that should not be treated as a secure
+        demographic count. Wider disorder then brought military intervention by the Syrian governor Varus.
+        The
+        alternatives examined here concern government <em>after</em> that crisis; they could not have
+        prevented every death associated with Herod's succession.<sup class="footnote-ref"><a href="#fn6" id="fnref6" role="doc-noteref" aria-label="Read note 6">6</a></sup>
+        Administrative reform could have reduced avoidable grievances, but opposition to foreign rule would
+        have remained. During the annexation census of 6 CE, Josephus reports that the high priest Joazar
+        persuaded much of the population to register property, while Judas the Galilean and Saddok denounced
+        the assessment as enslavement. Indigenous mediation could have helped secure compliance, and better
+        fiscal procedures could have
+        limited arbitrary extraction, but neither would have made Roman taxation politically or religiously neutral.<sup class="footnote-ref"><a href="#fn7" id="fnref7" role="doc-noteref" aria-label="Read note 7">7</a></sup>
+      </p>
+
+      <p>
+        The argument is strongest for the period leading to 66. It is much harder to extend it to the Bar
+        Kokhba revolt more than a century later. Hanan Eshel identifies several background conditions for
+        the revolt of 132 to 135: Judaea's administrative transformation after 70, a larger Roman military
+        presence, possible economic changes, the Diaspora revolts of 115 to 117, and Hadrianic policy. The
+        relative importance of Aelia Capitolina and the reported prohibition of circumcision remains
+        disputed. A different decision in 4 BCE might have changed whether the destruction of 70 CE occurred
+        and thereby
+        altered the later history, but that does not establish that it would have "prevented Bar Kokhba."<sup class="footnote-ref"><a href="#fn8" id="fnref8" role="doc-noteref" aria-label="Read note 8">8</a></sup>
+        The strongest alternatives would have reduced the occasions on which fiscal, judicial, or religious
+        disputes became tests of Roman sovereignty. Broad autonomy could have helped insofar as it served
+        that purpose. Augustus already used client monarchies, local courts, exemptions, imperial edicts,
+        petitions, separate legal jurisdictions, census registers, and remedies against official exaction
+        elsewhere in the empire. These practices provide the basis for the proposed administrative
+        frameworks.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="syrian-incorporation">Syrian incorporation with broad indigenous autonomy</h2>
+
+      <p>
+        Josephus describes a Judaean delegation whose request forms the basis of the
+        strongest alternative. Fifty representatives authorized by the nation appeared before Augustus,
+        joined, according to Josephus, by thousands of Jews living in Rome. They asked to end Herodian
+        kingship, join Syria, and live under Roman governors capable of moderation. Augustus rejected that
+        request. He gave Archelaus an ethnarchy covering roughly half of Herod's former kingdom and assigned
+        separate tetrarchies to Antipas and Philip.<sup class="footnote-ref"><a href="#fn9" id="fnref9" role="doc-noteref" aria-label="Read note 9">9</a></sup>
+        Josephus specifies the requested relationship to Syria, but he supplies no detailed indigenous
+        constitution. The proposal cannot support a claim that the delegates sought a sovereign "Sanhedrin
+        state" or Roman <em>civitas libera</em> status. Nor can the later rabbinic conception of a fixed Great
+        Sanhedrin safely be projected back into 4 BCE. The reconstruction used here combines Roman sovereignty
+        through Syria with broad jurisdiction for Jerusalem's high-priestly, Temple, council, municipal, and
+        local judicial institutions. It follows the wider Roman practice of retaining inherited legal and
+        civic structures under limited imperial administration.<sup class="footnote-ref"><a href="#fn10" id="fnref10" role="doc-noteref" aria-label="Read note 10">10</a></sup>
+      </p>
+
+      <p>
+        Under this framework, the Syrian legate would have overseen external security, major military
+        operations, Roman interests, final appeals, and the assessment of imperial tribute. Indigenous
+        institutions could have administered the Temple and religious law, heard much ordinary civil
+        litigation, governed towns and villages, and handled routine policing. Serious intercommunal
+        disputes and cases involving imperial security could have gone to the Syrian administration. Rome
+        would have retained the power to levy tribute and suppress revolt, but inhabitants would have dealt
+        with its officials less often in daily government. Keeping more disputes local could have reduced
+        the risk of escalation. Judaean magistrates and priestly authorities could still have exploited
+        their positions or pursued factional interests, but a grievance against them would not immediately
+        have become a confrontation with Caesar's representative. In Jerusalem, where authority was closely
+        tied to the Temple and pilgrimage, Roman intervention could have turned a manageable dispute into a
+        contest over ancestral law and imperial domination. The province's later history shows how coercion
+        combined with symbolic provocation could inflame such conflicts. Reserving direct Roman
+        force for matters of imperial security would have helped limit the stakes of routine administration.<sup class="footnote-ref"><a href="#fn11" id="fnref11" role="doc-noteref" aria-label="Read note 11">11</a></sup>
+      </p>
+
+      <p>
+        Joazar's mediation during the property registration of 6 CE suggests that recognized indigenous
+        authorities could persuade much of the population to comply with an unpopular Roman demand. Judas's
+        campaign against the same census shows that autonomy would not have ensured acceptance. Reliance on
+        indigenous intermediaries could nevertheless have given officials more opportunities to negotiate
+        compliance
+        before resorting to force.<sup class="footnote-ref"><a href="#fn12" id="fnref12" role="doc-noteref" aria-label="Read note 12">12</a></sup>
+        Local tax collection also had Roman precedents. The Principate had no single system across the
+        empire: some communities owed aggregate payments and raised the money through their own institutions
+        and agents, while elsewhere private contractors and state officials collected revenue in various
+        combinations. Early imperial taxation often adapted existing territorial practices. Augustus could
+        plausibly have set Judaea's obligations at the provincial level and left much routine collection and
+        allocation to local communities, subject to Roman audit and appeal.<sup class="footnote-ref"><a href="#fn13" id="fnref13" role="doc-noteref" aria-label="Read note 13">13</a></sup>
+      </p>
+
+      <p>
+        The main weakness would have been the power of local elites to use autonomy for their own benefit. A
+        distant Syrian legate might have responded slowly to abusive priestly or municipal authorities, and
+        local jurisdiction could have sharpened factional competition. Appeals against local injustice would
+        therefore have been necessary. Even with these risks, this division of authority would have reduced
+        routine contact between Roman coercive power and institutions whose authority rested heavily on
+        religious legitimacy. Syrian incorporation with broad indigenous autonomy appears most likely to
+        have offered the lowest long-term risk of escalation. Rome would have retained tribute, military
+        supremacy, final appellate authority, and regional security without taking responsibility for every
+        level of Judaean government. The proposal also has a direct basis in the succession debate: Judaean
+        representatives themselves advocated its constitutional core before Augustus.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="direct-roman-rule">Direct Roman rule with Augustan safeguards</h2>
+
+      <p>
+        A resident Roman administration could also have operated under stronger limits without a modern
+        professional civil service or a change to senatorial provincial status. Josephus describes
+        Quirinius, a senator, arriving in Syria after Archelaus's removal to reorganize taxation, while
+        Coponius, an equestrian, received authority to govern the Jews. Equestrian rank did not preclude
+        capable administration. Egypt's prefecture was among the most prestigious and demanding equestrian
+        offices, with fiscal, military, and judicial responsibilities. For Judaea, clearer jurisdiction,
+        closer supervision, fiscal records, and enforceable limits on the governor's discretion would have
+        mattered more
+        than social rank.<sup class="footnote-ref"><a href="#fn14" id="fnref14" role="doc-noteref" aria-label="Read note 14">14</a></sup>
+        The following measures have precedents in Augustan or near-Augustan administration.
+      </p>
+
+      <div class="table-wrapper" role="region" aria-labelledby="table-1-caption" aria-describedby="table-1-hint" tabindex="0">
+        <span class="table-scroll-hint" id="table-1-hint">Scroll horizontally to read all columns.</span>
+        <table>
+          <caption id="table-1-caption">Table 1. Augustan precedents and possible Judaean applications</caption>
+          <thead>
+            <tr>
+              <th scope="col">Administrative instrument</th>
+              <th scope="col">Augustan or near-Augustan precedent</th>
+              <th scope="col">Plausible Judaean application</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Protected ancestral practices</td>
+              <td>Augustan and Agrippan measures preserved by Josephus for Jewish communities in Asia and Cyrene</td>
+              <td>Explicit protection of Temple administration, Sabbath observance, sacred remittances, and indigenous legal practice where no overriding security issue existed</td>
+            </tr>
+            <tr>
+              <td>Local or mixed jurisdiction</td>
+              <td>Augustan edicts from Cyrene, 7–6 BCE</td>
+              <td>Jewish or local tribunals for ordinary intra-community cases; Roman jurisdiction reserved for imperial, serious criminal, or cross-community matters</td>
+            </tr>
+            <tr>
+              <td>Remedy against official exaction</td>
+              <td>Fifth Cyrene edict, 4 BCE; Agrippan intervention at Cyrene</td>
+              <td>Formal route to seek restitution and review of unauthorized seizures or assessments</td>
+            </tr>
+            <tr>
+              <td>Census and tax registers</td>
+              <td>Roman Egyptian census evidence, including a declaration from 3 BCE</td>
+              <td>Recorded taxable persons and property and traceable liabilities rather than purely ad hoc demands</td>
+            </tr>
+            <tr>
+              <td>Legally specified customs obligations</td>
+              <td>Customs-law tradition of Asia, incorporating regulations accumulated over a long period</td>
+              <td>Defined duties, authorized collectors, exemptions, and collection procedures</td>
+            </tr>
+            <tr>
+              <td>Equestrian governor with substantial administrative capacity</td>
+              <td>Prefecture of Egypt</td>
+              <td>Experienced prefect, on a far smaller scale, operating under meaningful review by the Syrian legate</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        These precedents require caution. Cyrene had different institutions, and Egypt differed in population,
+        wealth, administrative complexity, and strategic importance. Neither could be copied wholesale in
+        Judaea, but Augustus's government already used the individual measures needed to place tighter limits
+        on a Judaean prefecture.<sup class="footnote-ref"><a href="#fn15" id="fnref15" role="doc-noteref" aria-label="Read note 15">15</a></sup>
+      </p>
+
+      <h3 id="local-jurisdiction">Local jurisdiction and protection of ancestral practices</h3>
+
+      <p>
+        The Cyrene edicts provide a close precedent: four date from 7 to 6 BCE and the fifth to 4 BCE,
+        around the time of Augustus's decision on Judaea. For capital proceedings against Greek provincials,
+        Augustus provided mixed juries of Greeks and Roman citizens unless the defendant preferred an
+        all-Roman jury. In ordinary litigation between Greeks, Greek judges would hear the case unless the
+        defendant requested Roman adjudication. The fifth edict transmitted a procedure for extortion claims
+        before senatorial judges. For Judaea, their relevance lies in Augustus's willingness to allocate
+        jurisdiction in advance and limit the imbalance between provincials and Roman authorities. Uniform
+        Roman procedure was not
+        essential to maintaining sovereignty.<sup class="footnote-ref"><a href="#fn16" id="fnref16" role="doc-noteref" aria-label="Read note 16">16</a></sup>
+        A Judaean charter could have allocated jurisdiction by subject matter. Local courts would have
+        retained jurisdiction over ordinary internal civil disputes and religious questions. The prefect
+        would have heard cases involving Roman citizens, imperial property, serious public violence, or
+        threats to Roman security. The Syrian legate could have reviewed contested jurisdiction and
+        particularly sensitive cases. Defining these responsibilities in advance would have reduced the
+        number of disputes left to an ad hoc decision by the governor, whose own conduct might have been at
+        issue. This is a proposed adaptation of the Cyrene judicial procedures, grounded in Augustus's use
+        of distinct judicial jurisdictions.
+      </p>
+
+      <p>
+        Josephus preserves documents concerning Jewish communities in Asia and Cyrene that bear more
+        directly on ancestral practices. Orders attributed to Augustus allowed Jews to follow their customs,
+        protected sacred funds sent to Jerusalem, and exempted them from compulsory court appearances on the
+        Sabbath. Josephus also records Agrippa's instructions to Ephesian and Cyrenian authorities. At
+        Cyrene, Jewish complainants alleged that informers had obstructed sacred remittances on the pretext
+        of taxes that were not due; Agrippa ordered restoration. The documents' transmission and precise
+        legal status remain debated. Miriam Pucci Ben Zeev evaluates them against inscriptions and papyri
+        and treats their
+        substance as evidence of Roman policy toward Jewish customary practice.<sup class="footnote-ref"><a href="#fn17" id="fnref17" role="doc-noteref" aria-label="Read note 17">17</a></sup>
+        These measures protected ancestral practices without establishing a modern commitment to religious
+        tolerance. Rome could waive a Sabbath summons, protect sacred remittances, and retain local judges
+        without surrendering sovereignty. It could distinguish what imperial control required from matters
+        in which uniformity served little purpose. For Jerusalem, standing instructions could have covered
+        Temple affairs, festival policing, sacred funds, and military or imperial symbolism. The prefect
+        would have retained authority to respond to security threats, but intervention in the Temple or
+        unusually coercive measures during major pilgrimage festivals could have required consultation with
+        the Syrian legate or prompt review by him. The Temple would have remained under Roman sovereignty,
+        while the prefect would have faced a higher procedural threshold before using a religious dispute to
+        assert Roman prestige through force.
+      </p>
+
+      <h3 id="tax-obligations">Defined tax obligations and remedies against abuse</h3>
+
+      <p>
+        In Augustan terms, more predictable taxation would have meant that taxpayers and collectors could
+        identify the basis of assessment, the amount or rate owed, the authorized collector, applicable
+        exemptions, and evidence of payment. It would also have required some route to challenge an
+        unauthorized demand. This standard implies neither representative consent nor a public budget or
+        modern accounting. Roman fiscal systems varied, but direct provincial taxes were usually tied to
+        census or assessment lists, and local
+        systems often survived where they could meet Roman needs.<sup class="footnote-ref"><a href="#fn18" id="fnref18" role="doc-noteref" aria-label="Read note 18">18</a></sup>
+        A surviving Egyptian census declaration from 3 BCE records the formal registration of persons and
+        households within a year of Augustus's decision on Herod's succession. Egyptian procedures could not
+        simply be transferred to Judaea, and the regularity of later censuses cannot be assumed for the
+        Augustan period. The document nevertheless shows that Augustus's government could maintain registers
+        for fiscal
+        administration.<sup class="footnote-ref"><a href="#fn19" id="fnref19" role="doc-noteref" aria-label="Read note 19">19</a></sup>
+      </p>
+
+      <p>
+        A better census could have made Roman extraction <em>more</em> effective, while doing little to reduce
+        hostility to taxation. In Judaea in 6 CE, registration itself could signify subjection: Josephus
+        describes widespread initial opposition and Judas's campaign against the assessment. To reduce
+        conflict, registration would have needed to accompany defined liability, recognized local mediation,
+        proof of
+        payment, and remedies against demands exceeding the assessment.<sup class="footnote-ref"><a href="#fn20" id="fnref20" role="doc-noteref" aria-label="Read note 20">20</a></sup>
+        The Agrippan document from Cyrene distinguishes tax liability from fiscal abuse. The complainants
+        objected to the obstruction of sacred funds under the pretext of taxes "not due," rather than to all
+        Roman taxation, and Josephus describes restitution as the response. Although the document's precise
+        form needs caution, its substance shows Roman authority distinguishing a lawful levy from an
+        unauthorized exaction and ordering property restored. The Customs Law of Asia is a more indirect
+        precedent. Its surviving inscription was erected at Ephesus in 62 CE, so it was not an Augustan
+        fiscal code available for adoption in Judaea. The text does, however, contain regulations
+        accumulated and revised over nearly two centuries. It records a long Roman practice of specifying
+        customs liabilities, exemptions, collectors' powers, and procedures in
+        law. By 4 BCE, rules limiting a collector's authority were an established administrative possibility.<sup class="footnote-ref"><a href="#fn21" id="fnref21" role="doc-noteref" aria-label="Read note 21">21</a></sup>
+      </p>
+
+      <p>
+        Simply abolishing the <em>publicani</em> would not have resolved the problem. Roman revenue collection used
+        private contractors, imperial officials, local communities, and local agents in varying
+        combinations. P. A. Brunt notes that some provinces owed aggregate sums raised by communities
+        through their own institutions, while other revenues, including indirect taxes, could be farmed to
+        private contractors. Modern accounts likewise describe gradual changes that varied by region, rather
+        than an Augustan replacement of private tax farmers with salaried officials. Limits on a collector's
+        discretion would have
+        mattered regardless of whether the collector was public or private.<sup class="footnote-ref"><a href="#fn22" id="fnref22" role="doc-noteref" aria-label="Read note 22">22</a></sup>
+        A plausible tax system for Judaea would have begun with an assessment and retained local collection
+        where it worked. Records would have specified the tribute and customs charges due, recognized
+        exemptions and sacred remittances, and provided proof of payment. Restitution would have been
+        available when an official, soldier, contractor, informer, or local intermediary demanded more than
+        the recognized liability. Tribute would have remained unpopular, but taxpayers would have had less
+        reason to resent uncertainty about what Roman agents could lawfully take.
+      </p>
+
+      <h3 id="gubernatorial-supervision">Supervision and the governor's rank</h3>
+
+      <p>
+        Egypt also shows why equestrian rank alone cannot explain failures in Judaea. Brunt describes the
+        Egyptian prefecture before 70 CE as the greatest prize in an equestrian career. Its holder combined
+        judicial, fiscal, and military authority in one of Rome's most complex administrations. Egypt's
+        importance and distinctive institutions limit its use as a model for Judaea, but an equestrian could
+        clearly hold a prestigious office requiring substantial administrative competence.<sup class="footnote-ref"><a href="#fn23" id="fnref23" role="doc-noteref" aria-label="Read note 23">23</a></sup>
+        The proposed chain of authority would have remained:
+      </p>
+
+      <figure class="essay-image-block essay-diagram" aria-labelledby="authority-caption">
+        <figcaption class="diagram-caption" id="authority-caption">
+          <span class="diagram-number">Figure 1</span>
+          <strong class="diagram-title">Proposed chain of authority</strong>
+          <span class="diagram-subtitle">Direct Roman rule with Augustan safeguards</span>
+        </figcaption>
+        <ol class="diagram-steps diagram-authority" aria-label="Descending authority">
+          <li class="diagram-node"><strong>Central imperial authority</strong><span class="diagram-node-detail">Augustus</span></li>
+          <li class="diagram-node"><strong>Legate of Syria</strong></li>
+          <li class="diagram-node"><strong>Prefect of Judaea</strong></li>
+          <li class="diagram-node"><strong>Indigenous institutions</strong><span class="diagram-node-detail">Civic, judicial, and high-priestly</span></li>
+        </ol>
+      </figure>
+
+      <p>
+        That hierarchy would have needed to provide effective review. Local authorities or the prefect would
+        have resolved routine matters, while disputes over Temple privileges, large extraordinary exactions,
+        serious accusations against the prefect, and exceptionally coercive measures could have gone
+        promptly to Antioch. The Cyrene edicts record Augustus intervening in provincial justice, and
+        Josephus's Jewish documents describe imperial and Agrippan intervention when local officials
+        infringed protected practices. Review by a higher authority was consistent with Augustan government.
+        The crisis under Gessius Florus shows what could happen when supervision failed. In Goodman's
+        reconstruction of 66, intercommunal violence at Caesarea, Florus's handling of Judaean complaints,
+        his extraction of seventeen talents from the Jerusalem Temple, and his attempts to compel public
+        submission quickly turned political antagonism into violent confrontation. Josephus's hostile
+        account requires scrutiny, and Florus was not the war's sole cause, but his conduct could accelerate
+        a crisis
+        when other conditions were already present.<sup class="footnote-ref"><a href="#fn24" id="fnref24" role="doc-noteref" aria-label="Read note 24">24</a></sup>
+        This form of direct rule could have reduced the risk of armed confrontation by giving people routes
+        through local judgments, recorded assessments, restitution claims, and appeals to the Syrian legate.
+        Judaeans might still have resented Rome, and Roman officials would still have used force against
+        serious disorder. Most of the proposed procedures are documented in Augustan or closely related
+        provincial practice, however, so their more systematic use would have fit the administrative
+        possibilities of the period.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="antipas-monarchy">A unified Herodian monarchy under Antipas</h2>
+
+      <p>
+        If Augustus had retained Herodian rule, he could have placed a substantially unified kingdom under
+        Antipas. Herod the Great had named Antipas his sole successor before changing his final testament in
+        favor of Archelaus, and both brothers pressed their claims at Rome. Augustus modified the final will
+        by partitioning the realm and withholding the title of king from Archelaus. Antipas received Galilee
+        and Peraea, which he governed from 4 BCE until his deposition in 39 CE.<sup class="footnote-ref"><a href="#fn25" id="fnref25" role="doc-noteref" aria-label="Read note 25">25</a></sup>
+        A larger kingdom under Antipas would have fit Augustan policy in the east. Scholarship on client
+        kingship describes Augustus organizing relationships with eastern monarchs as part of imperial
+        government, beyond the looser Republican network of allied kings. These client or provincial
+        monarchs let Rome maintain strategic supremacy while leaving much taxation, policing, patronage, and
+        local adjudication
+        to indigenous or dynastic rulers.<sup class="footnote-ref"><a href="#fn26" id="fnref26" role="doc-noteref" aria-label="Read note 26">26</a></sup>
+      </p>
+
+      <p>
+        Antipas's forty-three-year tenure is the strongest evidence in his favor. The <em>Oxford Classical
+        Dictionary</em> treats its length as evidence that he maintained order from Rome's perspective. It
+        does not establish that his subjects uniformly prospered or supported him, but it compares favorably
+        with Archelaus's decade in power before Augustus removed him.<sup class="footnote-ref"><a href="#fn27" id="fnref27" role="doc-noteref" aria-label="Read note 27">27</a></sup>
+        A unified kingdom under Antipas could have avoided the repeated constitutional changes Judaea
+        experienced: Herod's death and partition in 4 BCE, Archelaus's unstable ethnarchy, his removal in 6
+        CE, annexation, and the Quirinian property assessment. Antipas would have borne primary
+        responsibility for collecting taxes, controlling crowds, making local appointments, and much
+        domestic coercion. Rome would have remained sovereign, but the monarchy would have placed an
+        intermediary between imperial officials and the population. A unified monarchy would also have
+        caused the least administrative disruption. It could have retained much of the Herodian fiscal and
+        bureaucratic system, with lower short-term transition costs than immediate incorporation into Syria
+        or the creation of a Roman prefecture.
+      </p>
+
+      <p>
+        Its principal weakness would have been dependence on one ruler. Antipas's record in Galilee and
+        Peraea does not establish that he could have governed Jerusalem equally well. Judaea's Temple,
+        powerful high-priestly establishment, large pilgrimage gatherings, and political elites would have
+        presented different demands. Relations between those elites and a Herodian sovereign were more
+        complicated than in Galilee. In Jerusalem, an
+        administrative mistake could have acquired symbolic importance across the empire.<sup class="footnote-ref"><a href="#fn28" id="fnref28" role="doc-noteref" aria-label="Read note 28">28</a></sup>
+        Antipas's long tenure also needs to be read alongside the less successful parts of his career. The
+        prosperity and quality of his government remain disputed, and Caligula eventually deposed him. After
+        marrying and later divorcing the daughter of the Nabataean king Aretas IV, Antipas became involved
+        in a conflict in which Aretas defeated him militarily. These events do not erase his relative
+        competence,
+        but they limit what can be inferred from the duration of his rule.<sup class="footnote-ref"><a href="#fn29" id="fnref29" role="doc-noteref" aria-label="Read note 29">29</a></sup>
+      </p>
+
+      <p>
+        Appointing Antipas would also have left the complaints of the 4 BCE delegation largely unanswered.
+        Josephus's delegates accused Herod's regime of excessive and arbitrary exactions and objected to
+        monarchy itself. Even allowing for the speech's rhetoric, a change of ruler would have retained
+        broadly similar dynastic powers. This alternative would have depended on Antipas using those powers
+        more prudently,
+        without the institutional limits proposed in the other alternatives.<sup class="footnote-ref"><a href="#fn30" id="fnref30" role="doc-noteref" aria-label="Read note 30">30</a></sup>
+        A unified Antipas kingdom still appears more likely to have provided stability than the system
+        Augustus chose. It could have avoided Archelaus's early failure and postponed direct Roman
+        administration for decades. But Antipas would eventually have died or been removed, reopening the
+        succession question unless Augustus or his successors had established a more durable framework.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="comparative-assessment">Comparative assessment</h2>
+
+      <p>
+        The comparison rests on expected institutional effects. Ancient casualty figures are too uncertain
+        to support hypothetical death tolls, which would imply precision the evidence cannot provide. The
+        criteria are how often Roman officials and inhabitants would have confronted one another directly,
+        the cost of administrative transition, limits on arbitrary exaction, routes for resolving disputes
+        before military intervention, and compatibility with Augustan practice. The war of 66 to 73/74
+        destroyed Jerusalem and the Temple, permanently expanded the Roman military presence, and
+        transformed political and social life. Reducing the risk of such a war would have mattered even
+        though no precise probability can
+        be assigned.<sup class="footnote-ref"><a href="#fn31" id="fnref31" role="doc-noteref" aria-label="Read note 31">31</a></sup>
+      </p>
+
+      <div class="table-wrapper table-wrapper--comparison" role="region" aria-labelledby="table-2-caption" aria-describedby="table-2-hint" tabindex="0">
+        <span class="table-scroll-hint" id="table-2-hint">Scroll horizontally to read all columns.</span>
+        <table class="comparison-table">
+          <caption id="table-2-caption">Table 2. Comparison of administrative alternatives</caption>
+          <thead>
+            <tr>
+              <th scope="col">Administrative alternative</th>
+              <th scope="col">Roman feasibility in 4 BCE</th>
+              <th scope="col">Immediate transition cost</th>
+              <th scope="col">Protection against administrative abuse</th>
+              <th scope="col">Routine friction between Romans and Judaeans</th>
+              <th scope="col">Principal weakness</th>
+              <th scope="col">Overall assessment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Historical: Archelaus and partition, followed by annexation</strong></td>
+              <td>Demonstrably feasible</td>
+              <td>High, amid an already violent succession</td>
+              <td>Weakly institutionalized</td>
+              <td>Increasing after 6 CE</td>
+              <td>Weak legitimacy under Archelaus, followed by direct exposure to prefectural failures</td>
+              <td><strong>Worst actual outcome; failure was not inevitable</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Syrian incorporation with broad local autonomy</strong></td>
+              <td>High: delegation explicitly requested attachment to Syria</td>
+              <td>Moderate</td>
+              <td>Moderate to high if Syrian review had been credible</td>
+              <td><strong>Lowest</strong></td>
+              <td>Elite capture, factionalism, distance of Syrian governor</td>
+              <td><strong>Most likely to reduce the long-term risk of escalation</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Safeguarded direct Roman administration</strong></td>
+              <td>High for individual measures; plausible in combination</td>
+              <td>Moderate to high initially</td>
+              <td><strong>Highest if safeguards had been enforced</strong></td>
+              <td>Moderate</td>
+              <td>A stronger administration could also have extracted more efficiently; safeguards would have depended on enforcement</td>
+              <td><strong>Close second; could have ranked first if safeguards had been effectively enforced</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Unified Antipas monarchy</strong></td>
+              <td>High: Antipas was a genuine claimant and client kingship was Augustan practice</td>
+              <td><strong>Lowest</strong></td>
+              <td>Dependent primarily on the ruler</td>
+              <td>Low if monarchy had retained legitimacy</td>
+              <td>Personal rule, Jerusalem untested, succession risk</td>
+              <td><strong>Likely superior to Archelaus but would have offered weaker institutional safeguards</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Syrian incorporation with local autonomy ranks first because it would have left fewer routine
+        disputes directly exposed to Roman coercion. Factional politics and local injustice would have
+        persisted, but more conflicts could have remained within local institutions. This framework also
+        comes closest to the request Josephus attributes to the anti-Herodian embassy. A prefecture with
+        enforceable safeguards ranks a close second. Its individual measures have particularly strong
+        documentary support: Cyrene records local and mixed jurisdiction and a remedy for extortion in 7 to
+        4 BCE; Josephus's Asian and Cyrenian documents describe protection of Jewish practices and
+        intervention against allegedly unfounded tax demands; Egypt records Augustan registration and
+        capable administration under an equestrian prefect; and Asia's customs-law tradition specifies
+        fiscal obligations. No province combined all these measures in precisely the framework proposed for
+        Judaea. Their combination is the counterfactual step. A unified Antipas monarchy could have provided
+        the greatest immediate continuity at the lowest administrative cost, while keeping Roman officials
+        at a distance. But reliance on his presumed competence would have provided less protection against
+        later dynastic deterioration than either alternative based on institutional limits.
+      </p>
+
+      <p>
+        Augustus did not necessarily expect Archelaus to fail, and the sequence from partition to annexation
+        should not be treated as a single plan devised in 4 BCE. Josephus says Augustus offered the
+        possibility of a future royal title if Archelaus governed well. In retrospect, Rome entrusted the most
+        sensitive part of Herod's realm to a ruler whose legitimacy soon deteriorated, then changed the system
+        again ten years later. Judaea thus experienced two major political transitions within a decade,
+        followed by direct administration in which the quality of individual governors could carry
+        disproportionate weight.<sup class="footnote-ref"><a href="#fn32" id="fnref32" role="doc-noteref" aria-label="Read note 32">32</a></sup>
+        Mason cautions against reading the years from 6 to 66 as an uninterrupted buildup to revolt. Goodman
+        shows how failed elite mediation and Florus's conduct could drive rapid escalation once a crisis
+        developed. Both readings allow room for this counterfactual: long periods of workable relations
+        with Rome support the view that war was avoidable, while the breakdown of 66 suggests that stronger procedures for handling
+        a crisis could have affected the outcome.<sup class="footnote-ref"><a href="#fn33" id="fnref33" role="doc-noteref" aria-label="Read note 33">33</a></sup>
+      </p>
+
+      <figure class="essay-image-block essay-diagram" aria-labelledby="ranking-caption" aria-describedby="ranking-note">
+        <figcaption class="diagram-caption" id="ranking-caption">
+          <span class="diagram-number">Figure 2</span>
+          <strong class="diagram-title">Administrative alternatives</strong>
+          <span class="diagram-subtitle">Qualitative order of preference</span>
+        </figcaption>
+        <ol class="diagram-steps diagram-ranking" aria-label="Administrative alternatives in order of preference">
+          <li class="diagram-node"><span class="diagram-rank" aria-hidden="true">1</span><strong>Syrian incorporation with broad indigenous autonomy</strong><span class="diagram-node-detail">Slight preference</span></li>
+          <li class="diagram-node"><span class="diagram-rank" aria-hidden="true">2</span><strong>Safeguarded direct Roman rule</strong><span class="diagram-node-detail">Close alternative</span></li>
+          <li class="diagram-node"><span class="diagram-rank" aria-hidden="true">3</span><strong>Unified Antipas monarchy</strong></li>
+          <li class="diagram-node"><span class="diagram-rank" aria-hidden="true">4</span><strong>Historical Archelaus-to-annexation sequence</strong></li>
+        </ol>
+        <span class="diagram-note" id="ranking-note">The first two options are closely ranked; implementation could have reversed their order. No numerical estimates are implied.</span>
+      </figure>
+
+      <p>
+        The first two options are close enough that implementation could have reversed their order. A Syrian
+        governor who ignored predatory local elites could have undermined autonomy, while effective
+        supervision could have made a prefecture work better. Both proposals would have established
+        procedures intended to resolve administrative disputes before Roman prestige and military force
+        became decisive, although neither could have relied on benevolence alone.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="conclusion">Conclusion</h2>
+
+      <p>
+        Augustus had several ways to govern Judaea under Roman sovereignty in 4 BCE. Dynastic monarchy and
+        attachment to a larger province could have coexisted with local jurisdiction, while a resident
+        equestrian prefect could have operated under limits on courts and taxation. Imperial protection of
+        ancestral practices, fiscal registers, private and local collection, appeals, restitution, and
+        intervention against provincial abuses were all available. Much of the evidence from Cyrene, Asia,
+        and Egypt dates to the succession crisis or close to it. Attaching Judaea to Syria while retaining
+        broad indigenous control of ordinary civil and religious administration appears the strongest
+        alternative. Rome would have kept military and fiscal supremacy, and its officials would have
+        participated less often in local political and religious disputes. This would have meant extensive
+        local jurisdiction under limited Roman provincial administration, without constituting a
+        sovereign "Sanhedrin state" or having <em>civitas libera</em> status.
+      </p>
+
+      <p>
+        If Augustus had required a resident governor, he could instead have combined the distinct
+        jurisdictions of the Cyrene edicts, the protection of Jewish practices in the Augustan and Agrippan
+        documents, Egyptian fiscal recordkeeping, and Syrian review of an equestrian prefect. Protection of
+        religious practice would have meant deciding which matters could have been left alone without
+        compromising Roman security. Predictable taxation would have meant identifiable assessments,
+        authorized collectors, payment records, known exemptions, and remedies against unauthorized
+        exaction. Neither would have required modern ideological toleration or public finance. A unified
+        Antipas monarchy would have been simpler and might have sustained indirect rule for several decades.
+        Antipas was a genuine claimant with a long record that indicated competence from Rome's perspective,
+        and client monarchy was part of Augustan eastern government. But the monarchy would have remained
+        dependent on his personality, legitimacy, and succession, offering fewer lasting procedures for
+        resolving disputes.
+      </p>
+
+      <p>
+        The evidence supports a limited claim: Augustus had administrative means to reduce the risk of
+        ordinary disputes becoming confrontations over sovereignty, although none could have guaranteed
+        that the wars of the first and second centuries would have been prevented. Contemporary practice
+        allowed exemptions from Sabbath summonses, protection of Temple remittances, local courts, limits on
+        tax collectors, and review of complaints against governors. His government used these measures
+        separately; the proposed frameworks would have brought them together in Judaea. Anti-Roman ideology,
+        elite competition, intercommunal violence, economic grievances, and periodic unrest would still have
+        posed problems. More disputes could nevertheless have ended in a local judgment, a defined
+        assessment, restitution, an appeal to Antioch, or an imperial ruling before a crowd confronted Roman
+        troops. This could have reduced suffering, economic devastation, and military bloodshed while
+        preserving Roman regional supremacy. Its success would have depended on enforcement: appeals would
+        have needed to work against abusive local elites as well as Roman officials, and higher authorities
+        would have needed to uphold the limits placed on provincial government.
+      </p>
+    </section>
+
+    <hr class="footnote-divider">
+
+    <section class="footnotes" role="doc-endnotes" aria-labelledby="notes-heading">
+      <h2 id="notes-heading">Notes</h2>
+
+      <ol>
+        <li id="fn1">
+          L. Michael White, “Herod and the Jewish Experience of Augustan Rule,” in Karl Galinsky, ed.,
+          <em>The Cambridge Companion to the Age of Augustus</em> (Cambridge: Cambridge University Press, 2005);
+          Flavius Josephus, <em>Jewish Antiquities</em> 17.213–218, 288–320.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref1" aria-label="Back to reference 1">↩</a>
+        </li>
+
+        <li id="fn2">
+          Josephus, <em>Antiquities</em> 17.299–320; Jan Willem van Henten, “Herod Antipas,”
+          <em>Oxford Classical Dictionary</em>, rev. 2021; Augustus, Edicts from Cyrene, SEG IX 8,
+          FIRA I 68; Roger S. Bagnall and W. Graham Claytor, “The Beginnings of the Roman Provincial
+          Census: A New Declaration from 3 BCE,” <em>Greek, Roman, and Byzantine Studies</em> 55
+          (2015): 637–653.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref2" aria-label="Back to reference 2">↩</a>
+        </li>
+
+        <li id="fn3">
+          Robert Goldenberg, “The Destruction of the Jerusalem Temple: Its Meaning and Its Consequences,”
+          in Steven T. Katz, ed., <em>The Cambridge History of Judaism</em>, vol. 4 (Cambridge:
+          Cambridge University Press, 2006), 191–205; Hayim Lapin, “The Origins and Development of
+          the Rabbinic Movement in the Land of Israel,” in the same volume, 206–229; Eusebius,
+          <em>Ecclesiastical History</em> 3.5; Craig R. Koester, “The Origin and Significance of the
+          Flight to Pella Tradition,” <em>Catholic Biblical Quarterly</em> 51, no. 1 (1989): 90–106;
+          Margaret M. Mitchell, “Gentile Christianity,” in Margaret M. Mitchell and Frances M. Young,
+          eds., <em>The Cambridge History of Christianity</em>, vol. 1 (Cambridge: Cambridge University
+          Press, 2006), 103–124.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref3" aria-label="Back to reference 3">↩</a>
+        </li>
+
+        <li id="fn4">
+          Alan K. Bowman, “Provincial Administration and Taxation,” in Alan K. Bowman, Edward Champlin,
+          and Andrew Lintott, eds., <em>The Cambridge Ancient History</em>, vol. 10,
+          <em>The Augustan Empire, 43 B.C.–A.D. 69</em>, 2nd ed. (Cambridge: Cambridge University Press,
+          1996); Tal A. Ish-Shalom, “Provincial Monarchs as an Eastern <em>Arcanum Imperii</em>:
+          ‘Client Kingship', the Augustan Revolution and the Flavians,” <em>Journal of Roman Studies</em>
+          111 (2021): 153–177.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref4" aria-label="Back to reference 4">↩</a>
+        </li>
+
+        <li id="fn5">
+          Martin Goodman, <em>The Ruling Class of Judaea: The Origins of the Jewish Revolt against Rome,
+          A.D. 66–70</em> (Cambridge: Cambridge University Press, 1987); Steve Mason,
+          <em>A History of the Jewish War, AD 66–74</em> (Cambridge: Cambridge University Press, 2016).
+          <a class="footnote-backref" role="doc-backlink" href="#fnref5" aria-label="Back to reference 5">↩</a>
+        </li>
+
+        <li id="fn6">
+          Josephus, <em>Antiquities</em> 17.213–218, 288–298. Josephus's figure of approximately
+          3,000 deaths is retained here as part of the ancient narrative, not as a secure demographic count.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref6" aria-label="Back to reference 6">↩</a>
+        </li>
+
+        <li id="fn7">
+          Josephus, <em>Antiquities</em> 18.1–10.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref7" aria-label="Back to reference 7">↩</a>
+        </li>
+
+        <li id="fn8">
+          Hanan Eshel, “The Bar Kochba Revolt, 132–135,” in Steven T. Katz, ed.,
+          <em>The Cambridge History of Judaism</em>, vol. 4 (Cambridge: Cambridge University Press,
+          2006), 105–127; Seth Schwartz, “Political, Social, and Economic Life in the Land of Israel,
+          66–c. 235,” in the same volume.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref8" aria-label="Back to reference 8">↩</a>
+        </li>
+
+        <li id="fn9">
+          Josephus, <em>Antiquities</em> 17.299–320.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref9" aria-label="Back to reference 9">↩</a>
+        </li>
+
+        <li id="fn10">
+          Bowman, “Provincial Administration and Taxation.” The proposed institutional division is a
+          reconstruction from wider Roman provincial practice, not a constitutional program explicitly
+          attributed by Josephus to the Judaean delegation.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref10" aria-label="Back to reference 10">↩</a>
+        </li>
+
+        <li id="fn11">
+          Goodman, <em>Ruling Class of Judaea</em>; Mason, <em>History of the Jewish War</em>.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref11" aria-label="Back to reference 11">↩</a>
+        </li>
+
+        <li id="fn12">
+          Josephus, <em>Antiquities</em> 18.1–10.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref12" aria-label="Back to reference 12">↩</a>
+        </li>
+
+        <li id="fn13">
+          P. A. Brunt, “Publicans in the Principate,” in <em>Roman Imperial Themes</em>
+          (Oxford: Clarendon Press, 1990), 354–432; Sven Günther, “Taxation in the Greco-Roman World:
+          The Roman Principate,” Oxford Handbooks Online, 2016.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref13" aria-label="Back to reference 13">↩</a>
+        </li>
+
+        <li id="fn14">
+          Josephus, <em>Antiquities</em> 18.1–2; P. A. Brunt, “The Administrators of Roman Egypt,”
+          <em>Journal of Roman Studies</em> 65 (1975): 124–147.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref14" aria-label="Back to reference 14">↩</a>
+        </li>
+
+        <li id="fn15">
+          Augustus, Edicts from Cyrene, SEG IX 8, FIRA I 68; Brunt, “Administrators of Roman Egypt”;
+          Bagnall and Claytor, “Beginnings of the Roman Provincial Census”; Michel Cottier et al., eds.,
+          <em>The Customs Law of Asia</em> (Oxford: Oxford University Press, 2008).
+          <a class="footnote-backref" role="doc-backlink" href="#fnref15" aria-label="Back to reference 15">↩</a>
+        </li>
+
+        <li id="fn16">
+          Augustus, Edicts from Cyrene, SEG IX 8, FIRA I 68. Four of the edicts date to 7–6 BCE and
+          the fifth to 4 BCE. Their relevance here lies in Augustus's willingness to create differentiated
+          provincial judicial procedures, not in any claim that Cyrene and Judaea were institutionally identical.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref16" aria-label="Back to reference 16">↩</a>
+        </li>
+
+        <li id="fn17">
+          Josephus, <em>Antiquities</em> 16.160–178; Miriam Pucci Ben Zeev,
+          <em>Jewish Rights in the Roman World: The Greek and Roman Documents Quoted by Josephus Flavius</em>
+          (Tübingen: Mohr Siebeck, 1998). The authenticity, transmission, and precise legal status of individual
+          documents in Josephus's dossier require caution, but the dossier remains evidence of Roman
+          policy toward Jewish customary practices.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref17" aria-label="Back to reference 17">↩</a>
+        </li>
+
+        <li id="fn18">
+          Günther, “Taxation in the Greco-Roman World”; Brunt, “Publicans in the Principate.”
+          <a class="footnote-backref" role="doc-backlink" href="#fnref18" aria-label="Back to reference 18">↩</a>
+        </li>
+
+        <li id="fn19">
+          Bagnall and Claytor, “Beginnings of the Roman Provincial Census,” 637–653.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref19" aria-label="Back to reference 19">↩</a>
+        </li>
+
+        <li id="fn20">
+          Josephus, <em>Antiquities</em> 18.1–10.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref20" aria-label="Back to reference 20">↩</a>
+        </li>
+
+        <li id="fn21">
+          Michel Cottier, Michael H. Crawford, Charles V. Crowther, Jean-Louis Ferrary, Barbara M. Levick,
+          Olli Salomies, and Michael Wörrle, eds., <em>The Customs Law of Asia</em>
+          (Oxford: Oxford University Press, 2008). The surviving inscription dates to 62 CE but incorporates
+          a much older body of Roman customs regulation.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref21" aria-label="Back to reference 21">↩</a>
+        </li>
+
+        <li id="fn22">
+          Brunt, “Publicans in the Principate,” 354–432; Günther, “Taxation in the Greco-Roman World.”
+          <a class="footnote-backref" role="doc-backlink" href="#fnref22" aria-label="Back to reference 22">↩</a>
+        </li>
+
+        <li id="fn23">
+          Brunt, “The Administrators of Roman Egypt,” 124–147.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref23" aria-label="Back to reference 23">↩</a>
+        </li>
+
+        <li id="fn24">
+          Goodman, <em>The Ruling Class of Judaea</em>. See also Josephus,
+          <em>Jewish War</em>, book 2, for the ancient narrative of the Florus crisis.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref24" aria-label="Back to reference 24">↩</a>
+        </li>
+
+        <li id="fn25">
+          Josephus, <em>Antiquities</em>, book 17; Jan Willem van Henten, “Herod Antipas,”
+          <em>Oxford Classical Dictionary</em>, rev. 2021.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref25" aria-label="Back to reference 25">↩</a>
+        </li>
+
+        <li id="fn26">
+          Ish-Shalom, “Provincial Monarchs as an Eastern <em>Arcanum Imperii</em>,” 153–177.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref26" aria-label="Back to reference 26">↩</a>
+        </li>
+
+        <li id="fn27">
+          van Henten, “Herod Antipas.”
+          <a class="footnote-backref" role="doc-backlink" href="#fnref27" aria-label="Back to reference 27">↩</a>
+        </li>
+
+        <li id="fn28">
+          White, “Herod and the Jewish Experience of Augustan Rule”; van Henten, “Herod Antipas.”
+          <a class="footnote-backref" role="doc-backlink" href="#fnref28" aria-label="Back to reference 28">↩</a>
+        </li>
+
+        <li id="fn29">
+          van Henten, “Herod Antipas.” Antipas's conflict with Aretas IV and eventual deposition under
+          Caligula illustrate the limitations of inferring general administrative competence solely from the
+          duration of his tetrarchy.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref29" aria-label="Back to reference 29">↩</a>
+        </li>
+
+        <li id="fn30">
+          Josephus, <em>Antiquities</em> 17.304–314.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref30" aria-label="Back to reference 30">↩</a>
+        </li>
+
+        <li id="fn31">
+          Schwartz, “Political, Social, and Economic Life in the Land of Israel, 66–c. 235”;
+          Goodman, <em>The Ruling Class of Judaea</em>. No attempt is made here to derive a
+          counterfactual casualty estimate from the disputed numerical figures in the ancient sources.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref31" aria-label="Back to reference 31">↩</a>
+        </li>
+
+        <li id="fn32">
+          Josephus, <em>Antiquities</em> 17.317–320; 18.1–2.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref32" aria-label="Back to reference 32">↩</a>
+        </li>
+
+        <li id="fn33">
+          Mason, <em>A History of the Jewish War, AD 66–74</em>; Goodman,
+          <em>The Ruling Class of Judaea</em>.
+          <a class="footnote-backref" role="doc-backlink" href="#fnref33" aria-label="Back to reference 33">↩</a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="bibliography" aria-labelledby="bibliography-heading">
+      <h2 id="bibliography-heading">Selected sources and bibliography</h2>
+
+      <h3 id="primary-sources">Primary and documentary sources</h3>
+
+      <p class="bibliography-entry">
+        <strong>Augustus.</strong> Edicts from Cyrene. SEG IX 8; FIRA I 68. Five Augustan edicts,
+        four dating to 7–6 BCE and the fifth to 4 BCE, dealing with provincial jurisdiction,
+        mixed juries, local adjudication, civic obligations, and procedures concerning extortion.
+      </p>
+
+      <p class="bibliography-entry">
+        <strong>Eusebius of Caesarea.</strong> <em>Ecclesiastical History</em> 3.5. The earliest
+        surviving explicit literary statement that the Jerusalem church departed for Pella before
+        the destruction of Jerusalem. As a fourth-century witness to a first-century event, it is
+        treated here as evidence for a later tradition rather than contemporary testimony.
+      </p>
+
+      <p class="bibliography-entry">
+        <strong>Josephus, Flavius.</strong> <em>Jewish Antiquities</em>, books 16–18. Particularly
+        16.160–178 for the Augustan and Agrippan measures concerning Jewish customary rights, sacred
+        remittances, Sabbath observance, and the Cyrenian fiscal complaint; 17.299–320 for the Judaean
+        embassy and Augustus's succession decision; and 18.1–10 for Quirinius, Coponius, the property
+        assessment, Joazar's mediation, and Judas the Galilean.
+      </p>
+
+      <p class="bibliography-entry">
+        <strong>Josephus, Flavius.</strong> <em>The Jewish War</em>, book 2. Essential for the later
+        prefectural and procuratorial period and the crisis under Gessius Florus, although Josephus's
+        account requires comparison with modern source-critical treatments.
+      </p>
+
+      <h3 id="modern-scholarship">Modern scholarship</h3>
+
+      <p class="bibliography-entry">
+        Bagnall, Roger S., and W. Graham Claytor. “The Beginnings of the Roman Provincial Census:
+        A New Declaration from 3 BCE.” <em>Greek, Roman, and Byzantine Studies</em> 55 (2015):
+        637–653.
+      </p>
+
+      <p class="bibliography-entry">
+        Ben Zeev, Miriam Pucci. <em>Jewish Rights in the Roman World: The Greek and Roman Documents
+        Quoted by Josephus Flavius</em>. Tübingen: Mohr Siebeck, 1998.
+      </p>
+
+      <p class="bibliography-entry">
+        Bowman, Alan K. “Provincial Administration and Taxation.” In
+        <em>The Cambridge Ancient History</em>, vol. 10, <em>The Augustan Empire, 43 B.C.–A.D. 69</em>,
+        2nd ed., edited by Alan K. Bowman, Edward Champlin, and Andrew Lintott.
+        Cambridge: Cambridge University Press, 1996.
+      </p>
+
+      <p class="bibliography-entry">
+        Brunt, P. A. “The Administrators of Roman Egypt.” <em>Journal of Roman Studies</em> 65
+        (1975): 124–147.
+      </p>
+
+      <p class="bibliography-entry">
+        Brunt, P. A. “Publicans in the Principate.” In <em>Roman Imperial Themes</em>, 354–432.
+        Oxford: Clarendon Press, 1990.
+      </p>
+
+      <p class="bibliography-entry">
+        Cottier, Michel, Michael H. Crawford, Charles V. Crowther, Jean-Louis Ferrary,
+        Barbara M. Levick, Olli Salomies, and Michael Wörrle, eds.
+        <em>The Customs Law of Asia</em>. Oxford: Oxford University Press, 2008.
+      </p>
+
+      <p class="bibliography-entry">
+        Eshel, Hanan. “The Bar Kochba Revolt, 132–135.” In <em>The Cambridge History of Judaism</em>,
+        vol. 4, <em>The Late Roman-Rabbinic Period</em>, edited by Steven T. Katz, 105–127.
+        Cambridge: Cambridge University Press, 2006.
+      </p>
+
+      <p class="bibliography-entry">
+        Goldenberg, Robert. “The Destruction of the Jerusalem Temple: Its Meaning and Its Consequences.”
+        In <em>The Cambridge History of Judaism</em>, vol. 4, edited by Steven T. Katz, 191–205.
+        Cambridge: Cambridge University Press, 2006.
+      </p>
+
+      <p class="bibliography-entry">
+        Goodman, Martin. <em>The Ruling Class of Judaea: The Origins of the Jewish Revolt against
+        Rome, A.D. 66–70</em>. Cambridge: Cambridge University Press, 1987.
+      </p>
+
+      <p class="bibliography-entry">
+        Günther, Sven. “Taxation in the Greco-Roman World: The Roman Principate.”
+        Oxford Handbooks Online. Oxford University Press, 2016.
+      </p>
+
+      <p class="bibliography-entry">
+        Ish-Shalom, Tal A. “Provincial Monarchs as an Eastern <em>Arcanum Imperii</em>:
+        ‘Client Kingship', the Augustan Revolution and the Flavians.”
+        <em>Journal of Roman Studies</em> 111 (2021): 153–177.
+      </p>
+
+      <p class="bibliography-entry">
+        Koester, Craig R. “The Origin and Significance of the Flight to Pella Tradition.”
+        <em>Catholic Biblical Quarterly</em> 51, no. 1 (1989): 90–106.
+      </p>
+
+      <p class="bibliography-entry">
+        Lapin, Hayim. “The Origins and Development of the Rabbinic Movement in the Land of Israel.”
+        In <em>The Cambridge History of Judaism</em>, vol. 4, edited by Steven T. Katz, 206–229.
+        Cambridge: Cambridge University Press, 2006.
+      </p>
+
+      <p class="bibliography-entry">
+        Mason, Steve. <em>A History of the Jewish War, AD 66–74</em>.
+        Cambridge: Cambridge University Press, 2016.
+      </p>
+
+      <p class="bibliography-entry">
+        Mitchell, Margaret M. “Gentile Christianity.” In
+        <em>The Cambridge History of Christianity</em>, vol. 1, <em>Origins to Constantine</em>,
+        edited by Margaret M. Mitchell and Frances M. Young, 103–124.
+        Cambridge: Cambridge University Press, 2006.
+      </p>
+
+      <p class="bibliography-entry">
+        Schwartz, Seth. “Political, Social, and Economic Life in the Land of Israel, 66–c. 235.”
+        In <em>The Cambridge History of Judaism</em>, vol. 4, edited by Steven T. Katz.
+        Cambridge: Cambridge University Press, 2006.
+      </p>
+
+      <p class="bibliography-entry">
+        van Henten, Jan Willem. “Herod Antipas.” <em>Oxford Classical Dictionary</em>.
+        Revised 2021.
+      </p>
+
+      <p class="bibliography-entry">
+        White, L. Michael. “Herod and the Jewish Experience of Augustan Rule.”
+        In <em>The Cambridge Companion to the Age of Augustus</em>, edited by Karl Galinsky.
+        Cambridge: Cambridge University Press, 2005.
+      </p>
+    </section>
+
+  </article>
+</main>
+
+</body>
+</html>
