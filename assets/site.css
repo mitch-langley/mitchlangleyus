@@ -200,7 +200,7 @@ figure, blockquote, h1, h2, h3, h4, p, ul, ol, dl, dd { margin: 0; }
 ul, ol { padding: 0; }
 
 /* Figures line up and a zero never reads as a capital O */
-.tnum, time, th, td, .role-dates, .metric-value, .essay-date, .shot-meta, .case-where {
+.tnum, time, th, td, .role-dates, .metric-value, .entry-date, .shot-meta, .case-where {
   font-variant-numeric: tabular-nums;
 }
 
@@ -1006,438 +1006,22 @@ a.metro-link:focus-visible { outline-color: var(--text-body); outline-offset: 5p
 }
 
 /* ============================================================
-   10. WRITING
+   10. SHARED CONTENT INDEX
    ============================================================ */
-.essay-list { list-style: none; border-top: 1px solid var(--rule); }
-.essay-list li { border-bottom: 1px solid var(--rule); }
-.essay-list a {
+.entry-list { list-style: none; border-top: 1px solid var(--rule); }
+.entry-list li { border-bottom: 1px solid var(--rule); }
+.entry-list a {
   display: grid; grid-template-columns: 6.5rem minmax(0, 1fr);
   gap: var(--s1) var(--s5); align-items: baseline;
   padding: var(--s4) var(--s3);
   color: var(--text-body); text-decoration: none;
   transition: background var(--dur-base) var(--ease-out);
 }
-.essay-list a:hover, .essay-list a:focus-visible { background: var(--surface-card); }
-.essay-date { font-size: var(--text-small); color: var(--text-muted); }
-.essay-title { font-family: var(--font-serif); font-weight: 700; font-size: 1.2rem; color: var(--color-primary); }
-.essay-list a:hover .essay-title { color: var(--color-primary-hover); }
-.essay-note { grid-column: 2; font-size: var(--text-small); color: var(--text-muted); }
-
-/* Standalone essay document -------------------------------------------------
-   Long-form essays use the same design tokens as the rest of the site, but
-   are presented as a physical sheet of paper on screen. Apply
-   class="essay-document" to <body> and wrap the article in .essay-paper. */
-body.essay-document {
-  background: #cfcfcf;
-  color: var(--text-body);
-  font-family: var(--font-serif);
-  font-size: clamp(.875rem, .705rem + .4vw, 1rem);
-  line-height: 1.6;
-}
-
-.essay-paper {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 1.25rem 1rem;
-  position: relative;
-  background: var(--surface-page);
-  box-shadow: none;
-}
-
-.essay-paper-head {
-  margin-bottom: 1.25rem;
-  padding-bottom: .5rem;
-  border-bottom: 2px solid var(--color-primary);
-  text-align: left;
-}
-
-.essay-paper-title {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(1.25rem, .818rem + 1.2vw, 1.5rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: .01em;
-  color: var(--color-primary);
-}
-
-.essay-byline {
-  margin-top: .35rem;
-  font-family: var(--font-serif);
-  font-size: clamp(.75rem, .642rem + .5vw, .875rem);
-  line-height: 1.35;
-  letter-spacing: .015em;
-  color: var(--text-muted);
-}
-
-.essay-paper p {
-  max-width: none;
-  margin: 0 0 1rem;
-  font-size: inherit;
-  line-height: 1.6;
-  text-wrap: pretty;
-}
-
-.essay-paper h2 {
-  margin: 1.25rem 0 .5rem;
-  padding-bottom: .25rem;
-  border-bottom: 1px solid var(--rule);
-  font-family: var(--font-serif);
-  font-size: clamp(.95rem, .744rem + .6vw, 1.15rem);
-  font-weight: 700;
-  line-height: 1.25;
-  color: var(--color-primary);
-}
-
-.essay-paper h3 {
-  margin: 1.25rem 0 .5rem;
-  font-size: 1rem;
-  color: var(--color-primary);
-}
-
-.essay-paper strong { font-weight: 600; }
-.essay-paper a { color: var(--color-primary); text-decoration: none; }
-.essay-paper a:hover { color: var(--color-primary-hover); text-decoration: underline; }
-
-.essay-image-block { margin: 1.25rem 0; }
-.essay-image-block--first { margin-top: 0; margin-bottom: 1.25rem; }
-.essay-image-block--middle { margin-top: 1.25rem; margin-bottom: 1.25rem; }
-.essay-image-block--last { margin-top: 2rem; margin-bottom: 0; }
-
-.essay-image {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  margin: 0;
-  border-radius: 0;
-  -webkit-mask-image:
-    linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%),
-    linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%),
-    linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
-  mask-composite: intersect;
-}
-
-.essay-paper .caption {
-  max-width: none;
-  margin-top: .35rem;
-  margin-bottom: 0;
-  font-family: var(--font-serif);
-  font-size: .75rem;
-  font-style: italic;
-  line-height: 1.2;
-  text-align: left;
-  color: var(--text-muted);
-}
-
-/* Diagrams and screenshots keep hard edges (no feathered mask) */
-.essay-image--plain {
-  width: 100%;
-  -webkit-mask-image: none;
-  mask-image: none;
-}
-/* Fixed-height diagrams, centred; contain keeps them undistorted when narrow */
-.essay-image--diagram,
-.essay-image--diagram-lg {
-  width: auto;
-  height: 200px;
-  margin-inline: auto;
-  object-fit: contain;
-}
-.essay-image--diagram-lg { height: 260px; }
-
-/* Footnote markers, with the note shown as a tooltip on hover */
-.footnote-ref {
-  position: relative;
-  top: -.4em;
-  padding: 0 .05em;
-  font-family: var(--font-sans);
-  font-size: 75%;
-  font-weight: 600;
-  line-height: 0;
-  vertical-align: baseline;
-  text-decoration: none;
-}
-.essay-paper .footnote-ref { color: var(--color-primary-hover); text-decoration: none; }
-.footnote-ref::after,
-.footnote-ref::before {
-  position: absolute;
-  left: 50%;
-  z-index: 100;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out), visibility var(--dur-base);
-}
-.footnote-ref::after {
-  content: attr(data-tooltip);
-  bottom: 150%;
-  width: max-content;
-  max-width: 250px;
-  padding: var(--s2) var(--s3);
-  transform: translateX(-50%);
-  background: var(--text-body);
-  color: var(--white);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-card-hover);
-  font-family: var(--font-sans);
-  font-size: var(--text-micro);
-  font-weight: 400;
-  line-height: 1.4;
-  text-align: left;
-  white-space: normal;
-}
-.footnote-ref::before {
-  content: "";
-  bottom: 100%;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-top-color: var(--text-body);
-}
-.footnote-ref:hover::after,
-.footnote-ref:focus-visible::after { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-2px); }
-.footnote-ref:hover::before,
-.footnote-ref:focus-visible::before { opacity: 1; visibility: visible; }
-
-.footnote-divider {
-  width: 25%;
-  margin: 2rem 0 .75rem;
-  border: 0;
-  border-top: 1px solid var(--rule);
-}
-/* The divider draws the rule, so drop the generic .footnotes border */
-.essay-paper .footnotes {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: 0;
-  font-size: .8125rem;
-  line-height: 1.4;
-}
-.essay-paper .footnotes p { margin-bottom: .5rem; }
-.essay-paper .footnote-backref { margin-left: .25rem; color: var(--color-primary-hover); }
-
-/* Inline text that opens a hidden figure below the paragraph */
-.interactive-trigger {
-  padding: 0 2px;
-  border-radius: 2px;
-  color: var(--color-primary-hover);
-  text-decoration: underline dotted;
-  text-underline-offset: 3px;
-  cursor: pointer;
-  transition: color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
-}
-.interactive-trigger:hover { color: var(--color-primary); background: rgba(29, 63, 92, .08); }
-
-.collapsible-drawer {
-  display: grid;
-  grid-template-rows: 0fr;
-  overflow: hidden;
-  transition: grid-template-rows var(--dur-slow) var(--ease-out);
-}
-.collapsible-drawer.open { grid-template-rows: 1fr; }
-.drawer-inner {
-  min-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--dur-base) var(--ease-out), visibility var(--dur-base);
-}
-.collapsible-drawer.open .drawer-inner { opacity: 1; visibility: visible; }
-
-@media screen and (min-width: 768px) {
-  body.essay-document { padding: 2rem 0; }
-  .essay-paper {
-    max-width: 11in;
-    padding: .8in 1in;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, .25);
-  }
-}
-
-/* Academic essays retain the document treatment with a narrower text measure. */
-body.essay-academic {
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.essay-academic .essay-paper {
-  max-width: calc(var(--measure-read) + var(--s8) * 2);
-  padding: var(--s6) var(--gutter);
-  text-align: left;
-  overflow-wrap: break-word;
-}
-
-.essay-academic .essay-paper-head { margin-bottom: var(--s6); }
-.essay-academic .essay-paper-title { font-size: 1.75rem; line-height: 1.25; letter-spacing: 0; }
-.essay-academic .essay-byline {
-  margin: var(--s3) 0 0;
-  font-family: var(--font-sans);
-  font-size: var(--text-small);
-  line-height: 1.5;
-}
-.essay-academic .essay-paper p { margin-bottom: 1.15em; line-height: 1.7; }
-.essay-academic .essay-paper .essay-byline { margin-bottom: 0; line-height: 1.5; }
-.essay-academic .essay-paper h2 { margin-top: var(--s7); margin-bottom: var(--s4); font-size: 1.1875rem; }
-.essay-academic .essay-paper h3 { margin-top: var(--s6); margin-bottom: var(--s3); font-size: 1.0625rem; }
-.essay-academic .essay-paper-head + section > h2:first-child { margin-top: 0; }
-
-.essay-academic .table-wrapper {
-  max-width: 100%;
-  margin-block: var(--s6);
-  overflow-x: auto;
-}
-.essay-academic table {
-  min-width: 36rem;
-  font-family: var(--font-sans);
-  font-size: var(--text-small);
-  line-height: 1.5;
-}
-.essay-academic .comparison-table { min-width: 56rem; }
-.essay-academic caption {
-  padding-bottom: var(--s3);
-  text-align: left;
-  font-weight: 600;
-  color: var(--text-body);
-}
-.essay-academic th, .essay-academic td {
-  padding: var(--s3);
-  text-align: center;
-  vertical-align: middle;
-}
-.essay-academic th:first-child, .essay-academic td:first-child { padding-left: 0; }
-.essay-academic th:last-child, .essay-academic td:last-child { padding-right: 0; }
-.essay-academic th { color: var(--text-body); }
-.essay-academic tbody tr:nth-child(even) { background: var(--surface-card); }
-.essay-academic .table-scroll-hint {
-  display: block;
-  margin-bottom: var(--s2);
-  font-family: var(--font-sans);
-  font-size: var(--text-small);
-  color: var(--text-muted);
-}
-
-.essay-academic .institutional-chain, .essay-academic .ranking {
-  padding-block: var(--s4);
-  border-block: 1px solid var(--rule);
-  font-family: var(--font-sans);
-  font-size: var(--text-small);
-}
-.essay-academic .footnote-ref::before, .essay-academic .footnote-ref::after { content: none; }
-.essay-academic .footnote-divider { margin-top: var(--s7); }
-.essay-academic .footnotes {
-  font-family: var(--font-serif);
-  font-size: .9375rem;
-  line-height: 1.55;
-  color: var(--text-body);
-}
-.essay-academic .footnotes ol { padding-left: 1.5em; }
-.essay-academic .footnotes li { padding-left: .25em; scroll-margin-top: var(--s5); }
-.essay-academic .footnotes li + li { margin-top: 1em; }
-.essay-academic .footnotes li::marker { font-family: var(--font-sans); font-weight: 600; }
-.essay-academic .footnotes li:target { background: var(--surface-card); }
-.essay-academic .footnote-ref { scroll-margin-top: var(--s5); }
-.essay-academic .footnote-backref { display: inline-block; padding: .15em .25em; }
-.essay-academic .bibliography-entry {
-  padding-left: 1.5em;
-  text-indent: -1.5em;
-  font-size: .9375rem;
-}
-
-.essay-academic .essay-toc {
-  margin: 0 var(--gutter);
-  padding-block: var(--s5);
-  font-family: var(--font-sans);
-  font-size: var(--text-small);
-  line-height: 1.4;
-}
-.essay-academic .essay-toc summary {
-  margin-bottom: var(--s3);
-  font-family: var(--font-serif);
-  font-size: 1.0625rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  cursor: pointer;
-}
-.essay-academic .essay-toc ol { list-style: none; }
-.essay-academic .essay-toc ol ol { margin-left: var(--s4); font-size: .8125rem; }
-.essay-academic .essay-toc li + li { margin-top: var(--s1); }
-.essay-academic .essay-toc a {
-  display: block;
-  padding-block: var(--s1);
-  color: var(--text-body);
-  text-decoration: none;
-}
-.essay-academic .essay-toc a:hover, .essay-academic .essay-toc a:focus-visible {
-  color: var(--color-primary);
-  text-decoration: underline;
-}
-.essay-academic .essay-paper :is(h2, h3)[id] { scroll-margin-top: var(--s5); }
-
-@media screen and (min-width: 768px) {
-  body.essay-academic { font-size: 1.0625rem; }
-  .essay-academic .essay-paper { padding: var(--s7) var(--s8); }
-  .essay-academic .table-wrapper:not(.table-wrapper--comparison) .table-scroll-hint { display: none; }
-}
-
-@media screen and (min-width: 1200px) {
-  .essay-academic .essay-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, calc(var(--measure-read) + var(--s8) * 2)) minmax(0, 1fr);
-    align-items: start;
-  }
-  .essay-academic .essay-layout > .essay-paper { grid-column: 2; grid-row: 1; min-width: 0; }
-  .essay-academic .essay-toc {
-    grid-column: 1;
-    grid-row: 1;
-    position: sticky;
-    top: var(--s6);
-    justify-self: end;
-    width: calc(100% - var(--s5) * 2);
-    max-width: 16rem;
-    max-height: calc(100vh - var(--s6) * 2);
-    margin-inline: var(--s5);
-    padding-block: var(--s3);
-    overflow-y: auto;
-    overflow-wrap: break-word;
-  }
-}
-
-.prose {
-  max-width: var(--measure-read);
-  margin-inline: auto;
-  font-family: var(--font-serif);
-  font-size: 1.1875rem;
-  line-height: 1.7;
-}
-.prose > * + * { margin-top: var(--s5); }
-.prose p { max-width: none; }
-.prose h2 { margin-top: var(--s8); font-size: var(--text-h3); }
-.prose h3 { margin-top: var(--s7); font-size: 1.2rem; }
-.prose h2 + p, .prose h3 + p { margin-top: var(--s4); }
-.prose ul, .prose ol { padding-left: 1.3rem; }
-.prose li + li { margin-top: var(--s2); }
-.prose li::marker { color: var(--color-primary-hover); }
-.prose img { width: 100%; border-radius: var(--radius-md); }
-.prose hr { height: 0; margin-block: var(--s7); border: 0; border-top: 1px solid var(--rule); }
-
-.prose blockquote {
-  padding: var(--s4) var(--s5);
-  background: var(--surface-card);
-  border-radius: var(--radius-md);
-  font-size: 1.15rem;
-  line-height: 1.55;
-  color: var(--color-primary);
-}
-.prose blockquote cite { display: block; margin-top: var(--s3); font-family: var(--font-sans); font-size: var(--text-small); font-style: normal; color: var(--text-muted); }
-.prose figure figcaption { margin-top: var(--s3); font-family: var(--font-sans); font-size: var(--text-small); color: var(--text-muted); }
-
-.footnotes { margin-top: var(--s8); padding-top: var(--s5); border-top: 1px solid var(--rule); font-family: var(--font-sans); font-size: var(--text-small); color: var(--text-muted); }
-.footnotes li + li { margin-top: var(--s3); }
-
-[lang="es"] .prose p, .prose[lang="es"] p { text-align: justify; hyphens: auto; }
-[lang="en"] .prose p, .prose[lang="en"] p { text-align: left; hyphens: manual; }
+.entry-list a:hover, .entry-list a:focus-visible { background: var(--surface-card); }
+.entry-date { font-size: var(--text-small); color: var(--text-muted); }
+.entry-title { font-family: var(--font-serif); font-weight: 700; font-size: 1.2rem; color: var(--color-primary); }
+.entry-list a:hover .entry-title { color: var(--color-primary-hover); }
+.entry-note { grid-column: 2; font-size: var(--text-small); color: var(--text-muted); }
 
 /* ============================================================
    10B. READING
@@ -2257,8 +1841,8 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .facts { grid-template-columns: 1fr; gap: 2px 0; }
   .facts dd { margin-bottom: var(--s3); }
 
-  .essay-list a { grid-template-columns: 1fr; }
-  .essay-note { grid-column: 1; }
+  .entry-list a { grid-template-columns: 1fr; }
+  .entry-note { grid-column: 1; }
 
   .gallery { gap: var(--s4); }
   .gallery-fixed { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2272,16 +1856,13 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .btn-row .btn { flex: 1 1 auto; }
   .gallery { grid-template-columns: 1fr; }
   .gallery-fixed { grid-template-columns: 1fr; }
-  .prose { font-size: 1.0625rem; }
-  [lang="es"] .prose p, .prose[lang="es"] p { text-align: left; }
 }
 
 /* ============================================================
    16. PRINT
-   The resume and the essays are documents.
+   Shared document printing; essay rules live in writing/writing.css.
    ============================================================ */
 @page { size: 8.5in 11in; margin: 12mm 16mm; }
-@page essay { size: 8.5in 11in; margin: 0; }
 
 @media print {
   :root {
@@ -2304,46 +1885,6 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   html, body { background: #fff; color: #111; }
   body { font-size: 10pt; line-height: 1.4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
-  body.essay-document { padding: 0; background: #fff; font-family: var(--font-serif); }
-  .essay-paper {
-    page: essay;
-    max-width: none;
-    margin: 0;
-    padding: .8in 1in;
-    box-shadow: none;
-  }
-  .essay-paper-head { margin-bottom: .16in; padding-bottom: .08in; border-bottom: 2px solid #111; }
-  .essay-paper-title { color: #111; font-size: 15pt; }
-  .essay-byline { color: #555; font-size: 8.5pt; }
-  .essay-paper p { font-size: 10.5pt; line-height: 1.42; margin-bottom: .1in; }
-  .essay-paper h2 { margin: .18in 0 .07in; padding-bottom: .03in; border-bottom-color: #999; color: #111; font-size: 10.5pt; }
-  .essay-paper h3 { color: #111; }
-  .essay-paper a { color: #111; text-decoration: none; }
-  .essay-image-block, .essay-image-block--first, .essay-image-block--middle { margin: .14in 0; }
-  .essay-image-block--last { margin: .2in 0 0; }
-  .footnote-ref::before, .footnote-ref::after { display: none; }
-  .essay-paper .footnotes { font-size: 8.5pt; }
-
-  .essay-academic .essay-paper { page: auto; max-width: none; padding: 0; }
-  .essay-academic .essay-toc { display: none; }
-  .essay-academic .essay-paper-head { margin-bottom: .16in; padding-bottom: .08in; }
-  .essay-academic .essay-paper-title { font-size: 15pt; }
-  .essay-academic .essay-paper p { font-size: 10.5pt; line-height: 1.45; margin-bottom: .12in; orphans: 3; widows: 3; }
-  .essay-academic .essay-paper .essay-byline { font-size: 8.5pt; }
-  .essay-academic .essay-paper h2 { margin: .22in 0 .08in; font-size: 11pt; break-after: avoid; }
-  .essay-academic .essay-paper h3 { margin: .16in 0 .07in; font-size: 10.5pt; break-after: avoid; }
-  .essay-academic .table-wrapper { overflow: visible; margin-block: .16in; }
-  .essay-academic .table-scroll-hint { display: none; }
-  .essay-academic table, .essay-academic .comparison-table { min-width: 0; table-layout: fixed; font-size: 8pt; line-height: 1.35; }
-  .essay-academic caption { padding-bottom: .07in; break-after: avoid; }
-  .essay-academic th, .essay-academic td { padding: .06in .04in; overflow-wrap: anywhere; }
-  .essay-academic tr { break-inside: avoid; }
-  .essay-academic .footnotes { font-size: 8.5pt; }
-  .essay-academic .footnote-divider { margin: .2in 0 .08in; }
-  .essay-academic .essay-paper .institutional-chain, .essay-academic .essay-paper .ranking { padding-block: .07in; font-size: 9pt; }
-  .essay-academic .footnotes li, .essay-academic .bibliography-entry { break-inside: avoid; }
-  .essay-academic .essay-paper .bibliography-entry { font-size: 9pt; }
-  .essay-academic .footnote-backref { display: none; }
 
   .doc-nav, .skip-link, .btn, .btn-row,
   .gallery, .lightbox, .home-routes-nav, .hero-video, .portrait, .case-jump { display: none !important; }
@@ -2385,11 +1926,6 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .case-col-outcome { border-top-color: #111; }
   .case-figure img { border-color: #cfd6db; box-shadow: none; }
   .case-figure-cue { display: none; }
-
-  .prose { max-width: none; font-size: 10.5pt; line-height: 1.42; }
-  .prose > * + * { margin-top: .1in; }
-  .prose h2, .prose h3 { margin-top: .18in; }
-  .prose a { color: #111; text-decoration: none; }
 
   .site-footer { padding: .1in 0 0; background: none; color: #555; border-top: 1px solid #cfd6db; }
   .site-footer .doc-name { color: #111; }
