@@ -7,20 +7,18 @@
    Built on the Mitchell Langley Asesorías design system
    (claude.ai/design, project 22dc858d), with the Santiago Metro
    route palette for section identities.
-     - Each section retains its homepage line color.
-     - Small text uses a darker route shade for contrast.
+     - Three Metro colors identify navigation categories.
+     - Page content uses charcoal, navy and muted gold.
      - Surfaces are white, alternating with #F4F6F8. Separation
        comes from background change and soft shadow; hairline
        #D8DCE0 rules only where a divider is needed.
-     - Source Serif 4 for headings and the wordmark,
-       Source Sans 3 for everything else.
+     - Sitka for headings, body text and navigation.
      - One ease-out curve, four durations, one focal moment per
        page load. No bounce, no loops.
 
    FONTS
-   Loaded by the Google Fonts link in every <head>:
-   Source Serif 4 400/600/700, Source Sans 3 400/600/700.
-   Keep weights in this file to that set.
+   Installed Sitka optical families, with Georgia as the fallback.
+   No remote font request is needed.
 
    ROUTE CLASSES
    Route classes assign section colors. .metro-section applies
@@ -34,18 +32,15 @@
 :root {
   /* Santiago Metro line colors from the supplied reference. */
   --metro-1: #ef0017;
-  --metro-2: #ffa800;
-  --metro-3: #813919;
   --metro-4: #282582;
   --metro-5: #00a368;
-  --metro-6: #943991;
 
   /* Brand palette */
-  --navy-900: #1D3F5C;    /* primary / dark */
-  --navy-600: #3D6485;    /* hover / accent tint, 6.0:1 on white */
-  --green-700: #1E8449;   /* the one action per page */
-  --green-800: #0F6330;
-  --ink-900: #1A1A1A;     /* principal text */
+  --navy-900: #20384D;    /* report navy */
+  --navy-600: #315571;    /* report navy hover */
+  --gold-700: #806324;    /* report gold */
+  --gold-800: #624B1D;
+  --ink-900: #282B30;     /* charcoal text */
   --ink-500: #69707D;     /* muted text, 4.9:1 white, 4.5:1 tint */
   --surface-tint: #F4F6F8;
   --white: #FFFFFF;
@@ -55,8 +50,8 @@
   /* Semantic aliases */
   --color-primary: var(--navy-900);
   --color-primary-hover: var(--navy-600);
-  --color-accent: var(--green-700);
-  --color-accent-hover: var(--green-800);
+  --color-accent: var(--gold-700);
+  --color-accent-hover: var(--gold-800);
   --text-body: var(--ink-900);
   --text-muted: var(--ink-500);
   --text-on-dark: var(--white);
@@ -68,11 +63,14 @@
   --focus-ring: var(--navy-600);
 
   /* Default route mark; themed pages assign their section color. */
-  --line: var(--navy-600);
+  --line: var(--gold-700);
+  --route-color: var(--gold-700);
+  --route-ink: var(--navy-900);
+  --route-hover: var(--navy-600);
 
   /* Type */
-  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Source Sans 3', Arial, sans-serif;
+  --font-serif: 'Sitka Heading', 'Sitka Display', 'Sitka', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Sitka Text', 'Sitka', Georgia, 'Times New Roman', serif;
 
   --text-display: clamp(2rem, 1.4rem + 2.2vw, 3.1rem);
   --text-h1: 2rem;
@@ -121,61 +119,38 @@
   color-scheme: light;
 }
 
-/* Section identities are shared by the map, navigation and page themes. */
-.route-work, .metro-line--1 {
+/* Metro identities belong to navigation; documents use the report palette. */
+.route-professional, .metro-line--1 {
   --route-color: var(--metro-1);
   --route-ink: #bd0012;
   --route-hover: #990010;
-  --route-surface: #cc0014;
-  --route-on-surface: #fff;
 }
-.route-cases, .metro-line--2 {
-  --route-color: var(--metro-2);
-  --route-ink: #805000;
-  --route-hover: #633d00;
-  --route-surface: var(--metro-2);
-  --route-on-surface: #1a1a1a;
-  --badge-ink: #111;
-}
-.route-writing, .metro-line--3 {
-  --route-color: var(--metro-3);
-  --route-ink: var(--metro-3);
-  --route-hover: #602710;
-  --route-surface: var(--metro-3);
-  --route-on-surface: #fff;
-}
-.route-gallery, .metro-line--4 {
+.route-essays, .metro-line--4 {
   --route-color: var(--metro-4);
   --route-ink: var(--metro-4);
   --route-hover: #19145f;
-  --route-surface: var(--metro-4);
-  --route-on-surface: #fff;
 }
 .route-reading, .metro-line--5 {
   --route-color: var(--metro-5);
   --route-ink: #006b45;
   --route-hover: #004c31;
-  --route-surface: #007b4f;
-  --route-on-surface: #fff;
 }
-.metro-line--6 { --route-color: var(--metro-6); }
-
 body.metro-section {
-  --color-primary: var(--route-ink);
-  --color-primary-hover: var(--route-hover);
-  --color-accent: var(--route-ink);
-  --color-accent-hover: var(--route-hover);
-  --surface-dark: var(--route-surface);
-  --text-on-dark: var(--route-on-surface);
-  --text-on-dark-muted: var(--route-on-surface);
-  --focus-ring: var(--route-ink);
-  --line: var(--route-color);
+  --color-primary: var(--navy-900);
+  --color-primary-hover: var(--navy-600);
+  --color-accent: var(--gold-700);
+  --color-accent-hover: var(--gold-800);
+  --surface-dark: var(--navy-900);
+  --text-on-dark: var(--white);
+  --text-on-dark-muted: rgba(255, 255, 255, .88);
+  --route-color: var(--gold-700);
+  --route-ink: var(--navy-900);
+  --route-hover: var(--navy-600);
+  --focus-ring: var(--navy-600);
+  --line: var(--gold-700);
   --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, .16);
-  --shadow-popover: 0 18px 44px rgba(0, 0, 0, .24);
-  accent-color: var(--route-ink);
-  caret-color: var(--route-ink);
+  --shadow-popover: 0 18px 44px rgba(0, 0, 0, .18);
 }
-body.metro-section.route-cases { --rule-dark: rgba(26, 26, 26, .25); }
 
 /* ============================================================
    2. BASE
@@ -315,6 +290,119 @@ p { max-width: var(--measure); text-wrap: pretty; }
    ============================================================ */
 .page { display: block; }
 
+/* Compact professional biography, with native expandable career cards. */
+.about-main {
+  --about-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+  --about-column-gap: var(--s6);
+  padding-block: var(--s7);
+}
+.about-intro {
+  display: grid;
+  grid-template-columns: var(--about-columns);
+  align-items: stretch;
+  gap: var(--about-column-gap);
+  padding-bottom: var(--s7);
+}
+.about-intro h1 { font-size: var(--text-display); margin-bottom: var(--s4); }
+.about-intro p { max-width: 70ch; }
+.about-intro p + p { margin-top: var(--s4); }
+.about-lead { font-size: var(--text-subtitle); line-height: 1.5; }
+.about-actions { align-items: center; margin-top: var(--s5); }
+.about-portrait-frame { position: relative; min-width: 0; }
+.about-portrait {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+.about-background {
+  display: grid;
+  grid-template-columns: var(--about-columns);
+  align-items: stretch;
+  gap: var(--about-column-gap);
+}
+.about-sidebar { display: flex; flex-direction: column; gap: var(--s5); min-width: 0; }
+.about-interests {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.about-interests-card {
+  flex: 1;
+  padding: var(--s5);
+  background: var(--surface-tint);
+  border-radius: var(--radius-md);
+}
+.about-interests-card ul {
+  padding-left: 1.2em;
+  font-size: var(--text-small);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.about-interests-card li + li { margin-top: var(--s2); }
+.about-background h2 { font-size: var(--text-h3); margin-bottom: var(--s4); }
+.about-section-note { margin-top: calc(-1 * var(--s2)); margin-bottom: var(--s4); color: var(--text-muted); font-size: var(--text-small); }
+.about-career { display: grid; gap: var(--s3); }
+.about-card {
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--route-color);
+  border-radius: var(--radius-md);
+  background: var(--white);
+}
+.about-card summary {
+  position: relative;
+  padding: var(--s4) var(--s7) var(--s4) var(--s5);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  list-style: none;
+}
+.about-card summary::-webkit-details-marker { display: none; }
+.about-card summary:hover { background: var(--surface-tint); }
+.about-card summary:focus-visible { outline-offset: 2px; }
+.about-card-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s1) var(--s4); }
+.about-card-title { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--color-primary); }
+.about-card-date { margin-left: auto; font-size: var(--text-small); color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.about-card-org, .about-card-preview { display: block; font-size: var(--text-small); line-height: 1.5; }
+.about-card-org { margin-top: var(--s1); font-weight: 600; }
+.about-card-preview { margin-top: var(--s2); }
+.about-card-toggle { position: absolute; top: 26px; right: 20px; width: 12px; height: 12px; color: var(--color-primary); }
+.about-card-toggle::before, .about-card-toggle::after { content: ""; position: absolute; background: currentColor; }
+.about-card-toggle::before { width: 12px; height: 2px; top: 5px; }
+.about-card-toggle::after { width: 2px; height: 12px; left: 5px; }
+.about-card[open] .about-card-toggle::after { display: none; }
+.about-card[open] summary { background: var(--surface-tint); }
+.about-card-body { padding: var(--s4) var(--s5) var(--s5); border-top: 1px solid var(--rule); }
+.about-card-body p { max-width: 65ch; }
+.about-other-entry + .about-other-entry { margin-top: var(--s5); }
+.about-other-entry h3 { margin-bottom: var(--s2); font-family: var(--font-sans); font-size: 1rem; font-weight: 600; }
+.about-education-card { padding: var(--s5); background: var(--surface-tint); border-radius: var(--radius-md); }
+.about-degree + .about-degree { margin-top: var(--s5); padding-top: var(--s4); border-top: 1px solid var(--rule); }
+.about-degree h3 { font-family: var(--font-sans); font-size: 1rem; font-weight: 600; }
+.about-degree p { margin-top: var(--s1); font-size: var(--text-small); line-height: 1.5; }
+.about-degree-note { color: var(--text-muted); }
+.about-footer { padding-block: var(--s5); border-top: 1px solid var(--rule); font-size: var(--text-small); color: var(--text-muted); }
+.about-footer span { margin-inline: var(--s2); }
+
+@media (max-width: 760px) {
+  .about-main { --about-columns: minmax(0, 1fr); }
+  .about-intro { gap: var(--s5); }
+  .about-portrait-frame { height: 240px; }
+}
+@media (max-width: 480px) {
+  .about-main { padding-block: var(--s6); }
+  .about-intro { grid-template-columns: minmax(0, 1fr); padding-bottom: var(--s6); }
+  .about-portrait-frame { display: none; }
+  .about-card summary { padding-left: var(--s4); }
+  .about-card-date { margin-left: 0; }
+  .about-card-body { padding-inline: var(--s4); }
+}
+
 .rail { width: min(var(--content-max), 100% - 2 * var(--gutter)); margin-inline: auto; }
 .rail-text { width: min(760px, 100% - 2 * var(--gutter)); margin-inline: auto; }
 
@@ -356,31 +444,60 @@ p { max-width: var(--measure); text-wrap: pretty; }
 }
 .doc-name:hover { color: var(--color-primary-hover); }
 
-.doc-nav { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) 25px; list-style: none; }
-.doc-nav a {
-  position: relative;
-  display: inline-block;
-  padding-block: var(--s1);
-  color: var(--color-primary);
+.doc-head { flex: 0 0 auto; }
+.doc-nav { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s6); list-style: none; }
+.nav-group { position: relative; }
+.nav-group > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 44px;
+  padding-block: var(--s2);
+  color: var(--route-ink);
   font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+}
+.nav-group > summary::-webkit-details-marker { display: none; }
+.nav-group > summary::after {
+  content: "";
+  width: .4em;
+  height: .4em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-.15em) rotate(45deg);
+}
+.nav-group[open] > summary::after { transform: translateY(.1em) rotate(225deg); }
+.nav-group > summary:hover { color: var(--route-hover); }
+.nav-group > summary:focus-visible { outline-color: var(--route-ink); }
+.nav-group > summary.is-current { text-decoration: underline; text-decoration-color: var(--route-color); text-underline-offset: 7px; }
+.nav-dropdown {
+  position: absolute;
+  z-index: 1010;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 14rem;
+  padding: var(--s2);
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--route-color);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-popover);
+  list-style: none;
+}
+.nav-dropdown a {
+  display: block;
+  padding: var(--s3) var(--s4);
+  color: var(--text-body);
   text-decoration: none;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
 }
-.doc-nav a::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
-  height: 2px; background: var(--color-primary);
-  transform: scaleX(0); transform-origin: center;
-  transition: transform var(--dur-base) var(--ease-out);
-}
-.doc-nav a:hover { color: var(--color-primary-hover); }
-.doc-nav a:hover::after { background: var(--color-primary-hover); }
-.doc-nav a:hover::after,
-.doc-nav a.is-current::after,
-.doc-nav a[aria-current="page"]::after { transform: scaleX(1); }
-
-/* Link to the Spanish site, set off by a hairline */
-.doc-nav .lang-link { padding-left: 25px; border-left: 1px solid var(--rule); }
-.doc-nav .lang-link a { font-weight: 400; color: var(--text-muted); }
-.doc-nav .lang-link a:hover { color: var(--color-primary); }
+.nav-dropdown a:hover, .nav-dropdown a:focus-visible { background: var(--surface-tint); color: var(--route-ink); }
+.nav-dropdown a[aria-current] { background: var(--surface-tint); color: var(--route-ink); font-weight: 700; }
+.doc-language { color: var(--text-muted); font-size: var(--text-small); text-decoration: none; }
+.doc-language:hover { text-decoration: underline; }
+.site-page [id] { scroll-margin-top: calc(var(--site-header-height, 96px) + var(--s5)); }
 
 /* Contact line under the name (resume) */
 .doc-contact { width: 100%; font-size: var(--text-small); color: var(--text-muted); line-height: 1.7; overflow-wrap: anywhere; }
@@ -429,7 +546,7 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .plate-facts a { color: var(--text-on-dark-muted)}
 .plate-facts a:hover { color: var(--text-on-dark); text-decoration-thickness: 2px; }
 
-/* Santiago Metro homepage */
+/* Three Metro lines, each with expandable station destinations. */
 .metro-page {
   min-height: 100vh;
   min-height: 100svh;
@@ -437,155 +554,83 @@ p { max-width: var(--measure); text-wrap: pretty; }
   flex-direction: column;
   background: #f7f8f9;
 }
-
 .metro-home {
-  width: min(880px, calc(100% - 80px));
+  width: min(1100px, calc(100% - 80px));
   margin: auto;
   padding-block: clamp(48px, 8vh, 88px) 32px;
 }
+.metro-home h1 { margin-bottom: var(--s7); font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 600 }
+.metro-map { position: relative; }
 
-.metro-home h1 {
-  margin-bottom: clamp(32px, 5vh, 56px);
-  font-size: clamp(2.25rem, 5vw, 3.5rem);
-  font-weight: 600;
-  letter-spacing: -.035em;
-  text-align: left;
-}
-
-.metro-map {
-  display: grid;
-  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
-  align-items: stretch;
-}
-
-.metro-tracks {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  pointer-events: none;
-}
-
-.metro-tracks--compact { display: none; }
-.metro-track {
-  fill: none;
-  stroke: var(--route-color);
-  stroke-width: 8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.metro-stop {
-  fill: #f7f8f9;
-  stroke: var(--route-color);
-  stroke-width: 4;
-  vector-effect: non-scaling-stroke;
-}
-
-.metro-interchange {
-  fill: #f7f8f9;
-  stroke: #1a1a1a;
-  stroke-width: 3;
-  vector-effect: non-scaling-stroke;
-}
-
-.metro-destinations {
-  display: grid;
-  grid-template-rows: repeat(6, minmax(80px, 1fr));
+.metro-destinations { list-style: none; }
+.metro-destinations > li { position: relative; display: grid; grid-template-columns: 180px minmax(0, 1fr); min-width: 0; }
+.metro-destinations > li::before { content: ""; position: absolute; left: 22px; top: 0; bottom: 0; width: 4px; background: #9ba2a9; }
+.metro-destinations > li:first-child::before { top: 48px; }
+.metro-destinations > li:last-child::before { bottom: auto; height: 48px; }
+.metro-branch--compact { display: none; }
+.metro-branch { width: 180px; height: 96px; position: relative; pointer-events: none; }
+.metro-track { fill: none; stroke: var(--route-color); stroke-width: 8; stroke-linecap: round; }
+.metro-interchange { fill: #f7f8f9; stroke: var(--text-body); stroke-width: 2.5; }
+.metro-route { position: relative; min-height: 96px; min-width: 0; }
+.metro-route > summary { display: flex; align-items: center; gap: var(--s4); width: 260px; min-height: 96px; list-style: none; cursor: pointer; }
+.metro-route > summary::-webkit-details-marker { display: none; }
+.metro-badge { display: grid; place-items: center; flex: 0 0 48px; height: 48px; border-radius: 50%; background: var(--route-color); color: var(--white); font: 700 1.8rem/1 var(--font-sans); font-variant-numeric: lining-nums; }
+.metro-label { font-size: clamp(1.2rem, 2vw, 1.65rem); font-weight: 600; line-height: 1.25; }
+.metro-route > summary::after { content: ""; flex: 0 0 8px; height: 8px; margin-left: auto; margin-right: var(--s4); border-top: 2px solid var(--route-ink); border-right: 2px solid var(--route-ink); transform: rotate(45deg); }
+.metro-route[open] > summary::after { transform: rotate(135deg); }
+.metro-route > summary:hover .metro-label { text-decoration: underline; text-decoration-color: var(--route-color); text-underline-offset: 6px; }
+.metro-route > summary:focus-visible { outline-color: var(--route-ink); outline-offset: 0; }
+.metro-stations {
+  position: absolute;
+  left: 280px;
+  right: 0;
+  top: 27px;
+  display: flex;
   list-style: none;
-  min-width: 0;
 }
-
-.metro-destinations li { display: flex; min-width: 0; }
-
-.metro-link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-  padding: 12px 8px 12px 0;
-  color: var(--text-body);
-  text-decoration: none;
-}
-
-.metro-badge {
-  display: grid;
-  place-items: center;
-  flex: 0 0 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--route-color);
-  color: var(--badge-ink, #fff);
-  font: 700 2rem/1 var(--font-sans);
-  font-variant-numeric: lining-nums;
-}
-
-.metro-label {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  font-weight: 600;
-  line-height: 1.25;
-}
-
-a.metro-link:hover,
-a.metro-link:focus-visible { color: var(--text-body); }
-
-a.metro-link:hover .metro-label,
-a.metro-link:focus-visible .metro-label {
-  text-decoration: underline;
-  text-decoration-color: var(--route-color);
-  text-decoration-thickness: 3px;
-  text-underline-offset: 6px;
-}
-
-a.metro-link:focus-visible { outline-color: var(--text-body); outline-offset: 5px; }
-
-.metro-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 28px;
-  width: min(880px, calc(100% - 80px));
-  margin-inline: auto;
-  padding-block: 20px 32px;
-}
-
-.metro-footer a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  color: var(--text-muted);
-  font-size: 1rem;
-  text-decoration: none;
-}
-
+.metro-stations::before { content: ""; position: absolute; top: 18px; left: -20px; right: calc(50% / var(--station-count)); height: 6px; background: var(--route-color); }
+.metro-stations > li { flex: 1; min-width: 0; position: relative; }
+.metro-stations a { display: flex; flex-direction: column; align-items: center; gap: var(--s2); min-height: 68px; padding: 12px var(--s2); color: var(--text-body); text-decoration: none; text-align: center; line-height: 1.3; font-size: 1rem; }
+.metro-station-mark { width: 18px; height: 18px; flex: 0 0 18px; border: 3px solid var(--route-color); border-radius: 50%; background: #f7f8f9; }
+.metro-stations a:hover { color: var(--route-ink); text-decoration: underline; }
+.metro-stations a:focus-visible { outline-color: var(--route-ink); }
+.metro-stations a:hover .metro-station-mark { background: var(--route-color); }
+.metro-footer { display: flex; flex-wrap: wrap; gap: var(--s3) var(--s5); width: min(1100px, calc(100% - 80px)); margin-inline: auto; padding-block: var(--s5) var(--s6); }
+.metro-footer a, .metro-footer p { display: inline-flex; align-items: center; min-height: 44px; color: var(--text-muted); text-decoration: none; }
 .metro-footer a:hover { color: var(--text-body); text-decoration: underline; }
-
+@media (prefers-reduced-motion: no-preference) {
+  .metro-route[open] .metro-stations { animation: stations-reveal var(--dur-base) var(--ease-out); }
+  @keyframes stations-reveal { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: translateX(0); } }
+}
+@media (max-width: 1000px) {
+  .metro-route > summary { width: 100%; }
+  .metro-stations { position: relative; inset: auto; margin: 0 0 var(--s5) 24px; flex-direction: column; }
+  .metro-stations::before { left: 7px; right: auto; top: 24px; bottom: 24px; width: 4px; height: auto; }
+  .metro-stations a { flex-direction: row; text-align: left; min-height: 48px; padding: var(--s3) 0; gap: var(--s4); }
+}
 @media (max-width: 600px) {
   .metro-home, .metro-footer { width: calc(100% - 40px); }
   .metro-home { padding-top: 40px; }
-  .metro-home h1 { margin-bottom: 28px; }
-  .metro-map { grid-template-columns: 64px minmax(0, 1fr); }
-  .metro-tracks--wide { display: none; }
-  .metro-tracks--compact { display: block; }
-  .metro-destinations { grid-template-rows: repeat(6, minmax(72px, 1fr)); }
-  .metro-link { gap: 16px; }
-  .metro-badge { flex-basis: 44px; height: 44px; font-size: 1.75rem; }
+  .metro-home h1 { margin-bottom: var(--s5); }
+  .metro-destinations > li { grid-template-columns: 64px minmax(0, 1fr); }
+  .metro-branch--wide { display: none; }
+  .metro-branch--compact { display: block; width: 64px; }
+  .metro-route > summary { gap: var(--s3); }
+  .metro-badge { flex-basis: 44px; height: 44px; font-size: 1.65rem; }
   .metro-footer { padding-top: 0; }
 }
-
 @media (forced-colors: active) {
-  .metro-badge { border: 2px solid CanvasText; }
-  .metro-track, .metro-stop, .metro-interchange { stroke: CanvasText; }
+  .metro-badge, .metro-station-mark { border-color: CanvasText; }
+  .metro-track, .metro-interchange { stroke: CanvasText; }
+  .metro-stations::before, .metro-destinations > li::before { background: CanvasText; }
 }
-
 @media print {
   .metro-page { min-height: auto; background: #fff; }
   .metro-home, .metro-footer { width: 100%; }
   .metro-home { padding-top: 0; }
-  .metro-map { display: block; }
-  .metro-tracks, .metro-badge { display: none; }
-  .metro-destinations { grid-template-rows: repeat(6, auto); }
-  .metro-link { padding-block: 8px; }
+  .metro-destinations > li { display: block; }
+  .metro-branch, .metro-badge, .metro-destinations > li::before, .metro-route > summary::after { display: none; }
+  .metro-route { min-height: auto; }
 }
 
 /* ============================================================
@@ -1365,7 +1410,7 @@ html:has(.book-drawer[open]) { overflow: hidden; scrollbar-gutter: stable; }
 }
 .library-error h2 { margin-bottom: var(--s3); }
 .library-error code {
-  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-family: var(--font-sans);
   font-size: .9em;
   color: var(--color-primary);
 }
@@ -1652,13 +1697,11 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
 
 /* Section colors on navigation, controls and page accents. */
 @media screen {
-  /* Metro-section page plates use a shared transit-silver surface.
-     Route colors are retained as restrained identity accents rather
-     than full-bleed backgrounds. */
+  /* Document plates use silver with a restrained report-gold rule. */
   .metro-section .plate {
     background: #E7EAED;
     color: var(--text-muted);
-    border-bottom: 6px solid var(--route-color);
+    border-bottom: 3px solid var(--gold-700);
   }
   .metro-section .plate .plate-line,
   .metro-section .plate h1 {
@@ -1712,38 +1755,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
 
   .metro-section .sec { border-bottom-color: var(--route-color); }
 
-  .metro-section .doc-nav a[class*="route-"] {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--route-ink);
-    white-space: nowrap;
-  }
-  .metro-section .doc-nav a[class*="route-"]:hover { color: var(--route-hover); }
-  .metro-section .doc-nav a[class*="route-"]:focus-visible { outline-color: var(--route-ink); }
-  .metro-section .doc-nav a[class*="route-"]::after { background: var(--route-color); }
-
-  .metro-section :is(.doc-nav, .footer-nav) a[class*="route-"]::before {
-    content: "";
-    display: inline-block;
-    flex: 0 0 10px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--route-color);
-  }
-  .metro-section .footer-nav a[class*="route-"] {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .metro-section .footer-nav a[class*="route-"]::before {
-    box-shadow: 0 0 0 2px var(--white);
-  }
-  .metro-section .footer-nav a[aria-current="page"] {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-  }
+  .metro-section .footer-nav a[aria-current="page"] { text-decoration: underline; }
 
   .metro-section .plate .btn[class*="route-"] {
     border-color: var(--navy-900);
@@ -1807,10 +1819,8 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .band { padding-block: var(--s8); }
   .doc-head { position: static; padding: var(--s4) var(--gutter); gap: var(--s2) var(--s4); }
   .doc-name { width: 100%; margin-right: 0; }
-  .doc-nav { gap: 0 var(--s5); }
-  .doc-nav a { padding-block: var(--s3); }
-  /* The nav wraps here, so the hairline would strand on its own row */
-  .doc-nav .lang-link { padding-left: 0; border-left: 0; }
+  .doc-nav { gap: var(--s2) var(--s5); }
+  .nav-group > summary { padding-block: var(--s3); }
 
   .home { padding-block: var(--s8) 72px; }
   .home-grid { grid-template-columns: 1fr; gap: var(--s6); }
@@ -1852,7 +1862,12 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
 
 @media (max-width: 560px) {
   :root { --space-section: 56px; --s8: 48px; }
-  .doc-nav { width: 100%; }
+  .doc-head > nav { width: 100%; }
+  .doc-nav { display: grid; grid-template-columns: repeat(3, max-content); justify-content: space-between; gap: var(--s2); }
+  .nav-group > summary { font-size: .9rem; gap: var(--s1); white-space: nowrap; }
+  .nav-dropdown { min-width: 12rem; }
+  .nav-group.route-essays .nav-dropdown { left: 50%; transform: translateX(-50%); }
+  .nav-group.route-reading .nav-dropdown { left: auto; right: 0; }
   .btn-row .btn { flex: 1 1 auto; }
   .gallery { grid-template-columns: 1fr; }
   .gallery-fixed { grid-template-columns: 1fr; }
@@ -1886,7 +1901,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   body { font-size: 10pt; line-height: 1.4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
 
-  .doc-nav, .skip-link, .btn, .btn-row,
+  .doc-nav, .doc-language, .skip-link, .btn, .btn-row,
   .gallery, .lightbox, .home-routes-nav, .hero-video, .portrait, .case-jump { display: none !important; }
 
   .doc-head { position: static; display: block; padding: 0 0 .08in; margin-bottom: .16in; box-shadow: none; border-bottom: 2px solid #111; text-align: center; }

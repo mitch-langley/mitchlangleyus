@@ -1,13 +1,80 @@
+# Repository, editor and agent metadata
 .git/
+.github/
+.gitignore
+.assetsignore
 .claude/
+.codex/
+.agents/
 .impeccable/
 .vscode/
-sync.py
+.idea/
+.toolkit-generated.json
+
+# Local credentials, including example files
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+
+# Build configuration, dependencies and local preview artifacts
+/wrangler.json
+/wrangler.jsonc
+/wrangler.toml
+/package.json
+/package-lock.json
+/pnpm-lock.yaml
+/yarn.lock
+/bun.lock
+/bun.lockb
+.wrangler/
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python tooling, environments and caches
+*.py
+*.py[cod]
+*$py.class
+__pycache__/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+/scripts/
+/tests/
+assets/others/tools/
+assets/others/.route-cache/
+
+# Source media and working documents
 *.wav
+*.xls
+*.xlsx
+*.xlsm
+*.docx
+*.pptx
+*.md
 assets/photography/stgo-contrasts/_originals/
 assets/photography/stgo-contrasts/color/
 assets/photography/stgo-contrasts/unused/
-.env.routes
-assets/others/.env.routes
-assets/others/.route-cache/
-assets/others/tools/
+
+# Operating system files, backups and local HTML copies
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.bak
+*.tmp
+*.swp
+*.swo
+*.orig
+*~
+* copy.html
+* copy *.html

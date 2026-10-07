@@ -1,14 +1,14 @@
 /* Writing styles. Load after ../site.css on essay pages, or after
    assets/site.css on the writing index. Sitka uses installed fonts;
-   Source Serif 4 and Georgia provide the cross-platform fallback. */
+   Georgia provides the cross-platform fallback. */
 @layer writing-tokens, essay-diagrams;
 
 @layer writing-tokens {
   body.route-writing {
-    --essay-font-text: 'Sitka Text', 'Sitka', 'Source Serif 4', Georgia, 'Times New Roman', serif;
-    --essay-font-heading: 'Sitka Heading', 'Sitka Display', 'Sitka', 'Source Serif 4', Georgia, serif;
-    --essay-font-subheading: 'Sitka Subheading', 'Sitka', 'Source Serif 4', Georgia, serif;
-    --essay-font-small: 'Sitka Small', 'Sitka Text', 'Sitka', 'Source Serif 4', Georgia, serif;
+    --essay-font-text: 'Sitka Text', 'Sitka', Georgia, 'Times New Roman', serif;
+    --essay-font-heading: 'Sitka Heading', 'Sitka Display', 'Sitka', Georgia, serif;
+    --essay-font-subheading: 'Sitka Subheading', 'Sitka', Georgia, serif;
+    --essay-font-small: 'Sitka Small', 'Sitka Text', 'Sitka', Georgia, serif;
     --font-serif: var(--essay-font-text, Georgia, serif);
     --essay-measure: var(--measure-read, 110ch);
     --essay-padding-inline: var(--gutter, 1.25rem);
@@ -363,11 +363,11 @@ body.essay-document {
     grid-column: 1;
     grid-row: 1;
     position: sticky;
-    top: var(--s6);
+    top: calc(var(--site-header-height, 96px) + var(--s6));
     justify-self: end;
     width: calc(100% - var(--s5) * 2);
     max-width: 16rem;
-    max-height: calc(100vh - var(--s6) * 2);
+    max-height: calc(100vh - var(--site-header-height, 96px) - var(--s6) * 2);
     margin-inline: var(--s5);
     padding-block: var(--s3);
     overflow-y: auto;

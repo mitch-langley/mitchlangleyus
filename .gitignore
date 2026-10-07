@@ -1,57 +1,70 @@
-# ==========================================
-# Large Media & Source Assets (Not for web)
-# ==========================================
-# Uncompressed audio files (e.g. 24 MB himno.wav)
+# Source media and working documents
 *.wav
-
-# Unused and source/original image working directories
 assets/photography/stgo-contrasts/_originals/
 assets/photography/stgo-contrasts/color/
 assets/photography/stgo-contrasts/unused/
-
-# Raw/working spreadsheets and documents
+*.xls
 *.xlsx
+*.xlsm
+*.docx
 *.pptx
-.toolkit-generated.json
 *.md
+!assets/others/README.md
+.toolkit-generated.json
 
-# ==========================================
-# AI Agents, Tools & Worktrees
-# ==========================================
-# Claude Code / Codex metadata and duplicated worktrees
+# Local credentials; keep explicitly named example files trackable
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+!.env.example
+!.env.sample
+!.dev.vars.example
+!.dev.vars.sample
+
+# Editor and agent metadata
 .claude/
+.codex/
+.agents/
 .impeccable/
 .vscode/
+.idea/
 
-# ==========================================
-# Python & Scripts
-# ==========================================
+# Python environments and caches
 __pycache__/
 *.py[cod]
 *$py.class
 .venv/
 venv/
 env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# ==========================================
-# Operating System & Editors
-# ==========================================
+# Operating system files, backups and local HTML copies
 .DS_Store
 Thumbs.db
 ehthumbs.db
 desktop.ini
+*.bak
+*.tmp
+*.swp
+*.swo
+*.orig
+*~
+* copy.html
+* copy *.html
 
-# VS Code settings
-.vscode/
-
-# ==========================================
-# Build & Local Deploy Artifacts (Cloudflare)
-# ==========================================
+# Build and local preview artifacts
 .wrangler/
 dist/
 node_modules/
+coverage/
+playwright-report/
+test-results/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Local route-generation credentials and source downloads
-.env.routes
+# Route-generation source downloads
 assets/others/.route-cache/
-!assets/others/README.md

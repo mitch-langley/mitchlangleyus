@@ -5,28 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Writing, Mitchell Langley</title>
 <meta name="description" content="Essays on cities, transport, founding documents and the work of reading records carefully.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="assets/site.css">
 <link rel="stylesheet" href="assets/writing/writing.css">
+<script src="assets/navigation.js" defer></script>
 </head>
-<body class="metro-section route-writing">
+<body class="metro-section route-writing site-page">
 
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="doc-head">
   <a class="doc-name" href="index.html">Mitchell Langley</a>
   <nav aria-label="Primary navigation">
-    <ul class="doc-nav">
-      <li><a class="route-work" href="resume.html">Resume</a></li>
-      <li><a class="route-cases" href="cases.html">Project samples</a></li>
-      <li><a class="route-writing is-current" href="writing.html" aria-current="page">Writing</a></li>
-      <li><a class="route-reading" href="reading.html">Reading</a></li>
-      <li><a class="route-gallery" href="photography.html">Photography</a></li>
-      <li class="lang-link"><a href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a></li>
+    <ul class="doc-nav" data-disclosure-group>
+      <li><details class="nav-group route-professional" name="site-navigation" data-nav-disclosure>
+        <summary>Professional</summary>
+        <ul class="nav-dropdown">
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="cases.html">Project samples</a></li>
+        </ul>
+      </details></li>
+      <li><details class="nav-group route-essays" name="site-navigation" data-nav-disclosure>
+        <summary class="is-current">Essays</summary>
+        <ul class="nav-dropdown">
+          <li><a href="writing.html" aria-current="page">Writing</a></li>
+          <li><a href="photography.html">Photography</a></li>
+        </ul>
+      </details></li>
+      <li><details class="nav-group route-reading" name="site-navigation" data-nav-disclosure>
+        <summary>Reading</summary>
+        <ul class="nav-dropdown">
+          <li><a href="reading.html">Reading</a></li>
+        </ul>
+      </details></li>
     </ul>
   </nav>
+  <a class="doc-language" href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a>
 </header>
 
 
@@ -35,8 +49,7 @@
   <section class="plate">
     <div class="rail">
       <p class="plate-line">Writing</p>
-      <h1>Essays</h1>
-      <p class="plate-note">Potpurri topics.</p>
+      <p class="plate-note">Personal-interest written essays focusing on a variety of topics.</p>
     </div>
   </section>
 

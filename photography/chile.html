@@ -5,23 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Photographs, Mitchell Langley</title>
 <meta name="description" content="Twelve landscape and city photographs from Chile, from the Atacama coast at Antofagasta to the Patagonian steppe at Torres del Paine.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/navigation.js" defer></script>
 </head>
-<body class="route-gallery">
+<body class="route-gallery metro-section site-page">
 
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="doc-head">
-  <a class="doc-name" href="index.html">Mitchell Langley</a>
+  <a class="doc-name" href="../index.html">Mitchell Langley</a>
   <nav aria-label="Primary navigation">
-    <ul class="doc-nav">
-      <li><a class="route-gallery is-current" href="photography.html" aria-current="page">Photographs</a></li>
-      <li class="lang-link"><a href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a></li>
+    <ul class="doc-nav" data-disclosure-group>
+      <li><details class="nav-group route-professional" name="site-navigation" data-nav-disclosure>
+        <summary>Professional</summary>
+        <ul class="nav-dropdown">
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../cases.html">Project samples</a></li>
+        </ul>
+      </details></li>
+      <li><details class="nav-group route-essays" name="site-navigation" data-nav-disclosure>
+        <summary class="is-current">Essays</summary>
+        <ul class="nav-dropdown">
+          <li><a href="../writing.html">Writing</a></li>
+          <li><a href="../photography.html" aria-current="location">Photography</a></li>
+        </ul>
+      </details></li>
+      <li><details class="nav-group route-reading" name="site-navigation" data-nav-disclosure>
+        <summary>Reading</summary>
+        <ul class="nav-dropdown">
+          <li><a href="../reading.html">Reading</a></li>
+        </ul>
+      </details></li>
     </ul>
   </nav>
+  <a class="doc-language" href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a>
 </header>
 
 

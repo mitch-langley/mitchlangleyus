@@ -4,11 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mitchell Langley</title>
-<meta name="description" content="Mitchell Langley: resume, project samples, writing, photography, reading, and other projects.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<meta name="description" content="Mitchell Langley: professional background and project samples, written and photographic essays, and reading.">
 <link rel="stylesheet" href="assets/site.css">
+<script src="assets/navigation.js" defer></script>
 </head>
 <body class="metro-page">
 
@@ -18,80 +16,57 @@
   <h1>Mitchell Langley</h1>
 
   <nav class="metro-map" aria-label="Explore the site">
-    <svg class="metro-tracks metro-tracks--wide" viewBox="0 0 300 480" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-      <g class="metro-line--1">
-        <path class="metro-track" d="M32 190H56L206 40H300"/>
-        <circle class="metro-stop" cx="228" cy="40" r="6"/>
-      </g>
-      <g class="metro-line--2">
-        <path class="metro-track" d="M32 210H80L170 120H300"/>
-        <circle class="metro-stop" cx="228" cy="120" r="6"/>
-      </g>
-      <g class="metro-line--3">
-        <path class="metro-track" d="M32 230H104L134 200H300"/>
-        <circle class="metro-stop" cx="228" cy="200" r="6"/>
-      </g>
-      <g class="metro-line--4">
-        <path class="metro-track" d="M32 250H104L134 280H300"/>
-        <circle class="metro-stop" cx="228" cy="280" r="6"/>
-      </g>
-      <g class="metro-line--5">
-        <path class="metro-track" d="M32 270H80L170 360H300"/>
-        <circle class="metro-stop" cx="228" cy="360" r="6"/>
-      </g>
-      <g class="metro-line--6">
-        <path class="metro-track" d="M32 290H56L206 440H300"/>
-        <circle class="metro-stop" cx="228" cy="440" r="6"/>
-      </g>
-      <rect class="metro-interchange" x="20" y="177" width="24" height="126" rx="12"/>
-    </svg>
-
-    <svg class="metro-tracks metro-tracks--compact" viewBox="0 0 64 480" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-      <path d="M16 40V440" fill="none" stroke="#a4abb3" stroke-width="3"/>
-      <g class="metro-line--1"><path class="metro-track" d="M16 40H64"/><circle class="metro-stop" cx="16" cy="40" r="7"/></g>
-      <g class="metro-line--2"><path class="metro-track" d="M16 120H64"/><circle class="metro-stop" cx="16" cy="120" r="7"/></g>
-      <g class="metro-line--3"><path class="metro-track" d="M16 200H64"/><circle class="metro-stop" cx="16" cy="200" r="7"/></g>
-      <g class="metro-line--4"><path class="metro-track" d="M16 280H64"/><circle class="metro-stop" cx="16" cy="280" r="7"/></g>
-      <g class="metro-line--5"><path class="metro-track" d="M16 360H64"/><circle class="metro-stop" cx="16" cy="360" r="7"/></g>
-      <g class="metro-line--6"><path class="metro-track" d="M16 440H64"/><circle class="metro-stop" cx="16" cy="440" r="7"/></g>
-    </svg>
-
-    <ul class="metro-destinations">
-      <li class="metro-line--1">
-        <a class="metro-link" href="resume.html">
-          <span class="metro-badge" aria-hidden="true">1</span>
-          <span class="metro-label">Resume</span>
-        </a>
+    <ul class="metro-destinations" data-disclosure-group>
+      <li class="route-professional metro-line--1">
+        <svg class="metro-branch metro-branch--wide" viewBox="0 0 180 96" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path class="metro-track" d="M24 48H180"/>
+          <rect class="metro-interchange" x="16" y="34" width="16" height="28" rx="8"/>
+        </svg>
+        <svg class="metro-branch metro-branch--compact" viewBox="0 0 64 96" aria-hidden="true" focusable="false">
+          <path class="metro-track" d="M24 48H64"/>
+          <rect class="metro-interchange" x="16" y="34" width="16" height="28" rx="8"/>
+        </svg>
+        <details class="metro-route" name="home-routes" data-nav-disclosure>
+          <summary><span class="metro-badge" aria-hidden="true">1</span><span class="metro-label">Professional</span></summary>
+          <ul class="metro-stations" style="--station-count: 3">
+            <li><a href="about.html"><span class="metro-station-mark" aria-hidden="true"></span><span>About</span></a></li>
+            <li><a href="resume.html"><span class="metro-station-mark" aria-hidden="true"></span><span>Resume</span></a></li>
+            <li><a href="cases.html"><span class="metro-station-mark" aria-hidden="true"></span><span>Project samples</span></a></li>
+          </ul>
+        </details>
       </li>
-      <li class="metro-line--2">
-        <a class="metro-link" href="cases.html">
-          <span class="metro-badge" aria-hidden="true">2</span>
-          <span class="metro-label">Project samples</span>
-        </a>
+      <li class="route-essays metro-line--4">
+        <svg class="metro-branch metro-branch--wide" viewBox="0 0 180 96" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path class="metro-track" d="M24 48H180"/>
+          <rect class="metro-interchange" x="16" y="34" width="16" height="28" rx="8"/>
+        </svg>
+        <svg class="metro-branch metro-branch--compact" viewBox="0 0 64 96" aria-hidden="true" focusable="false">
+          <path class="metro-track" d="M24 48H64"/>
+          <rect class="metro-interchange" x="16" y="34" width="16" height="28" rx="8"/>
+        </svg>
+        <details class="metro-route" name="home-routes" data-nav-disclosure>
+          <summary><span class="metro-badge" aria-hidden="true">4</span><span class="metro-label">Essays</span></summary>
+          <ul class="metro-stations" style="--station-count: 2">
+            <li><a href="writing.html"><span class="metro-station-mark" aria-hidden="true"></span><span>Writing</span></a></li>
+            <li><a href="photography.html"><span class="metro-station-mark" aria-hidden="true"></span><span>Photography</span></a></li>
+          </ul>
+        </details>
       </li>
-      <li class="metro-line--3">
-        <a class="metro-link" href="writing.html">
-          <span class="metro-badge" aria-hidden="true">3</span>
-          <span class="metro-label">Writing</span>
-        </a>
-      </li>
-      <li class="metro-line--4">
-        <a class="metro-link" href="photography.html">
-          <span class="metro-badge" aria-hidden="true">4</span>
-          <span class="metro-label">Photography</span>
-        </a>
-      </li>
-      <li class="metro-line--5">
-        <a class="metro-link" href="reading.html">
-          <span class="metro-badge" aria-hidden="true">5</span>
-          <span class="metro-label">Reading</span>
-        </a>
-      </li>
-      <li class="metro-line--6">
-        <a class="metro-link" href="others.html">
-          <span class="metro-badge" aria-hidden="true">6</span>
-          <span class="metro-label">Other projects</span>
-        </a>
+      <li class="route-reading metro-line--5">
+        <svg class="metro-branch metro-branch--wide" viewBox="0 0 180 96" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path class="metro-track" d="M24 48H180"/>
+          <rect class="metro-interchange" x="16" y="34" width="16" height="28" rx="8"/>
+        </svg>
+        <svg class="metro-branch metro-branch--compact" viewBox="0 0 64 96" aria-hidden="true" focusable="false">
+          <path class="metro-track" d="M24 48H64"/>
+          <rect class="metro-interchange" x="16" y="34" width="16" height="28" rx="8"/>
+        </svg>
+        <details class="metro-route" name="home-routes" data-nav-disclosure>
+          <summary><span class="metro-badge" aria-hidden="true">5</span><span class="metro-label">Reading</span></summary>
+          <ul class="metro-stations" style="--station-count: 1">
+            <li><a href="reading.html"><span class="metro-station-mark" aria-hidden="true"></span><span>Reading</span></a></li>
+          </ul>
+        </details>
       </li>
     </ul>
   </nav>
@@ -100,6 +75,7 @@
 <footer class="metro-footer">
   <a href="mailto:mitch@mitchlangley.us">Email</a>
   <a href="https://mitchlangley.cl" hreflang="es" lang="es">Español</a>
+  <p><em>Color scheme and design elements based on Metro de Santiago.</em></p>
 </footer>
 </body>
 </html>
