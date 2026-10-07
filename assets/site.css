@@ -1873,6 +1873,81 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
   .gallery-fixed { grid-template-columns: 1fr; }
 }
 
+/* Spanish overview: a compact page with links to the existing collections. */
+.spanish-onepage .es-nav a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding-block: var(--s2); color: var(--route-ink);
+  text-decoration: none; font-weight: 600;
+  border-bottom: 2px solid var(--route-color);
+}
+.spanish-onepage .es-nav a:hover { color: var(--route-hover); }
+.spanish-onepage .es-main { --content-max: 1040px; padding-block: var(--s8); }
+.spanish-onepage .es-intro {
+  display: grid; grid-template-columns: minmax(0, 1fr) 180px;
+  gap: var(--s7); align-items: center;
+}
+.spanish-onepage .es-intro h1 { font-size: var(--text-display); margin-bottom: var(--s5); }
+.spanish-onepage .es-prose { text-align: justify; hyphens: auto; }
+.spanish-onepage .es-intro-copy > p + p { margin-top: var(--s4); }
+.spanish-onepage .es-lead { font-size: var(--text-subtitle); }
+.spanish-onepage .es-portrait { width: 100%; height: auto; border-radius: var(--radius-sm); }
+.spanish-onepage .es-actions { margin-top: var(--s5); align-items: center; }
+.spanish-onepage .es-background {
+  display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: var(--s6); margin-top: var(--s6);
+}
+.spanish-onepage .es-background h2 { margin-bottom: var(--s4); font-size: 1.4rem; }
+.spanish-onepage .es-link-note { font-size: var(--text-small); }
+.spanish-onepage p.es-link-note { color: var(--text-muted); }
+.spanish-onepage .es-section { margin-top: var(--s8); }
+.spanish-onepage .es-section-heading {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  justify-content: space-between; gap: var(--s3) var(--s5); margin-bottom: var(--s6);
+}
+.spanish-onepage .es-section-heading > a { font-size: var(--text-small); }
+.spanish-onepage .es-essay-grid,
+.spanish-onepage .es-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s6); }
+.spanish-onepage .es-essay { border-top: 2px solid var(--color-accent); padding-top: var(--s4); }
+.spanish-onepage .es-meta { color: var(--text-muted); font-size: var(--text-small); margin-bottom: var(--s2); }
+.spanish-onepage .es-essay h3,
+.spanish-onepage .es-photo h3 { font-size: 1.25rem; margin-bottom: var(--s3); }
+.spanish-onepage h3 a { text-decoration: none; }
+.spanish-onepage h3 a:hover { text-decoration: underline; }
+.spanish-onepage .es-text-link { display: inline-block; margin-top: var(--s3); font-size: var(--text-small); }
+.spanish-onepage .es-photo-grid { margin-top: var(--s6); }
+.spanish-onepage .es-photo-image { display: block; margin-bottom: var(--s4); }
+.spanish-onepage .es-photo-image img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-sm); }
+.spanish-onepage .es-photo > p.es-link-note { margin-top: var(--s2); }
+.spanish-onepage .es-reading { padding: var(--s6); background: var(--surface-tint); }
+.spanish-onepage .es-book-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s5); }
+.spanish-onepage .es-book-heading {
+  display: grid; grid-template-columns: 80px minmax(0, 1fr);
+  gap: var(--s4); align-items: start; margin-bottom: var(--s4);
+}
+.spanish-onepage .es-book-heading img { width: 80px; height: 120px; object-fit: contain; object-position: top; }
+.spanish-onepage .es-book h3 { font-size: 1.1rem; }
+.spanish-onepage .es-author { color: var(--text-muted); font-size: var(--text-small); margin-top: var(--s2); }
+.spanish-onepage .es-book > p { font-size: .95rem; }
+.spanish-onepage .es-reading-note { margin-top: var(--s5); }
+.spanish-onepage .es-footer { padding-block: var(--s5); font-size: var(--text-small); }
+@media (max-width: 900px) {
+  .spanish-onepage .es-intro { gap: var(--s5); grid-template-columns: minmax(0, 1fr) 140px; }
+  .spanish-onepage .es-book-grid { grid-template-columns: 1fr; }
+  .spanish-onepage .es-book { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s5); }
+  .spanish-onepage .es-book-heading { margin-bottom: 0; }
+}
+@media (max-width: 600px) {
+  .spanish-onepage .es-main { padding-block: var(--s6); }
+  .spanish-onepage .es-intro { grid-template-columns: 1fr; }
+  .spanish-onepage .es-background { grid-template-columns: 1fr; }
+  .spanish-onepage .es-portrait { width: 120px; grid-row: 1; }
+  .spanish-onepage .es-essay-grid,
+  .spanish-onepage .es-photo-grid { grid-template-columns: 1fr; }
+  .spanish-onepage .es-reading { padding: var(--s5) var(--s4); }
+  .spanish-onepage .es-book { grid-template-columns: 1fr; gap: var(--s3); }
+  .spanish-onepage .es-book + .es-book { border-top: 1px solid var(--rule); padding-top: var(--s5); }
+}
+
 /* ============================================================
    16. PRINT
    Shared document printing; essay rules live in writing/writing.css.

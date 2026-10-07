@@ -10,7 +10,7 @@
     --essay-font-subheading: 'Sitka Subheading', 'Sitka', Georgia, serif;
     --essay-font-small: 'Sitka Small', 'Sitka Text', 'Sitka', Georgia, serif;
     --font-serif: var(--essay-font-text, Georgia, serif);
-    --essay-measure: var(--measure-read, 110ch);
+    --essay-measure: 80ch;
     --essay-padding-inline: var(--gutter, 1.25rem);
   }
 }
@@ -33,7 +33,7 @@ body.essay-document {
 
 .essay-paper {
   width: 100%;
-  max-width: calc(var(--essay-measure, 110ch) + var(--essay-padding-inline, 1.25rem) * 2);
+  max-width: calc(var(--essay-measure, 80ch) + var(--essay-padding-inline, 1.25rem) * 2);
   margin-inline: auto;
   padding: var(--s6, 2rem) var(--essay-padding-inline, 1.25rem);
   text-align: left;
@@ -355,7 +355,7 @@ body.essay-document {
 @media screen and (min-width: 1200px) {
   .essay-academic .essay-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, calc(var(--essay-measure, 110ch) + var(--essay-padding-inline, 4rem) * 2)) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, calc(var(--essay-measure, 80ch) + var(--essay-padding-inline, 4rem) * 2)) minmax(0, 1fr);
     align-items: start;
   }
   .essay-academic .essay-layout > .essay-paper { grid-column: 2; grid-row: 1; min-width: 0; }

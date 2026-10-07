@@ -11,6 +11,7 @@ assets/photography/stgo-contrasts/unused/
 *.md
 !assets/others/README.md
 .toolkit-generated.json
+assets/cases/depot-relocation-strategy.svg
 
 # Local credentials; keep explicitly named example files trackable
 .env
