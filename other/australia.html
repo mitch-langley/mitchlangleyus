@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="A fourteen-week upper-level syllabus with annotated weekly assignments from three course books, thematic questions, scholarly readings, and primary sources." name="description"/><meta content="#7A263A" name="theme-color"/><title>Postwar Australia: History, Society and Politics, 1945–Present</title><style>
+:root {
+  --ink: #282b30;
+  --burgundy: #7a263a;
+  --burgundy-dark: #5f1e2f;
+  --blue: #012169;
+  --muted: #69707d;
+  --rule: #d8dce0;
+  --surface: #f4f6f8;
+  --paper: #ffffff;
+  --soft-blue: #f4f6fa;
+  --font: "Sitka Text", "Sitka", "Charis SIL", Georgia, serif;
+  --font-heading: "Sitka Heading", "Sitka Display", "Sitka", "Charis SIL", Georgia, serif;
+  --shadow: 0 12px 30px rgb(25 53 74 / 9%);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.58;
+}
+a { color: var(--blue); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: -100px;
+  left: 1rem;
+  background: white;
+  color: var(--blue);
+  padding: .65rem .9rem;
+  border-radius: .35rem;
+  box-shadow: var(--shadow);
+}
+.skip-link:focus { top: 1rem; }
+
+.site-hero {
+  background: linear-gradient(145deg, #ffffff 0%, #fbf8f9 100%);
+  border-bottom: 4px solid var(--burgundy);
+}
+.hero-inner, .toolbar-inner, main {
+  width: min(1080px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+.hero-inner { padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(2rem, 5vw, 4rem); }
+.eyebrow {
+  margin: 0 0 .55rem;
+  color: var(--blue);
+  font-family: var(--font-heading);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.site-hero h1 {
+  margin: 0;
+  color: var(--burgundy);
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  line-height: .98;
+  letter-spacing: -.025em;
+}
+.hero-subtitle {
+  margin: .8rem 0 0;
+  color: var(--blue);
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 3vw, 2.15rem);
+  line-height: 1.15;
+}
+.hero-meta { margin: 1.25rem 0 0; color: var(--muted); font-size: .95rem; }
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgb(244 246 248 / 94%);
+  border-bottom: 1px solid var(--rule);
+  backdrop-filter: blur(10px);
+}
+.toolbar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  align-items: center;
+  padding: .72rem 0;
+}
+.toolbar button, .toolbar a {
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+  font-size: .86rem;
+  line-height: 1;
+  padding: .58rem .82rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.toolbar button:hover, .toolbar a:hover { border-color: var(--burgundy); color: var(--burgundy); }
+.toolbar .spacer { flex: 1 1 auto; }
+
+main { padding: 1.4rem 0 4rem; }
+.accordion-section {
+  margin: 0 0 .85rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: .65rem;
+  box-shadow: 0 3px 12px rgb(25 53 74 / 5%);
+  overflow: clip;
+  scroll-margin-top: 5rem;
+}
+.accordion-heading { margin: 0; }
+.accordion-toggle {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.05rem 1.2rem;
+  border: 0;
+  background: white;
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.accordion-toggle:hover { background: #fbfbfc; }
+.accordion-toggle[aria-expanded="true"] { background: #fcfafb; }
+.accordion-label { min-width: 0; }
+.accordion-kicker {
+  display: block;
+  margin-bottom: .18rem;
+  color: var(--blue);
+  font-family: var(--font-heading);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.accordion-title {
+  display: block;
+  color: var(--burgundy);
+  font-family: var(--font-heading);
+  font-size: clamp(1.12rem, 2vw, 1.42rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.chevron {
+  width: 1.9rem;
+  height: 1.9rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  color: var(--blue);
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem;
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+.accordion-toggle[aria-expanded="true"] .chevron { transform: rotate(180deg); border-color: var(--blue); }
+.accordion-panel {
+  height: 0;
+  overflow: hidden;
+  border-top: 0 solid var(--rule);
+  transition: height 300ms cubic-bezier(.2,.75,.25,1), border-top-width 1ms linear 150ms;
+}
+.accordion-section.is-open .accordion-panel { border-top-width: 1px; }
+.accordion-inner { padding: 1.35rem 1.2rem 1.55rem; }
+
+/* Typography and syllabus content */
+.accordion-inner h2, .accordion-inner h3, .accordion-inner h4 {
+  font-family: var(--font-heading);
+  line-height: 1.22;
+}
+.accordion-inner h2 {
+  position: relative;
+  margin: 1.7rem 0 .7rem;
+  padding-bottom: .38rem;
+  color: var(--burgundy);
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+.accordion-inner h2::after, .group-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 3.8rem;
+  height: 2px;
+  background: var(--blue);
+}
+.accordion-inner h3 { margin: 1.35rem 0 .45rem; color: var(--burgundy); font-size: 1.12rem; }
+.accordion-inner h4 { margin: 0 0 .2rem; color: var(--burgundy); font-size: 1rem; }
+.accordion-inner p { margin: .45rem 0 0; }
+.accordion-inner > :first-child { margin-top: 0; }
+.section-intro {
+  margin: 0 0 1.3rem;
+  padding: 0 0 1rem;
+  border-bottom: 2px solid var(--burgundy);
+}
+.section-intro h3 { margin: 0; font-size: 1.2rem; }
+.section-intro .lede { margin-top: .45rem; color: var(--muted); }
+.subsection-label {
+  margin: 1.8rem 0 1rem;
+  padding: .6rem 0;
+  color: var(--blue);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-heading);
+  font-size: .84rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.theme { margin-bottom: 1rem; }
+.question {
+  margin: 1rem 0 1.25rem;
+  padding: .85rem 1rem;
+  background: var(--soft-blue);
+  border-left: 4px solid var(--blue);
+  border-radius: 0 .35rem .35rem 0;
+}
+.question h3 { margin: 0 0 .25rem; color: var(--blue); font-size: .95rem; }
+.question p { margin: 0; font-style: italic; }
+.group-title { position: relative; margin: 1.5rem 0 .85rem !important; padding-bottom: .4rem; border-bottom: 1px solid var(--rule); }
+.group-title span { color: var(--muted); font-size: .82rem; font-weight: 400; }
+.book-assignment, .reading, .dossier-reading {
+  margin: 0 0 .9rem;
+  padding: .95rem 1rem;
+  background: #fff;
+  border: 1px solid #e6e8eb;
+  border-left: 3px solid #c8ced5;
+  border-radius: .35rem;
+}
+.book-assignment[data-book="macintyre"] { border-left-color: var(--burgundy); }
+.book-assignment[data-book="bongiorno"] { border-left-color: var(--blue); }
+.book-assignment[data-book="app"] { border-left-color: #667f92; }
+.book-author, .year { color: var(--muted); font-size: .88rem; }
+.selection { margin-top: .45rem !important; }
+.annotation { margin-top: .45rem !important; }
+.source-link { margin-top: .45rem !important; font-size: .87rem; line-height: 1.35; }
+.extension { margin-top: 1.5rem; }
+.reading-connection { margin-top: 1.2rem; padding-top: .8rem; border-top: 1px solid var(--rule); }
+.seminar {
+  margin-top: 1.3rem;
+  padding: .9rem 1rem;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--burgundy);
+  border-radius: .35rem;
+  background: #fcfbfb;
+}
+.seminar h3 { margin: 0 0 .3rem; color: var(--blue); font-size: 1rem; }
+.guide-book { margin-bottom: 1.25rem; }
+
+.course-map, .evidence-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.3rem;
+  font-size: .94rem;
+}
+.course-map th, .evidence-table th {
+  text-align: left;
+  color: var(--blue);
+  font-weight: 700;
+  border-bottom: 2px solid var(--burgundy);
+  padding: .55rem .65rem .55rem 0;
+}
+.course-map td, .evidence-table td {
+  padding: .62rem .65rem .62rem 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+}
+.course-map td:last-child { color: var(--muted); }
+.week-cell { width: 3rem; color: var(--burgundy); font-variant-numeric: tabular-nums; }
+.evidence-table td:not(:first-child), .evidence-table thead th:not(:first-child) { text-align: right; }
+.evidence-table caption { margin-bottom: .35rem; color: var(--blue); text-align: left; font-weight: 700; }
+
+
+.week-illustration {
+  width: min(100%, 720px);
+  margin: 0 auto 1.45rem;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: .5rem;
+  background: var(--paper);
+  box-shadow: 0 4px 14px rgb(25 53 74 / 7%);
+}
+.week-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.week-illustration figcaption {
+  margin: 0;
+  padding: .72rem .9rem .78rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  background: #fcfbfb;
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  .hero-inner, .toolbar-inner, main { width: min(100% - 1rem, 1080px); }
+  .hero-inner { padding-top: 2rem; }
+  .toolbar-inner { gap: .4rem; }
+  .toolbar .spacer { display: none; }
+  .toolbar button, .toolbar a { font-size: .78rem; padding: .5rem .65rem; }
+  .accordion-toggle { padding: .9rem .9rem; }
+  .accordion-inner { padding: 1.05rem .9rem 1.2rem; }
+  .course-map { font-size: .86rem; }
+  .course-map th:nth-child(3), .course-map td:nth-child(3) { display: none; }
+  .book-assignment, .reading, .dossier-reading { padding: .8rem .8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .accordion-panel, .chevron { transition: none !important; }
+}
+
+@media print {
+  .toolbar, .skip-link, .chevron { display: none !important; }
+  body { background: white; }
+  .site-hero { border-bottom-width: 2px; }
+  main { width: 100%; padding: 1rem 0; }
+  .accordion-section { box-shadow: none; border: 0; overflow: visible; break-inside: auto; }
+  .accordion-toggle { padding: 1rem 0 .5rem; border-bottom: 1px solid var(--rule); }
+  .accordion-panel { height: auto !important; overflow: visible !important; border-top: 0 !important; }
+  .accordion-panel[hidden] { display: block !important; }
+  .accordion-inner { padding: 1rem 0; }
+  a { color: inherit; text-decoration: none; }
+}
+</style></head><body><a class="skip-link" href="#syllabus-sections">Skip to syllabus sections</a><header class="site-hero"><div class="hero-inner"><p class="eyebrow">14-week History Seminar</p><h1>Postwar Australia</h1><p class="hero-subtitle">History, Society and Politics,<br/>1945–Present</p></div></header><nav aria-label="Syllabus controls" class="toolbar"><div class="toolbar-inner"><button id="expand-all" type="button">Expand all</button><button id="collapse-all" type="button">Collapse all</button><span class="spacer"></span></div></nav><main aria-label="Postwar Australia course syllabus" id="syllabus-sections"><section class="accordion-section is-open" id="introduction"><h2 class="accordion-heading" id="introduction-heading"><button aria-controls="introduction-panel" aria-expanded="true" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Course introduction</span><span class="accordion-title">Goals, method, and learning outcomes</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="introduction-heading" class="accordion-panel" id="introduction-panel" role="region" style="height: auto;"><div class="accordion-inner">
+<section aria-labelledby="goal-heading"><h2 id="goal-heading">Course goal</h2>
+<p>This course explains how Australia changed from the postwar society of imperial attachment, racial restriction, regulated wages, expanding suburbs, and durable party loyalties into a country shaped by mass migration, Indigenous claims to land and authority, social liberalization, market reform, and changing political constituencies. It asks how those transformations altered the distribution of security, belonging, and political power, and why their consequences remain contested.</p>
+<p>The aim is to develop a connected historical interpretation of the period rather than an account confined to successive governments. Students will assess when a celebrated event changed institutions, when it expressed changes already underway, and when its later symbolic meaning exceeded its immediate effects. By the end of the course, students should be able to explain current political disputes through their historical foundations while identifying the evidence and limits of competing explanations.</p>
+</section>
+<section aria-labelledby="method-heading"><h2 id="method-heading">Course method</h2>
+<p>A chronological spine runs from reconstruction and Menzies through the upheavals of the 1960s and 1970s, the Hawke–Keating reforms, and subsequent conflicts over identity and representation. Each week combines assigned selections from three course books with specialist scholarly readings. Macintyre establishes the wider chronology; Bongiorno connects political leadership with parties and social movements; <cite>Australian Politics and Policy</cite> explains institutions, concepts, and policy mechanisms. The specialist readings then test these frameworks against evidence and competing interpretations.</p>
+<p>Seminars compare each author’s question, argument, evidence, and scale of analysis. Electoral surveys, constitutional precedent, archival research, medical writing, photography, and discourse analysis are treated as different ways of establishing a historical claim. Close reading of contemporary documents in Weeks 9 and 14 brings the distinction between historical interpretation and participant testimony into focus. The final seminar returns to the opening readings to assess continuity and change across the full period.</p>
+</section>
+<section aria-labelledby="outcomes-heading"><h2 id="outcomes-heading">Learning outcomes</h2>
+<p>Students will develop an evidence-based chronology, compare competing explanations of change, connect social experience with institutional power, and distinguish legal outcomes from political memory. A sustained argument should explain how class, race, gender, property, and national identity intersect, specify what its sources establish, and identify what further evidence would change its conclusions.</p>
+</section></div></div></section><section class="accordion-section" id="course-books"><h2 class="accordion-heading" id="course-books-heading"><button aria-controls="course-books-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Required books and reading method</span><span class="accordion-title">Course books</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="course-books-heading" class="accordion-panel" hidden="" id="course-books-panel" role="region"><div class="accordion-inner"><div class="section-intro"><h3>Three perspectives throughout the course</h3><p class="lede">All three books are assigned every week. Each selection has a specific historical or analytical purpose, and each is annotated where it is used.</p></div>
+<section class="guide-book"><h3>Stuart Macintyre: the historical survey</h3><p><cite>A Concise History of Australia</cite>, 5th ed. Cambridge University Press, 2020.</p><p>Read the assigned thematic passages within the named chapters. The relevant chapter spans are chapter 7, “Sacrifice, 1914–1945” (pp. 165–207); chapter 8, “Golden age, 1946–1975” (pp. 208–251); chapter 9, “Rectification, 1976–1996” (pp. 252–286); and chapter 10, “Outcomes, 1997–2019” (pp. 287–328). These spans identify the chapters, rather than requiring all their pages to be read again every week.</p><p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Publisher and access information</a> · <a href="https://assets.cambridge.org/97811087/28485/toc/9781108728485_toc.pdf">Publisher’s table of contents</a></p></section>
+<section class="guide-book"><h3>Frank Bongiorno: the political narrative</h3><p><cite>Dreamers and Schemers: A Political History of Australia</cite>. La Trobe University Press / Black Inc., 2022.</p><p>The postwar assignments draw principally on chapter 5, “War and Peace: 1939–49”; chapter 6, “The Good Times: 1949–66”; chapter 7, “Revolt, Reason and Reaction: 1966–82”; chapter 8, “Australia Remade? 1983–99”; chapter 9, “The Glimmer of Twilight: 2000–19”; and the conclusion, “In the Age of COVID-19.” Read the thematic selections indicated each week, using the surrounding chronology when needed to understand a decision or conflict.</p><p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Publisher and access information</a> · <a href="https://ci.nii.ac.jp/ncid/BD07627631">Library contents record</a></p></section>
+<section class="guide-book"><h3>Australian Politics and Policy: institutions and concepts</h3><p>Diana Perche, Nicholas Barry, Nicholas Bromfield, Alan Fenna, Emily Foley, Zareh Ghazarian, and Phoebe Hayman, eds. <cite>Australian Politics and Policy</cite>. Sydney University Press, 2026.</p><p>This open-access textbook is organized by institution, political relationship, and policy field. Weekly references give the chapter number, author, and assigned sections; their links open the chapter itself. Later examples in the textbook are comparative material for the historical problem, rather than evidence of what postwar participants knew or intended.</p><p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/">Read or download the complete textbook</a> · <a href="https://sydneyuniversitypress.com/products/9781761540714">Publisher’s edition record</a></p></section>
+<section><h3>Reading and seminar practice</h3><p>Begin with the three textbook selections, then read the required specialist works. Where a chapter reappears, return to the specified theme and your notes instead of restarting the whole chapter. Named section titles in <cite>Australian Politics and Policy</cite> identify the text directly; thematic directions for Macintyre and Bongiorno identify the passages to select within their broader chronological chapters.</p><p>For each reading, record its claim or framework, its evidence, and a question about its explanatory limits. Optional seminar extensions deepen a case or method. Macintyre and Bongiorno require book or library access; <cite>Australian Politics and Policy</cite> and Stokes’s 2014 chapter are free. Recent scholarly articles and primary sources provide the evidence for developments after the narrative histories’ endpoints.</p></section></div></div></section><section class="accordion-section" id="course-map"><h2 class="accordion-heading" id="course-map-heading"><button aria-controls="course-map-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Course structure</span><span class="accordion-title">Fourteen-week sequence</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="course-map-heading" class="accordion-panel" hidden="" id="course-map-panel" role="region"><div class="accordion-inner"><div class="section-intro"><h3>The fourteen-week sequence</h3><p class="lede">Survey concepts open the course; watersheds and social trends test them. The final week returns to the relationship between society, institutions, and political allegiance.</p></div>
+<nav aria-label="Weekly syllabus"><table class="course-map"><thead><tr><th scope="col">Week</th><th scope="col">Theme</th><th scope="col">Historical focus</th></tr></thead><tbody><tr><td class="week-cell">01</td><td><a href="#week-01">Survey: the postwar order</a></td><td>1945 onward</td></tr>
+<tr><td class="week-cell">02</td><td><a href="#week-02">Menzies and the durability of the postwar order</a></td><td>1949–1972</td></tr>
+<tr><td class="week-cell">03</td><td><a href="#week-03">Migration and the dismantling of White Australia</a></td><td>1945–1973</td></tr>
+<tr><td class="week-cell">04</td><td><a href="#week-04">Suburbia, affluence, and the Australian Dream</a></td><td>1950s–1970s</td></tr>
+<tr><td class="week-cell">05</td><td><a href="#week-05">Britain, the United States, Asia, and Vietnam</a></td><td>1945–1972</td></tr>
+<tr><td class="week-cell">06</td><td><a href="#week-06">Indigenous politics: 1967, Black Power, and land rights</a></td><td>1950s–1970s</td></tr>
+<tr><td class="week-cell">07</td><td><a href="#week-07">Gender, sexuality, and Whitlam-era social change</a></td><td>1968–1975</td></tr>
+<tr><td class="week-cell">08</td><td><a href="#week-08">Green bans and the organization of resistance</a></td><td>1971–early 1980s</td></tr>
+<tr><td class="week-cell">09</td><td><a href="#week-09">1975: the Dismissal and constitutional conflict</a></td><td>1975 and its historical interpretation</td></tr>
+<tr><td class="week-cell">10</td><td><a href="#week-10">Hawke, Keating, and economic restructuring</a></td><td>1983–1996, with longer consequences</td></tr>
+<tr><td class="week-cell">11</td><td><a href="#week-11">Mabo, reconciliation, and the national past</a></td><td>1992–2000s</td></tr>
+<tr><td class="week-cell">12</td><td><a href="#week-12">Howard’s Australia: Hanson, Tampa, and the history wars</a></td><td>1996–2007</td></tr>
+<tr><td class="week-cell">13</td><td><a href="#week-13">Rudd, Gillard, and the instability of leadership</a></td><td>2007–2021</td></tr>
+<tr><td class="week-cell">14</td><td><a href="#week-14">Teals, the Voice, and contemporary realignment</a></td><td>2022–2026</td></tr></tbody></table></nav>
+<section><h3>Questions carried across the course</h3><p>Who received protection and who was excluded? How did everyday practices become political claims? When did institutional reform follow social change, and when did it redirect it? How did the nation’s historical self-understanding shape decisions about citizenship, territory, welfare, and representation?</p></section>
+<section><h3>Using the annotations</h3><p>Each annotation identifies the reading’s argument or approach, explains its place in the course, and offers a problem for close reading. Interpretive terms such as settlement, assimilation, neoliberalism, reconciliation, and realignment should be tested against the evidence and definitions used by each author.</p></section>
+<section><h3>Connecting the opening and closing weeks</h3><p>Retain the Week 1 map of social cleavages and institutional protection. In Week 10, compare the reform of those institutions with evidence about redistribution. In Week 14, examine whether the social divisions measured in postwar voting still organize party allegiance, and what has taken their place.</p></section></div></div></section><section class="accordion-section" id="week-01"><h2 class="accordion-heading" id="week-01-heading"><button aria-controls="week-01-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 01 · 1945 onward</span><span class="accordion-title">Survey: the postwar order</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-01-heading" class="accordion-panel" hidden="" id="week-01-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w01.png" alt="Week 01 illustration: Survey: the postwar order" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>Institutions, industry, suburbia, migration, and Parliament are assembled into a single landscape, presenting the postwar order as a constructed settlement whose parts would change at different speeds.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>The institutions, social divisions, and historical interpretations that organize the course. The opening survey treats postwar Australia as an arrangement of economic protection, wage regulation, racial exclusion, federal government, and imperial attachment whose components changed at different speeds.</p></section>
+<section class="question"><h3>Underlying question</h3><p>What made the Australian postwar order distinctive, and how useful is the idea of an “Australian settlement” for explaining its transformation?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Golden age, 1946–1975” (pp. 208–251): opening discussion of reconstruction, prosperity, and the postwar political order.</p>
+<p class="annotation">Establish the relationship between economic reconstruction and the institutions that organized postwar life. Identify the social groups whose security the national narrative emphasizes, then ask how an account of prosperity changes when migration, Indigenous exclusion, and gender are placed within it. Use these selections to build a chronology against which the specialist readings’ analytical models can be tested.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 5, “War and Peace: 1939–49”: the concluding postwar passages; chapter 6, “The Good Times: 1949–66”: the opening account of Coalition government.</p>
+<p class="annotation">Follow the transition from wartime Labor to the political order associated with Menzies. Consider which conflicts persisted despite the change of government and which institutions made party rivalry durable. Compare this political narrative with Macintyre’s wider survey, looking for differences between an explanation centered on electoral competition and one centered on reconstruction and social experience.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Nicholas Barry</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 3, “Australian political thought”: read the introduction and the sections on liberalism, socialism and social democracy, laborism, and nationalism and exclusion.</p>
+<p class="annotation">Barry introduces the ideological traditions that shaped the state’s responsibilities, citizenship, and political conflict. His account supplies vocabulary for distinguishing social liberalism from later market liberalism and for understanding Labor’s relationship with organized workers. Ask how apparently pragmatic policies contained substantive political ideas, then connect these traditions with the institutions described in the two historical books.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/australian-political-thought/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Build a provisional map of the settlement, identifying who received security, who was excluded, and which institutions connected social position to political allegiance. Keep this map for comparison in Weeks 10 and 14.</p><p class="source-link"><a href="#readings-01">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-01" class="reading-group"><h3 class="group-title" id="readings-01">Required scholarly readings</h3>
+<section aria-label="Reading 1: The Changing Structural Base of Australian Politics since 1946" class="reading">
+<h4>F. L. Jones and Ian McAllister <span class="year">(1989)</span></h4>
+<p class="citation">“The Changing Structural Base of Australian Politics since 1946.” <cite>Politics</cite>, 24(1): 7–17.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/00323268908402073">doi: 10.1080/00323268908402073</a></p>
+<p class="annotation">Using multivariate analysis of voting, Jones and McAllister distinguish changes in class, religion, gender, and generations. They find that class voting remained strong until after the mid-1960s and declined less dramatically than some accounts suggest, while the religious divide and Labor’s disadvantage among women weakened. This establishes a social baseline for the course. Ask how changes in the composition of the electorate differ from changes in the behavior of a particular social group.</p>
+</section><section aria-label="Reading 2: The Rise and Fall of Economic Rationalism" class="reading">
+<h4>Geoffrey Stokes <span class="year">(2014)</span></h4>
+<p class="citation">“The Rise and Fall of Economic Rationalism.” <cite>Studies in Australian Political Rhetoric</cite>, edited by John Uhr and Ryan Walter, chapter 10, pp. 195–220. Canberra: ANU Press.</p>
+<p class="source-link"><a href="https://press-files.anu.edu.au/downloads/press/p291051/html/ch10.xhtml?page=19&amp;referer=">doi: 10.22459/SAPR.09.2014.10</a></p>
+<p class="annotation">Stokes traces how economic rationalism changed from a favorable description of some Whitlam-era policies into a disputed label for market-oriented reform. He explicitly discusses Kelly’s Australian settlement framework and examines conflicts over government, social values, and economic authority. Use this open-access chapter to connect the course’s postwar institutions with later arguments about their transformation. Distinguish the policies being described from the political work performed by the label, and return to the chapter in Week 10.</p>
+</section><section aria-label="Reading 3: The Australian Welfare State: Has Federalism Made a Difference?" class="reading">
+<h4>Francis G. Castles and John Uhr <span class="year">(2007)</span></h4>
+<p class="citation">“The Australian Welfare State: Has Federalism Made a Difference?.” <cite>Australian Journal of Politics &amp; History</cite>, 53(1): 96–117.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/j.1467-8497.2007.00445.x">doi: 10.1111/j.1467-8497.2007.00445.x</a></p>
+<p class="annotation">Castles and Uhr trace welfare development to test claims that federal institutions obstruct expansion or slow changes in either direction. Their historical approach makes the relationship between constitutional structure and social protection open to investigation rather than treating federalism as an automatic explanation. Compare their institutional account with the social cleavages in Jones and McAllister. Consider whether a settlement can remain politically recognizable while its means of providing security change.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-02"><h2 class="accordion-heading" id="week-02-heading"><button aria-controls="week-02-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 02 · 1949–1972</span><span class="accordion-title">Menzies and the durability of the postwar order</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-02-heading" class="accordion-panel" hidden="" id="week-02-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w02.png" alt="Week 02 illustration: Menzies and the durability of the postwar order" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>The long civic axis, ordered suburbs, industry, and Parliament emphasize the stability that sustained the Menzies era, while also hinting that political durability rested on institutions larger than any one leader.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>Prosperity, civic obligation, anti-communism, religious division, and the 1955 Labor split. The week investigates the ideas and political arrangements behind prolonged Coalition government, while distinguishing Menzies’s Liberalism from later market-oriented conservatism.</p></section>
+<section class="question"><h3>Underlying question</h3><p>How did prosperity, political ideas, and divisions within Labor sustain Coalition rule, and where were the limits of the postwar consensus?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Golden age, 1946–1975”: selections on Menzies, prosperity, anti-communism, and Labor’s divisions.</p>
+<p class="annotation">Read the politics of Coalition durability within the wider postwar economy and society. Assess the relationship between stable government and continuing conflict, particularly where religious identity and Cold War alignments cut across class. Use the survey to place the 1955 split within a chronology, then evaluate whether the specialist readings explain features that a broad narrative compresses.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 6, “The Good Times: 1949–66”: selections on Menzies’s political authority, the Labor split, and party competition.</p>
+<p class="annotation">Examine how political leadership operated through parties, constituencies, and competing accounts of national purpose. Compare explanations of Menzies’s longevity with the institutional and intellectual evidence in Carr and Jones and Lyons. Ask what the label “good times” helps explain about political expectations and what it may leave unresolved about exclusion or opposition.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Zareh Ghazarian</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 7, “The Australian party system”: read the sections on Labor Party splits, the Liberal Party, and the early minor parties produced by major-party splits.</p>
+<p class="annotation">Ghazarian explains how party organization, parliamentary competition, and electoral arrangements interact. The discussion of splits and minor parties provides an institutional frame for the DLP’s influence. Distinguish a party’s size from its ability to affect government formation and electoral outcomes, and consider why the same social conflict can have different consequences under different voting systems.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/the-australian-party-system/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Explain Coalition durability through both ideas and electoral organization. Test whether “conservative consensus” adequately describes a period containing a failed attempt to ban the Communist Party and a lasting split within Labor.</p><p class="source-link"><a href="#readings-02">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-02" class="reading-group"><h3 class="group-title" id="readings-02">Required scholarly readings</h3>
+<section aria-label="Reading 1: Civic Republicanism and Sir Robert Menzies: The Non-Liberal Side of the Liberal Leader" class="reading">
+<h4>Andrew Carr and Benjamin T. Jones <span class="year">(2013)</span></h4>
+<p class="citation">“Civic Republicanism and Sir Robert Menzies: The Non-Liberal Side of the Liberal Leader.” <cite>Journal of Australian Studies</cite>, 37(4): 485–502.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/14443058.2013.832701">doi: 10.1080/14443058.2013.832701</a></p>
+<p class="annotation">Carr and Jones interpret Menzies’s concern for civic virtue, education, and public duty through the tradition of civic republicanism. Their argument complicates an equation of Liberal identity with minimal government or individual economic freedom. Evaluate the speeches and intellectual influences supporting their interpretation. Ask how a constitutional monarchist could endorse republican ideas about citizenship, and what this suggests about continuity between Menzies’s party and the Liberal Party of later decades.</p>
+</section><section aria-label="Reading 2: Defence, the Family and the Battler: The Democratic Labor Party and its Legacy" class="reading">
+<h4>Michael Lyons <span class="year">(2008)</span></h4>
+<p class="citation">“Defence, the Family and the Battler: The Democratic Labor Party and its Legacy.” <cite>Australian Journal of Political Science</cite>, 43(3): 425–442.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/10361140802267233">doi: 10.1080/10361140802267233</a></p>
+<p class="annotation">Lyons examines the Democratic Labor Party through its policy priorities and political legacy. The reading places anti-communist Labor within a broader social outlook involving defense, family, and economic protection. Use it to examine the consequences of the 1955 split and the role of preferences in sustaining Coalition government. Consider how a party outside the governing majority can influence the electoral system and preserve ideas that later reappear in mainstream politics.</p>
+</section></section><section class="extension"><h3 class="group-title">Seminar extension <span>(optional)</span></h3><section aria-label="Reading 3: A House Committee on Un-Australian Activities? An Alternative to the Dissolution Act" class="reading">
+<h4>Lachlan Clohesy <span class="year">(2013)</span></h4>
+<p class="citation">“A House Committee on Un-Australian Activities? An Alternative to the Dissolution Act.” <cite>Australian Historical Studies</cite>, 44(1): 23–36.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/1031461X.2012.760636">doi: 10.1080/1031461X.2012.760636</a></p>
+<p class="annotation">Clohesy studies a proposed Australian counterpart to American anti-communist investigations that the Liberals drafted but did not introduce. Internal disagreements and Menzies’s competing commitments help explain why Australia did not reproduce the American apparatus. This provides a comparative test of the Cold War’s local effects. Distinguish a shared anti-communist objective from the particular institutions and methods chosen to pursue it.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-03"><h2 class="accordion-heading" id="week-03-heading"><button aria-controls="week-03-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 03 · 1945–1973</span><span class="accordion-title">Migration and the dismantling of White Australia</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-03-heading" class="accordion-panel" hidden="" id="week-03-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w03.png" alt="Week 03 illustration: Migration and the dismantling of White Australia" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>Arriving migrants pass through a breaking barrier into a changing national landscape, capturing how mass migration transformed Australia even as racial restriction was only gradually dismantled.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>Mass migration, racial selection, assimilation, and the gradual emergence of multicultural policy. Migration remade Australian society during Coalition dominance, exposing tensions between economic demand for population growth and the ideal of a white, British nation.</p></section>
+<section class="question"><h3>Underlying question</h3><p>How could the postwar migration program transform Australia while retaining racial exclusion, and what explains the eventual dismantling of White Australia?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Golden age, 1946–1975”: selections on postwar immigration, assimilation, and changes in racial restriction.</p>
+<p class="annotation">Place migration within the same historical period as Coalition dominance and the long boom. Ask how demographic change altered the meaning of an apparently stable political order. Use the chronology to distinguish the expansion of European migration from the dismantling of racial selection, and compare the timing of policy change with transformations in everyday social life.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 5, “War and Peace: 1939–49”, and chapter 6, “The Good Times: 1949–66”: migration-related passages; chapter 7, “Revolt, Reason and Reaction: 1966–82”: passages on the subsequent transition.</p>
+<p class="annotation">Trace migration across several governments rather than assigning the entire transformation to a single minister or party. Compare the political significance of population growth with competing definitions of national belonging. Keep the sequence from Calwell through the Coalition and Whitlam visible when evaluating Tavan’s account of incremental policy change.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Andrew Parkin and Leonie Hardcastle</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 40, “Immigration and multicultural policy”: read “Historical context,” “Multiculturalism,” and the discussions of political parties and public opinion under “Policy actors.”</p>
+<p class="annotation">This chapter distinguishes immigration selection from multicultural policy and identifies the actors influencing both. Read its historical sections to follow the shift from racial restriction and assimilation toward a more diverse society. Compare its account of policy-making with Tavan’s evidence about leadership and public acceptance, and ask which aspects of migration require an institutional explanation and which require social history.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/immigration-and-multicultural-policy/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Trace the movement from assimilation to integration and multiculturalism, distinguishing changes in admission rules from changes in everyday expectations of migrants. Identify the roles of ministers, administrators, public opinion, and international pressure.</p><p class="source-link"><a href="#readings-03">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-03" class="reading-group"><h3 class="group-title" id="readings-03">Required scholarly readings</h3>
+<section aria-label="Reading 1: Leadership: Arthur Calwell and the Post-War Immigration Program" class="reading">
+<h4>Gwenda Tavan <span class="year">(2012)</span></h4>
+<p class="citation">“Leadership: Arthur Calwell and the Post-War Immigration Program.” <cite>Australian Journal of Politics &amp; History</cite>, 58(2): 203–220.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/j.1467-8497.2012.01632.x">doi: 10.1111/j.1467-8497.2012.01632.x</a></p>
+<p class="annotation">Tavan evaluates Calwell’s leadership of an immigration program that expanded non-British European migration while defending White Australia. She treats innovation, administration, and racial restriction as connected features of his political project. The reading prevents a simple classification of Calwell as either a modernizing hero or an obstacle to change. Examine how the same population policy could broaden the nation’s cultural composition and enforce boundaries on who could belong.</p>
+</section><section aria-label="Reading 2: The Dismantling of the White Australia Policy: Elite Conspiracy or Will of the Australian People?" class="reading">
+<h4>Gwenda Tavan <span class="year">(2004)</span></h4>
+<p class="citation">“The Dismantling of the White Australia Policy: Elite Conspiracy or Will of the Australian People?.” <cite>Australian Journal of Political Science</cite>, 39(1): 109–125.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/1036114042000205678">doi: 10.1080/1036114042000205678</a></p>
+<p class="annotation">Tavan challenges the claim that elites abolished White Australia without public knowledge or acceptance. Her account emphasizes incremental policy change and shifting public attitudes. Read for the evidence supporting the relationship between leadership and public opinion, rather than assuming that either acted alone. Compare the chronology of administrative adjustments with the later political memory of a single decisive abolition, and consider what changed before the Whitlam government took office.</p>
+</section></section><section class="extension"><h3 class="group-title">Seminar extension <span>(optional)</span></h3><section aria-label="Reading 3: Constructing the “New Australian Patient”: Assimilation as Preventative Medicine in Postwar Australia" class="reading">
+<h4>Eureka Henrich <span class="year">(2019)</span></h4>
+<p class="citation">“Constructing the “New Australian Patient”: Assimilation as Preventative Medicine in Postwar Australia.” <cite>Histoire sociale / Social History</cite>, 52(105): 109–135.</p>
+<p class="source-link"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6588523/">doi: 10.1353/his.2019.0005</a></p>
+<p class="annotation">Through medical writing from the 1950s and 1960s, Henrich shows how doctors interpreted migrant health through assimilationist expectations. Medical assistance could bridge cultural differences while reproducing stereotypes and assigning responsibility for illness to migrants themselves. This moves the analysis from immigration law into professional practice. Ask how institutions that offered care also defined desirable behavior, and how their sources enable or limit access to migrants’ own experiences.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-04"><h2 class="accordion-heading" id="week-04-heading"><button aria-controls="week-04-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 04 · 1950s–1970s</span><span class="accordion-title">Suburbia, affluence, and the Australian Dream</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-04-heading" class="accordion-panel" hidden="" id="week-04-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w04.png" alt="Week 04 illustration: Suburbia, affluence, and the Australian Dream" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>Repeating houses, lawns, roads, and the family car turn postwar prosperity into a suburban landscape, evoking both the material appeal of the Australian Dream and the social order built around it.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>The long boom as a transformation of everyday life: housing, industrial work, domesticity, consumption, and urban expansion. The suburban home is examined as a material achievement, an unevenly distributed benefit, and a political image of the nation.</p></section>
+<section class="question"><h3>Underlying question</h3><p>Who could participate in the Australian Dream, and how did suburban life shape citizenship, inequality, and later political nostalgia?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Golden age, 1946–1975”: selections on housing, suburbs, employment, consumption, and family life.</p>
+<p class="annotation">Relate the material changes of the long boom to everyday expectations of security and respectability. Compare a national account of rising prosperity with the uneven distribution of housing, services, and stable employment. Ask which conditions made suburban aspirations attainable and whether the same conditions were available to migrants, women, renters, and industrial workers.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 6, “The Good Times: 1949–66”: selections linking affluence and domestic life with political expectations.</p>
+<p class="annotation">Read suburban prosperity as part of the setting in which governments acquired and maintained authority. Compare the social groups visible in a political narrative with those foregrounded by Allon and Morrow. Ask how household aspirations influenced national political language, and whether images of security were descriptions of widespread experience or claims about how Australians ought to live.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Dallas Rogers and Madeleine Pill</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 44, “Urban policy”: read “Urban policy is politics,” “Theories of urban policy,” and “National urban policy.”</p>
+<p class="annotation">Rogers and Pill connect urban policy with power, inequality, and the division of responsibilities among governments. Their framework helps explain why suburbs cannot be understood simply as individual housing choices. Apply it to the historical cases, distinguishing infrastructure provision, property interests, and household aspirations, while keeping present-day policy concepts separate from the intentions of postwar actors.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/urban-policy/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Compare a national image of suburban security with an account of local infrastructure and industrial change. Explain how gender, migration, employment, and access to services complicate the picture of a uniform affluent society.</p><p class="source-link"><a href="#readings-04">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-04" class="reading-group"><h3 class="group-title" id="readings-04">Required scholarly readings</h3>
+<section aria-label="Reading 1: At Home in the Suburbs: Domesticity and Nation in Postwar Australia" class="reading">
+<h4>Fiona Allon <span class="year">(2014)</span></h4>
+<p class="citation">“At Home in the Suburbs: Domesticity and Nation in Postwar Australia.” <cite>History Australia</cite>, 11(1): 13–36.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/14490854.2013.11668498">doi: 10.1080/14490854.2013.11668498</a></p>
+<p class="annotation">Allon uses the idea of domopolitics, or home politics, to connect the suburban household with national belonging. A historically specific period of secure work and domestic prosperity became a supposedly timeless model of Australian life. Read for the political consequences of this conversion of selective memories into a national ideal. Ask who is excluded when homeownership and a particular household form become measures of responsible citizenship, including in later appeals to the mortgage belt.</p>
+</section><section aria-label="Reading 2: Ideas from Australian Cities: Relocating Urban and Suburban History" class="reading">
+<h4>Andrew May <span class="year">(2009)</span></h4>
+<p class="citation">“Ideas from Australian Cities: Relocating Urban and Suburban History.” <cite>Australian Economic History Review</cite>, 49(1): 70–86.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/j.1467-8446.2009.00250.x">doi: 10.1111/j.1467-8446.2009.00250.x</a></p>
+<p class="annotation">May argues for a richer history of Australian cities and suburbs, attentive to ordinary aspirations, geographical differences, and social experience. His methodological intervention challenges dismissive portrayals of suburbia as culturally empty or homogeneous. Use it to evaluate the scale at which urban history should be written. Consider what local life stories and comparisons between cities reveal that a national narrative of prosperity or conformity cannot adequately explain.</p>
+</section></section><section class="extension"><h3 class="group-title">Seminar extension <span>(optional)</span></h3><section aria-label="Reading 3: “Forging, Ahead”: Industry and Environmental Transformation in a Melbourne Suburb 1906–85" class="reading">
+<h4>Dan Morrow <span class="year">(2012)</span></h4>
+<p class="citation">““Forging, Ahead”: Industry and Environmental Transformation in a Melbourne Suburb 1906–85.” <cite>Australian Economic History Review</cite>, 52(2): 148–166.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/j.1467-8446.2012.00347.x">doi: 10.1111/j.1467-8446.2012.00347.x</a></p>
+<p class="annotation">Morrow follows Sunshine’s development from an industrial suburb to an area associated with service deprivation, industrial contraction, and environmental change. The case shows how uneven urban provision undercut the presumed comfort of the long boom. Its longer chronology connects postwar expansion to earlier industrial organization. Pair it with Allon to distinguish the public image of suburban security from the infrastructure and employment conditions required to sustain it.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-05"><h2 class="accordion-heading" id="week-05-heading"><button aria-controls="week-05-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 05 · 1945–1972</span><span class="accordion-title">Britain, the United States, Asia, and Vietnam</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-05-heading" class="accordion-panel" hidden="" id="week-05-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w05.png" alt="Week 05 illustration: Britain, the United States, Asia, and Vietnam" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>Australia sits amid competing currents linking Britain, the United States, and Asia, while the darker Vietnam landscape shows how strategic alignment and regional geography became sources of domestic conflict.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>The changing international orientation of a country attached to Britain, allied with the United States, and increasingly connected to Asia. Diplomacy, visual culture, trade, and conscription reveal how foreign policy entered domestic identities and everyday lives.</p></section>
+<section class="question"><h3>Underlying question</h3><p>How did Australia reconcile British attachment, an American security alliance, and its Asian location, and why did Vietnam make those tensions politically explosive?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Golden age, 1946–1975”: selections on Britain, the American alliance, Asian relations, and Vietnam.</p>
+<p class="annotation">Establish the sequence of international reorientation alongside domestic reconstruction and prosperity. Identify when diplomatic or strategic commitments changed and when older attachments persisted. Compare the national chronology with the cultural and recruitment evidence in Gerster and Ville and Siminski, asking how international relationships affected groups whose experiences are less visible in diplomatic history.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 6, “The Good Times: 1949–66”, and chapter 7, “Revolt, Reason and Reaction: 1966–82”: foreign-policy and Vietnam-related passages.</p>
+<p class="annotation">Follow foreign policy across the end of the Menzies period and the rise of domestic contestation. Examine how national loyalty, party rivalry, and generational conflict interacted with strategic choices. Compare accounts of leaders’ decisions with the social distribution of military service, and ask when an international commitment became a dispute over the government’s authority at home.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Nicholas Bromfield, William Clapton, and Thomas S. Wilkins</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 38, “Foreign and defence policy”: read “Historical background,” the discussion of Labor and Coalition foreign-policy traditions, Section 3 on regionalism, and “USA alliance.”</p>
+<p class="annotation">This chapter provides an institutional and thematic frame for continuity and change in Australia’s international position. Compare alliance policy with regional relationships and identify how party traditions shape their interpretation. Use the framework to ask whether Britain, the United States, and Asia represented mutually exclusive orientations, then distinguish that analytical question from the specific historical evidence about Japan and Vietnam.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/foreign-and-defence-policy/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Compare diplomatic language, photographs, and recruitment arrangements as evidence of international reorientation. Explain how the effects of Vietnam differed across generations and social groups, and distinguish strategic choices from claims about national loyalty.</p><p class="source-link"><a href="#readings-05">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-05" class="reading-group"><h3 class="group-title" id="readings-05">Required scholarly readings</h3>
+<section aria-label="Reading 1: The Price of Nostalgia: Menzies, the “Liberal” Tradition and Australian Foreign Policy" class="reading">
+<h4>Frank Bongiorno <span class="year">(2005)</span></h4>
+<p class="citation">“The Price of Nostalgia: Menzies, the “Liberal” Tradition and Australian Foreign Policy.” <cite>Australian Journal of Politics &amp; History</cite>, 51(3): 400–417.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/j.1467-8497.2005.0382a.x">doi: 10.1111/j.1467-8497.2005.0382a.x</a></p>
+<p class="annotation">Bongiorno surveys interpretations of Menzies’s foreign policy through imperial attachment, nationalism, Asia, and the American alliance. He treats the relationship between these commitments as historically contingent and increasingly difficult to sustain. Read this alongside Week 2’s account of Menzies’s political thought. Assess whether Britishness obstructed adaptation or initially helped organize it, and identify how the international setting changed the meaning of a Liberal foreign-policy tradition.</p>
+</section><section aria-label="Reading 2: Take Two: Photography and the Reconstruction of the Post-War Australia/Japan Relationship" class="reading">
+<h4>Robin Christopher Gerster <span class="year">(2018)</span></h4>
+<p class="citation">“Take Two: Photography and the Reconstruction of the Post-War Australia/Japan Relationship.” <cite>History Australia</cite>, 15(1): 23–45.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/14490854.2017.1413946">doi: 10.1080/14490854.2017.1413946</a></p>
+<p class="annotation">Gerster examines photography as a medium through which Australians reinterpreted Japan between military occupation and renewed commercial relations. Images helped turn a recent enemy into a society with which Australia could imagine a shared future. The reading broadens foreign-policy history beyond treaties and ministers. Evaluate who produced and circulated the photographs, what they encouraged viewers to see, and how cultural reinterpretation related to the 1957 commerce agreement.</p>
+</section><section aria-label="Reading 3: A Fair and Equitable Method of Recruitment? Conscription by Ballot into the Australian Army during the Vietnam War" class="reading">
+<h4>Simon Ville and Peter Siminski <span class="year">(2011)</span></h4>
+<p class="citation">“A Fair and Equitable Method of Recruitment? Conscription by Ballot into the Australian Army during the Vietnam War.” <cite>Australian Economic History Review</cite>, 51(3): 277–296.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/j.1467-8446.2011.00335.x">doi: 10.1111/j.1467-8446.2011.00335.x</a></p>
+<p class="annotation">Ville and Siminski investigate the birthday-ballot recruitment system and the claim that random selection made conscription equitable. Their analysis turns a familiar symbol of the Vietnam era into a question about procedure and the distribution of obligations. Distinguish randomness within the eligible pool from fairness in the broader population. Use the article to connect security policy with disputes about age, opportunity, compulsory service, and the legitimacy of state demands.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-06"><h2 class="accordion-heading" id="week-06-heading"><button aria-controls="week-06-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 06 · 1950s–1970s</span><span class="accordion-title">Indigenous politics: 1967, Black Power, and land rights</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-06-heading" class="accordion-panel" hidden="" id="week-06-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w06.png" alt="Week 06 illustration: Indigenous politics: 1967, Black Power, and land rights" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>The procession from Country toward Parliament places the 1967 referendum within a longer Indigenous political movement, linking constitutional recognition to activism, self-determination, and claims to land.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>Assimilation, constitutional reform, Indigenous activism, and demands for land and self-determination. The referendum is placed within a longer political struggle, including Wave Hill and the Aboriginal Tent Embassy, rather than treated as the moment Indigenous Australians first acquired rights.</p></section>
+<section class="question"><h3>Underlying question</h3><p>What did the 1967 referendum change, and why did its symbolic promise coexist with a turn toward Indigenous nationalism and land rights?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Golden age, 1946–1975”: passages concerning assimilation, Indigenous activism, and the 1967 referendum.</p>
+<p class="annotation">Place constitutional reform within the broader postwar history of exclusion and political mobilization. Distinguish the national chronology from the expectations held by Indigenous campaigners. Ask how a survey’s treatment of 1967 changes when the referendum is interpreted through subsequent disappointment, land-rights demands, and claims to self-determination rather than solely through its public celebration.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 7, “Revolt, Reason and Reaction: 1966–82”: selections on Indigenous activism, land rights, and political representation.</p>
+<p class="annotation">Read Indigenous mobilization as a source of political change within the wider conflicts of the period. Compare the place of activists in the political narrative with McGregor’s account of cultural nationalism. Ask what is gained by connecting Indigenous struggles with the decade’s other movements, and what must remain distinct because the demands concerned sovereignty and colonial subordination.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Diana Perche and Jason O’Neil</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 23, “Indigenous politics”: read the opening discussion of First Peoples, the account of political activism, and the sections on organizations, leadership, and diversity within the movement.</p>
+<p class="annotation">Perche and O’Neil frame Indigenous politics through sovereignty, self-determination, representation, and the diversity of First Nations claims. Use their framework to distinguish participation within Australian institutions from demands to transform those institutions. Compare the chapter with the accounts of 1967 and Aboriginal nationalism, avoiding an assumption that one organization or one reform represented all Indigenous political aspirations.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/indigenous-politics/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Separate constitutional provisions, administrative practice, and political memory. Compare inclusion within the Australian nation with demands for self-determination, and identify why activists could judge a celebrated national milestone insufficient.</p><p class="source-link"><a href="#readings-06">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-06" class="reading-group"><h3 class="group-title" id="readings-06">Required scholarly readings</h3>
+<section aria-label="Reading 1: (The) 1967 (Referendum) and All That: Narrative and Myth, Aborigines and Australia" class="reading">
+<h4>Bain Attwood and Andrew Markus <span class="year">(1998)</span></h4>
+<p class="citation">“(The) 1967 (Referendum) and All That: Narrative and Myth, Aborigines and Australia.” <cite>Australian Historical Studies</cite>, 29(111): 267–288.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/10314619808596073">doi: 10.1080/10314619808596073</a></p>
+<p class="annotation">Attwood and Markus explain the referendum’s significance through the narratives of citizenship and inclusion advanced by its supporters and later interpreters. They distinguish its constitutional effects from claims that it newly granted citizenship or voting rights. The article is a study of political memory as well as constitutional history. Ask why a limited legal change could carry such expansive expectations, and how later commemorations alter the understanding of the original campaign.</p>
+</section><section aria-label="Reading 2: Another Nation: Aboriginal Activism in the Late 1960s and Early 1970s" class="reading">
+<h4>Russell McGregor <span class="year">(2009)</span></h4>
+<p class="citation">“Another Nation: Aboriginal Activism in the Late 1960s and Early 1970s.” <cite>Australian Historical Studies</cite>, 40(3): 343–360.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/10314610903105217">doi: 10.1080/10314610903105217</a></p>
+<p class="annotation">McGregor explains the rise of Aboriginal nationalism through disappointment after 1967, Black Power, land rights, youth radicalization, and identity politics. He emphasizes cultural renewal as a response to colonial subordination. This shifts attention from what governments offered to what Indigenous activists demanded. Compare the aspirations documented here with the referendum’s promise of inclusion, and consider how transnational influences interacted with specific Australian experiences and political claims.</p>
+</section></section><section class="extension"><h3 class="group-title">Seminar extension <span>(optional)</span></h3><section aria-label="Reading 3: The Limits of “Elimination” in the Politics of Population" class="reading">
+<h4>Tim Rowse and Len Smith <span class="year">(2010)</span></h4>
+<p class="citation">“The Limits of “Elimination” in the Politics of Population.” <cite>Australian Historical Studies</cite>, 41(1): 90–106.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/10314610903317598">doi: 10.1080/10314610903317598</a></p>
+<p class="annotation">Rowse and Smith study census policy between 1961 and 1971 to show that inclusion did not simply erase Indigenous identification. Demands for recognition, technical problems with racial categories, and administrative interests reshaped enumeration. This introduces the politics of population knowledge. Evaluate how counting can both sustain governmental control and make a collective presence visible, and compare that process with the national symbolism analyzed by Attwood and Markus.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-07"><h2 class="accordion-heading" id="week-07-heading"><button aria-controls="week-07-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 07 · 1968–1975</span><span class="accordion-title">Gender, sexuality, and Whitlam-era social change</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-07-heading" class="accordion-panel" hidden="" id="week-07-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w07.png" alt="Week 07 illustration: Gender, sexuality, and Whitlam-era social change" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>Open civic spaces and changing patterns of work, family, and public life represent the movement of gender and sexuality from the private sphere into politics, and the uneven translation of social movements into Whitlam-era reform.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>Women’s liberation, gay and lesbian liberation, reproductive politics, welfare participation, and Indigenous self-determination. Whitlam-era reform is examined in relation to movements and demands already developing outside Parliament, with attention to the obstacles between aspiration and implementation.</p></section>
+<section class="question"><h3>Underlying question</h3><p>How did matters treated as private become public political claims, and how did the Whitlam government translate social movements into institutional change?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Golden age, 1946–1975”: selections on changing social expectations, women’s liberation, and Whitlam-era reform.</p>
+<p class="annotation">Connect cultural change and political reform without assuming that one automatically produced the other. Examine how developments within families, work, and public institutions interacted. Use the historical sequence to distinguish demands that preceded Whitlam from policies his government introduced, then compare the visibility of social movements with the achievements emphasized in a national survey.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 7, “Revolt, Reason and Reaction: 1966–82”: passages on the social movements and reforms of the Whitlam period.</p>
+<p class="annotation">Read governmental reform alongside the movements that helped define its purposes. Compare the scale of political ambition with the institutional constraints documented in Oppenheimer and Perche. Ask which changes depended on legislation, which operated through administrative programs, and which involved shifts in the legitimacy of claims previously treated as private or outside formal politics.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Merri Andrew</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 21, “Gender and sexuality in Australian politics”: read the opening discussion of the public/private divide, “Political participation,” “Institutions,” and “Feminist institution building.”</p>
+<p class="annotation">Andrew explains how feminist and queer approaches broaden the meaning of politics and how movements reshape institutions. The account of feminist institution-building connects the Whitlam period with later disputes over representation. Compare these concepts with Arrow and Woollacott’s historical framing, identifying how a change in political visibility differs from a transfer of durable decision-making power.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/gender-and-sexuality-in-australian-politics/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Compare reforms of representation, welfare, and intimate life. Identify what movements asked for, what Commonwealth institutions could deliver, and why participation or recognition did not necessarily transfer durable political power.</p><p class="source-link"><a href="#readings-07">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-07" class="reading-group"><h3 class="group-title" id="readings-07">Required scholarly readings</h3>
+<section aria-label="Reading 1: Introduction: How the Personal Became Political: The Gender and Sexuality Revolutions in 1970s Australia" class="reading">
+<h4>Michelle Arrow and Angela Woollacott <span class="year">(2018)</span></h4>
+<p class="citation">“Introduction: How the Personal Became Political: The Gender and Sexuality Revolutions in 1970s Australia.” <cite>Australian Feminist Studies</cite>, 33(95): 1–8.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/08164649.2018.1498730">doi: 10.1080/08164649.2018.1498730</a></p>
+<p class="annotation">This introduction frames the 1970s through changes in gender and sexuality, connecting street protest, policy reform, transnational movements, and resistance. It asks how private experience became a basis for political demands and how the decade’s transformations should be assessed. Use it to set the week’s analytical questions rather than as a complete history of either movement. Distinguish changes in everyday expectations from changes in law and government institutions.</p>
+</section><section aria-label="Reading 2: Voluntary Action, Social Welfare and the Australian Assistance Plan in the 1970s" class="reading">
+<h4>Melanie Oppenheimer <span class="year">(2008)</span></h4>
+<p class="citation">“Voluntary Action, Social Welfare and the Australian Assistance Plan in the 1970s.” <cite>Australian Historical Studies</cite>, 39(2): 167–182.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/10314610802033155">doi: 10.1080/10314610802033155</a></p>
+<p class="annotation">Oppenheimer reconstructs the Australian Assistance Plan, introduced in 1973 and abolished under Fraser three years later. The program sought a different relationship between government, community participation, and the voluntary sector. It provides a concrete way to examine Whitlamism beyond its best-known legislation. Assess what the program changed even though it was short-lived, and ask how the capacity to participate differed among communities and organizations.</p>
+</section><section aria-label="Reading 3: Aboriginal Self-determination, Land Rights, and Recognition in the Whitlam Era: Laying Groundwork for Power Sharing and Representation" class="reading">
+<h4>Diana Perche <span class="year">(2024)</span></h4>
+<p class="citation">“Aboriginal Self-determination, Land Rights, and Recognition in the Whitlam Era: Laying Groundwork for Power Sharing and Representation.” <cite>Australian Journal of Politics &amp; History</cite>, 70(2): 169–187.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/ajph.12996">doi: 10.1111/ajph.12996</a></p>
+<p class="annotation">Perche examines the move from assimilation toward self-determination, tracing ambitions for representation, incorporation, compensation, and land tenure alongside political constraints. She connects these initiatives with later debates about Voice, Treaty, and Truth. Read for the gap between reform language and institutional authority, and for continuities across the Whitlam and Fraser governments. Relate the account to Indigenous demands in Week 6 and retain it for the final week’s discussion of recognition.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-08"><h2 class="accordion-heading" id="week-08-heading"><button aria-controls="week-08-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 08 · 1971–early 1980s</span><span class="accordion-title">Green bans and the organization of resistance</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-08-heading" class="accordion-panel" hidden="" id="week-08-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w08.png" alt="Week 08 illustration: Green bans and the organization of resistance" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>A human chain and sweeping green bands interrupt the construction site, turning the city itself into the field of struggle where unions, residents, and activists used collective organization to defend places and reshape political authority.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>Environmental and urban movements, construction unions, feminist politics, and anti-feminist mobilization. The week places collective action outside Parliament at the center of the 1970s and examines how supporters and opponents of social change organized competing claims to authority.</p></section>
+<section class="question"><h3>Underlying question</h3><p>How did movements turn workplace power and domestic identities into political influence, and what made the transformations of the 1970s both effective and contested?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Golden age, 1946–1975”, and the opening of chapter 9, “Rectification, 1976–1996”: passages on protest, environmental politics, and the response to social change.</p>
+<p class="annotation">Follow the movement from the late boom into a more contested social and political setting. Compare the national account of change with the local alliances and organized resistance in the specialist readings. Ask how the transition between chapters periodizes the decade, and whether environmental and anti-feminist mobilization challenge a single narrative of liberalization or reversal.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 7, “Revolt, Reason and Reaction: 1966–82”: selections on protest movements and resistance to reform.</p>
+<p class="annotation">Examine the relationship between movements outside Parliament and the wider struggle over public authority. Compare unions, residents, feminist organizations, and conservative opponents as differently situated political actors. Use the chapter’s period frame to assess whether the 1970s generated a stable consensus or sustained conflicts that could be organized through competing claims about community, family, and social responsibility.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Justine Lloyd</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 27, “Social movements”: read “What are social movements?”, “Why do they form?”, and the sections on political opportunities, mobilizing structures, and framing.</p>
+<p class="annotation">Lloyd identifies mechanisms through which collective demands become organized political action. Apply the distinctions among opportunities, organizational resources, and framing to the green bans and anti-feminist campaigns. Ask whether similar mechanisms explain movements with opposing objectives, and specify what evidence would show why some organizations achieved influence while others failed to sustain participation or change policy.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/social-movements/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Compare the constituencies, tactics, and legitimating claims of green-ban organizers and anti-feminist groups. Examine how each movement defined social responsibility and whose participation it treated as authoritative.</p><p class="source-link"><a href="#readings-08">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-08" class="reading-group"><h3 class="group-title" id="readings-08">Required scholarly readings</h3>
+<section aria-label="Reading 1: The Social Responsibility of Labour versus the Environmental Impact of Property Capital: The Australian Green Bans Movement" class="reading">
+<h4>Verity Burgmann <span class="year">(2000)</span></h4>
+<p class="citation">“The Social Responsibility of Labour versus the Environmental Impact of Property Capital: The Australian Green Bans Movement.” <cite>Environmental Politics</cite>, 9(2): 78–101.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/09644010008414525">doi: 10.1080/09644010008414525</a></p>
+<p class="annotation">Burgmann interprets green bans as a confrontation between organized labor’s social responsibilities and property capital’s power to shape cities. Construction workers’ refusal to undertake particular projects connected workplace organization with heritage, environmental protection, and residents’ demands. Evaluate the mechanisms through which withholding labor altered urban decision-making. Ask how this form of power differed from electoral representation, and what alliances were necessary for unions to act beyond immediate wages and conditions.</p>
+</section><section aria-label="Reading 2: “How Much Longer Will We Allow This Country’s Affairs to Be Run by Radical Feminists?” Anti-Feminist Activism in Late 1970s Australia" class="reading">
+<h4>Michelle Arrow <span class="year">(2021)</span></h4>
+<p class="citation">““How Much Longer Will We Allow This Country’s Affairs to Be Run by Radical Feminists?” Anti-Feminist Activism in Late 1970s Australia.” <cite>Australian Historical Studies</cite>, 52(3): 331–347.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/1031461X.2020.1821723">doi: 10.1080/1031461X.2020.1821723</a></p>
+<p class="annotation">Arrow examines Women’s Action Alliance and Women Who Want to Be Women, showing how anti-feminist activists used identities as wives and mothers to authorize political claims. Their campaigns adapted language associated with the women’s movement while contesting its influence over policy. Read this as an account of active organization and competing responses to economic pressure. Consider why small groups could affect federal politics and why opposition to feminism should not be understood as simple political inactivity.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-09"><h2 class="accordion-heading" id="week-09-heading"><button aria-controls="week-09-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 09 · 1975 and its historical interpretation</span><span class="accordion-title">1975: the Dismissal and constitutional conflict</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-09-heading" class="accordion-panel" hidden="" id="week-09-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w09.png" alt="Week 09 illustration: 1975: the Dismissal and constitutional conflict" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>A fractured Parliament, opposing crowds, and documents caught between light and shadow visualize the Dismissal as a conflict not only over power, but over constitutional convention and rival claims to democratic legitimacy.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>The Senate’s blocking of supply, reserve powers, the Crown, and the Fraser transition. Archival history and constitutional precedent distinguish participants’ actions, their claims to authority, and the effects of subsequent evidence on the controversy.</p></section>
+<section class="question"><h3>Underlying question</h3><p>Which constitutional conventions and competing claims to democratic authority shaped the Dismissal, and how should new archival evidence change its interpretation?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Golden age, 1946–1975”: the concluding account of the Whitlam government; chapter 9, “Rectification, 1976–1996”: the opening Fraser-era discussion.</p>
+<p class="annotation">Read across the chapter boundary to examine whether 1975 appears primarily as a constitutional event, a political defeat, or the end of a wider historical period. Establish the sequence of government transition and distinguish it from its later interpretation. Compare the survey’s explanatory scale with Hocking’s archival questions and Twomey’s constitutional comparisons.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 7, “Revolt, Reason and Reaction: 1966–82”: passages on the supply crisis, the Dismissal, and the Fraser transition.</p>
+<p class="annotation">Locate the confrontation within the wider political conflicts of the 1970s. Compare the roles attributed to parties, parliamentary institutions, and individual decision-makers. Use the narrative to organize the chronology, then test its explanation against the primary documents, distinguishing a participant’s stated justification from what the subsequent historical record establishes.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Marija Taflaga</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 4, “Executive government”: read “Responsible government,” “The governor-general,” and “The prime minister.”</p>
+<p class="annotation">Taflaga sets out the relationships among executive authority, parliamentary responsibility, and vice-regal office. These concepts clarify the institutional questions raised in 1975 without resolving the historical controversy in advance. Distinguish formal powers from the expectations governing their use, and compare constitutional descriptions with the competing interpretations supplied by Kerr, Barwick, Whitlam, and Fraser.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/executive-government/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Reconstruct the decisions and their evidentiary basis. Distinguish legal power, constitutional convention, political judgment, and retrospective justification across the historical interpretations and contemporary documents.</p><p class="source-link"><a href="#readings-09">Additional textbook selection and specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-09" class="reading-group"><h3 class="group-title" id="readings-09">Required scholarly readings</h3>
+<section aria-label="Reading 1: Critical Archival Encounters and the Evolving Historiography of the Dismissal of the Whitlam Government" class="reading">
+<h4>Jenny Hocking <span class="year">(2024)</span></h4>
+<p class="citation">“Critical Archival Encounters and the Evolving Historiography of the Dismissal of the Whitlam Government.” <cite>Australian Journal of Politics &amp; History</cite>, 70(2): 281–299.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/ajph.12979">doi: 10.1111/ajph.12979</a></p>
+<p class="annotation">Hocking examines archival access, missing records, and revelations in the history of the Dismissal. The construction and availability of evidence become part of the historical problem. Evaluate how a new record changes an explanation and where inference exceeds what a document establishes. Compare her argument with Twomey’s, distinguishing questions answered by archival discoveries from those answered by constitutional precedent.</p>
+</section><section aria-label="Reading 2: The Exercise of Reserve Powers in Victoria from 1912–1955" class="reading">
+<h4>Anne Twomey <span class="year">(2014)</span></h4>
+<p class="citation">“The Exercise of Reserve Powers in Victoria from 1912–1955.” <cite>Australian Bar Review</cite>, 39(2): 198–214.</p>
+<p class="source-link"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2730396">Author manuscript and publication record</a></p>
+<p class="annotation">Twomey examines earlier exercises of vice-regal power in Victoria, asking why some became notorious while others disappeared from public memory. The comparison supplies constitutional context without predetermining whether Kerr acted properly. Assess which precedents are comparable in institutions and circumstances, and how participants’ responses determine both an intervention’s immediate consequences and its later historical reputation.</p>
+</section></section><section class="additional-books"><h3 class="group-title">Additional required textbook selection</h3><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Neil Laurie and Tracey Arklay</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 5, “Parliaments of Australia”: read the discussions of forming government, financial appropriation, and confidence under “Functions of parliament.”</p>
+<p class="annotation">Laurie and Arklay separate parliamentary functions that the supply crisis brought into conflict. Use the distinction between appropriation and confidence to explain why support in the House and access to funds became different questions. Compare the powers and representative claims of the two chambers, then assess how these arrangements conditioned the options available to political participants.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/parliaments-of-australia/">Read chapter online</a></p>
+</section></section><section class="primary-sources"><h3 class="group-title">Required primary sources</h3><section class="primary-reading"><h4><a href="https://www.naa.gov.au/students-and-teachers/student-research-portal/learning-resource-themes/government-and-democracy/constitution-and-referendums/letter-gough-whitlam-sir-john-kerr-dismissing-him-prime-minister-1975">Sir John Kerr, dismissal letter to Gough Whitlam, November 11, 1975</a></h4><p>Read the letter as an exercise of authority and Kerr’s account of Whitlam’s position. Compare its stated basis with the scholarly reconstruction of events.</p></section><section class="primary-reading"><h4><a href="https://www.monarchist.org.au/letter_from_the_chief_justice_10th_november_1975">Sir Garfield Barwick, advice to Kerr, November 10, 1975</a></h4><p>Identify the steps connecting the Senate’s powers over supply to the proposed dismissal. Treat the advice as a participant’s constitutional argument, reproduced by an advocacy organization, rather than a judgment of the High Court.</p></section><section class="primary-reading"><h4><a href="https://www.whitlam.org/explainers/the-dismissal">Gough Whitlam, Parliament House steps speech, November 11, 1975</a></h4><p>View the Whitlam Institute’s speech extract. Examine how Whitlam framed resistance and the Crown after dismissal, distinguishing this public appeal from a constitutional submission.</p></section><section class="primary-reading"><h4><a href="https://www.moadoph.gov.au/visit/whats-on/tours/chamber-audio-guides/house-of-representatives-audio-guide">House of Representatives proceedings, November 11, 1975: Fraser’s announcement</a></h4><p>Read or listen to the Museum of Australian Democracy’s chamber extract. Compare Fraser’s claim to restore stability with the responses; this is a selection from the day’s proceedings.</p></section></section></div></div></section><section class="accordion-section" id="week-10"><h2 class="accordion-heading" id="week-10-heading"><button aria-controls="week-10-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 10 · 1983–1996, with longer consequences</span><span class="accordion-title">Hawke, Keating, and economic restructuring</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-10-heading" class="accordion-panel" hidden="" id="week-10-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w10.png" alt="Week 10 illustration: Hawke, Keating, and economic restructuring" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>Factories give way to towers, container ports, infrastructure, and global trade routes, presenting Hawke–Keating restructuring as a remaking of the postwar economy whose gains and disruptions reached households as well as markets.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>Financial and trade liberalization, wage bargaining, the Accord, and changes in social protection. Competing accounts of the policy process and welfare outcomes test how much of the Australian settlement was dismantled and how much was reconstructed through different institutions.</p></section>
+<section class="question"><h3>Underlying question</h3><p>Did economic reform dismantle the Australian welfare settlement, or change the instruments through which governments pursued economic security and redistribution?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 9, “Rectification, 1976–1996” (pp. 252–286): selections on Hawke, Keating, structural reform, and changing social protection.</p>
+<p class="annotation">Place economic restructuring within a chronology extending beyond individual reform announcements. Distinguish the changes in financial regulation, trade, employment relations, and welfare that together altered the settlement. Compare the survey’s account of reform with Goldfinch’s explanation of decision-making and the contrasting measures of social protection used by Castles and Fenna and Tapper.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Australia Remade? 1983–99”: selections on the Hawke–Keating governments, the Accord, and economic reform.</p>
+<p class="annotation">Examine how Labor organized support for policies that changed its inherited relationship with unions, the state, and markets. Compare the chapter’s question about a remade Australia with the mechanisms identified in the specialist readings. Ask which changes involved adaptation within existing political coalitions and which suggest a more fundamental transformation of the purposes of government.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Alan Fenna</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 35, “Economic policy”: read the discussions of the mixed economy and Keynesianism, followed by “The resource economy dilemma” and “The end of the protectionist road.”</p>
+<p class="annotation">Fenna connects macroeconomic management with the structural choices behind resource dependence, protection, and liberalization. His distinctions help separate stabilization policy from reforms of the economic system. Compare those mechanisms with Stokes’s account of economic rationalist rhetoric, asking when a common label conceals different policies and when claims of efficiency depend on contested social priorities.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/economic-policy/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Return to Week 1’s institutional map and identify which mechanisms changed. Assess whether greater market exposure, altered wage regulation, and rising social expenditure can coexist, and specify what evidence would resolve disagreement between the readings.</p><p class="source-link"><a href="#readings-10">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-10" class="reading-group"><h3 class="group-title" id="readings-10">Required scholarly readings</h3>
+<section aria-label="Reading 1: Remaking Australia’s Economic Policy: Economic Policy Decision-Makers During the Hawke and Keating Labor Governments" class="reading">
+<h4>Shaun Goldfinch <span class="year">(1999)</span></h4>
+<p class="citation">“Remaking Australia’s Economic Policy: Economic Policy Decision-Makers During the Hawke and Keating Labor Governments.” <cite>Australian Journal of Public Administration</cite>, 58(2): 3–20.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/1467-8500.00085">doi: 10.1111/1467-8500.00085</a></p>
+<p class="annotation">Drawing on interviews with policy elites, Goldfinch examines the institutions and people that influenced particular economic decisions. He challenges explanations that assign reform primarily to the central economic agencies, identifying roles for ministers, advisers, unions, and other departments. Read for the relationship between ideas and institutional access. Evaluate what elite interviews reveal about decision-making and what they leave unresolved about public pressure, distributional effects, and the experience of workers.</p>
+</section><section aria-label="Reading 2: A Farewell to Australia’s Welfare State" class="reading">
+<h4>Francis G. Castles <span class="year">(2001)</span></h4>
+<p class="citation">“A Farewell to Australia’s Welfare State.” <cite>International Journal of Health Services</cite>, 31(3): 537–544.</p>
+<p class="source-link"><a href="https://doi.org/10.2190/E6W8-3HYY-EHJ5-7VFK">doi: 10.2190/E6W8-3HYY-EHJ5-7VFK</a></p>
+<p class="annotation">Castles argues that Australia’s relatively limited cash benefits must be understood alongside wage regulation and the design of means tests. He sees reforms in the 1980s and 1990s, especially under the Coalition, as undermining these distinctive arrangements. Treat the article as a specific argument about the erosion of protection through wages and benefits. Identify the mechanisms it evaluates before deciding whether evidence about aggregate social spending can confirm or challenge it.</p>
+</section><section aria-label="Reading 3: The Australian Welfare State and the Neoliberalism Thesis" class="reading">
+<h4>Alan Fenna and Alan Tapper <span class="year">(2012)</span></h4>
+<p class="citation">“The Australian Welfare State and the Neoliberalism Thesis.” <cite>Australian Journal of Political Science</cite>, 47(2): 155–172.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/10361146.2012.677007">doi: 10.1080/10361146.2012.677007</a></p>
+<p class="annotation">Using fiscal-incidence data for 1984–2004, Fenna and Tapper examine household social expenditure and redistribution. They find a larger welfare state through this lens, despite bipartisan economic liberalization. Their account makes the choice of measurement central to the debate. Compare household fiscal benefits with Castles’s concern for wage-setting institutions. Ask whether the two interpretations contradict each other, describe different dimensions of change, or require evidence about different populations and time periods.</p>
+</section></section><section class="reading-connection"><h3>Return to Stokes (2014)</h3><p>Reread the Week 1 chapter’s discussion of the settlement, economic rationalist ideology, and social values. Compare the language used to justify reform with Goldfinch’s decision-making evidence and the welfare measures used by Castles and Fenna and Tapper.</p><p class="source-link"><a href="https://press-files.anu.edu.au/downloads/press/p291051/html/ch10.xhtml?page=19&amp;referer=">The Rise and Fall of Economic Rationalism: free full text</a></p></section></div></div></section><section class="accordion-section" id="week-11"><h2 class="accordion-heading" id="week-11-heading"><button aria-controls="week-11-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 11 · 1992–2000s</span><span class="accordion-title">Mabo, reconciliation, and the national past</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-11-heading" class="accordion-panel" hidden="" id="week-11-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w11.png" alt="Week 11 illustration: Mabo, reconciliation, and the national past" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>A shared path crosses layered land and water toward civic institutions, suggesting how Mabo and reconciliation forced legal recognition, historical memory, and the meaning of national belonging into the same contested landscape.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>Native title, historical knowledge, reconciliation, and competing national narratives. The week connects legal recognition with debates over how Indigenous and settler histories should be written, while examining the limits of recognition within institutions inherited from colonization.</p></section>
+<section class="question"><h3>Underlying question</h3><p>How did Mabo change Australia’s historical self-understanding, and why did recognition of native title leave the meaning and material consequences of reconciliation contested?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 9, “Rectification, 1976–1996”: passages on Mabo, land rights, reconciliation, and national identity; relevant follow-through in chapter 10.</p>
+<p class="annotation">Locate legal recognition within the broader national transformations of the reform period. Compare the survey’s account of changing national identity with the specialist readings’ attention to Indigenous historical knowledge and land law. Ask what a national chronology can establish about recognition and what further evidence is required to assess changes in land, authority, and relationships between Indigenous and settler Australians.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Australia Remade? 1983–99”: selections on Mabo, reconciliation, and arguments about the nation’s past.</p>
+<p class="annotation">Examine how a historical and legal challenge became a central political question. Compare the relationship between leadership, public debate, and Indigenous demands with the accounts in Willis and Dominello. Ask whether a shared national story could accommodate conflicting understandings of sovereignty, historical responsibility, and reconciliation, and identify where the political narrative and legal analysis address different problems.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Diana Perche and Jason O’Neil</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 23, “Indigenous politics”: reread the discussion of political activism, concentrating on land rights and native title, then the discussion of barriers to participation.</p>
+<p class="annotation">Return to the chapter’s account of the relationship between Indigenous claims and Australian institutions. Use native title as a case for distinguishing acknowledgment from authority and legal recognition from material redress. Compare the chapter’s framework with Dominello’s critique of historical assumptions in land law, and ask how institutional barriers can persist after a celebrated reform.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/indigenous-politics/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Compare a historiographical survey with a critique of native title’s historical assumptions. Distinguish legal recognition, historical representation, and changes in the distribution of land and authority; then consider how Anzac memory shaped the wider national story.</p><p class="source-link"><a href="#readings-11">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-11" class="reading-group"><h3 class="group-title" id="readings-11">Required scholarly readings</h3>
+<section aria-label="Reading 1: A Reconciled Nation? Mabo and the Reimagining of Australia’s National History" class="reading">
+<h4>Freya Willis <span class="year">(2021)</span></h4>
+<p class="citation">“A Reconciled Nation? Mabo and the Reimagining of Australia’s National History.” <cite>Journal of Australian Studies</cite>, 45(4): 455–470.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/14443058.2021.1974922">doi: 10.1080/14443058.2021.1974922</a></p>
+<p class="annotation">Willis surveys the historiographical consequences of Mabo, tracing arguments for reconciling national narratives alongside criticisms that reconciliation could appropriate Indigenous history. The reading establishes that historians disagreed about the implications of legal recognition for their discipline. Identify the competing understandings of who can produce historical knowledge and how Indigenous histories relate to the nation. Ask whether rewriting a shared narrative necessarily addresses the continuities of dispossession that critics emphasize.</p>
+</section><section aria-label="Reading 2: The Politics of Remembering and Forgetting: Native Title Law and Reconciliation in Australia" class="reading">
+<h4>Francesca Dominello <span class="year">(2009)</span></h4>
+<p class="citation">“The Politics of Remembering and Forgetting: Native Title Law and Reconciliation in Australia.” <cite>Cosmopolitan Civil Societies: An Interdisciplinary Journal</cite>, 1(3).</p>
+<p class="source-link"><a href="https://epress.lib.uts.edu.au/journals/index.php/mcs/article/view/1077">doi: 10.5130/ccs.v1i3.1077</a></p>
+<p class="annotation">Dominello argues that native title law contains tensions between the newer historical recognition associated with Mabo and older colonial representations of Indigenous peoples. These continuities help explain why acknowledgment of dispossession did not end injustice in land law. Read her interpretation alongside Willis’s survey to compare legal reasoning with historiographical debate. Examine which assumptions persist within recognition itself and what changes would be necessary for reconciliation to alter material relationships.</p>
+</section></section><section class="extension"><h3 class="group-title">Seminar extension <span>(optional)</span></h3><section aria-label="Reading 3: In the Shadow of Anzac: Labour Historiography of the First World War in Australia" class="reading">
+<h4>Carolyn Holbrook and Nathan Wise <span class="year">(2016)</span></h4>
+<p class="citation">“In the Shadow of Anzac: Labour Historiography of the First World War in Australia.” <cite>History Compass</cite>, 14(7): 314–325.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/hic3.12320">doi: 10.1111/hic3.12320</a></p>
+<p class="annotation">Holbrook and Wise examine how the Anzac legend shaped labor historiography and obscured working-class experiences of war. Its pre-1945 subject illuminates the later power of nationalist remembrance. Compare alternative ways of organizing Australia’s past, asking what becomes difficult to see when national unity is the principal frame for interpreting conflict and historical experience.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-12"><h2 class="accordion-heading" id="week-12-heading"><button aria-controls="week-12-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 12 · 1996–2007</span><span class="accordion-title">Howard’s Australia: Hanson, Tampa, and the history wars</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-12-heading" class="accordion-panel" hidden="" id="week-12-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w12.png" alt="Week 12 illustration: Howard’s Australia: Hanson, Tampa, and the history wars" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>Border barriers, a crowded boat, media spectacle, suburban nationhood, and contested memorial space collide in one divided image, linking Howard-era sovereignty politics to arguments over race, belonging, and the national past.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>Race, immigration, national sovereignty, cultural authority, and the political uses of history. Howard-era politics is examined through the social tensions and reforms of earlier decades, including the changing relationship between mainstream parties and exclusionary claims about belonging.</p></section>
+<section class="question"><h3>Underlying question</h3><p>How did Howard-era politics combine market reform with a contested national identity, and what do Hanson, Tampa, and the history wars reveal about its political foundations?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 10, “Outcomes, 1997–2019” (pp. 287–328): selections on Howard, immigration, national identity, and cultural conflict.</p>
+<p class="annotation">Read the Howard period against the consequences of earlier economic and social reform. Distinguish institutional continuity from changes in the political language of belonging and authority. Compare the broad narrative with Jackman’s survey evidence and the analyses of Tampa and the history wars, asking whether those controversies reveal one synthesis or several overlapping sources of political conflict.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 8, “Australia Remade? 1983–99”: the Howard transition; chapter 9, “The Glimmer of Twilight: 2000–19”: the Howard-era passages.</p>
+<p class="annotation">Follow Howard’s political position across the boundary between the reform period and the new century. Assess how leadership and party strategy related to longer changes in constituencies and national identity. Compare the narrative with the different kinds of evidence in the specialist articles, particularly when moving from a claim about political rhetoric to an explanation of electoral support.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Juliet Pietsch and Ibrahim Genc</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 24, “Multicultural Australia”: read “The development of multicultural Australia” and “Public support for multiculturalism”; consult the policy-history selections from Week 3.</p>
+<p class="annotation">Pietsch and Genc examine multiculturalism as a political project and a contested object of public opinion. Their account helps distinguish support for cultural diversity from attitudes toward particular migration policies. Compare those distinctions with Jackman’s findings about racial attitudes and party candidates, and assess whether claims about a unified “mainstream” conceal significant differences within the electorate.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/multicultural-australia/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Compare survey evidence, discourse analysis, and historical interpretation. Evaluate whether the readings establish a single political synthesis, several overlapping conflicts, or different mechanisms through which governments and challengers defined “mainstream” Australia.</p><p class="source-link"><a href="#readings-12">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-12" class="reading-group"><h3 class="group-title" id="readings-12">Required scholarly readings</h3>
+<section aria-label="Reading 1: Pauline Hanson, the Mainstream, and Political Elites: The Place of Race in Australian Political Ideology" class="reading">
+<h4>Simon Jackman <span class="year">(1998)</span></h4>
+<p class="citation">“Pauline Hanson, the Mainstream, and Political Elites: The Place of Race in Australian Political Ideology.” <cite>Australian Journal of Political Science</cite>, 33(2): 167–186.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/10361149850598">doi: 10.1080/10361149850598</a></p>
+<p class="annotation">Jackman compares the electorate and parliamentary candidates using 1996 survey evidence. He finds substantial differences on racial questions and shows that these attitudes cross other ideological divisions, producing strains within the parties. This tests Hanson’s claim to speak for a neglected mainstream rather than treating that claim as self-evident. Examine how the evidence distinguishes public attitudes from party leadership, and why the relationship could create opportunities for both insurgent and established political actors.</p>
+</section><section aria-label="Reading 2: Protecting the Nation: Nationalist Rhetoric on Asylum Seekers and the Tampa" class="reading">
+<h4>Kieran O’Doherty and Martha Augoustinos <span class="year">(2008)</span></h4>
+<p class="citation">“Protecting the Nation: Nationalist Rhetoric on Asylum Seekers and the Tampa.” <cite>Journal of Community &amp; Applied Social Psychology</cite>, 18(6): 576–592.</p>
+<p class="source-link"><a href="https://doi.org/10.1002/casp.973">doi: 10.1002/casp.973</a></p>
+<p class="annotation">O’Doherty and Augoustinos analyze rhetoric surrounding asylum seekers and the Tampa affair, examining how claims about the nation organized arguments about entry and exclusion. Their method shows how apparently practical questions of border administration become claims about sovereignty and belonging. Compare this discursive evidence with Jackman’s survey findings. Ask what rhetorical analysis can establish about political legitimation and what additional evidence would be needed to demonstrate its effects on votes or policy decisions.</p>
+</section><section aria-label="Reading 3: Australia’s History under Howard, 1996–2007" class="reading">
+<h4>Andrew Bonnell and Martin Crotty <span class="year">(2008)</span></h4>
+<p class="citation">“Australia’s History under Howard, 1996–2007.” <cite>The ANNALS of the American Academy of Political and Social Science</cite>, 617(1): 149–165.</p>
+<p class="source-link"><a href="https://doi.org/10.1177/0002716207310818">doi: 10.1177/0002716207310818</a></p>
+<p class="annotation">Bonnell and Crotty interpret the Howard government’s efforts to shape historical representation through disputes over Indigenous history, museums, broadcasting, and education. They connect these interventions with conservative ideology and political interests, while finding limited lasting effects on historical practice. Evaluate this distinction between public controversy and disciplinary change. Compare their critical account of Howard with Week 11’s debates over reconciliation and the authority to write the national past.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-13"><h2 class="accordion-heading" id="week-13-heading"><button aria-controls="week-13-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 13 · 2007–2021</span><span class="accordion-title">Rudd, Gillard, and the instability of leadership</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-13-heading" class="accordion-panel" hidden="" id="week-13-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w13.png" alt="Week 13 illustration: Rudd, Gillard, and the instability of leadership" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>Intersecting paths, repeated podiums, and figures entering and leaving the political stage turn leadership into a cycle of succession, capturing the instability that made prime-ministerial authority itself a central political question.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>Party leadership changes, gendered authority, public confidence, and the institutions of government. The Rudd–Gillard conflicts are situated within the broader succession of leadership removals through 2018; the pandemic provides an extension on federal coordination and the visibility of state power.</p></section>
+<section class="question"><h3>Underlying question</h3><p>Why did parties repeatedly replace prime ministers, and how did gender, national identity, and institutional structure shape judgments about legitimate and effective leadership?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 10, “Outcomes, 1997–2019”: selections on Rudd, Gillard, minority government, and the leadership transitions through 2018.</p>
+<p class="annotation">Establish the sequence and policy setting of leadership change before evaluating competing explanations of it. Compare a general historical narrative with the specialist evidence about voters and gendered legitimacy. Ask whether repeated changes of prime minister demonstrate institutional instability, party conflict, or an attempt to manage pressures arising outside the leadership itself.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 9, “The Glimmer of Twilight: 2000–19”: the Rudd–Gillard and subsequent leadership passages; conclusion, “In the Age of COVID-19.”</p>
+<p class="annotation">Follow the relationship between party leadership, parliamentary authority, and public expectations across the period. Use the conclusion to broaden the discussion beyond succession contests and toward the institutions made visible by the pandemic. Compare this narrative with the empirical studies, identifying what can be explained through leaders’ decisions and what requires attention to gender, parties, or federal structure.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Stewart Jackson</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 25, “Political leadership”: read “Theorising political leadership,” the discussion of party leadership as leading a group, and “Contemporary leadership issues.”</p>
+<p class="annotation">Jackson compares approaches to leadership that emphasize individual qualities, circumstances, organizational relationships, and followers. Use these distinctions to evaluate explanations of repeated replacement rather than presuming a more popular leader will improve electoral results. Compare the framework with the treatment of Gillard and ask how legitimacy depends on party support and political expectations as well as an individual’s conduct.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/political-leadership/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Distinguish explanations of internal party decisions from explanations of voter responses. Consider how the treatment of Gillard changes the interpretation of leadership instability, then compare personalized political coverage with the institutional account in the extension.</p><p class="source-link"><a href="#readings-13">Specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-13" class="reading-group"><h3 class="group-title" id="readings-13">Required scholarly readings</h3>
+<section aria-label="Reading 1: The Coup Capital of the Democratic World? Voters and Prime Ministerial Change in Australia" class="reading">
+<h4>Sarah Cameron and Ian McAllister <span class="year">(2024)</span></h4>
+<p class="citation">“The Coup Capital of the Democratic World? Voters and Prime Ministerial Change in Australia.” <cite>Australian Journal of Politics &amp; History</cite>, 70(1): 120–134.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/ajph.12890">doi: 10.1111/ajph.12890</a></p>
+<p class="annotation">Cameron and McAllister use election surveys and polling to examine voters’ responses to four removals of sitting prime ministers between 2010 and 2018. They find no evidence that the parties improved their subsequent electoral results through these changes. Assess the distinction between a leader’s popularity, expectations of better economic performance, and a party’s eventual vote. The article makes repeated leadership replacement an empirical puzzle rather than assuming electoral benefit from a new leader.</p>
+</section><section aria-label="Reading 2: The Double Delegitimatisation of Julia Gillard: Gender, the Media, and Australian Political Culture" class="reading">
+<h4>Jack Holland and Katharine A. M. Wright <span class="year">(2017)</span></h4>
+<p class="citation">“The Double Delegitimatisation of Julia Gillard: Gender, the Media, and Australian Political Culture.” <cite>Australian Journal of Politics &amp; History</cite>, 63(4): 588–602.</p>
+<p class="source-link"><a href="https://doi.org/10.1111/ajph.12405">doi: 10.1111/ajph.12405</a></p>
+<p class="annotation">Holland and Wright examine media treatment of Gillard through the general expectations facing women leaders and specifically Australian narratives of national identity and masculinity. Their comparative discourse analysis connects the misogyny speech with the reporting of her removal. Read this alongside Cameron and McAllister to distinguish gendered legitimacy from measured electoral preference. Ask how mateship and Anzac narratives help determine who appears entitled to exercise national authority.</p>
+</section></section><section class="extension"><h3 class="group-title">Seminar extension <span>(optional)</span></h3><section aria-label="Reading 3: Assessing the Performance of Australian Federalism in Responding to the Pandemic" class="reading">
+<h4>Julian R. Murphy and Erika Arban <span class="year">(2021)</span></h4>
+<p class="citation">“Assessing the Performance of Australian Federalism in Responding to the Pandemic.” <cite>Publius: The Journal of Federalism</cite>, 51(4): 627–649.</p>
+<p class="source-link"><a href="https://doi.org/10.1093/publius/pjab026">doi: 10.1093/publius/pjab026</a></p>
+<p class="annotation">Murphy and Arban evaluate how federal structure contributed to the successes and failures of the pandemic response through the end of 2020. Their institutional analysis shifts attention to coordination, responsibility, and state-level authority. Use the article to revisit the federalism introduced in Week 1. Keep its time boundary explicit when assessing its conclusions, and consider what the prominence of premiers reveals about accounts of politics centered almost entirely on prime ministers.</p>
+</section></section></div></div></section><section class="accordion-section" id="week-14"><h2 class="accordion-heading" id="week-14-heading"><button aria-controls="week-14-panel" aria-expanded="false" class="accordion-toggle" type="button"><span class="accordion-label"><span class="accordion-kicker">Week 14 · 2022–2026</span><span class="accordion-title">Teals, the Voice, and contemporary realignment</span></span><span aria-hidden="true" class="chevron">⌄</span></button></h2><div aria-labelledby="week-14-heading" class="accordion-panel" hidden="" id="week-14-panel" role="region"><div class="accordion-inner">
+<figure class="week-illustration"><img src="../assets/other/australia/w14.png" alt="Week 14 illustration: Teals, the Voice, and contemporary realignment" width="1600" height="900" loading="lazy" decoding="async"/><figcaption>Teal networks, community groupings, Parliament, and overlapping fields of public speech portray a political system whose older alignments are fragmenting, while the Voice and independent campaigns test what new forms of representation may replace them.</figcaption></figure>
+<section class="theme"><h3>Theme</h3><p>Independent campaigns, changing party constituencies, Indigenous representation, and the 2025 election. The final week connects recent developments with the course’s long history of class, gender, national identity, property, and the institutional organization of political conflict.</p></section>
+<section class="question"><h3>Underlying question</h3><p>Do recent elections and the Voice referendum indicate durable political realignment, and how would we distinguish a new social basis of politics from temporary campaign effects?</p></section>
+<section class="book-group"><h3 class="group-title">Required textbook selections</h3><section class="book-assignment" data-book="macintyre">
+<h4><cite>A Concise History of Australia</cite> <span class="year">(5th ed., 2020)</span></h4>
+<p class="book-author">Stuart Macintyre</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 10, “Outcomes, 1997–2019”: reread its closing assessment as a historical baseline for the developments examined in 2022–2026.</p>
+<p class="annotation">Use the endpoint of Macintyre’s account to specify which problems and political divisions were already visible before the recent elections and referendum. Compare that baseline with contemporary evidence, identifying continuity and possible departures. The assignment is retrospective: it establishes antecedents rather than supplying an account of events beyond the book’s chronological coverage.</p>
+<p class="source-link"><a href="https://www.cambridge.org/highereducation/books/a-concise-history-of-australia/92CF9067EF297ECDF6E723579593E011">Book and access information</a></p>
+</section><section class="book-assignment" data-book="bongiorno">
+<h4><cite>Dreamers and Schemers</cite> <span class="year">(2022)</span></h4>
+<p class="book-author">Frank Bongiorno</p>
+<p class="selection"><strong>Assigned selection:</strong> Conclusion, “In the Age of COVID-19”: reread alongside the closing passages of chapter 9, “The Glimmer of Twilight: 2000–19.”</p>
+<p class="annotation">Use the book’s closing perspective to examine the pressures inherited by contemporary parties and institutions. Compare its historical frame with the attitudinal clusters, campaign demographics, and electoral explanations in the specialist readings. Distinguish an argument about the longer condition of political life from evidence establishing the causes of the 2025 result or the Voice referendum’s defeat.</p>
+<p class="source-link"><a href="https://www.blackincbooks.com.au/books/dreamers-and-schemers">Book and access information</a></p>
+</section><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Shaun Ratcliff</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 29, “Voter behaviour”: read the discussions of elite cues and framing, aggregate voter behavior, and surveys.</p>
+<p class="annotation">Ratcliff explains how political opinions are formed and measured, providing methods for evaluating the final week’s empirical studies. Distinguish attitudes, campaign participation, vote choice, and seats won. Use the chapter’s discussion of aggregate data and surveys to assess which explanations the election and referendum results can support and which require individual-level evidence.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/voter-behaviour/">Read chapter online</a></p>
+</section></section>
+<section class="seminar"><h3>Seminar focus</h3><p>Compare the final-week evidence with Jones and McAllister’s postwar baseline. Explain how Labor’s 2025 parliamentary majority can coexist with changes in political allegiance, and keep explanations of an election distinct from explanations of a constitutional referendum.</p><p class="source-link"><a href="#readings-14">Additional textbook selection and specialist readings</a></p></section><div class="subsection-label">Specialist readings</div>
+<section aria-labelledby="readings-14" class="reading-group"><h3 class="group-title" id="readings-14">Required scholarly readings</h3>
+<section aria-label="Reading 1: Political Outsiders? A Study of “Teal” Independent Campaign Demographics in the 2022 Australian Federal Election" class="reading">
+<h4>Phoebe Hayman <span class="year">(2025)</span></h4>
+<p class="citation">“Political Outsiders? A Study of “Teal” Independent Campaign Demographics in the 2022 Australian Federal Election.” <cite>Journal of Australian Studies</cite>, 49(2): 234–253.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/14443058.2025.2486854">doi: 10.1080/14443058.2025.2486854</a></p>
+<p class="annotation">Hayman examines the gender, class, and ethnicity of candidates, campaigners, and volunteers through interviews and a volunteer survey. The study asks whether independent campaigns broaden participation or reproduce the elite composition associated with established parties. Use it to separate outsider status within party politics from social representativeness. Its evidence concerns campaign participants, so assess carefully what it can establish about the electorate or the wider meaning of teal success.</p>
+</section><section aria-label="Reading 2: How Many Parties Are Enough? The Changing Structure of Australian Political Attitudes" class="reading">
+<h4>Jill Sheppard <span class="year">(2026)</span></h4>
+<p class="citation">“How Many Parties Are Enough? The Changing Structure of Australian Political Attitudes.” <cite>Australian Journal of Political Science</cite>, Published online July 17, 2026.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/10361146.2026.2704794">doi: 10.1080/10361146.2026.2704794</a></p>
+<p class="annotation">Using Australian Election Study data from 1998–2025, Sheppard compares fragmentation, dealignment, and realignment through clusters of political attitudes. She finds substantial recomposition rather than a proliferation of attitudinal groups, including erosion of the Liberal professional-class base. Evaluate how the clusters are constructed and how they relate to actual parties. Ask why a decline in major-party votes need not mean that Australians hold an ever-growing number of incompatible political positions.</p>
+</section><section aria-label="Reading 3: Short- and Long-Term Influences on Voting: The Case of the 2025 Australian Election" class="reading">
+<h4>Sarah Cameron and Ian McAllister <span class="year">(2026)</span></h4>
+<p class="citation">“Short- and Long-Term Influences on Voting: The Case of the 2025 Australian Election.” <cite>Australian Journal of Political Science</cite>, Published online August 18, 2026.</p>
+<p class="source-link"><a href="https://doi.org/10.1080/10361146.2026.2714948">doi: 10.1080/10361146.2026.2714948</a></p>
+<p class="annotation">Cameron and McAllister use the 2025 election study to weigh immediate electoral influences against longer changes in generation, gender, and education. The article provides an empirical endpoint for the opening week’s account of social cleavages. Compare its explanation of a particular election with Sheppard’s map of attitudes. Assess what evidence supports persistence beyond 2025 and what remains uncertain about how parties will respond to their changing constituencies.</p>
+</section></section><section class="additional-books"><h3 class="group-title">Additional required textbook selection</h3><section class="book-assignment" data-book="app">
+<h4><cite>Australian Politics and Policy</cite> <span class="year">(2026)</span></h4>
+<p class="book-author">Diana Perche and Jason O’Neil</p>
+<p class="selection"><strong>Assigned selection:</strong> Chapter 23, “Indigenous politics”: read the section on Uluru Statement reforms and the Victorian Treaty.</p>
+<p class="annotation">Perche and O’Neil place constitutional recognition within a broader agenda concerning representation, agreement-making, and self-determination. Read this discussion with the Uluru Statement and the referendum returns, distinguishing the aspirations of the statement from the proposition submitted to voters. Compare it with Weeks 6, 7, and 11 to assess what changed in the instruments through which Indigenous political claims were pursued.</p>
+<p class="source-link"><a href="https://oercollective.caul.edu.au/aust-politics-policy/chapter/indigenous-politics/">Read chapter online</a></p>
+</section></section><section class="seminar"><h3>Required primary sources</h3><p>Read the <a href="#source-dossier">Week 14 source dossier</a> alongside these articles. It brings the Uluru Statement, the Voice referendum, and the 2025 election into the final comparative discussion.</p></section><div class="subsection-label" id="source-dossier">Required primary sources · Representation and electoral change</div><p class="lede">Contemporary realignment and the longer history of Indigenous demands for authority and recognition.</p>
+<section class="dossier-reading"><h3>1. Uluru Statement from the Heart (2017)</h3><p class="source-link"><a href="https://ulurustatement.org/the-statement/view-the-statement/">Read the full statement</a></p><p>Read the linked claims about sovereignty, a protected Voice, agreement-making, and truth-telling. The statement connects recognition with First Nations’ authority over decisions affecting their lives. Compare its proposed institutions with the self-determination discussed in Weeks 6 and 7, and examine how governments and campaigners represented these demands during the referendum.</p></section>
+<section class="dossier-reading"><h3>2. AEC: the 2023 Voice referendum</h3><p class="source-link"><a href="https://results.aec.gov.au/29581/Website/ReferendumNationalResults-29581.htm">Australian Electoral Commission: final referendum results</a></p><p>The proposal failed both requirements of the constitutional double majority. Use the geographical pattern to formulate explanations and identify the individual-level or campaign evidence needed to test them. Returns establish outcomes but cannot establish motives or show that referendums and elections express the same division. Compare this outcome with the constitutional meaning and public memory of 1967.</p>
+<table class="evidence-table"><caption>2023 referendum: share of formal votes</caption><thead><tr><th scope="col">Jurisdiction</th><th scope="col">Yes</th><th scope="col">No</th></tr></thead><tbody>
+<tr><th scope="row">National</th><td>39.94%</td><td>60.06%</td></tr>
+<tr><th scope="row">New South Wales</th><td>41.04%</td><td>58.96%</td></tr>
+<tr><th scope="row">Victoria</th><td>45.85%</td><td>54.15%</td></tr>
+<tr><th scope="row">Queensland</th><td>31.79%</td><td>68.21%</td></tr>
+<tr><th scope="row">Western Australia</th><td>36.73%</td><td>63.27%</td></tr>
+<tr><th scope="row">South Australia</th><td>35.83%</td><td>64.17%</td></tr>
+<tr><th scope="row">Tasmania</th><td>41.06%</td><td>58.94%</td></tr>
+</tbody></table></section>
+<section class="dossier-reading"><h3>3. AEC: the 2025 federal election</h3><p class="source-link"><a href="https://results.aec.gov.au/31496/Website/HouseDefault-31496.htm">Australian Electoral Commission: final House of Representatives results</a></p><p>Seat totals establish the outcome that Cameron and McAllister seek to explain. Compare parliamentary representation with Sheppard’s attitudinal clusters and Hayman’s campaign participants. Explain how a decisive majority can coexist with weakening inherited allegiances, distinguishing evidence of one election’s outcome from evidence that a realignment will persist.</p>
+<table class="evidence-table seats-table"><caption>2025 election: House seats won, out of 150</caption><thead><tr><th scope="col">Party or grouping</th><th scope="col">Seats</th></tr></thead><tbody><tr><th scope="row">Australian Labor Party</th><td>94</td></tr><tr><th scope="row">Liberal/National Coalition</th><td>43</td></tr><tr><th scope="row">Independents</th><td>10</td></tr><tr><th scope="row">The Greens</th><td>1</td></tr><tr><th scope="row">Centre Alliance</th><td>1</td></tr><tr><th scope="row">Katter’s Australian Party</th><td>1</td></tr></tbody></table></section>
+<section class="seminar"><h3>Final seminar focus</h3><p>Return to Jones and McAllister’s baseline. Explain which cleavages remain consequential and how institutional and social histories connect. Distinguish elections from referendums, and identify the evidence that would challenge your account of the present.</p></section></div></div></section></main><script>
+(() => {
+  const sections = [...document.querySelectorAll('.accordion-section')];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function setOpen(section, open, animate = true) {
+    const button = section.querySelector('.accordion-toggle');
+    const panel = section.querySelector('.accordion-panel');
+    if (!button || !panel) return;
+    const alreadyOpen = button.getAttribute('aria-expanded') === 'true';
+    if (alreadyOpen === open && (open || panel.hidden)) return;
+
+    button.setAttribute('aria-expanded', String(open));
+    section.classList.toggle('is-open', open);
+
+    if (open) {
+      panel.hidden = false;
+      if (!animate || reduceMotion.matches) {
+        panel.style.height = 'auto';
+        return;
+      }
+      panel.style.height = '0px';
+      panel.getBoundingClientRect();
+      panel.style.height = panel.scrollHeight + 'px';
+      panel.addEventListener('transitionend', function done(event) {
+        if (event.propertyName !== 'height') return;
+        panel.removeEventListener('transitionend', done);
+        if (button.getAttribute('aria-expanded') === 'true') panel.style.height = 'auto';
+      });
+    } else {
+      if (panel.hidden) return;
+      if (!animate || reduceMotion.matches) {
+        panel.style.height = '0px';
+        panel.hidden = true;
+        return;
+      }
+      panel.style.height = panel.scrollHeight + 'px';
+      panel.getBoundingClientRect();
+      panel.style.height = '0px';
+      panel.addEventListener('transitionend', function done(event) {
+        if (event.propertyName !== 'height') return;
+        panel.removeEventListener('transitionend', done);
+        if (button.getAttribute('aria-expanded') === 'false') panel.hidden = true;
+      });
+    }
+  }
+
+  for (const section of sections) {
+    const button = section.querySelector('.accordion-toggle');
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      setOpen(section, open, true);
+    });
+  }
+
+  document.getElementById('expand-all').addEventListener('click', () => {
+    sections.forEach(section => setOpen(section, true, false));
+  });
+  document.getElementById('collapse-all').addEventListener('click', () => {
+    sections.forEach(section => setOpen(section, false, false));
+    window.scrollTo({ top: document.querySelector('main').offsetTop - 60, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+  });
+
+  function openForTarget(target, scroll = true) {
+    if (!target) return;
+    const section = target.closest('.accordion-section');
+    if (section) setOpen(section, true, false);
+    if (scroll) requestAnimationFrame(() => target.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' }));
+  }
+
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const id = decodeURIComponent(link.getAttribute('href').slice(1));
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    event.preventDefault();
+    history.pushState(null, '', '#' + encodeURIComponent(id));
+    openForTarget(target, true);
+  });
+
+  if (location.hash) {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    openForTarget(target, false);
+  } else {
+    const first = document.querySelector('.accordion-section');
+    if (first) setOpen(first, true, false);
+  }
+
+  window.addEventListener('hashchange', () => {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    openForTarget(target, true);
+  });
+})();
+</script></body></html>

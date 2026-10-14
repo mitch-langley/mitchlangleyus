@@ -13,7 +13,6 @@ assets/other/yugoslavia/unused/
 !assets/others/README.md
 .toolkit-generated.json
 assets/cases/depot-relocation-strategy.svg
-other/australia.html
 
 # Local credentials; keep explicitly named example files trackable
 .env
