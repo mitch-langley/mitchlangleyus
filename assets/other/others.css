@@ -1,0 +1,127 @@
+/* Travel overview pages. Shared typography and colors come from site.css. */
+.yugoslavia-page .jug-page {
+  --content-max: 1480px;
+  --jug-water: #edf3f6;
+  --jug-land: #fff;
+  --jug-neighbor: #e8ecef;
+  --jug-border: #bac5ce;
+  --jug-route-future: #c4ccd2;
+}
+.yugoslavia-page .jug-intro { padding-block: 32px 28px; }
+.yugoslavia-page .jug-intro__context { color: var(--text-muted); font-size: var(--text-small); margin-bottom: 6px; }
+.yugoslavia-page .jug-intro h1 { font-size: var(--text-display); margin-bottom: 12px; }
+.yugoslavia-page .jug-intro > p:last-child { max-width: 86ch; line-height: 1.5; }
+.yugoslavia-page .jug-explorer { border: 1px solid var(--rule); border-radius: var(--radius-md); background: var(--white); scroll-margin-top: calc(var(--site-header-height, 80px) + 12px); }
+.yugoslavia-page .jug-explorer:focus-visible { outline-offset: 5px; }
+.yugoslavia-page .jug-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; padding: 14px 24px; border-bottom: 1px solid var(--rule); }
+.yugoslavia-page .jug-position { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; max-width: none; font-size: .95rem; }
+.yugoslavia-page #jug-day-label { color: var(--color-accent); font-weight: 700; }
+.yugoslavia-page #jug-location-label { color: var(--color-primary); }
+.yugoslavia-page .jug-option { display: inline-flex; align-items: center; gap: 8px; margin: 0; font-weight: 400; font-size: .85rem; color: var(--text-muted); cursor: pointer; }
+.yugoslavia-page .jug-option input { inline-size: 16px; block-size: 16px; margin: 0; accent-color: var(--color-primary); }
+.yugoslavia-page .jug-visuals { display: grid; grid-template-columns: 1.15fr 1fr; min-width: 0; }
+.yugoslavia-page .jug-map { background: var(--jug-water); border-radius: 0; min-width: 0; }
+.yugoslavia-page .jug-overview { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; }
+.yugoslavia-page .jug-geography { pointer-events: none; }
+.yugoslavia-page .jug-water { fill: var(--jug-water); }
+.yugoslavia-page .jug-country { fill: var(--jug-neighbor); stroke: var(--jug-border); stroke-width: .75; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.yugoslavia-page .jug-country--trip { fill: var(--jug-land); }
+.yugoslavia-page .jug-country-label { fill: #74828b; font-family: var(--font-sans); font-size: 17px; font-weight: 400; }
+.yugoslavia-page .jug-sea-label { fill: #718c9d; font-family: var(--font-serif); font-size: 20px; font-style: italic; }
+.yugoslavia-page .jug-river { fill: none; stroke: #b2c8d7; stroke-width: 1.3; vector-effect: non-scaling-stroke; }
+.yugoslavia-page .jug-leg { fill: none; stroke: var(--jug-route-future); stroke-width: 1.4; stroke-dasharray: 3 4; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.yugoslavia-page .jug-leg.is-traveled { stroke: var(--navy-900); stroke-width: 1.8; stroke-dasharray: none; }
+.yugoslavia-page .jug-leg.is-current { stroke: var(--gold-700); stroke-width: 2.7; stroke-dasharray: none; }
+.yugoslavia-page .jug-map-location { cursor: pointer; outline: none; }
+.yugoslavia-page .jug-marker-hit { fill: transparent; stroke: none; pointer-events: all; }
+.yugoslavia-page .jug-marker-dot { fill: var(--white); stroke: #71818f; stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+.yugoslavia-page .jug-map-location.is-visited .jug-marker-dot { fill: var(--navy-900); stroke: var(--navy-900); }
+.yugoslavia-page .jug-marker-ring { fill: none; stroke: var(--gold-700); stroke-width: 2; opacity: 0; vector-effect: non-scaling-stroke; }
+.yugoslavia-page .jug-map-location.is-active .jug-marker-ring,
+.yugoslavia-page .jug-map-location:focus-visible .jug-marker-ring { opacity: 1; }
+.yugoslavia-page .jug-map-location.is-active .jug-marker-dot { fill: var(--gold-700); stroke: var(--white); }
+.yugoslavia-page .jug-marker-label { font-family: var(--font-sans); font-size: 19px; fill: var(--navy-900); stroke: var(--jug-land); stroke-width: 4px; paint-order: stroke fill; stroke-linejoin: round; pointer-events: visiblePainted; }
+.yugoslavia-page .jug-label-leader { fill: none; stroke: var(--jug-border); stroke-width: .8; vector-effect: non-scaling-stroke; pointer-events: none; }
+.yugoslavia-page .jug-country-label.is-crowded { visibility: hidden; }
+.yugoslavia-page .jug-map-location.is-active .jug-marker-label { font-weight: 700; fill: var(--gold-800); }
+.yugoslavia-page .jug-map-location:focus-visible .jug-marker-label { text-decoration: underline; }
+.yugoslavia-page .jug-map-location.is-omitted { opacity: .35; cursor: default; }
+.yugoslavia-page .jug-illustration { position: relative; margin: 0; min-width: 0; padding: 0; overflow: hidden; border-left: 1px solid var(--rule); background: var(--surface-tint); }
+.yugoslavia-page .jug-illustration img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; max-height: none; object-fit: cover; }
+.yugoslavia-page .jug-illustration figcaption { position: absolute; inset: auto 0 0; padding: 36px 20px 16px; font-size: .85rem; line-height: 1.35; color: var(--white); background: linear-gradient(transparent, rgba(15, 28, 39, .82)); }
+.yugoslavia-page .jug-image-error { position: absolute; inset: 16px 16px auto; padding: 8px; background: var(--white); color: var(--red-700); font-size: .9rem; }
+.yugoslavia-page .jug-card { padding: 22px 28px 24px; min-height: 225px; border-top: 1px solid var(--rule); touch-action: pan-y; }
+.yugoslavia-page .jug-card__meta { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; font-size: .82rem; color: var(--text-muted); margin-bottom: 8px; }
+.yugoslavia-page #jug-optional-label { color: var(--gold-800); }
+.yugoslavia-page .jug-card h2 { font-size: clamp(1.35rem, 1rem + 1vw, 1.8rem); margin-bottom: 12px; }
+.yugoslavia-page .jug-card > p { max-width: 92ch; font-size: 1rem; line-height: 1.55; text-align: left; }
+.yugoslavia-page .jug-card__route { margin-top: 10px; color: var(--color-primary); }
+.yugoslavia-page .jug-card > .jug-card__overnight { margin-top: 5px; font-size: .9rem; color: var(--text-muted); }
+.yugoslavia-page .jug-card[data-kind="day"] { border-left: 4px solid var(--gold-700); padding-left: 24px; background: #fafbfc; }
+.yugoslavia-page .jug-sources { margin-top: 12px; font-size: .85rem; }
+.yugoslavia-page .jug-sources summary { width: fit-content; cursor: pointer; color: var(--text-muted); }
+.yugoslavia-page .jug-sources ul { list-style: none; margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.yugoslavia-page .jug-controls { display: grid; grid-template-columns: auto minmax(60px, 220px) auto; justify-content: space-between; align-items: center; gap: 18px; padding: 16px 24px; border-top: 1px solid var(--rule); }
+.yugoslavia-page .jug-arrow { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 16px; border: 1px solid var(--navy-900); border-radius: var(--radius-sm); background: var(--white); color: var(--navy-900); font-size: .95rem; line-height: 1.3; min-height: 44px; cursor: pointer; }
+.yugoslavia-page .jug-arrow--next { background: var(--navy-900); color: var(--white); }
+.yugoslavia-page .jug-arrow:hover:not(:disabled) { background: var(--navy-600); border-color: var(--navy-600); color: var(--white); }
+.yugoslavia-page .jug-arrow:disabled { opacity: .35; cursor: default; }
+.yugoslavia-page .jug-arrow svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.yugoslavia-page .jug-progress { text-align: center; font-size: .78rem; color: var(--text-muted); min-width: 0; }
+.yugoslavia-page .jug-progress progress { display: block; width: 100%; height: 3px; margin-top: 8px; appearance: none; border: 0; background: var(--rule); accent-color: var(--gold-700); }
+.yugoslavia-page .jug-progress progress::-webkit-progress-bar { background: var(--rule); }
+.yugoslavia-page .jug-progress progress::-webkit-progress-value { background: var(--gold-700); }
+.yugoslavia-page .jug-progress progress::-moz-progress-bar { background: var(--gold-700); }
+.yugoslavia-page .jug-days { display: flex; align-items: center; gap: 5px; padding: 12px 24px; border-top: 1px solid var(--rule); overflow-x: auto; scrollbar-width: thin; }
+.yugoslavia-page .jug-days button { flex: 1 0 34px; min-width: 34px; min-height: 40px; border: 0; border-radius: 3px; background: transparent; color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: .85rem; cursor: pointer; }
+.yugoslavia-page .jug-days button[aria-current="step"] { background: var(--navy-900); color: var(--white); }
+.yugoslavia-page .jug-days button:hover:not([aria-current]):not(:disabled) { background: var(--surface-tint); color: var(--color-primary); }
+.yugoslavia-page .jug-days button:disabled { cursor: default; }
+.yugoslavia-page .jug-load-error { color: var(--red-700); padding: 20px 24px; max-width: none; border-top: 1px solid var(--rule); }
+.yugoslavia-page .jug-notes { padding-block: 20px 28px; }
+.yugoslavia-page .jug-notes > p { max-width: 105ch; font-size: .82rem; line-height: 1.55; color: var(--text-muted); }
+.yugoslavia-page .jug-notes > p + p { margin-top: 8px; }
+.yugoslavia-page .jug-full-itinerary { margin-top: 24px; padding-block: 18px; border-block: 1px solid var(--rule); }
+.yugoslavia-page .jug-full-itinerary > summary { width: fit-content; cursor: pointer; color: var(--color-primary); font-size: 1rem; }
+.yugoslavia-page .jug-full-itinerary ol { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; margin-top: 24px; }
+.yugoslavia-page .jug-full-itinerary h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.yugoslavia-page .jug-full-itinerary p { font-size: .9rem; line-height: 1.55; }
+.yugoslavia-page .jug-full-itinerary p + p { margin-top: 6px; color: var(--text-muted); }
+.yugoslavia-page [hidden] { display: none !important; }
+@media (prefers-reduced-motion: no-preference) {
+  .yugoslavia-page .jug-arrow { transition: background-color 140ms ease-out, color 140ms ease-out; }
+  .yugoslavia-page .jug-card.is-changing { animation: jug-card-change 180ms ease-out; }
+  @keyframes jug-card-change { from { opacity: .45; } to { opacity: 1; } }
+}
+@media (max-width: 780px) {
+  .yugoslavia-page .jug-intro { padding-block: 24px; }
+  .yugoslavia-page .jug-intro h1 { font-size: clamp(1.85rem, 6.2vw, 2.7rem); }
+  .yugoslavia-page .jug-toolbar { padding: 12px 16px; }
+  .yugoslavia-page .jug-position { gap: 4px 12px; font-size: .88rem; }
+  .yugoslavia-page .jug-visuals { display: contents; }
+  .yugoslavia-page .jug-map { position: sticky; top: var(--site-header-height, 80px); z-index: 4; border-bottom: 1px solid var(--rule); }
+  .yugoslavia-page .jug-overview { height: auto; aspect-ratio: 4 / 3; }
+  .yugoslavia-page .jug-marker-label { font-size: 23px; stroke-width: 5px; }
+  .yugoslavia-page .jug-country-label { font-size: 20px; }
+  .yugoslavia-page .jug-illustration { padding: 0; border-left: 0; aspect-ratio: 5 / 3; }
+  .yugoslavia-page .jug-illustration figcaption { padding: 30px 16px 12px; font-size: .8rem; }
+  .yugoslavia-page .jug-card { padding: 20px; min-height: 250px; }
+  .yugoslavia-page .jug-card[data-kind="day"] { padding-left: 16px; }
+  .yugoslavia-page .jug-card > p { font-size: .95rem; }
+  .yugoslavia-page .jug-controls { padding: 14px 16px; grid-template-columns: auto minmax(55px, 150px) auto; gap: 10px; }
+  .yugoslavia-page .jug-arrow { padding: 10px 12px; gap: 5px; font-size: .85rem; }
+  .yugoslavia-page .jug-days { padding: 10px 12px; gap: 2px; }
+  .yugoslavia-page .jug-days button { flex-basis: 38px; min-height: 44px; }
+  .yugoslavia-page .jug-full-itinerary ol { grid-template-columns: 1fr; }
+}
+@media (max-width: 380px) {
+  .yugoslavia-page .jug-arrow span { font-size: .8rem; }
+  .yugoslavia-page .jug-arrow { padding-inline: 8px; }
+  .yugoslavia-page .jug-option { font-size: .8rem; }
+}
+@media print {
+  .yugoslavia-page .doc-head, .yugoslavia-page .jug-toolbar, .yugoslavia-page .jug-controls,
+  .yugoslavia-page .jug-days, .yugoslavia-page #jug-instructions { display: none; }
+  .yugoslavia-page .jug-map { position: static; }
+  .yugoslavia-page .jug-full-itinerary { display: block; }
+}

@@ -1697,6 +1697,10 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
 
 /* Section colors on navigation, controls and page accents. */
 @media screen {
+  .route-cases .case-brief {
+    border: 1px solid var(--gold-700);
+  }
+
   /* Document plates use silver with a restrained report-gold rule. */
   .metro-section .plate {
     background: #E7EAED;

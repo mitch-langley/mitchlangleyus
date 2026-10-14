@@ -3,6 +3,7 @@
 assets/photography/stgo-contrasts/_originals/
 assets/photography/stgo-contrasts/color/
 assets/photography/stgo-contrasts/unused/
+assets/other/yugoslavia/unused/
 *.xls
 *.xlsx
 *.xlsm
@@ -12,6 +13,8 @@ assets/photography/stgo-contrasts/unused/
 !assets/others/README.md
 .toolkit-generated.json
 assets/cases/depot-relocation-strategy.svg
+other/australia.html
+cases/
 
 # Local credentials; keep explicitly named example files trackable
 .env

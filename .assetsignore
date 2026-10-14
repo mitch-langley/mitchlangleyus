@@ -50,8 +50,8 @@ env/
 .ruff_cache/
 /scripts/
 /tests/
-assets/others/tools/
-assets/others/.route-cache/
+assets/other/tools/
+assets/other/.route-cache/
 
 # Source media and working documents
 *.wav
@@ -64,6 +64,9 @@ assets/others/.route-cache/
 assets/photography/stgo-contrasts/_originals/
 assets/photography/stgo-contrasts/color/
 assets/photography/stgo-contrasts/unused/
+assets/other/yugoslavia/unused/
+other/australia.html
+cases/
 
 # Operating system files, backups and local HTML copies
 .DS_Store
