@@ -14,7 +14,6 @@ assets/other/yugoslavia/unused/
 .toolkit-generated.json
 assets/cases/depot-relocation-strategy.svg
 other/australia.html
-cases/
 
 # Local credentials; keep explicitly named example files trackable
 .env
