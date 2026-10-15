@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal and Administrative Framework | Complementary Operating Subsidy | Mitchell Langley</title>
+
+<style>
+  @page {
+    size: Letter portrait;
+    margin: 0.65in;
+  }
+
+  :root {
+    --paper-width: 8.5in;
+    --page-margin: 0.65in;
+
+    --ink: #282B30;
+    --navy: #20384D;
+    --navy-soft: #315571;
+    --gold: #806324;
+    --muted: #69707D;
+    --rule: #D8DCE0;
+    --surface: #F4F6F8;
+
+    --font: "Sitka Text", "Sitka", "Charis SIL", Georgia, serif;
+    --font-heading: "Sitka Heading", "Sitka Display", "Sitka",
+                    "Charis SIL", Georgia, serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: var(--surface);
+  }
+
+  body {
+    margin: 0;
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 10.5pt;
+    line-height: 1.36;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+
+  .sample-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: min(100%, var(--paper-width));
+    margin: 0 auto 18px;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--gold);
+    background: white;
+  }
+
+  .sample-nav__back {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    min-height: 44px;
+    margin-left: -8px;
+    padding: 8px;
+    border-radius: 3px;
+    color: var(--navy);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .sample-nav__back svg {
+    flex: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  .sample-nav__back:hover {
+    background: var(--surface);
+    color: var(--gold);
+  }
+
+  .sample-nav__back:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  .sample-nav__label {
+    color: var(--gold);
+    font-family: var(--font-heading);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 400px) {
+    .sample-nav {
+      padding: 8px 16px;
+    }
+
+    .sample-nav__label {
+      display: none;
+    }
+  }
+
+  .preview-tools {
+    max-width: var(--paper-width);
+    margin: 22px auto 16px;
+    padding: 0 16px;
+    color: var(--muted);
+    font-size: 9.5pt;
+  }
+
+  .preview-tools button {
+    padding: 8px 14px;
+    border: 1px solid var(--navy);
+    border-radius: 3px;
+    background: var(--navy);
+    color: white;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .document {
+    width: var(--paper-width);
+    margin: 0 auto 32px;
+    padding: var(--page-margin);
+    background: white;
+    box-shadow: 0 2px 12px rgb(25 53 74 / 12%);
+  }
+
+  .document-header {
+    border-bottom: 1.2pt solid var(--gold);
+    padding-bottom: 10pt;
+    margin-bottom: 14pt;
+  }
+
+  .eyebrow {
+    margin: 0 0 4pt;
+    color: var(--gold);
+    font-family: var(--font-heading);
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--navy);
+  }
+
+  h1 {
+    margin: 0;
+    max-width: 6.7in;
+    font-size: 23pt;
+    line-height: 1.06;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    margin: 5pt 0 0;
+    color: var(--navy-soft);
+    font-family: var(--font-heading);
+    font-size: 13pt;
+    line-height: 1.2;
+  }
+
+  .author {
+    margin: 9pt 0 0;
+    color: var(--muted);
+    font-size: 10pt;
+  }
+
+  .context-note {
+    margin: 14pt 0 16pt;
+    padding: 10pt 12pt;
+    border-left: 2.5pt solid var(--gold);
+    background: var(--surface);
+  }
+
+  .context-note strong {
+    color: var(--navy);
+  }
+
+  .context-note p {
+    margin: 0;
+  }
+
+  h2 {
+    position: relative;
+    margin: 18pt 0 7pt;
+    padding-bottom: 3pt;
+    border-bottom: 0.4pt solid var(--rule);
+    font-size: 14pt;
+    line-height: 1.18;
+    font-weight: 700;
+    break-after: avoid;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.6pt;
+    width: 0.7in;
+    height: 1.2pt;
+    background: var(--gold);
+  }
+
+  h3 {
+    margin: 13pt 0 5pt;
+    font-size: 11.5pt;
+    line-height: 1.22;
+    font-weight: 700;
+    break-after: avoid;
+  }
+
+  h4 {
+    margin: 10pt 0 4pt;
+    font-size: 10.5pt;
+    line-height: 1.2;
+    font-weight: 700;
+    break-after: avoid;
+  }
+
+  p {
+    margin: 0 0 7pt;
+  }
+
+  ul, ol {
+    margin: 5pt 0 8pt;
+    padding-left: 0.24in;
+  }
+
+  li {
+    margin-bottom: 4pt;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  .lead {
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  .key-conclusion {
+    margin: 10pt 0 13pt;
+    padding: 9pt 11pt;
+    border-left: 2.5pt solid var(--gold);
+    background: var(--surface);
+  }
+
+  .key-conclusion strong {
+    color: var(--navy);
+  }
+
+  .legal-note {
+    margin: 8pt 0;
+    padding: 8pt 10pt;
+    background: var(--surface);
+    border: 0.5pt solid var(--rule);
+    font-size: 9.5pt;
+  }
+
+  .legal-note strong {
+    color: var(--navy);
+  }
+
+  blockquote {
+    margin: 9pt 0 11pt 12pt;
+    padding: 7pt 10pt;
+    border-left: 1.5pt solid var(--gold);
+    color: #3D4248;
+    font-size: 9.6pt;
+    line-height: 1.4;
+  }
+
+  blockquote p {
+    margin: 0;
+  }
+
+  .memo-meta {
+    width: 100%;
+    margin: 2pt 0 15pt;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+  }
+
+  .memo-meta td {
+    border: none;
+    padding: 2.5pt 0;
+    vertical-align: top;
+    background: transparent;
+  }
+
+  .memo-meta td:first-child {
+    width: 0.85in;
+    color: var(--navy);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .source-note {
+    margin-top: 16pt;
+    padding-top: 8pt;
+    border-top: 0.5pt solid var(--rule);
+    color: var(--muted);
+    font-size: 8.5pt;
+  }
+
+  @media print {
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+    }
+
+    .sample-nav,
+    .preview-tools {
+      display: none;
+    }
+
+    .document {
+      width: auto;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+
+    h2,
+    h3,
+    h4,
+    .key-conclusion,
+    .legal-note,
+    blockquote {
+      break-inside: avoid;
+    }
+
+    p,
+    li {
+      orphans: 2;
+      widows: 2;
+    }
+
+    * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>
+</head>
+
+<body>
+<nav class="sample-nav" aria-label="Writing sample navigation">
+  <a class="sample-nav__back" href="../../cases.html#legal-statute-brief">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <path d="M19 12H5M11 18l-6-6 6-6" />
+    </svg>
+    <span>Back to case studies</span>
+  </a>
+  <span class="sample-nav__label">Writing sample</span>
+</nav>
+<!--
+<aside class="preview-tools">
+  <button type="button" onclick="window.print()">Print / Save PDF</button>
+  <p>
+    US Letter. Print at 100% scale with browser headers and footers disabled.
+  </p>
+</aside>
+-->
+<main class="document">
+
+  <header class="document-header">
+    <p class="eyebrow">Professional Writing Sample · Legal and Policy Analysis</p>
+
+    <h1>Legal and Administrative Framework for a Complementary Transit Operating Subsidy</h1>
+
+    <p class="subtitle">
+      Electric Bus Service in the Coquimbo-La Serena Metropolitan Area
+    </p>
+
+    <p class="author">
+      <strong>Mitchell Langley</strong> · April 2026
+    </p>
+  </header>
+
+  <aside class="context-note">
+    <p>
+      <strong>Writing Sample Context.</strong>
+      This memorandum was prepared in 2026 to determine whether the Regional
+      Government of Coquimbo could use regional transportation funds to provide
+      a complementary operating subsidy to the private operator of a regulated
+      electric bus service in the Coquimbo-La Serena metropolitan area. The
+      analysis required reconciliation of a recently amended transportation
+      funding statute, its implementing regulation, an older public-sector
+      contracting statute, the underlying transit procurement and operating
+      contract, and guidance issued by Chile's Office of the Comptroller
+      General. This writing sample is an English-language adaptation of the
+      original Spanish memorandum. It has been edited for clarity and U.S.
+      legal-writing conventions without changing the underlying legal
+      conclusions.
+    </p>
+  </aside>
+
+  <table class="memo-meta">
+    <tr>
+      <td>To</td>
+      <td>Client</td>
+    </tr>
+    <tr>
+      <td>From</td>
+      <td>Mitchell Langley</td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td>April 2026</td>
+    </tr>
+    <tr>
+      <td>Re</td>
+      <td>
+        Authority of the Regional Government of Coquimbo to provide a
+        complementary operating subsidy to a private operator of regulated
+        public transportation service
+      </td>
+    </tr>
+  </table>
+
+
+  <section>
+    <h2>I. Question Presented</h2>
+
+    <p class="lead">
+      May the Regional Government of Coquimbo (the “Regional Government”) use
+      resources from the Public Transportation and Regional Connectivity
+      Support Fund (the “Fund”) to provide Electromovilidad Serena Coquimbo SpA
+      (“ESERCO”), the private operator of a regulated electric bus service, with
+      a complementary operating subsidy?
+    </p>
+  </section>
+
+
+  <section>
+    <h2>II. Short Answer</h2>
+
+    <div class="key-conclusion">
+      <p>
+        <strong>Yes.</strong>
+        The Regional Government may use Fund resources to provide ESERCO with a
+        complementary operating subsidy, provided that the Regional Public
+        Transportation Division (“DTPR”) first issues the required technical
+        approval and the funding is implemented through an interagency mandate
+        agreement (<em>convenio mandato</em>) between the Regional Government
+        and the Ministry of Transport and Telecommunications (“MTT”).
+      </p>
+    </div>
+
+    <p>
+      The Fourth Transitional Article of Law No. 20.378, as amended by Law
+      No. 21.692 (the “Transit Funding Law”), expressly authorizes regional
+      governments to designate public transportation services for operating
+      subsidies from the Fund when those services are regulated under Article 5
+      of Law No. 20.378 or the regulatory mechanisms established by Law
+      No. 18.696. ESERCO's electric bus service falls within the former
+      category. The Transit Funding Law requires prior technical approval by
+      MTT and implementation through a <em>convenio mandato</em> with MTT as
+      the implementing agency.
+    </p>
+
+    <p>
+      Supreme Decree No. 112 of 2025 (“Decree 112”) establishes the procedure
+      for exercising that authority and incorporates the
+      <em>convenio mandato</em> mechanism established by Article 16 of Law
+      No. 18.091. Article 16 requires the recipient of the relevant public
+      contract to have been selected through the “respective procurement.”
+      That requirement is satisfied here. MTT previously conducted a competitive
+      procurement for the electric bus services, awarded the procurement to
+      Liserco, and subsequently approved Liserco's assignment of its rights and
+      obligations to ESERCO. Nothing in Article 16 or the Transit Funding Law
+      requires a second procurement solely because the Regional Government
+      proposes to provide an additional operating subsidy to the operator
+      already selected to provide the underlying service.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>III. Facts</h2>
+
+    <p>
+      MTT created the Special Electromobility Promotion Program through Exempt
+      Resolution No. 2657 of 2020. The program was established under Article 5
+      of Law No. 20.378 and the residual authority in Article 1(iv) of Supreme
+      Decree No. 4 of 2010 for programs that promote public transportation. One
+      component of the program provides incentives for incorporating electric
+      buses into existing public transportation fleets.
+    </p>
+
+    <p>
+      MTT Decree No. 8 of 2022, as amended by Decree No. 44 of 2023, approved
+      the technical and administrative specifications for a competitive
+      procurement of subsidized electric bus service in the Coquimbo-La Serena
+      metropolitan area. MTT awarded that procurement to the La
+      Serena-Coquimbo Microbus Owners Trade Association (“Liserco”) through
+      Decree No. 112 of November 16, 2023.
+    </p>
+
+    <p>
+      On January 29, 2024, MTT and Liserco executed the
+      <em>Contract of Enrollment and Grant of Subsidy for Services E01 and
+      E02</em> (the “Contract”). The Contract requires a minimum fleet of
+      42 electric buses, provides a maximum monthly subsidy of
+      CLP 233 million, and establishes an initial 96-month term, extendable for
+      an additional 24 months. DTPR approved the Contract through Exempt Decree
+      No. 650/2024.
+    </p>
+
+    <p>
+      Section 10 of the Contract permits assignment of contractual rights with
+      MTT's prior approval but prohibits subcontracting the service in its
+      entirety. In May 2024, Liserco sought MTT's approval to assign its rights
+      under the Contract to ESERCO. MTT approved the assignment through DTPR
+      Exempt Resolution No. 2801/2024. ESERCO therefore succeeded to Liserco's
+      rights and obligations under the Contract.
+    </p>
+
+    <p>
+      The statutory framework governing regional transportation funding changed
+      later in 2024. Law No. 21.692 amended the Fourth Transitional Article of
+      Law No. 20.378, created the Fund as the legal successor to the former
+      Regional Support Fund, and expressly authorized regional governments to
+      use Fund resources for operating subsidies to qualifying regulated public
+      transportation services.
+    </p>
+
+    <p>
+      The amended statute requires MTT to validate the proposed service
+      technically before Fund resources are used for an operating subsidy. It
+      also requires the subsidy to be implemented through a
+      <em>convenio mandato</em> between the regional government and MTT, with
+      MTT acting as the implementing agency.
+    </p>
+
+    <p>
+      Decree 112 subsequently established the administrative procedure for
+      implementing these provisions. Article 5 requires prior technical
+      validation by DTPR. Article 6 requires the Regional Government and MTT to
+      execute a <em>convenio mandato</em> pursuant to Article 16 of Law
+      No. 18.091.
+    </p>
+
+    <p>
+      The Office of the Comptroller General reviewed Decree 112 in Official
+      Letter No. E207989/2025. The Comptroller General approved the regulation
+      subject to the qualification that the <em>convenios mandato</em>
+      authorized by Article 6 may be used only for purposes contemplated by the
+      statutory provision that Decree 112 implements.
+    </p>
+
+    <p>
+      The Regional Government is now considering whether Fund resources may be
+      used to provide ESERCO with a complementary operating subsidy, payable in
+      monthly installments during the remaining term of the Contract and in
+      addition to the subsidy already payable under the Contract.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>IV. Analysis</h2>
+
+    <h3>
+      A. The Transit Funding Law Authorizes the Regional Government to Fund
+      Operating Subsidies for Services Regulated Under Article 5 of Law
+      No. 20.378
+    </h3>
+
+    <p>
+      The Regional Government has statutory authority to use Fund resources for
+      the proposed operating subsidy. The Fourth Transitional Article of Law
+      No. 20.378, as amended by Law No. 21.692, establishes the Fund and
+      identifies the purposes for which its resources may be used. Numeral 1
+      authorizes funding for fleet replacement, public transportation
+      infrastructure and modernization, operating expenditures associated with
+      public transportation, and enabling infrastructure.
+    </p>
+
+    <p>
+      More specifically, the paragraph following subsection (c) of numeral 1
+      authorizes the use of Fund resources for operating subsidies in public
+      transportation systems regulated under Law No. 18.696 or for services
+      regulated pursuant to Article 5 of Law No. 20.378. It provides:
+    </p>
+
+    <blockquote>
+      <p>
+        Where a portion of the Fund is allocated to operating subsidies
+        implemented in public transportation systems under the regulatory
+        mechanisms established by Law No. 18.696 or in services regulated
+        pursuant to Article 5 of this law, the Regional Governments shall
+        determine the services that may be financed from the Fund allocation,
+        subject to prior technical validation by the Ministry of Transport and
+        Telecommunications. Implementation of those services shall be carried
+        out through interagency mandate agreements between the respective
+        Regional Government and the Ministry of Transport and
+        Telecommunications, which shall act as the implementing agency in order
+        to ensure the necessary coordination in the use of those resources.
+      </p>
+    </blockquote>
+
+    <p>
+      ESERCO's service falls within the second category. The electric bus
+      service was established through the Special Electromobility Promotion
+      Program, which derives its authority from Article 5 of Law No. 20.378.
+      It is therefore a service “regulated pursuant to Article 5” within the
+      meaning of the operating-subsidy provision.
+    </p>
+
+    <p>
+      The service does not depend on the separate road-use procurement
+      mechanisms established by Law No. 18.696. That statute governs a
+      different regulatory mechanism involving the competitive allocation of
+      road use for route concessions. Because ESERCO's service derives from
+      Article 5 of Law No. 20.378, it independently satisfies the alternative
+      statutory condition for Fund-financed operating subsidies.
+    </p>
+
+    <p>
+      <strong>
+        The Regional Government's authority to provide the subsidy derives from
+        the Transit Funding Law itself, not from Decree 112.
+      </strong>
+      The statute authorizes regional governments to identify qualifying
+      services for operating subsidies and establishes the required
+      <em>convenio mandato</em> with MTT. Decree 112 governs the procedure for
+      exercising that authority. The distinction matters because the legal
+      basis for the proposed expenditure does not depend on an expansive
+      interpretation of the implementing regulation.
+    </p>
+
+
+    <h3>
+      B. Decree 112 Requires DTPR Approval and a Convenio Mandato with MTT
+    </h3>
+
+    <p>
+      Decree 112 establishes the administrative steps the Regional Government
+      must complete before Fund resources may be used for the proposed subsidy.
+      Although the decree formally regulates public transportation operating
+      programs identified in subsection (b) of numeral 1 of the Fourth
+      Transitional Article, Article 1 expressly extends its procedural
+      framework to services regulated under Article 5 of Law No. 20.378 and to
+      transportation projects implemented under Law No. 18.696.
+    </p>
+
+    <p>
+      The Comptroller General's review of Decree 112 confirms that the decree
+      implements numeral 1 of the Fourth Transitional Article. Read together
+      with the operating-subsidy paragraph of that same numeral, Decree 112
+      provides the procedure for implementing the authority applicable to
+      ESERCO.
+    </p>
+
+    <p>
+      Three requirements are relevant here. First, Article 3 recognizes
+      operating programs involving major public transportation services as
+      eligible uses of Fund resources. ESERCO's electric bus service falls
+      within that category and is consistent with the electromobility objective
+      identified in Article 1.
+    </p>
+
+    <p>
+      Second, Article 5 requires DTPR to provide favorable technical validation
+      before the subsidy is implemented. DTPR has a maximum of 45 business days
+      after receiving the Regional Government's submission to issue that
+      determination.
+    </p>
+
+    <p>
+      Third, Article 6 provides that, after favorable technical validation, the
+      Regional Government and MTT must execute the agreements necessary to
+      implement the service pursuant to Article 16 of Law No. 18.091. For the
+      proposed subsidy, that instrument is the <em>convenio mandato</em>
+      required independently by the Transit Funding Law.
+    </p>
+
+    <p>
+      The Comptroller General imposed one relevant limitation when reviewing
+      Decree 112. A <em>convenio mandato</em> executed under Article 6 may not
+      be extended to purposes outside those authorized by the governing
+      statutory provision. The proposed subsidy does not present that problem.
+      An operating subsidy for a service regulated under Article 5 of Law
+      No. 20.378 is expressly contemplated by numeral 1 of the Fourth
+      Transitional Article.
+    </p>
+
+
+    <h3>
+      C. Article 16's Public-Works Origins Do Not Prevent Use of the Convenio
+      Mandato for an Operating Subsidy
+    </h3>
+
+    <p>
+      Article 16 of Law No. 18.091 presents an apparent textual issue because
+      it was enacted to govern public works rather than recurring operating
+      subsidies for existing transportation services. Its second paragraph
+      addresses contracts for the study, design, construction, and maintenance
+      of works and provides that the relevant public entity shall contract
+      directly with the person or entity that “has been awarded the respective
+      procurement.” Its third paragraph permits the public entity to entrust a
+      State technical agency, through a complete and irrevocable mandate, with
+      the procurement, award, and execution of the corresponding work.
+    </p>
+
+    <p>
+      Applying the Article 16 mechanism to an operating subsidy does not require
+      a conclusion that an operating subsidy is itself a public work. The
+      Legislature subsequently incorporated Article 16's mandate mechanism
+      expressly into the transportation funding framework. The Transit Funding
+      Law requires operating subsidies of the type at issue here to be
+      implemented through <em>convenios mandato</em> between regional
+      governments and MTT, and Decree 112 expressly directs the parties to use
+      the Article 16 mechanism.
+    </p>
+
+    <p>
+      The authority to use that mechanism for operating subsidies therefore
+      derives from the later transportation legislation's express
+      cross-reference to Article 16. It does not depend on construing the
+      original public-works language of Article 16 to encompass operating
+      subsidies.
+    </p>
+
+    <p>
+      The Comptroller General's review of Decree 112 is consistent with this
+      reading. The Comptroller General did not object to the use of Article
+      16's <em>convenio mandato</em> mechanism for the purposes identified in
+      Decree 112. Instead, the Comptroller General required that the agreements
+      remain confined to purposes authorized by the statute. Because the
+      proposed ESERCO subsidy falls within the operating-subsidy authority of
+      the Transit Funding Law, that limitation is satisfied.
+    </p>
+
+
+    <h3>
+      D. Article 16's Omission of Regional Governments Does Not Preclude Their
+      Use of the Mandate Mechanism
+    </h3>
+
+    <p>
+      Article 16 does not expressly identify regional governments among the
+      public entities authorized to use its mandate mechanism. That omission is
+      explained by the statute's institutional history. Law No. 18.091 predates
+      the current regional-government structure. Chile's present regional
+      governments were established under Law No. 19.175 in 1992, eleven years
+      after Law No. 18.091 was enacted.
+    </p>
+
+    <p>
+      Later law resolves the issue. The Regional Government has public-law legal
+      personality and its own assets as a territorially decentralized body of
+      the State Administration under Article 13 of D.F.L. No. 1-19.175. More
+      importantly for the present analysis, the Transit Funding Law expressly
+      requires a <em>convenio mandato</em> between the “respective Regional
+      Government” and MTT for the operating subsidies it authorizes. Article 6
+      of Decree 112 likewise identifies the Regional Government as a party to
+      the Article 16 agreement.
+    </p>
+
+    <p>
+      The absence of regional governments from the original text of Article 16
+      therefore does not exclude them from the mechanism. The later
+      transportation legislation expressly incorporates them for the specific
+      purpose at issue here.
+    </p>
+
+
+    <h3>
+      E. The Existing Transit Procurement Satisfies Article 16, and a Second
+      Procurement Is Not Required
+    </h3>
+
+    <p>
+      Article 16's requirement that the contracting party “has been awarded the
+      respective procurement” does not require a new procurement for the
+      complementary subsidy. The statute does not require the procurement to
+      occur after the decision to provide the additional funding. Its language
+      is satisfied by a prior procurement that selected the entity legally
+      responsible for providing the service to which the additional funding
+      relates.
+    </p>
+
+    <p>
+      That condition is satisfied here. MTT competitively procured the electric
+      bus services and awarded the procurement to Liserco through Decree
+      No. 112/2023. MTT and Liserco then executed the Contract, which DTPR
+      approved through Exempt Decree No. 650/2024. Pursuant to Section 10 of
+      the Contract, MTT later approved Liserco's assignment of its contractual
+      rights and obligations to ESERCO through DTPR Exempt Resolution
+      No. 2801/2024. ESERCO is therefore the current operator under the Contract
+      that resulted from the competitively awarded procurement.
+    </p>
+
+    <p>
+      For purposes of Article 16, that procurement is the “respective
+      procurement.” The proposed regional subsidy would provide additional
+      operating support for the same service already awarded through that
+      process. It would not select a new operator, create a separate service, or
+      substitute another provider for the entity currently responsible for
+      performance under the Contract.
+    </p>
+
+    <p>
+      Requiring a second procurement directed solely to the complementary
+      subsidy would therefore duplicate the competitive process already used to
+      select the provider of the underlying service. Neither Article 16, the
+      Transit Funding Law, nor Decree 112 imposes such a requirement.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>V. Conclusion and Recommendation</h2>
+
+    <p>
+      The Regional Government may use Fund resources to provide ESERCO with a
+      complementary operating subsidy for the electric bus services in the
+      Coquimbo-La Serena metropolitan area. The Transit Funding Law expressly
+      authorizes regional governments to finance operating subsidies for
+      qualifying services regulated under Article 5 of Law No. 20.378, and
+      ESERCO's service falls within that category.
+    </p>
+
+    <p>
+      Before disbursement, DTPR must issue favorable technical validation and
+      the Regional Government and MTT must execute a <em>convenio mandato</em>
+      pursuant to the Transit Funding Law, Decree 112, and the mechanism
+      incorporated from Article 16 of Law No. 18.091. No additional procurement
+      is required. The competitive procurement that resulted in the Contract,
+      together with MTT's subsequent approval of the assignment to ESERCO,
+      satisfies Article 16's requirement that the recipient have been selected
+      through the relevant procurement.
+    </p>
+
+    <div class="legal-note">
+      <strong>Recommended implementation.</strong>
+      The <em>convenio mandato</em> should state expressly that the legal basis
+      for the subsidy is numeral 1 of the Fourth Transitional Article of Law
+      No. 20.378, as amended by Law No. 21.692, together with Article 6 of
+      Decree 112. It should also identify the subsidy as additional operating
+      support for the service provided under the Contract and state that the
+      agreement is limited to a purpose expressly contemplated by the Transit
+      Funding Law. Doing so would address directly the limitation identified by
+      the Comptroller General in its review of Decree 112 and would establish
+      the statutory basis for the expenditure on the face of the implementing
+      instrument.
+    </div>
+  </section>
+
+
+  <footer class="source-note">
+    <p>
+      <strong>Translation note:</strong>
+      Statutory and regulatory citations retain their Chilean legal
+      designations. Institutional terminology has been translated where
+      necessary for an English-language legal audience while preserving its
+      Chilean administrative meaning. <em>Convenio mandato</em> is retained
+      after first being described as an “interagency mandate agreement” because
+      it refers to a specific mechanism of Chilean public law for which there
+      is no exact U.S. equivalent. Monetary amounts are stated in Chilean pesos
+      (CLP).
+    </p>
+  </footer>
+
+</main>
+
+</body>
+</html>

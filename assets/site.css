@@ -907,6 +907,34 @@ p { max-width: var(--measure); text-wrap: pretty; }
 .case-brief-head .role-eyebrow { margin-bottom: var(--s2); }
 .case-brief-head .role-title { margin: 0; }
 
+.case-sample-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 44px;
+  margin-top: var(--s4, 16px);
+  padding: var(--s2, 8px) var(--s4, 16px);
+  border: 1px solid var(--gold-700, #806324);
+  border-radius: var(--radius-pill, 999px);
+  background: var(--white, #fff);
+  color: var(--gold-700, #806324);
+  font-size: var(--text-small, .9rem);
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color var(--dur-fast, 140ms) var(--ease-out, ease-out), color var(--dur-fast, 140ms) var(--ease-out, ease-out);
+}
+.case-sample-link:hover,
+.case-sample-link:focus-visible {
+  background: var(--gold-700, #806324);
+  color: var(--white, #fff);
+}
+.case-sample-link:focus-visible {
+  outline-color: var(--gold-700, #806324);
+}
+
 .case-cols {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 1.6fr);
@@ -1134,6 +1162,32 @@ p { max-width: var(--measure); text-wrap: pretty; }
    so all six sit on one line whenever the rail allows. */
 .case-jump { contain: none; }
 .library-jump a, .case-jump a { display: inline-block; text-decoration: none; }
+.case-jump .has-writing-sample {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2, 8px);
+}
+.case-sample-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.case-sample-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2, 8px);
+  margin-top: var(--s3, 12px);
+  color: var(--gold-700, #806324);
+  font-size: var(--text-small, .9rem);
+  line-height: 1.4;
+}
 #library-sections > .band, .case-brief { scroll-margin-top: 5.5rem; }
 
 .book-card {
@@ -1778,6 +1832,16 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
     background: var(--route-ink);
     color: var(--white);
   }
+  .case-jump .has-writing-sample {
+    border-color: var(--gold-700, #806324);
+    background: #F4EDE0;
+    color: var(--gold-700, #806324);
+  }
+  .case-jump .has-writing-sample:hover,
+  .case-jump .has-writing-sample:focus-visible {
+    background: var(--gold-700, #806324);
+    color: var(--white, #fff);
+  }
   .metro-section .book-drawer-bar { border-top: 4px solid var(--route-color); }
   .metro-section .book-drawer::backdrop { background: rgba(0, 0, 0, .45); }
 }
@@ -1981,7 +2045,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--color-primary-ho
 
 
   .doc-nav, .doc-language, .skip-link, .btn, .btn-row,
-  .gallery, .lightbox, .home-routes-nav, .hero-video, .portrait, .case-jump { display: none !important; }
+  .gallery, .lightbox, .home-routes-nav, .hero-video, .portrait, .case-jump, .case-sample-key { display: none !important; }
 
   .doc-head { position: static; display: block; padding: 0 0 .08in; margin-bottom: .16in; box-shadow: none; border-bottom: 2px solid #111; text-align: center; }
   .doc-name { color: #111; font-size: 13pt; }

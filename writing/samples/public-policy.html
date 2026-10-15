@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Policy Analysis and Recommendations | Regional Bus Fleet Replacement Program | Mitchell Langley</title>
+
+<style>
+  @page {
+    size: Letter portrait;
+    margin: 0.65in;
+  }
+
+  :root {
+    --paper-width: 8.5in;
+    --page-margin: 0.65in;
+    --content-width: 7.2in;
+
+    --ink: #282B30;
+    --navy: #20384D;
+    --navy-soft: #315571;
+    --gold: #806324;
+    --muted: #69707D;
+    --rule: #D8DCE0;
+    --surface: #F4F6F8;
+    --surface-dark: #E9EDF1;
+    --table-alt: #F7F8FA;
+
+    --font: "Sitka Text", "Sitka", "Charis SIL", Georgia, serif;
+    --font-heading: "Sitka Heading", "Sitka Display", "Sitka",
+                    "Charis SIL", Georgia, serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: var(--surface);
+  }
+
+  body {
+    margin: 0;
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 10.5pt;
+    line-height: 1.36;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+
+  .sample-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: min(100%, var(--paper-width));
+    margin: 0 auto 18px;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--gold);
+    background: white;
+  }
+
+  .sample-nav__back {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    min-height: 44px;
+    margin-left: -8px;
+    padding: 8px;
+    border-radius: 3px;
+    color: var(--navy);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .sample-nav__back svg {
+    flex: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  .sample-nav__back:hover {
+    background: var(--surface);
+    color: var(--gold);
+  }
+
+  .sample-nav__back:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  .sample-nav__label {
+    color: var(--gold);
+    font-family: var(--font-heading);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 400px) {
+    .sample-nav {
+      padding: 8px 16px;
+    }
+
+    .sample-nav__label {
+      display: none;
+    }
+  }
+
+  .preview-tools {
+    max-width: var(--paper-width);
+    margin: 22px auto 16px;
+    padding: 0 16px;
+    color: var(--muted);
+    font-size: 9.5pt;
+  }
+
+  .preview-tools button {
+    padding: 8px 14px;
+    border: 1px solid var(--navy);
+    border-radius: 3px;
+    background: var(--navy);
+    color: white;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .document {
+    width: var(--paper-width);
+    margin: 0 auto 32px;
+    padding: var(--page-margin);
+    background: white;
+    box-shadow: 0 2px 12px rgb(25 53 74 / 12%);
+  }
+
+  .document-header {
+    border-bottom: 1.2pt solid var(--gold);
+    padding-bottom: 10pt;
+    margin-bottom: 14pt;
+  }
+
+  .eyebrow {
+    margin: 0 0 4pt;
+    color: var(--gold);
+    font-family: var(--font-heading);
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--navy);
+  }
+
+  h1 {
+    margin: 0;
+    max-width: 6.7in;
+    font-size: 23pt;
+    line-height: 1.06;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    margin: 5pt 0 0;
+    color: var(--navy-soft);
+    font-family: var(--font-heading);
+    font-size: 13pt;
+    line-height: 1.2;
+  }
+
+  .author {
+    margin: 9pt 0 0;
+    color: var(--muted);
+    font-size: 10pt;
+  }
+
+  .context-note {
+    margin: 14pt 0 16pt;
+    padding: 10pt 12pt;
+    border-left: 2.5pt solid var(--gold);
+    background: var(--surface);
+  }
+
+  .context-note strong {
+    color: var(--navy);
+  }
+
+  .context-note p {
+    margin: 0;
+  }
+
+  h2 {
+    position: relative;
+    margin: 18pt 0 7pt;
+    padding-bottom: 3pt;
+    border-bottom: 0.4pt solid var(--rule);
+    font-size: 14pt;
+    line-height: 1.18;
+    font-weight: 700;
+    break-after: avoid;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.6pt;
+    width: 0.7in;
+    height: 1.2pt;
+    background: var(--gold);
+  }
+
+  h3 {
+    margin: 13pt 0 5pt;
+    font-size: 11.5pt;
+    line-height: 1.2;
+    font-weight: 700;
+    break-after: avoid;
+  }
+
+  h4 {
+    margin: 10pt 0 4pt;
+    font-size: 10.5pt;
+    line-height: 1.2;
+    font-weight: 700;
+    break-after: avoid;
+  }
+
+  p {
+    margin: 0 0 7pt;
+  }
+
+  ul {
+    margin: 5pt 0 8pt;
+    padding-left: 0.22in;
+  }
+
+  li {
+    margin-bottom: 4pt;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  .lead {
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  .executive-summary {
+    margin-top: 4pt;
+  }
+
+  .key-figure {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .proposal {
+    margin: 10pt 0 13pt;
+    padding: 0 0 0 10pt;
+    border-left: 1.5pt solid var(--gold);
+  }
+
+  .proposal h3 {
+    margin-top: 0;
+  }
+
+  .legal-note {
+    margin: 8pt 0;
+    padding: 8pt 10pt;
+    background: var(--surface);
+    border: 0.5pt solid var(--rule);
+    font-size: 9.5pt;
+  }
+
+  .legal-note strong {
+    color: var(--navy);
+  }
+
+  table {
+    width: 100%;
+    margin: 9pt 0 12pt;
+    border-collapse: collapse;
+    font-size: 9.25pt;
+    line-height: 1.25;
+    break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  th {
+    padding: 6pt;
+    border: 0.5pt solid #BBC3CA;
+    background: var(--navy);
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  td {
+    padding: 5.5pt 6pt;
+    border: 0.5pt solid #C9CFD4;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) td {
+    background: var(--table-alt);
+  }
+
+  td.num,
+  th.num {
+    text-align: right;
+  }
+
+  td.center,
+  th.center {
+    text-align: center;
+  }
+
+  .total-row td {
+    background: #E7EDF3 !important;
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .comparison-table {
+    font-size: 8.75pt;
+  }
+
+  .comparison-table th:first-child {
+    width: 0.55in;
+  }
+
+  .source-note {
+    margin-top: 16pt;
+    padding-top: 8pt;
+    border-top: 0.5pt solid var(--rule);
+    color: var(--muted);
+    font-size: 8.5pt;
+  }
+
+  .page-break {
+    break-before: page;
+  }
+
+  .keep {
+    break-inside: avoid;
+  }
+
+  @media print {
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+    }
+
+    .sample-nav,
+    .preview-tools {
+      display: none;
+    }
+
+    .document {
+      width: auto;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+
+    h2,
+    h3,
+    h4,
+    table,
+    .proposal,
+    .legal-note {
+      break-inside: avoid;
+    }
+
+    p,
+    li {
+      orphans: 2;
+      widows: 2;
+    }
+
+    * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>
+</head>
+
+<body>
+<nav class="sample-nav" aria-label="Writing sample navigation">
+  <a class="sample-nav__back" href="../../cases.html#fleet-replacement">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <path d="M19 12H5M11 18l-6-6 6-6" />
+    </svg>
+    <span>Back to case studies</span>
+  </a>
+  <span class="sample-nav__label">Writing sample</span>
+</nav>
+<!--
+<aside class="preview-tools">
+  <button type="button" onclick="window.print()">Print / Save PDF</button>
+  <p>
+    US Letter. Print at 100% scale with browser headers and footers disabled.
+  </p>
+</aside>
+-->
+<main class="document">
+
+  <header class="document-header">
+    <p class="eyebrow">Professional Writing Sample · Policy Analysis</p>
+
+    <h1>Policy Analysis and Recommendations for the Regional Bus Fleet Replacement Program</h1>
+
+    <p class="subtitle">
+      Prioritizing Renewal of the Urban Bus Fleet in Osorno Province
+    </p>
+
+    <p class="author">
+      <strong>Mitchell Langley</strong> · 2026
+    </p>
+  </header>
+
+  <aside class="context-note">
+    <p>
+      <strong>Writing Sample Context.</strong>
+      This report was prepared in 2026 as an independent policy analysis of
+      <em>Renueva Tu Micro</em> (“Renew Your Bus”), a publicly funded bus fleet
+      replacement program administered by Chilean regional governments pursuant
+      to national transportation law. It reviews the rules adopted by the
+      Regional Government of Los Lagos for the 2026 funding round, compares
+      those rules with fleet and program data from Osorno Province, and proposes
+      changes for a subsequent round. Chilean regional governments are
+      subnational public authorities with elected regional councils and
+      statutorily defined administrative and budgetary powers. This writing
+      sample is an English translation of the original Spanish-language work
+      product. The underlying analysis, findings, and recommendations have not
+      been changed.
+    </p>
+  </aside>
+
+
+  <section>
+    <h2>Executive Summary</h2>
+
+    <div class="executive-summary">
+      <p class="lead">
+        This report reviews the rules governing the 2026
+        <em>Renueva Tu Micro</em> bus fleet replacement program, adopted by the
+        Regional Government of Los Lagos through Exempt Resolution
+        No. 1880/2026. The analysis is limited to matters that fall within the
+        authority granted to regional governments by Supreme Decree No. 44/2011
+        of the Ministry of Transport and Telecommunications (MTT). It does not
+        address the amount of the individual replacement incentives, which MTT
+        establishes nationally and which therefore falls outside the Regional
+        Government's authority.
+      </p>
+
+      <p>
+        The point of departure is the urban bus fleet in Osorno, which operates
+        under a <strong>Regulated Service Area
+        (<em>Perímetro de Exclusión</em>)</strong>. For purposes of this
+        translation, “Regulated Service Area” refers to the specific Chilean
+        regulatory mechanism under which MTT establishes operating conditions
+        for public transportation services within a defined geographic area.
+        Osorno is consequently subject to a maximum bus age of 20 years under
+        MTT Resolution No. 3/2021, rather than the general national maximum of
+        22 years.
+        <span class="key-figure">Forty-seven of Osorno's 246 registered urban
+        buses, or 19.11 percent of the fleet, were manufactured in 2007 or
+        earlier and will therefore reach or exceed the applicable 20-year limit
+        within the horizon of the next funding round.</span>
+        A further 10 buses manufactured in 2008 will reach that limit during
+        2027, bringing the identified near-term replacement need to 57 vehicles.
+      </p>
+
+      <p>
+        The results of the 2026 funding round confirm that this regulatory
+        pressure is not adequately reflected in the existing selection
+        methodology. Osorno received only
+        <span class="key-figure">1 of the 21 urban awards</span> made during the
+        first stage of the 2026 program. At the same time,
+        <span class="key-figure">28 of the 37 applicants placed on the regional
+        urban waiting list, or 75.7 percent, were from Osorno.</span>
+        The result is a substantial mismatch between the location of the
+        documented replacement need and the allocation produced by the current
+        selection criteria.
+      </p>
+
+      <p>
+        Three changes are proposed for a future funding round. The first is to
+        revise the allocation of resources between the Urban and Rural
+        categories, or alternatively to establish an Osorno-specific
+        suballocation within the Urban category. The second is to revise the
+        first-stage order of priority so that vehicles operating within a
+        Regulated Service Area receive greater weight. The third is to
+        strengthen territorial retention by extending the minimum period during
+        which replacement vehicles must remain within the Los Lagos Region and
+        by creating a selection preference for applicants that voluntarily
+        commit to retaining the replacement vehicle in urban service in Osorno.
+      </p>
+
+      <p>
+        Each proposal is limited by the scope of the authority delegated to the
+        Regional Government. Most importantly, the governing regulation allows
+        restrictions on reassignment at the regional level, but does not
+        authorize the Regional Government to impose an additional mandatory
+        restriction at the provincial or municipal level. An Osorno-specific
+        retention measure should therefore be structured as a voluntary
+        selection criterion rather than as a mandatory post-award condition.
+        Any differential treatment in favor of Osorno should also be supported
+        expressly by objective technical evidence, both to satisfy the
+        requirements applicable to reasoned administrative decision-making and
+        to reduce the risk of claims of arbitrary or unequal treatment by
+        operators elsewhere in the Los Lagos Region.
+      </p>
+    </div>
+  </section>
+
+
+  <section>
+    <h2>1. Introduction</h2>
+
+    <p>
+      This report analyzes Exempt Resolution No. 1880/2026 of the Regional
+      Government of Los Lagos, which establishes the rules governing the 2026
+      <em>Renueva Tu Micro</em> funding round, and proposes changes for a future
+      round. The analysis is confined to the powers that Supreme Decree
+      No. 44/2011 of the Ministry of Transport and Telecommunications, as
+      subsequently amended, grants to regional governments.
+    </p>
+
+    <p>
+      The report therefore does not propose changes to the nationally
+      established incentive amounts, including vehicle purchase value and the
+      supplemental incentive components. Those amounts are established annually
+      by MTT and are currently governed by Exempt Resolution No. 741/2026. They
+      are outside the rulemaking authority of the Regional Government.
+    </p>
+
+    <p>
+      The report incorporates a quantitative analysis of the age profile of
+      Osorno's urban bus fleet using the National Public Transportation
+      Registry (<em>Registro Nacional de Transporte Público</em>, RNSTP). Those
+      data are compared with the MTT regulations governing maximum vehicle age.
+      The purpose is to ensure that the recommendations that follow are based
+      on objective and verifiable information and that any future decision by
+      the Regional Government can be supported by a documented technical basis.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>2. Governing Policy and Regulatory Framework</h2>
+
+    <ul>
+      <li>
+        <strong>Law No. 20.378 (2010), Fourth Transitional Article.</strong>
+        As amended by Law No. 21.692, this provision creates the special
+        funding mechanism used by the program and authorizes regional
+        governments to conduct fleet replacement funding rounds.
+      </li>
+
+      <li>
+        <strong>Supreme Decree No. 44/2011, Ministry of Transport and
+        Telecommunications.</strong>
+        This is the principal regulation governing the Special Program for the
+        Replacement of Buses, Minibuses, Trolleybuses, and Taxibuses.
+      </li>
+
+      <li>
+        <strong>Exempt Resolution No. 1880/2026, Regional Government of Los
+        Lagos.</strong>
+        This resolution establishes the rules governing the 2026 regional
+        funding round.
+      </li>
+
+      <li>
+        <strong>Regional Council Certificate No. 151, March 20, 2026.</strong>
+        This records the Regional Council's approval of the 2026 distribution
+        of program resources, with 50 percent assigned to the Urban category
+        and 50 percent assigned to the Rural category.
+      </li>
+
+      <li>
+        <strong>Exempt Resolution No. 741/2026, MTT.</strong>
+        This establishes the vehicle purchase values and incentive amounts
+        applicable during 2026. Those amounts are not analyzed in this report.
+      </li>
+
+      <li>
+        <strong>Decree No. 44 of June 18, 2024, MTT.</strong>
+        This establishes a general maximum vehicle age of 22 years for buses
+        and taxibuses providing compensated public transportation service.
+        Services operating in cities, provinces, or municipalities subject to
+        a Regulated Service Area or equivalent mechanism are expressly excluded
+        from that general rule and remain subject to the maximum age established
+        by the resolution governing the particular regulated system.
+      </li>
+
+      <li>
+        <strong>Resolution No. 3/2021, MTT.</strong>
+        This establishes the operating conditions applicable to Osorno's urban
+        public transportation Regulated Service Area and fixes a maximum age of
+        20 years for buses assigned to that system.
+      </li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2>3. Regulatory Diagnosis: Age of Osorno's Urban Bus Fleet</h2>
+
+    <p>
+      Osorno is one of the municipalities in Chile in which urban public
+      transportation operates under a Regulated Service Area. Decree
+      No. 44/2024 identifies Castro, Quellón, Osorno, and Puerto Montt among the
+      locations in the Los Lagos Region with active regulated-area arrangements.
+      In the case of Osorno, MTT Resolution No. 3/2021 establishes a maximum
+      vehicle age of 20 years. The applicable local standard is therefore more
+      stringent than the general 22-year maximum that applies where no
+      Regulated Service Area or equivalent mechanism is in force.
+    </p>
+
+    <p>
+      The June 2026 RNSTP vehicle registry makes it possible to quantify the
+      resulting replacement requirement. The next <em>Renueva Tu Micro</em>
+      funding round is expected in 2027. A vehicle manufactured in 2007 will
+      therefore reach 20 years of age during that year. For purposes of the
+      analysis, vehicles manufactured in 2007 or earlier are treated as the
+      group that will reach or exceed the applicable limit within the horizon
+      of the next funding round.
+    </p>
+
+    <div class="keep">
+      <h3>Fleetwide Results</h3>
+
+      <ul>
+        <li><strong>Total registered urban bus fleet:</strong> 246 vehicles</li>
+        <li><strong>Vehicles manufactured in 2007 or earlier:</strong> 47 vehicles</li>
+        <li><strong>Share of fleet in this category:</strong> 19.11%</li>
+      </ul>
+    </div>
+
+    <p>
+      In practical terms, almost one in five urban buses registered in Osorno
+      falls within the group that will reach or exceed the 20-year maximum
+      during the planning horizon relevant to the next funding round.
+    </p>
+
+    <table aria-label="Age exposure by operator">
+      <thead>
+        <tr>
+          <th>Operator Folio</th>
+          <th class="num">Total Fleet</th>
+          <th class="num">2007 or Earlier</th>
+          <th class="num">Share of Fleet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>400063</td>
+          <td class="num">87</td>
+          <td class="num">25</td>
+          <td class="num">28.7%</td>
+        </tr>
+        <tr>
+          <td>400065</td>
+          <td class="num">47</td>
+          <td class="num">11</td>
+          <td class="num">23.4%</td>
+        </tr>
+        <tr>
+          <td>400009</td>
+          <td class="num">22</td>
+          <td class="num">5</td>
+          <td class="num">22.7%</td>
+        </tr>
+        <tr>
+          <td>400012</td>
+          <td class="num">20</td>
+          <td class="num">3</td>
+          <td class="num">15.0%</td>
+        </tr>
+        <tr>
+          <td>400032</td>
+          <td class="num">30</td>
+          <td class="num">2</td>
+          <td class="num">6.7%</td>
+        </tr>
+        <tr>
+          <td>400075</td>
+          <td class="num">21</td>
+          <td class="num">0</td>
+          <td class="num">0.0%</td>
+        </tr>
+        <tr>
+          <td>400074</td>
+          <td class="num">18</td>
+          <td class="num">0</td>
+          <td class="num">0.0%</td>
+        </tr>
+        <tr>
+          <td>400070</td>
+          <td class="num">1</td>
+          <td class="num">1</td>
+          <td class="num">100.0% (n=1)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      The problem is not distributed uniformly among operators. Folios 400063,
+      400065, and 400009 account for 41 of the 47 affected vehicles, equivalent
+      to 87 percent of the total. Folio 400063 presents the most significant
+      case in both absolute and relative terms, with 25 vehicles in the
+      identified age group representing 28.7 percent of its fleet. Folios
+      400074 and 400075, by comparison, have no vehicles in this category.
+      Fleet age is therefore a concentrated problem affecting identifiable
+      operators rather than a condition distributed evenly throughout the
+      Osorno system.
+    </p>
+
+    <p>
+      The same pressure will continue during 2027, when 10 additional buses
+      manufactured in 2008 reach the 20-year limit.
+    </p>
+
+    <table aria-label="Additional 2008 vehicles">
+      <thead>
+        <tr>
+          <th>Operator Folio</th>
+          <th class="num">Vehicles Manufactured in 2008</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>400063</td><td class="num">6</td></tr>
+        <tr><td>400065</td><td class="num">1</td></tr>
+        <tr><td>400009</td><td class="num">0</td></tr>
+        <tr><td>400012</td><td class="num">2</td></tr>
+        <tr><td>400032</td><td class="num">0</td></tr>
+        <tr><td>400075</td><td class="num">1</td></tr>
+        <tr><td>400074</td><td class="num">0</td></tr>
+        <tr><td>400070</td><td class="num">0</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      This quantification is relevant to each of the proposals developed below.
+      It permits the Regional Government to evaluate the situation in Osorno on
+      the basis of technical information that is objective, identifiable by
+      operator, and independently verifiable against the RNSTP and the
+      20-year limit established by MTT Resolution No. 3/2021.
+    </p>
+
+    <h3>2026 Program Outcomes</h3>
+
+    <p>
+      The results of the 2026 funding round reflect the same problem from a
+      different direction. According to Regional Public Transit Division
+      Official Letter No. 17189/2026, which reports the results of the first
+      stage and the associated waiting list, Osorno received only
+      <strong>one of the 21 urban awards</strong>, equivalent to 4.8 percent of
+      the total. The single award, made to operator DTCV15 (Américo Pizarro
+      Queulo), totaled CLP $105,490,000.
+    </p>
+
+    <p>
+      At the same time, <strong>28 of the 37 applicants placed on the urban
+      waiting list, or 75.7 percent, were from Osorno</strong>. Those
+      applications represented CLP $2,077,930,000 in requested funding awaiting
+      award.
+    </p>
+
+    <p>
+      The imbalance is relevant because Osorno was heavily represented on the
+      waiting list while receiving only one initial award, notwithstanding a
+      documented fleet-age exposure of 19.11 percent. The result indicates that
+      the current selection methodology, in which Regulated Service Area status
+      occupies fourth place in the order of priority, does not adequately
+      reflect the particular regulatory pressure affecting Osorno. Vehicles in
+      other cities may therefore receive priority even where the applicable
+      fleet-age constraint is less immediate.
+    </p>
+
+    <p>
+      The 2026 results accordingly provide additional support for reconsidering
+      both the allocation of resources within the Urban category and the
+      position assigned to Regulated Service Area status in the first-stage
+      selection criteria.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>4. Assessment of the 2026 Program Rules</h2>
+
+    <h3>4.1 Allocation of Funding Between Urban and Rural Categories</h3>
+
+    <p>
+      The 2026 rules allocate 50 percent of program resources to urban buses and
+      50 percent to rural buses. Supreme Decree No. 44 does not require this
+      distribution and does not prescribe another fixed percentage. The current
+      allocation is a decision of the Regional Government, approved through
+      Regional Council Certificate No. 151/2026.
+    </p>
+
+    <p>
+      The distinction matters because the Regional Government retains authority
+      to reconsider both the percentage allocated to each category and the
+      structure used to distribute those resources in a future funding round.
+      The fleet and program data summarized above provide a technical basis on
+      which that authority may be exercised.
+    </p>
+
+    <h3>4.2 First-Stage Prioritization Within the Urban Category</h3>
+
+    <p>
+      Within the Urban category, outgoing vehicles from cities or areas
+      operating under a Regulated Service Area, including Osorno, currently
+      occupy fourth place in the order of priority. They rank below buses
+      replaced because of vandalism, applications proposing incoming electric
+      vehicles, and applications proposing incoming vehicles meeting the
+      Santiago <em>RED</em> fleet standard.
+    </p>
+
+    <p>
+      Article 11 of Supreme Decree No. 44 gives regional governments authority
+      to establish the selection criteria applicable to each funding round. It
+      does not impose the current order. The Regional Government may therefore
+      revise that order in a future call for applications.
+    </p>
+
+    <p>
+      In Osorno, Regulated Service Area status is directly connected to the
+      fleet-age problem identified above. Resolution No. 3/2021 imposes a
+      20-year maximum precisely because the buses operate within that regulatory
+      framework. The current placement of the criterion in fourth position does
+      not reflect the urgency created when a significant portion of the local
+      fleet is approaching the maximum age permitted under the resolution.
+    </p>
+
+    <h3>4.3 Territorial Retention of Replacement Vehicles</h3>
+
+    <p>
+      Under the 2026 rules, an incoming replacement vehicle may not change its
+      type of service or leave the Los Lagos Region for a minimum period of
+      36 months beginning with the second stage of the application process.
+      This requirement reproduces Article 15(b) of Supreme Decree No. 44.
+    </p>
+
+    <p>Two issues are relevant to a future funding round:</p>
+
+    <ul>
+      <li>
+        <strong>Duration.</strong>
+        The regulation establishes a minimum period of “at least” 36 months.
+        The Regional Government may therefore establish a longer minimum.
+      </li>
+
+      <li>
+        <strong>Geographic scope.</strong>
+        The restriction applies to the vehicle's region and type of service. It
+        does not establish an equivalent restriction at the level of a province
+        or municipality. Under the present framework, a vehicle replaced in
+        Osorno could therefore later be reassigned to urban service elsewhere
+        in the Los Lagos Region without violating Article 15(b).
+      </li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2>5. Recommendations for a Future Funding Round</h2>
+
+    <p>
+      The proposals that follow are limited to powers expressly available to
+      the Regional Government under Supreme Decree No. 44. For each proposal,
+      the relevant authority is identified together with the principal
+      procedural or legal limitation on its use. The Regional Government
+      remains free to adopt, modify, or reject any of the proposals. The
+      quantitative analysis provides a technical basis for that decision; it
+      does not convert a discretionary policy choice into a legal obligation.
+    </p>
+
+
+    <div class="proposal">
+      <h3>Proposal A: Adjust the Allocation of Resources Between Program Categories</h3>
+
+      <p>
+        Article 2 of Supreme Decree No. 44 provides that annual program
+        expenditures are subject to the maximum amount that each Regional
+        Government determines to allocate to the program. The current 50/50
+        division between the Urban and Rural categories does not originate in
+        Supreme Decree No. 44. It was established by decision of the Regional
+        Council.
+      </p>
+
+      <p>Two alternatives are available and may be used separately or together:</p>
+
+      <ul>
+        <li>
+          <strong>Modify the percentage allocated to each category.</strong>
+          The Regional Government may assign a larger share of program
+          resources to the Urban category. Within that category, Osorno's
+          Regulated Service Area status and documented concentration of aging
+          vehicles would then operate together with the revised selection
+          criteria proposed below.
+        </li>
+
+        <li>
+          <strong>Establish a geographic suballocation within the Urban
+          category.</strong>
+          A defined percentage of Urban-category resources may be reserved for
+          applications involving vehicles operating in Osorno Province.
+        </li>
+      </ul>
+
+      <p>
+        The available data permit either alternative to be supported by a
+        specific factual record. Osorno has 246 registered urban buses, 47 of
+        which fall within the immediate age group identified in this report,
+        with most of those vehicles concentrated among three operators. A
+        decision based on those figures is more readily defensible than one
+        based on a generalized preference for Osorno, particularly if operators
+        in other provinces question the allocation.
+      </p>
+
+      <div class="legal-note">
+        <strong>Procedural consideration.</strong>
+        A change in the percentage distribution of program resources would
+        require approval by the Regional Council, just as the existing
+        distribution was approved through Regional Council Certificate
+        No. 151/2026. It cannot be adopted solely through an administrative
+        decision of the Regional Government's Infrastructure and Transportation
+        Division.
+      </div>
+
+      <div class="legal-note">
+        <strong>Basis for a geographic suballocation.</strong>
+        If the Regional Government adopts an Osorno-specific suballocation, the
+        resolution should identify the objective evidence supporting that
+        treatment. Relevant considerations include the age profile of Osorno's
+        urban fleet, the 20-year maximum established by Resolution No. 3/2021,
+        the timetable under which additional vehicles will reach that limit,
+        and, if appropriate, comparison with other provincial capitals in the
+        Los Lagos Region. The purpose is to establish a documented technical
+        basis for the distinction and to reduce the risk that the measure could
+        be characterized as arbitrary or unequal.
+      </div>
+
+      <h4>Estimated Funding Requirement</h4>
+
+      <p>
+        The 57 vehicles identified in the analysis, consisting of 47 vehicles
+        manufactured in 2007 or earlier and 10 additional vehicles manufactured
+        in 2008, also permit an estimate of the amount of regional resources
+        required to address the replacement need under different incoming
+        vehicle scenarios.
+      </p>
+
+      <table aria-label="Estimated replacement funding requirement">
+        <thead>
+          <tr>
+            <th rowspan="2">Retirement Year</th>
+            <th colspan="2" class="center">New Incoming Diesel Bus</th>
+          </tr>
+          <tr>
+            <th class="num">Taxibus</th>
+            <th class="num">RED Standard<br>(including BER + IAU)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2026 (2005-2007 buses)</td>
+            <td class="num">CLP $1,175,140,000</td>
+            <td class="num">CLP $3,787,400,000</td>
+          </tr>
+          <tr>
+            <td>2027 (2008 buses)</td>
+            <td class="num">CLP $281,800,000</td>
+            <td class="num">CLP $837,600,000</td>
+          </tr>
+          <tr class="total-row">
+            <td>Total, 2026-2027</td>
+            <td class="num">CLP $1,456,940,000</td>
+            <td class="num">CLP $4,625,000,000</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        These figures are included only to establish the approximate budgetary
+        scale of the replacement requirement. They are calculated using the
+        vehicle purchase values and incentive amounts applicable during 2026
+        under Exempt Resolution No. 741/2026. The figures do not constitute a
+        proposal to modify those amounts, which remain outside the authority of
+        the Regional Government. Their purpose is to quantify the fiscal effort
+        associated with the identified fleet under each vehicle scenario and to
+        inform the allocation decision described above.
+      </p>
+    </div>
+
+
+    <div class="proposal">
+      <h3>Proposal B: Restructure First-Stage Urban Selection Priorities</h3>
+
+      <p>
+        Article 11 of Supreme Decree No. 44 expressly authorizes regional
+        governments to determine the selection criteria applicable to each
+        funding round. It does not prescribe either a fixed number of criteria
+        or a mandatory order of priority. The current hierarchy may therefore
+        be revised.
+      </p>
+
+      <table class="comparison-table" aria-label="Current and proposed selection priorities">
+        <thead>
+          <tr>
+            <th class="center">Priority</th>
+            <th>Current Criterion<br>(Exempt Resolution No. 1880/2026)</th>
+            <th>Proposed Criterion for Future Funding Round</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="center"><strong>1</strong></td>
+            <td>Applications replacing buses damaged by vandalism.</td>
+            <td>Applications replacing buses damaged by vandalism.</td>
+          </tr>
+          <tr>
+            <td class="center"><strong>2</strong></td>
+            <td>Applications proposing incoming electric vehicles.</td>
+            <td>
+              Outgoing vehicles from cities or areas operating under a
+              Regulated Service Area pursuant to Law No. 18.696, including
+              qualifying systems continued through an applicable resolution.
+            </td>
+          </tr>
+          <tr>
+            <td class="center"><strong>3</strong></td>
+            <td>Applications proposing incoming RED-standard vehicles.</td>
+            <td>Applications proposing incoming electric vehicles.</td>
+          </tr>
+          <tr>
+            <td class="center"><strong>4</strong></td>
+            <td>
+              Outgoing vehicles from cities operating under a Regulated Service
+              Area.
+            </td>
+            <td>Applications proposing incoming RED-standard vehicles.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        The proposed change would move Regulated Service Area status from fourth
+        to second place, immediately after buses replaced because of vandalism.
+        The justification is the documented convergence in Osorno of two
+        separate regulatory conditions: operation under a Regulated Service
+        Area and the 20-year maximum vehicle age imposed through Resolution
+        No. 3/2021.
+      </p>
+
+      <p>
+        The vehicle-age requirement affects 19.11 percent of Osorno's urban
+        fleet within the planning horizon analyzed here and is concentrated
+        among identifiable operators. Buses replaced because of vandalism
+        address an immediate emergency and public-safety condition, which
+        supports retaining that criterion in first place. Vehicles affected by
+        Osorno's Regulated Service Area face a different form of regulatory
+        urgency because they must leave service upon reaching the applicable
+        maximum age. That condition supports assigning the criterion greater
+        weight than it receives under the current rules.
+      </p>
+
+      <p>
+        Article 11 would allow the Regional Government to place Regulated
+        Service Area status either first or second. The choice between those
+        positions is a policy decision rather than a question of legal
+        authority. If the hierarchy is changed, the resolution should state the
+        reason for the change expressly and should identify the fleet-age data
+        on which the decision relies.
+      </p>
+
+      <div class="legal-note">
+        <strong>Drafting consideration.</strong>
+        Any revision should preserve the existing substantive definition of the
+        Regulated Service Area criterion, including its reference to Law
+        No. 18.696 and the continuation of qualifying operating arrangements
+        through an applicable resolution. This avoids narrowing the criterion
+        inadvertently or creating unnecessary uncertainty as to its scope.
+      </div>
+    </div>
+
+
+    <div class="proposal">
+      <h3>Proposal C: Strengthen Territorial Retention of Replacement Vehicles</h3>
+
+      <p>
+        A two-part mechanism is proposed. The first relies on the authority to
+        establish a longer regional retention period. The second uses the
+        Regional Government's authority over selection criteria to encourage
+        continued operation in Osorno without imposing a restriction that
+        exceeds the geographic scope authorized by the national regulation.
+      </p>
+
+      <h4>1. Extend the Minimum Regional Retention Period</h4>
+
+      <p>
+        Article 15(b) establishes a minimum retention period of “at least”
+        36 months. The Regional Government may therefore establish a longer
+        period, such as 48 or 60 months, for the next funding round. Extending
+        the period would provide greater assurance that vehicles renewed with
+        regional resources remain within the Los Lagos Region for a meaningful
+        period after the public investment is made.
+      </p>
+
+      <h4>2. Incentivize Voluntary Retention in Osorno</h4>
+
+      <p>
+        Article 15(b) restricts changes in the vehicle's type of service and
+        region. It does not authorize a corresponding mandatory restriction at
+        the provincial or municipal level. A condition requiring a replacement
+        vehicle to remain exclusively in the city or municipality of Osorno
+        would therefore go beyond the authority delegated to the Regional
+        Government by the regulation.
+      </p>
+
+      <p>
+        Supreme Decree No. 44 is a national regulation issued jointly by the
+        Ministries of Transport, Interior, and Finance. A regional funding
+        resolution cannot unilaterally expand the geographic scope of the
+        restriction established in Article 15(b). An Osorno-specific mandatory
+        retention requirement should therefore not be included as a condition
+        of award.
+      </p>
+
+      <p>
+        The same policy objective can be pursued through Article 11. A future
+        funding round could assign additional points or priority to applicants
+        that voluntarily commit, through a sworn declaration or contractual
+        undertaking, to retain the replacement vehicle in Osorno urban service
+        for a defined period.
+      </p>
+
+      <p>
+        The distinction is material. A mandatory restriction imposed after
+        award must remain within the limits established by Article 15. A
+        voluntary commitment used as a selection criterion falls instead within
+        the broader authority granted by Article 11 to determine how
+        applications are prioritized.
+      </p>
+    </div>
+  </section>
+
+
+  <section>
+    <h2>6. Cross-Cutting Implementation Considerations</h2>
+
+    <p>
+      The following considerations apply across the three proposals and should
+      be reflected in the design of any future funding round.
+    </p>
+
+    <h3>Distinguish Discretionary Powers from Rule-Bound Requirements</h3>
+
+    <p>
+      Supreme Decree No. 44 does not grant the same degree of discretion in all
+      matters. The allocation of resources under Article 2 and the definition
+      of selection criteria under Article 11 leave substantial room for
+      regional policy choices. Eligibility requirements and post-award
+      restrictions under Articles 4, 5, and 15 are more closely defined by the
+      regulation itself.
+    </p>
+
+    <p>
+      Those more closely defined provisions may be adjusted only where the
+      regulation expressly permits it. The clearest example is the authority to
+      extend a stated minimum retention period. They should not be used to
+      create new categories of mandatory restriction, such as municipal-level
+      vehicle retention, where the national regulation does not provide for
+      them.
+    </p>
+
+    <h3>Establish an Objective Technical Basis for Geographic Differentiation</h3>
+
+    <p>
+      Any decision that gives Osorno different treatment from other provinces
+      in the Los Lagos Region should be supported by objective evidence. The
+      quantitative analysis in this report provides such a basis. Osorno has
+      246 registered urban buses, 47 of which fall within the immediate age
+      group identified here. Those vehicles are concentrated among identifiable
+      operators, and their regulatory significance derives from the 20-year
+      maximum established specifically for the Osorno system by Resolution
+      No. 3/2021.
+    </p>
+
+    <p>
+      Those facts should be incorporated expressly into the administrative
+      record supporting any geographic allocation or change in selection
+      criteria. Doing so would provide the technical foundation required for a
+      reasoned administrative decision and would help address potential claims
+      that the Regional Government had treated operators in different parts of
+      the region arbitrarily or without sufficient justification.
+    </p>
+
+    <h3>Use the Appropriate Decision-Making Procedure</h3>
+
+    <p>
+      The proposals also require different procedural routes. A change in the
+      percentage distribution of program resources requires Regional Council
+      approval. Changes to the selection criteria may be established
+      administratively when the funding-round rules are adopted pursuant to
+      Article 11. An extension of the regional retention period may likewise be
+      established in the funding-round rules pursuant to Article 15(b).
+    </p>
+  </section>
+
+
+  <section>
+    <h2>7. Conclusion</h2>
+
+    <p>
+      The Regional Government of Los Lagos has authority to modify several
+      elements of the next <em>Renueva Tu Micro</em> funding round in response
+      to the replacement needs documented in Osorno. The available evidence
+      supports consideration of a revised allocation between the Urban and
+      Rural categories, an Osorno-specific suballocation within the Urban
+      category, greater priority for vehicles operating under a Regulated
+      Service Area, and a longer regional retention period combined with an
+      incentive for voluntary continued operation in Osorno.
+    </p>
+
+    <p>
+      That authority is subject to identifiable limits. Mandatory post-award
+      restrictions must remain within the geographic scope established by
+      Supreme Decree No. 44. Any differential treatment of Osorno should also
+      be supported by objective evidence and by an express statement of the
+      technical considerations that justify the distinction.
+    </p>
+
+    <p>
+      The decision to adopt, modify, or reject the proposals remains a decision
+      of regional public policy. Whichever approach is adopted, the resolution
+      or other administrative instrument formalizing that decision should
+      identify the relevant fleet-age data and the requirements of MTT
+      Resolution No. 3/2021 as part of its stated technical basis. This would
+      connect the exercise of the Regional Government's discretion to the
+      documented conditions of the Osorno fleet and provide a clearer basis for
+      implementation and subsequent administrative review.
+    </p>
+  </section>
+
+
+  <footer class="source-note">
+    <p>
+      <strong>Translation note:</strong>
+      Statutory and regulatory citations retain their Chilean legal
+      designations. Institutional terminology has been translated where
+      necessary for an English-language planning audience while preserving its
+      Chilean administrative meaning. <em>Perímetro de Exclusión</em> is
+      rendered as “Regulated Service Area.” Monetary amounts are stated in
+      Chilean pesos (CLP).
+    </p>
+  </footer>
+
+</main>
+
+</body>
+</html>
