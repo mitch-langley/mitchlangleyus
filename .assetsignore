@@ -10,6 +10,7 @@
 .vscode/
 .idea/
 .toolkit-generated.json
+.ignore/
 
 # Local credentials, including example files
 .env
@@ -54,6 +55,11 @@ assets/other/tools/
 assets/other/.route-cache/
 
 # Source media and working documents
+# Professional documents and working previews are not public assets.
+/resume.html
+/writing/samples/
+/assets/cases/
+/index-sandbox.html
 *.wav
 *.xls
 *.xlsx

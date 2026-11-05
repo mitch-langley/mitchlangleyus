@@ -1,0 +1,5 @@
+/resume /about.html 302
+/resume.html /about.html 302
+/index-sandbox / 302
+/index-sandbox.html / 302
+/writing/samples/* /cases.html 302

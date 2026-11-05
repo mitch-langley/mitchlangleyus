@@ -1,20 +1,6 @@
-# Source media and working documents
-*.wav
-assets/photography/stgo-contrasts/_originals/
-assets/photography/stgo-contrasts/color/
-assets/photography/stgo-contrasts/unused/
-assets/other/yugoslavia/unused/
-*.xls
-*.xlsx
-*.xlsm
-*.docx
-*.pptx
-*.md
-!assets/others/README.md
 .toolkit-generated.json
-assets/cases/depot-relocation-strategy.svg
+.ignore/
 
-# Local credentials; keep explicitly named example files trackable
 .env
 .env.*
 .dev.vars
@@ -67,6 +53,3 @@ test-results/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Route-generation source downloads
-assets/others/.route-cache/
