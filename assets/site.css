@@ -24,7 +24,7 @@
     background: var(--surface, #f4f6f8);
     color: var(--ink, #282b30);
     font-family: 'Sitka Text', 'Sitka', Georgia, 'Times New Roman', serif;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
@@ -64,23 +64,26 @@
   body { padding: 3rem 1.25rem; }
 
   main {
-    max-inline-size: 68ch;
+    max-inline-size: 40rem;
+    margin-inline: auto;
     overflow-wrap: break-word;
   }
 
-  .photo-panel {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: .75rem;
-    margin-block: 1.5rem 2rem;
+  .heading-photo {
+    inline-size: fit-content;
+    max-inline-size: 100%;
+    margin-inline: auto;
+    margin-block-end: 2rem;
+    text-align: center;
   }
 
-  .photo-panel img {
+  .heading-photo img {
     display: block;
-    inline-size: 100%;
+    /* Let the heading set the width, then fill that width with the photo. */
+    inline-size: 0;
+    min-inline-size: 100%;
     block-size: auto;
-    max-block-size: 300px;
-    aspect-ratio: 1;
+    margin-block-start: 1.5rem;
     border: 1px solid rgb(49 85 113 / .16);
     border-radius: .5rem;
     box-shadow: 0 2px 8px rgb(32 56 77 / .1);
@@ -90,6 +93,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: .5rem 1.5rem;
     margin-block-start: 2rem;
     font-size: 1rem;
@@ -121,7 +125,4 @@
 
   .coord-text { font-variant-numeric: tabular-nums; }
 
-  @media (min-width: 60rem) {
-    body { padding-inline-start: 20%; }
-  }
 }
